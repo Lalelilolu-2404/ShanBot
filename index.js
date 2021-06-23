@@ -60,7 +60,7 @@ const { toinmenu } = require('./src/toinmenu')
 const { menuadmin } = require('./src/menuadmin')
 const { nsfwmenu } = require('./src/nsfwmenu')
 const { desmenu } = require('./src/desmenu')
-const { version } = require('./src/version')
+/**const { version } = require('./src/version')**/
 const { shantera } = require('./src/shantera')
 const { welmenu } = require('./src/welmenu')
 const { otak } = require('./src/otak')
@@ -307,7 +307,7 @@ async function starts() {
 					ownerB: '[❗] Este comando solo lo usa ShanBot!',
 					admin: '[❗] Este comando solo puede ser utilizado por administradores del grupo!',
 					Badmin: '[❗] Este comando solo se puede usar cuando el bot se convierte en administrador!',
-                                        pegatina: 'Relaja la raja, load... 👏\n\n*Stickersgif son de 6 segundos ❗*\n\nby Lalelilolu',
+                                        pegatina: 'Relaja la raja, loading... 👏\n\n*Stickersgif son de 6 segundos ❗*\n\nby Lalelilolu',
 					attp: 'Calma crack estoy haciendo tu texto a sticker 👏\n\n*Loading...*\n\nby Lalelilolu',
 					imgs: 'Euu flaco 🥴\n\n*Convirtiendo tu Sticker a Imagen 🔄*\n\nby Lalelilolu',
 					mpcancion: 'Calmaoooo estoy procesando 😎\n\n*Convirtiendo de MP4 a MP3 🔄*\n\nby Lalelilolu',
@@ -449,10 +449,10 @@ async function starts() {
 		case 'desmenu':
 		client.sendMessage(from, desmenu(prefix, sender), text, {quoted: mek})
 		break
-		case 'versión':
+		/**case 'versión':
 		case 'version':
 		client.sendMessage(from, version(prefix, sender), text, {quoted: mek})
-		break
+		break**/
                 case 'welmenu':
 		client.sendMessage(from, welmenu(prefix, sender), text, {quoted: mek})
 		break
