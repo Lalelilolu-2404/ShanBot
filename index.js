@@ -1203,7 +1203,7 @@ async function starts() {
                   }
 
 		if (budy.includes(`Buenas noches`)) {
-                  reply(`Te violaré mientras duermas xd`)
+                  reply(`Te violaré mientras duermas 🥵`)
                   }
 
 		if (budy.includes(`Bot gay`)) {
@@ -1211,9 +1211,11 @@ async function starts() {
                   }
 
 		if (budy.includes(`Gracias`)) {
-                  reply(`De nada putit@ xd`)
+                  reply(`De nada putit@ 🤭`)
                   }
-
+		if (budy.includes(`gracias`)) {
+                  reply(`De nada putit@ 🤭`)
+                  }			
 		if (budy.includes(`Hola`)) {
                   reply(`Hola putit@ 🤭`)
                   }
