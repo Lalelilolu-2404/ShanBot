@@ -1314,10 +1314,11 @@ async function starts() {
                   }					
 					
         if (budy.startsWith(`Yamete kudasai`)) {
-        const none = fs.readFileSync('./anishan/Yamete kudasai.mp3');
+		if (budy.endsWith(`Yamete kudasai`)){
+        	const none = fs.readFileSync('./anishan/Yamete kudasai.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }					
-	
+		}
         if (budy.startsWith(`Hentai`)) {
         const none = fs.readFileSync('./anishan/Hentai.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
