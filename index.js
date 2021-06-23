@@ -1217,6 +1217,9 @@ async function starts() {
 		if (budy.includes(`Hola`)) {
                   reply(`Hola putit@ 🤭`)
                   }
+		if (budy.includes(`Ola`)) {
+                  reply(`Hola putit@ 🤭`)
+                  }
                  
 		if (budy.includes(`Uff`)) {
                   reply(`Uhm zi, ufff 🥵!`)
