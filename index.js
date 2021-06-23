@@ -1227,14 +1227,25 @@ async function starts() {
                   reply(`Uhm zi, ufff 🥵!`)
                   }
 
+	if (budy.includes(`Ayy`)) {
+        const none = fs.readFileSync('./anishan/Ayy.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }	
+					
+	if (budy.includes(`Mujer`)) {
+        const none = fs.readFileSync('./anishan/Mujer.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }
+					
 	if (budy.includes(`Me vengo`)) {
         const none = fs.readFileSync('./anishan/Me vengo.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }							
+                  }	
+					
 	if (budy.includes(`Setso`)) {
         const none = fs.readFileSync('./anishan/Setso.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }					
+                  }	
 					
         if (budy.startsWith(`Mi reina`)) {
         const none = fs.readFileSync('./anishan/Mi reina.mp3');
@@ -1255,11 +1266,13 @@ async function starts() {
         	const none = fs.readFileSync('./anishan/Brr.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }										
-		}			
+		}
+					
         if (budy.startsWith(`Brr2`)) {
         const none = fs.readFileSync('./anishan/Brr2.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
+					
  	if (budy.includes(`Sparta`)) {
         const none = fs.readFileSync('./anishan/Sparta.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
@@ -1313,7 +1326,8 @@ async function starts() {
         if (budy.startsWith(`Petardo`)) {
         const none = fs.readFileSync('./anishan/Petardo.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }					
+                  }	
+					
         if (budy.startsWith(`A`)) {
 		if (budy.endsWith(`A`)){
         	const none = fs.readFileSync('./anishan/A.mp3');
@@ -1329,7 +1343,13 @@ async function starts() {
         if (budy.startsWith(`Pasa pack`)) {
         const none = fs.readFileSync('./anishan/Pasa pack.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }				
+                  }	
+	if (budy.startsWith(`Pack`)) {
+		if (budy.endsWith(`Pack`)){
+        	const none = fs.readFileSync('./Pack/A.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }	
+		}							
         if (budy.startsWith(`Yamete`)) {
         const none = fs.readFileSync('./anishan/Yamete.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
