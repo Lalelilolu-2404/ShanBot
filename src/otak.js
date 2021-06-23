@@ -15,6 +15,7 @@ const otak = (prefix, pushname) => {
 - La toca :3
 - Lokita
 - Me gimes?
+- Me vengo
 - Mi reina
 - Nya
 - Pasa pack
