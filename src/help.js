@@ -44,7 +44,7 @@ const help = (prefix) => {
   ╠ ○ ${prefix}wame
   ╠ Link de Whatsapp
   ╠ ○ ${prefix}qrcode
-  ╚ Coloca un texto**/
+  ╚ Coloca un texto
 
 ◉ *GRUPOS*
   ╠ ○ ${prefix}closegc
