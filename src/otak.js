@@ -2,6 +2,7 @@ const otak = (prefix, pushname) => {
     return `*Palabras especificas para que el bot interactue con ustedes, pinches otakus*
 
 - A
+- Ayy
 - Acm1pt
 - A mimir
 - Brr
@@ -17,7 +18,9 @@ const otak = (prefix, pushname) => {
 - Me gimes?
 - Me vengo
 - Mi reina
+- Mujer
 - Nya
+- Pack
 - Pasa pack
 - Petardo
 - Pete
