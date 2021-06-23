@@ -4,6 +4,8 @@ const otak = (prefix, pushname) => {
 - A
 - Acm1pt
 - A mimir
+- Brr
+- Brr2
 - Dime onichan
 - Feliz jueves
 - Gambare
@@ -11,12 +13,16 @@ const otak = (prefix, pushname) => {
 - Hentai
 - Iluminati
 - La toca :3
+- Lokita
 - Me gimes?
+- Mi reina
 - Nya
 - Pasa pack
 - Petardo
 - Pete
 - Quien es tu sempai 
+- Sapee
+- Setso
 - Sparta
 - Te amo botsito
 - Yamete 
