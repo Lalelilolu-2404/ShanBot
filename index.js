@@ -1224,7 +1224,22 @@ async function starts() {
 		if (budy.includes(`Uff`)) {
                   reply(`Uhm zi, ufff 🥵!`)
                   }
-
+					
+ 	if (budy.includes(`Sparta`)) {
+        const none = fs.readFileSync('./anishan/Sparta.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }					
+					
+        if (budy.startsWith(`Iluminati`)) {
+        const none = fs.readFileSync('./anishan/Iluminati.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }										
+					
+        if (budy.startsWith(`Help`)) {
+        const none = fs.readFileSync('./anishan/Help.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }
+					
         if (budy.includes(`A mimir`)) {
         const none = fs.readFileSync('./anishan/A mimir.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
