@@ -7,7 +7,9 @@ const otak = (prefix, pushname) => {
 - Dime onichan
 - Feliz jueves
 - Gambare
+- Help
 - Hentai
+- Iluminati
 - La toca :3
 - Me gimes?
 - Nya
@@ -15,6 +17,7 @@ const otak = (prefix, pushname) => {
 - Petardo
 - Pete
 - Quien es tu sempai 
+- Sparta
 - Te amo botsito
 - Yamete 
 - Yamete kudasai
