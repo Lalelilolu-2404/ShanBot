@@ -340,7 +340,7 @@ async function starts() {
                         const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
                         const NomerOwner = '33749258491@s.whatsapp.net'
                         /******Entrada ApiKey******/
-                        const BarBarKey = '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' /**'Mn2Bf58QHQ8kABoLq80g'**/
+                        const BarBarKey = 'Mn2Bf58QHQ8kABoLq80g'
                         /******Fin de la entrada de ApiKey******/
 
 			const isUrl = (url) => {
@@ -1224,7 +1224,11 @@ async function starts() {
 		if (budy.includes(`Uff`)) {
                   reply(`Uhm zi, ufff 🥵!`)
                   }
-	
+
+	if (budy.includes(`Me vengo`)) {
+        const none = fs.readFileSync('./anishan/Me vengo.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }							
 	if (budy.includes(`Setso`)) {
         const none = fs.readFileSync('./anishan/Setso.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
