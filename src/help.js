@@ -9,8 +9,10 @@ const help = (prefix) => {
 ◉ *NUEVO COMANDO*
   ╠ ○ ${prefix}otak
     Monas chinas
+  ╠ ○ ${prefix}bana
+    Banaudios
   ╠ ○ ${prefix}shantera
-    Interactua con el bot
+    Interactua con el bot    
 
 ◉ *NUEVOS MENUS*
   ╠ ○ ${prefix}desmenu
