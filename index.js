@@ -664,12 +664,12 @@ async function starts() {
 						reply('')
 					} else {
 						for (let _ of anu) {
-							sendMess(_.jid, `*「 Shanduy 」*\n\n${body.slice(4)}`)
+							sendMess(_.jid, `*「 《Lalelilolu》\◔,◡◔,/ ت♡ 」*\n\n${body.slice(4)}`)
 						}
 						reply('Transmisión exitosa')
 					}
 					break
-					case 'bcgc':
+				case 'bcgc':
 					client.updatePresence(from, Presence.composing) 
 					if (!isOwner) return reply(mess.only.ownerB)
 					if (args.length < 1) return reply('.......')
@@ -686,8 +686,9 @@ async function starts() {
 						}
 						reply('Grupo de transmisión exitoso')
 					}
+					break 
 					
-                     case 'leave':
+              case 'leave':
                     if (!isGroup) return reply(mess.only.group)
                     if (!isGroupAdmins) return reply(mess.only.admin)
                      setTimeout( () => {
@@ -697,7 +698,7 @@ async function starts() {
 					client.updatePresence(from, Presence.composing) 
 					client.sendMessage(from, 'Chao Pa👋', text) // ur cods
 					}, 0)
-                     break
+              break
        /*case 'ownergrup':
 				  case 'ownergroup':
                client.updatePresence(from, Presence.composing) 
@@ -750,6 +751,7 @@ async function starts() {
 					yeh = `Aqui esta el link del grupo 🤑\n\nhttps://chat.whatsapp.com/${linkgc}\n\nLink Del Grupo *${groupName}*`
 					client.sendMessage(from, yeh, text, {quoted: mek, detectLinks: false})
 					break
+					
                 case 'qrcode':
                 buff = await getBuffer(`https://api.qrserver.com/v1/create-qr-code/?data=${body.slice(8)}&size=1080%C3%971080`)
 				client.sendMessage(from, buff, image, {quoted: mek})
@@ -863,6 +865,7 @@ async function starts() {
 						reply(`Envíe una imagen con el comando ${prefix}s o etiqueta a una imagen que ya se haya enviado`)
 					}
 					break
+					
 			            case 'toimg':
 				    client.updatePresence(from, Presence.composing)
                                     if (!isUser) return reply(mess.only.daftarB)
@@ -911,7 +914,7 @@ async function starts() {
                                 case 'daftar':
 					client.updatePresence(from, Presence.composing)
 					if (isUser) return reply('Ya estas registrado 🧐')
-					if (args.length < 1) return reply(`Incorrecto \nComando : ${prefix}daftar Nombre\nComando : ${prefix}daftar shanduy`)
+					if (args.length < 1) return reply(`Incorrecto \nComando : ${prefix}daftar Nombre\nComando : ${prefix}daftar Lalelilolu`)
 					var reg = body.slice(8)
 					var nombre = reg.split("|")[0];
                                                 user.push(sender)
