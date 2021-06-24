@@ -58,7 +58,7 @@ const { help } = require('./src/help')
 const { logomaker } = require('./database/menu/logomaker')
 const { toinmenu } = require('./src/toinmenu')
 const { menuadmin } = require('./src/menuadmin')
-/**const { nsfwmenu } = require('./src/nsfwmenu')**/
+const { nsfwmenu } = require('./src/nsfwmenu')
 const { desmenu } = require('./src/desmenu')
 /**const { version } = require('./src/version')**/
 const { shantera } = require('./src/shantera')
@@ -238,7 +238,7 @@ async function starts() {
 		start('2', 'Desconectado. Utiliza npm start Para conectarte')
 	})
 	client.on('open', () => {
-		success('2', 'Conectado by Lalelilolu')
+		success('2', 'Conectado by Shanduy')
 	})
 	await client.connect({timeoutMs: 30*1000})
         fs.writeFileSync('./Nazwa.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
@@ -308,9 +308,9 @@ async function starts() {
 					ownerB: '[❗] Este comando solo lo usa ShanBot!',
 					admin: '[❗] Este comando solo puede ser utilizado por administradores del grupo!',
 					Badmin: '[❗] Este comando solo se puede usar cuando el bot se convierte en administrador!',
-                                        pegatina: 'Relaja la raja, loading... 👏\n\n*Stickersgif son de 6 segundos ❗*\n\nby Lalelilolu',
-					attp: 'Calma crack estoy haciendo tu texto a sticker 👏\n\n*Loading...*\n\nby Lalelilolu',
-					imgs: 'Euu flaco 🥴\n\n*Convirtiendo tu Sticker a Imagen 🔄*\n\nby Lalelilolu',
+                                        pegatina: 'Relaja la raja, loading... 👏\n\n*Stickersgif son de 6 segundos ❗*',
+					attp: 'Calma crack estoy haciendo tu texto a sticker 👏\n\n*Loading...*',
+					imgs: 'Euu flaco 🥴\n\n*Convirtiendo tu Sticker a Imagen 🔄*',
 					mpcancion: 'Calmaoooo estoy procesando 😎\n\n*Convirtiendo de MP4 a MP3 🔄*\n\nby Lalelilolu',
 					mpa: 'Euu flaco 🥴\n\n*Estoy decargando tu cancion 🔄*\n\nAguarde un momento, por favor\n\nby Lalelilolu',
                                         mpv: 'Calmao pa 😎\n\n*Estoy descargando tu video 🔄*\n\nAguarde un momento, por favor\n\nby Lalelilolu',
@@ -447,9 +447,9 @@ async function starts() {
 		case 'menuadmin':
 		client.sendMessage(from, menuadmin(prefix, sender), text, {quoted: mek})
 		break
-		/**case 'nsfwmenu':
+		case 'nsfwmenu':
 		client.sendMessage(from, nsfwmenu(prefix, sender), text, {quoted: mek})
-		break**/
+		break
 		case 'desmenu':
 		client.sendMessage(from, desmenu(prefix, sender), text, {quoted: mek})
 		break
@@ -966,22 +966,22 @@ async function starts() {
 						reply('Digite 1 para activarlo, 0 para desactivarlo')
 					}
 					break	
-				case 'waifu':
+				/***case 'waifu':
 					gatauda = body.slice(7)
 					reply(mess.wait)
                                         if (!isUser) return reply(mess.only.daftarB)
 					anu = await fetchJson(`https://arugaz.my.id/api/nekonime`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image,{quoted: mek})
-					break
-				case 'randomanime':
+					break***/
+				/***case 'randomanime':
 					gatauda = body.slice(13)
 					reply(mess.wait)
                                         if (!isUser) return reply(mess.only.daftarB)
 					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/randomanime?apikey=BotWeA`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
-					break						
+					break***/					
                              case 'delete':
 					case 'del':
 					if (!isGroup)return reply(mess.only.group)
