@@ -1324,12 +1324,12 @@ async function starts() {
                   }					
 		}
         if (budy.startsWith(`Hentai`)) {
-        const none = fs.readFileSync('./anishan/Hentai.mp3');
+        	const none = fs.readFileSync('./anishan/Hentai.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }					
 					
         if (budy.startsWith(`Petardo`)) {
-        const none = fs.readFileSync('./anishan/Petardo.mp3');
+        	const none = fs.readFileSync('./anishan/Petardo.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }	
 					
@@ -1346,7 +1346,7 @@ async function starts() {
                   }	
 		}
         if (budy.startsWith(`Pasa pack`)) {
-        const none = fs.readFileSync('./anishan/Pasa pack.mp3');
+        	const none = fs.readFileSync('./anishan/Pasa pack.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }	
 	if (budy.startsWith(`Pack`)) {
