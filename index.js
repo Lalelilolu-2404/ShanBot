@@ -682,7 +682,9 @@ async function starts() {
 						reply('')
 					} else {
 						for (let _ of groupMembers) {
-							sendMess(_.jid, `*「 BC GROUP 」*\n*Group* : ${groupName}\n\n${body.slice(6)}`)
+							/**sendMess(_.jid, `*「 BC GROUP 」*\n*Group* : ${groupName}\n\n${body.slice(6)}`)**/
+							
+							sendMess(_.jid, `*「 GROUP : ${groupName} 」*\n\n${body.slice(6)}`)
 						}
 						reply('Grupo de transmisión exitoso')
 					}
