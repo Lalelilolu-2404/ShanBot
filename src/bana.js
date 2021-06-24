@@ -1,4 +1,4 @@
-const otak = (prefix, pushname) => {
+const bana = (prefix, pushname) => {
     return `*Palabras especificas Sapee 😎*
 
 - Acm1pt
