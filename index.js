@@ -1231,13 +1231,17 @@ async function starts() {
                   reply(`Uhm zi, ufff 🥵!`)
                   }
 
+	if (budy.includes(`Admin`)) {
+        	const none = fs.readFileSync('./anishan/Admin.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }	
 	if (budy.includes(`Ayy`)) {
-        const none = fs.readFileSync('./anishan/Ayy.mp3');
+        	const none = fs.readFileSync('./anishan/Ayy.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }	
 					
 	if (budy.includes(`Mujer`)) {
-        const none = fs.readFileSync('./anishan/Mujer.mp3');
+        	const none = fs.readFileSync('./anishan/Mujer.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
 					
@@ -1351,7 +1355,7 @@ async function starts() {
                   }	
 	if (budy.startsWith(`Pack`)) {
 		if (budy.endsWith(`Pack`)){
-        	const none = fs.readFileSync('./Pack/A.mp3');
+        	const none = fs.readFileSync('./anishan/Pack.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }	
 		}							
