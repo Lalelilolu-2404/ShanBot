@@ -1239,9 +1239,9 @@ async function starts() {
 					} else {
 						/**reply('Digite 1 para activarlo, 0 para desactivarlo')**/
 					}
-			break						
+								
 
-	default:					
+						
 /***Stickers..............***/
 	
 	if (!isStick) 
@@ -1723,11 +1723,12 @@ async function starts() {
 		}					
 	}			
 			
-			
+break				
 					
 /******************************************/					
 				
-
+	default:
+					
 		if (budy.includes(`Todo bien`)) {
                   reply(`Si amig@ todo bien 🙄`)
                   }
