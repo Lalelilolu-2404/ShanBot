@@ -1814,7 +1814,7 @@ break
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }					
         if (budy.startsWith(`Hentai`)) {
-		if (budy.endsWith(`Hentai`))
+		if (budy.endsWith(`Hentai`)){
         	const none = fs.readFileSync('./anishan/Hentai.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }	
