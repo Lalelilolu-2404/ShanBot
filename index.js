@@ -1239,9 +1239,9 @@ async function starts() {
 
 					
 case 'stick':
-	try {
+	
 	if (!isStick) return reply('❌ *STICK Desactivado* ❌')
-	}			
+	{			
 					
         if (budy.startsWith(`A2`)) {
 		if (budy.endsWith(`A2`)){
@@ -1717,7 +1717,7 @@ case 'stick':
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}					
-				
+	}			
 break								
 		
 				
