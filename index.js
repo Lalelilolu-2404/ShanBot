@@ -1253,29 +1253,29 @@ async function starts() {
         if (budy.startsWith(`Hentaii`)) {
 		if (budy.endsWith(`Hentaii`)){
         	const none = fs.readFileSync('./src/stickers/Hentai.webp');
-		client.sendMessage(from, none, MessageType.webp)
+		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
         if (budy.startsWith(`Hahaha`)) {
 		if (budy.endsWith(`Hahaha`)){
         	const none = fs.readFileSync('./src/stickers/Hahaha.webp');
-		client.sendMessage(from, none, MessageType.webp)
+		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
 	if (budy.includes(`FBI`)) {
         	const none = fs.readFileSync('./src/stickers/FBI.webp');
-		client.sendMessage(from, none, MessageType.webp)
+		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
         if (budy.startsWith(`Pack`)) {
 		if (budy.endsWith(`Pack`)){
         	const none = fs.readFileSync('./src/stickers/Pack.webp');
-		client.sendMessage(from, none, MessageType.webp)
+		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}							
         if (budy.startsWith(`F`)) {
 		if (budy.endsWith(`F`)){
         	const none = fs.readFileSync('./src/stickers/F.webp');
-		client.sendMessage(from, none, MessageType.webp)
+		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}		
 					
