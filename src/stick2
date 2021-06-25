@@ -1,0 +1,50 @@
+const stick2 = (prefix, pushname) => {
+    return `*Stickers :3*
+
+-	No antojes
+-	No me interesa
+-	No sé
+-	Pack
+-	Packsito
+-	Paja
+-	Pansito?
+-	Pero
+-	Procede
+-	Purga
+-	Que weba
+-	Rico
+-	Sad
+-	Santas escrituras
+-	Sapee
+-	Se encuera
+-	Se ofendió
+-	Se va xd
+-	Sex
+-	Sexo
+-	Shh
+-	Si mi amor
+-	Sit on me pls
+-	Ta fuerte
+-	Toma tu galleta
+-	Triste
+-	Tu culito
+-	Turbio
+-	Uff
+-	Uhm
+-	Uwu
+-	Vas a llorar
+-	Volví
+-	Wow
+-	Xd
+-	Ya es hora?
+-	Ya sabes
+-	Ya se enojó
+
+
+
+_Ojito escribe tal como esta_
+by Lalelilolu`
+
+}
+
+exports.stick2 = stick2
