@@ -4,6 +4,7 @@ const otak = (prefix, pushname) => {
 - A
 - Admin
 - A mimir
+- Banx
 - Dime onichan
 - Feliz jueves
 - Gambare
