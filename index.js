@@ -65,6 +65,8 @@ const { shantera } = require('./src/shantera')
 const { welmenu } = require('./src/welmenu')
 const { otak } = require('./src/otak')
 const { bana } = require('./src/bana')
+const { stick1 } = require('./src/stick1')
+const { stick2 } = require('./src/stick2')
 /*const { mediamenu } = require('./database/menu/mediamenu')
 const { educationmenu } = require('./database/menu/educationmenu')
 const { downloadermenu } = require('./database/menu/downloadermenu')
@@ -437,7 +439,13 @@ async function starts() {
 		break
 		case 'bana':
 		client.sendMessage(from, bana(prefix, sender), text, {quoted: mek})
+		break	
+		case 'stick1':
+		client.sendMessage(from, stick1(prefix, sender), text, {quoted: mek})
 		break						
+		case 'stick2':
+		client.sendMessage(from, stick2(prefix, sender), text, {quoted: mek})
+		break
 		case 'idioma':
 		client.sendMessage(from, bahasa(prefix, sender), text, {quoted: mek})
 		break
