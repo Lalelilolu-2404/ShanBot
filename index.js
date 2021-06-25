@@ -47,6 +47,9 @@ const speed = require('performance-now')
 /******COMIENZO DE LA ENTRADA JSON******/
 const welkom = JSON.parse(fs.readFileSync('./database/json/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./database/json/nsfw.json'))
+
+const stick = JSON.parse(fs.readFileSync('./database/json/stick.json'))
+
 const samih = JSON.parse(fs.readFileSync('./database/json/simi.json'))
 const user = JSON.parse(fs.readFileSync('./database/json/user.json'))
 const _leveling = JSON.parse(fs.readFileSync('./database/json/leveling.json'))
@@ -337,6 +340,9 @@ async function starts() {
 			const isGroupAdmins = groupAdmins.includes(sender) || false
 			const isWelkom = isGroup ? welkom.includes(from) : false
 			const isNsfw = isGroup ? nsfw.includes(from) : false
+			
+			const isStick = isGroup ? stick.includes(from) : false
+			
 			const isSimi = isGroup ? samih.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
                         const isUser = user.includes(sender)
@@ -1210,57 +1216,32 @@ async function starts() {
 						fs.unlinkSync(rano)
 					})
 					break
-                default:
-		if (budy.includes(`Todo bien`)) {
-                  reply(`Si amig@ todo bien 🙄`)
-                  }
-
-		if (budy.includes(`Buenos días`)) {
-                  reply(`Buenos Dias trolos de mierda`)
-                  }
-
-		if (budy.includes(`Buenas noches`)) {
-                  reply(`Te violaré mientras duermas 🥵`)
-                  }
-		if (budy.includes(`Bye`)) {
-                  reply(`Bye bye beautiful 😉`)
-                  }
-		if (budy.includes(`Bot gay`)) {
-                  reply(`Miren a este boludito`)
-                  }
-
-		if (budy.includes(`Gracias`)) {
-                  reply(`De nada putit@ 🤭`)
-                  }
-		if (budy.includes(`gracias`)) {
-                  reply(`De nada putit@ 🤭`)
-                  }			
-
-      		if (budy.startsWith(`Hola`)) {
-			if (budy.endsWith(`Hola`)){
-        		reply(`Hola putit@ 🤭`)}
-		  }					
-     		if (budy.startsWith(`Ola`)) {
-			if (budy.endsWith(`Ola`)){
-        		reply(`Hola putit@ 🤭`)}
-		  }					
-                if (budy.includes(`Put@`)) {
-                  reply(`Relaja la raja nena 😎`)
-                  }
-                if (budy.includes(`Putit@`)) {
-                  reply(`Relaja la raja nena 😎`)
-                  }
-                if (budy.includes(`put@`)) {
-                  reply(`Relaja la raja nena 😎`)
-                  }
-                if (budy.includes(`putit@`)) {
-                  reply(`Relaja la raja nena 😎`)
-                  }					
-		if (budy.includes(`Uff`)) {
-                  reply(`Uhm zi, ufff 🥵!`)
-                  }
-
+		
 /*** Stickers***/	
+	
+                         case 'stick':
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isOwner) return reply(mess.only.ownerB)
+					if (args.length < 1) return reply('Digita 1 para activar los STICK')
+					if (Number(args[0]) === 1) {
+						if (isStick) return reply('Activado ✅')
+						stick.push(from)
+						fs.writeFileSync('./database/json/stick.json', JSON.stringify(stick))
+						reply('❬ ✅ ❭ La funcion Stick esta habilitado')
+					} else if (Number(args[0]) === 0) {
+						nsfw.splice(from, 1)
+						fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
+						reply('❬ ✅ ❭ La funcion Stick esta deshabilitado')
+					} else {
+						reply('Digite 1 para activarlo, 0 para desactivarlo')
+					}
+			break						
+
+					
+case 'stick':
+	try {
+	if (!isStick) return reply('❌ *STICK Desactivado* ❌')
+				
 					
         if (budy.startsWith(`A2`)) {
 		if (budy.endsWith(`A2`)){
@@ -1737,10 +1718,63 @@ async function starts() {
                   }	
 		}					
 				
-					
+} 
+break								
 		
+				
+					
+/******************************************/					
+				
+		default:
+		if (budy.includes(`Todo bien`)) {
+                  reply(`Si amig@ todo bien 🙄`)
+                  }
 
-/**************/									
+		if (budy.includes(`Buenos días`)) {
+                  reply(`Buenos Dias trolos de mierda`)
+                  }
+
+		if (budy.includes(`Buenas noches`)) {
+                  reply(`Te violaré mientras duermas 🥵`)
+                  }
+		if (budy.includes(`Bye`)) {
+                  reply(`Bye bye beautiful 😉`)
+                  }
+		if (budy.includes(`Bot gay`)) {
+                  reply(`Miren a este boludito`)
+                  }
+
+		if (budy.includes(`Gracias`)) {
+                  reply(`De nada putit@ 🤭`)
+                  }
+		if (budy.includes(`gracias`)) {
+                  reply(`De nada putit@ 🤭`)
+                  }			
+
+      		if (budy.startsWith(`Hola`)) {
+			if (budy.endsWith(`Hola`)){
+        		reply(`Hola putit@ 🤭`)}
+		  }					
+     		if (budy.startsWith(`Ola`)) {
+			if (budy.endsWith(`Ola`)){
+        		reply(`Hola putit@ 🤭`)}
+		  }					
+                if (budy.includes(`Put@`)) {
+                  reply(`Relaja la raja nena 😎`)
+                  }
+                if (budy.includes(`Putit@`)) {
+                  reply(`Relaja la raja nena 😎`)
+                  }
+                if (budy.includes(`put@`)) {
+                  reply(`Relaja la raja nena 😎`)
+                  }
+                if (budy.includes(`putit@`)) {
+                  reply(`Relaja la raja nena 😎`)
+                  }					
+		if (budy.includes(`Uff`)) {
+                  reply(`Uhm zi, ufff 🥵!`)
+                  }
+									
 					
         if (budy.startsWith(`A`)) {
 		if (budy.endsWith(`A`)){
