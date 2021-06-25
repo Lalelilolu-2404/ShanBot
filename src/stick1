@@ -1,7 +1,6 @@
 const stick1 = (prefix, pushname) => {
     return `*Stickers*
 
-
 -   Aa
 -	Ah ok
 -	Ahh :'c
