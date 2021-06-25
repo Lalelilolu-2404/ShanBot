@@ -447,11 +447,11 @@ async function starts() {
 		client.sendMessage(from, bana(prefix, sender), text, {quoted: mek})
 		break	
 		case 'stick1':
-		if (!isOwner)			
+		if (isOwner)			
 		client.sendMessage(from, stick1(prefix, sender), text, {quoted: mek})
 		break						
 		case 'stick2':
-		if (!isOwner)
+		if (isOwner)
 		client.sendMessage(from, stick2(prefix, sender), text, {quoted: mek})
 		break
 		case 'idioma':
