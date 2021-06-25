@@ -1,10 +1,13 @@
 const help = (prefix) => {
 	return `
-⌜ *ShanBot 🤖 * ⌟  
+⌜*《Lalelilolu》\◔,◡◔,/ ت♡*⌟  
 
 ◉ *INFORMACION*
   ╠ ○ Comando: ⌜ ${prefix} ⌟
   ╠ ○ Creador: Lalelilolu
+ 
+◉ *PARA USAR EL BOT*
+  ╠ ○ Regístrate con : ${prefix}daftar + ⌜*Tu nombre*⌟ 
 
 ◉ *NUEVO COMANDO*
   ╠ ○ ${prefix}otak
@@ -17,18 +20,13 @@ const help = (prefix) => {
 ◉ *NUEVOS MENUS*
   ╠ ○ ${prefix}desmenu
     Descargar musica y videos de YT
-  ╠ ○ ${prefix}version
-    Conoce la versión de tu bot
   ╠ ○ ${prefix}welmenu
     Comandos de bienvedia a grupos
 
-◉ *PARA USAR EL BOT*
-    Registrate con el comando ${prefix}daftar y tu nombre
-
 ◉ *CREAR STICKERS*
   ╠ ○ ${prefix}sticker
-  ╠ ○ ${prefix}attp
-  ╠ Mas un texto corto
+  ╠ ○ ${prefix}attp + ⌜*Texto*⌟
+  ╠ Texto corto
   ╠ ○ ${prefix}stickergif
   ╚ 6 segundos de video
 
@@ -40,13 +38,16 @@ const help = (prefix) => {
 
 ◉ *AUDIO*
   ╠ ○ ${prefix}idioma
-  ╚ ○ ${prefix}tts es (mas texto)
+  ╠ ○ ${prefix}tts ⌜*Code*⌟ + ⌜*Texto*⌟
+  ╚ Ej.: *tts es Hol@...
 
 ◉ *OTROS*
   ╠ ○ ${prefix}wame
   ╠ Link de Whatsapp
   ╠ ○ ${prefix}qrcode
   ╚ Coloca un texto
+
+Para usar estas funciones el bot necesita admin
 
 ◉ *GRUPOS*
   ╠ ○ ${prefix}closegc
@@ -63,15 +64,11 @@ const help = (prefix) => {
   ╠ Link del grupo
   ╠ ○ ${prefix}tagall
   ╚ Nombra a todos los del grupo
-
-Para usar estas funciones el bot necesita admin
   
 ◉ *NSWF* 
   ╚ ○ ${prefix}nsfwmenu
 
-by Lalelilolu
-
-⌜ *ごきげんよう :)* ⌟ 
+⌜*《Lalelilolu》\◔,◡◔,/ ت♡*⌟
 `
 }
 
