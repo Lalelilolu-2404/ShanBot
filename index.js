@@ -1272,8 +1272,8 @@ async function starts() {
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}							
-        if (budy.startsWith(`F`)) {
-		if (budy.endsWith(`F`)){
+        if (budy.startsWith(`F el grupo`)) {
+		if (budy.endsWith(`F el grupo`)){
         	const none = fs.readFileSync('./src/stickers/F.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
