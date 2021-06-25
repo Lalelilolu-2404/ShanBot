@@ -1,0 +1,52 @@
+const stick1 = (prefix, pushname) => {
+    return `*Stickers*
+
+-	A
+-	Ah ok
+-	Ahh
+-	Amistad
+-	Así me gusta
+-	Ay me asusté
+-	Ban
+-	Besito
+-	Buenas noches
+-	Bye
+-	Segura?
+-	Cc
+-	Chelitas
+-	Chongo
+-	Colita
+-	Colitax
+-	Contra el muro
+-	Ctm
+-	Dame
+-	Delito
+-	En fin
+-	Encuerate
+-	Eres bonita
+-	F en el grupo
+-	F en el chat
+-	Facha
+-	Fallesí
+-	FBI
+-	Flap
+-	Hahaha
+-	Helado?
+-	Hentai
+-	Inflingir
+-	Jiji
+-	Kuaker
+-	Llegó papi
+-	Love
+-	Me dormí
+-	Me prometiste
+-	Me vengo
+-	Meyou
+
+
+_Ojito escribe tal como esta_
+by Lalelilolu`
+
+}
+
+exports.stick1 = stick1
