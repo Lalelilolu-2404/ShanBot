@@ -1,5 +1,6 @@
 const help = (prefix) => {
 	return `
+	
 *⌜《Lalelilolu》\◔,◡◔,/ ت♡⌟*  
 
 ◉ *INFORMACION*
@@ -11,17 +12,17 @@ const help = (prefix) => {
 
 ◉ *NUEVO COMANDO*
   ╠ ○ ${prefix}otak
-    Monas chinas
+  ╠ Monas chinas
   ╠ ○ ${prefix}bana
-    Banaudios
+  ╠ Banaudios
   ╠ ○ ${prefix}shantera
-    Interactua con el bot    
+  ╚ Interactua con el bot    
 
 ◉ *NUEVOS MENUS*
   ╠ ○ ${prefix}desmenu
-    Descargar musica y videos de YT
+  ╠ Descargar musica y videos de YT
   ╠ ○ ${prefix}welmenu
-    Comandos de bienvedia a grupos
+  ╚ Comandos de bienvedia a grupos
 
 ◉ *CREAR STICKERS*
   ╠ ○ ${prefix}sticker
@@ -38,6 +39,7 @@ const help = (prefix) => {
 
 ◉ *AUDIO*
   ╠ ○ ${prefix}idioma
+  ╠ Code para ${prefix}tts
   ╠ ○ ${prefix}tts ⌜Code⌟ + ⌜Texto⌟
   ╚ Ej.: *tts es Hol@...
 
