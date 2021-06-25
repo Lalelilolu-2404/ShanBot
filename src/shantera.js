@@ -6,9 +6,12 @@ const shantera = (prefix, pushname) => {
 - Buenas noches
 - Bot gay
 - Gracias
-- Hola
-- Uff
+- Nefasto
 - Corte
+- Hola
+- Sexo
+- Uff
+- Bye
 - Gaspi buenos días 
 - Gaspi me saludas
 - Gaspi y las minitas
@@ -16,14 +19,12 @@ const shantera = (prefix, pushname) => {
 - Me quiero suicidar
 - Gaspi ya no aguanto
 - Contate algo bot
-- Sexo
 - Momento epico
 - El bot del orto no funciona
 - Epicardo
 - Insta de la minita
 - Una mierda de bot
 - Ultimo momento
-- Nefasto
 - Paraguayo
 - Bot de mierda
 - Venezolano
