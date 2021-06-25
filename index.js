@@ -1227,18 +1227,18 @@ async function starts() {
 						if (isStick) return reply('Activado ✅')
 						stick.push(from)
 						fs.writeFileSync('./database/json/stick.json', JSON.stringify(stick))
-						reply('❬ ✅ ❭ La funcion Stick esta habilitado')
+						/**reply('❬ ✅ ❭ La funcion Stick esta habilitado')**/
 					} else if (Number(args[0]) === 0) {
 						nsfw.splice(from, 1)
 						fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
-						reply('❬ ✅ ❭ La funcion Stick esta deshabilitado')
+						/**reply('❬ ✅ ❭ La funcion Stick esta deshabilitado')**/
 					} else {
-						reply('Digite 1 para activarlo, 0 para desactivarlo')
+						/**reply('Digite 1 para activarlo, 0 para desactivarlo')**/
 					}
 			break						
 
 					
-case 'stick':
+/***Stickers..............***/
 	
 	if (!isStick) 
 	{			
