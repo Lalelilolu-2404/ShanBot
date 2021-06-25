@@ -1,13 +1,13 @@
 const help = (prefix) => {
 	return `
-⌜*《Lalelilolu》\◔,◡◔,/ ت♡*⌟  
+*⌜《Lalelilolu》\◔,◡◔,/ ت♡⌟*  
 
 ◉ *INFORMACION*
   ╠ ○ Comando: ⌜ ${prefix} ⌟
   ╠ ○ Creador: Lalelilolu
  
 ◉ *PARA USAR EL BOT*
-  ╠ ○ Regístrate con : ${prefix}daftar + ⌜*Tu nombre*⌟ 
+  ╠ ○ Regístrate con : ${prefix}daftar + ⌜Tu nombre⌟ 
 
 ◉ *NUEVO COMANDO*
   ╠ ○ ${prefix}otak
@@ -25,7 +25,7 @@ const help = (prefix) => {
 
 ◉ *CREAR STICKERS*
   ╠ ○ ${prefix}sticker
-  ╠ ○ ${prefix}attp + ⌜*Texto*⌟
+  ╠ ○ ${prefix}attp + ⌜Texto⌟
   ╠ Texto corto
   ╠ ○ ${prefix}stickergif
   ╚ 6 segundos de video
@@ -38,7 +38,7 @@ const help = (prefix) => {
 
 ◉ *AUDIO*
   ╠ ○ ${prefix}idioma
-  ╠ ○ ${prefix}tts ⌜*Code*⌟ + ⌜*Texto*⌟
+  ╠ ○ ${prefix}tts ⌜Code⌟ + ⌜Texto⌟
   ╚ Ej.: *tts es Hol@...
 
 ◉ *OTROS*
@@ -68,7 +68,7 @@ Para usar estas funciones el bot necesita admin
 ◉ *NSWF* 
   ╚ ○ ${prefix}nsfwmenu
 
-⌜*《Lalelilolu》\◔,◡◔,/ ت♡*⌟
+⌜《Lalelilolu》\◔,◡◔,/ ت♡⌟
 `
 }
 
