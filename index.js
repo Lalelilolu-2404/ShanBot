@@ -1237,7 +1237,7 @@ async function starts() {
 					}
 			break						
 
-					
+	default:					
 /***Stickers..............***/
 	
 	if (!isStick) 
@@ -1718,13 +1718,12 @@ async function starts() {
                   }	
 		}					
 	}			
-break								
-		
-				
+			
+			
 					
 /******************************************/					
 				
-		default:
+
 		if (budy.includes(`Todo bien`)) {
                   reply(`Si amig@ todo bien 🙄`)
                   }
