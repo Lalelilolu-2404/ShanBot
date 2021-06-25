@@ -1343,6 +1343,18 @@ async function starts() {
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
+        else if (budy.startsWith(`Colita 🥵`)) {
+		if (budy.endsWith(`Colita 🥵`)){
+        	const none = fs.readFileSync('./src/stickers/Colitaxxx.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
+        else if (budy.startsWith(`Contesta`)) {
+		if (budy.endsWith(`Contesta`)){
+        	const none = fs.readFileSync('./src/stickers/Contesta.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
         else if (budy.startsWith(`Contra el muro`)) {
 		if (budy.endsWith(`Contra el muro`)){
         	const none = fs.readFileSync('./src/stickers/Contra el muro.webp');
@@ -1697,8 +1709,8 @@ async function starts() {
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        else if (budy.startsWith(`Xd`)) {
-		if (budy.endsWith(`Xd`)){
+        else if (budy.startsWith(`Xdxd`)) {
+		if (budy.endsWith(`Xdxd`)){
         	const none = fs.readFileSync('./src/stickers/Xd.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
