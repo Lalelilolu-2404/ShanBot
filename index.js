@@ -1237,11 +1237,12 @@ async function starts() {
 					} else {
 						/**reply('Digite 1 para activarlo, 0 para desactivarlo')**/
 					}
-								
+			break						
 
 						
 /***Stickers..............***/
-	
+				case 'stick' :
+					
 	if (!isStick) 
 	{			
 					
@@ -1721,7 +1722,8 @@ async function starts() {
 		}					
 	}			
 			
-break				
+	break
+					
 					
 /******************************************/					
 				
