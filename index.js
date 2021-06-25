@@ -1241,9 +1241,10 @@ async function starts() {
 
 						
 /***Stickers..............***/
-				case 'stick' :
+	default:					
 					
-	if (isStick === 1) 
+					
+	if (isStick == 1) 
 	{			
 					
         if (budy.startsWith(`Aa`)) {
@@ -1721,13 +1722,12 @@ async function starts() {
                   }	
 		}					
 	}			
-			
-	break
+	
 					
 					
-/******************************************/					
+/******Otak and shnatera************************************/					
 				
-	default:
+	
 					
 		if (budy.includes(`Todo bien`)) {
                   reply(`Si amig@ todo bien 🙄`)
@@ -1777,7 +1777,19 @@ async function starts() {
 		if (budy.includes(`Uff`)) {
                   reply(`Uhm zi, ufff 🥵!`)
                   }
-									
+/*** Audios ****/
+		
+	if (isOwner){
+        	if (budy.startsWith(`Detente`)) {
+			if (budy.endsWith(`Detente`)){
+        			client.sendMessage(from, thumb, image, {quoted: mek, caption: 'Loading...'})
+				const none = fs.readFileSync('./anishan/videos/Detente.mp4');
+				client.sendMessage(from, none, MessageType.video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
+			}
+		}				
+	}	
+			
+			
 					
         if (budy.startsWith(`A`)) {
 		if (budy.endsWith(`A`)){
@@ -1798,6 +1810,12 @@ async function starts() {
  	if (budy.includes(`A mimir`)) {
 		if (budy.endsWith(`A mimir`)){
         	const none = fs.readFileSync('./anishan/A mimir.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }
+		}
+ 	if (budy.includes(`Banx`)) {
+		if (budy.endsWith(`Banx`)){
+        	const none = fs.readFileSync('./anishan/Banx.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
 		}
