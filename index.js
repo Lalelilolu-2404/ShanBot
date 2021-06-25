@@ -1243,7 +1243,7 @@ async function starts() {
 /***Stickers..............***/
 				case 'stick' :
 					
-	if (!isStick) 
+	if (isStick === 1) 
 	{			
 					
         if (budy.startsWith(`Aa`)) {
