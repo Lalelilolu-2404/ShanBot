@@ -1868,7 +1868,13 @@ async function starts() {
 	if (budy.includes(`Setso`)) {
         	const none = fs.readFileSync('./anishan/Setso.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }			
+                  }
+        if (budy.startsWith(`Sexual`)) {
+		if (budy.endsWith(`Sexual`)){
+        	const none = fs.readFileSync('./anishan/Sexual.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }					
+		}
  	if (budy.includes(`Sparta`)) {
         	const none = fs.readFileSync('./anishan/Sparta.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
