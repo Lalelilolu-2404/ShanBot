@@ -315,7 +315,7 @@ async function starts() {
 					mpa: 'Euu flaco 🥴\n\n*Estoy decargando tu cancion 🔄*\n\nAguarde un momento, por favor\n\nby Lalelilolu',
                                         mpv: 'Calmao pa 😎\n\n*Estoy descargando tu video 🔄*\n\nAguarde un momento, por favor\n\nby Lalelilolu',
 					/**musica: 'Calmao pa estoy bucando tu canción 😎\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube ❗*\n\nby shanduy',**/
-					daftarB: `「NEFASTOOOOO」\n\nPERO PAAAAA!\n\nNo estas registrado en mi base de datos 😳 \n\nComando : ${prefix}daftar Nombre\nEjemplo : ${prefix}daftar ...`,
+					daftarB: `「NEFASTOOOOO」\n\nPERO PAAAAA!\n\nNo estas registrado en mi base de datos 😳 \n\nComando : ${prefix}daftar Nombre\nEjemplo : ${prefix}daftar Putit@`,
 				}
 			}
     			const apakah = ['Si','No']
@@ -1214,7 +1214,9 @@ async function starts() {
 		if (budy.includes(`Buenas noches`)) {
                   reply(`Te violaré mientras duermas 🥵`)
                   }
-
+		if (budy.includes(`Bye`)) {
+                  reply(`Bye bye beautiful 😉`)
+                  }
 		if (budy.includes(`Bot gay`)) {
                   reply(`Miren a este boludito`)
                   }
@@ -1231,7 +1233,9 @@ async function starts() {
 		if (budy.includes(`Ola`)) {
                   reply(`Hola putit@ 🤭`)
                   }
-                 
+                if (budy.includes(`Put@`)) {
+                  reply(`Relaja la raja nena 😎`)
+                  }
 		if (budy.includes(`Uff`)) {
                   reply(`Uhm zi, ufff 🥵!`)
                   }
@@ -1384,7 +1388,11 @@ async function starts() {
         if (budy.startsWith(`Concha`)) {
         	const none = fs.readFileSync('./anishan/Concha.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }					
+                  }
+        if (budy.startsWith(`Japi`)) {
+        	const none = fs.readFileSync('./anishan/Japi.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }
         if (budy.startsWith(`Las pelotas`)) {
         	const none = fs.readFileSync('./anishan/Las pelotas.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
