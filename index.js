@@ -1337,9 +1337,9 @@ async function starts() {
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        else if (budy.startsWith(`Colitax`)) {
-		if (budy.endsWith(`Colitax`)){
-        	const none = fs.readFileSync('./src/stickers/Colitax.webp');
+        else if (budy.startsWith(`Colita 🥵`)) {
+		if (budy.endsWith(`Colita 🥵`)){
+        	const none = fs.readFileSync('./src/stickers/Colitaxxx.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
