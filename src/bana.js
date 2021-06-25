@@ -10,6 +10,7 @@ const bana = (prefix, pushname) => {
 - Brr
 - Brr2
 - Concha
+- Japi
 - Las pelotas
 - Lokita
 - Orto
