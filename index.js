@@ -447,10 +447,14 @@ async function starts() {
 		client.sendMessage(from, bana(prefix, sender), text, {quoted: mek})
 		break	
 		case 'stick1':
+		if (!isOwner) return reply(mess.only.ownerB){			
 		client.sendMessage(from, stick1(prefix, sender), text, {quoted: mek})
+		}
 		break						
 		case 'stick2':
+		if (!isOwner) return reply(mess.only.ownerB){	
 		client.sendMessage(from, stick2(prefix, sender), text, {quoted: mek})
+		}
 		break
 		case 'idioma':
 		client.sendMessage(from, bahasa(prefix, sender), text, {quoted: mek})
@@ -1220,7 +1224,7 @@ async function starts() {
 /*** Stickers***/	
 	
                          case 'stick':
-					if (!isGroupAdmins) return reply(mess.only.admin)
+					/**if (!isGroupAdmins) return reply(mess.only.admin)**/
 					if (!isOwner) return reply(mess.only.ownerB)
 					if (args.length < 1) return reply('Digita 1 para activar los STICK')
 					if (Number(args[0]) === 1) {
