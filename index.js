@@ -1240,478 +1240,478 @@ async function starts() {
 					
 case 'stick':
 	
-	if (!isStick) return reply('❌ *STICK Desactivado* ❌')
+	if (!isStick) 
 	{			
 					
-        if (budy.startsWith(`A2`)) {
-		if (budy.endsWith(`A2`)){
+        if (budy.startsWith(`Aa`)) {
+		if (budy.endsWith(`Aa`)){
         	const none = fs.readFileSync('./src/stickers/A2.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Ahh :'c`)) {
+        else if (budy.startsWith(`Ahh :'c`)) {
 		if (budy.endsWith(`Ahh :'c`)){
         	const none = fs.readFileSync('./src/stickers/Ahh.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-	if (budy.startsWith(`Ah ok`)) {
+	else if (budy.startsWith(`Ah ok`)) {
 		if (budy.endsWith(`Ah ok`)){
         	const none = fs.readFileSync('./src/stickers/Ah ok.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Amistad`)) {
+        else if (budy.startsWith(`Amistad`)) {
 		if (budy.endsWith(`Amistad`)){
         	const none = fs.readFileSync('./src/stickers/Amistad.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Así me gusta`)) {
+        else if (budy.startsWith(`Así me gusta`)) {
 		if (budy.endsWith(`Así me gusta`)){
         	const none = fs.readFileSync('./src/stickers/Así me gusta.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}					
-        if (budy.startsWith(`Ay me asusté`)) {
+        else if (budy.startsWith(`Ay me asusté`)) {
 		if (budy.endsWith(`Ay me asusté`)){
         	const none = fs.readFileSync('./src/stickers/Ay me asusté.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Ban`)) {
+        else if (budy.startsWith(`Ban`)) {
 		if (budy.endsWith(`Ban`)){
         	const none = fs.readFileSync('./src/stickers/Ban.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Besito`)) {
+        else if (budy.startsWith(`Besito`)) {
 		if (budy.endsWith(`Besito`)){
         	const none = fs.readFileSync('./src/stickers/Besito.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Buenas noches`)) {
+        else if (budy.startsWith(`Buenas noches`)) {
 		if (budy.endsWith(`Buenas noches`)){
         	const none = fs.readFileSync('./src/stickers/Buenas noches.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Bye`)) {
+        else if (budy.startsWith(`Bye`)) {
 		if (budy.endsWith(`Bye`)){
         	const none = fs.readFileSync('./src/stickers/Bye.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
-	if (budy.includes(`Segura?`)) {
+	else if (budy.includes(`Segura?`)) {
 		if (budy.endsWith(`Segura?`)){
         	const none = fs.readFileSync('./src/stickers/Byebye.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
-        if (budy.startsWith(`Cc`)) {
+        else if (budy.startsWith(`Cc`)) {
 		if (budy.endsWith(`Cc`)){
         	const none = fs.readFileSync('./src/stickers/Cc.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Chelitas`)) {
+        else if (budy.startsWith(`Chelitas`)) {
 		if (budy.endsWith(`Chelitas`)){
         	const none = fs.readFileSync('./src/stickers/Chelitas.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Chongo`)) {
+        else if (budy.startsWith(`Chongo`)) {
 		if (budy.endsWith(`Chongo`)){
         	const none = fs.readFileSync('./src/stickers/Chongo.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Colita`)) {
+        else if (budy.startsWith(`Colita`)) {
 		if (budy.endsWith(`Colita`)){
         	const none = fs.readFileSync('./src/stickers/Colita.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Colitax`)) {
+        else if (budy.startsWith(`Colitax`)) {
 		if (budy.endsWith(`Colitax`)){
         	const none = fs.readFileSync('./src/stickers/Colitax.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Contra el muro`)) {
+        else if (budy.startsWith(`Contra el muro`)) {
 		if (budy.endsWith(`Contra el muro`)){
         	const none = fs.readFileSync('./src/stickers/Contra el muro.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Ctm`)) {
+        else if (budy.startsWith(`Ctm`)) {
 		if (budy.endsWith(`Ctm`)){
         	const none = fs.readFileSync('./src/stickers/Ctm.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}	
-        if (budy.startsWith(`Dame`)) {
+        else if (budy.startsWith(`Dame`)) {
 		if (budy.endsWith(`Dame`)){
         	const none = fs.readFileSync('./src/stickers/Dame.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Delito`)) {
+        else if (budy.startsWith(`Delito`)) {
 		if (budy.endsWith(`Delito`)){
         	const none = fs.readFileSync('./src/stickers/Delito.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Encuerate`)) {
+        else if (budy.startsWith(`Encuerate`)) {
 		if (budy.endsWith(`Encuerate`)){
         	const none = fs.readFileSync('./src/stickers/Encuerate.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`En fin`)) {
+        else if (budy.startsWith(`En fin`)) {
 		if (budy.endsWith(`En fin`)){
         	const none = fs.readFileSync('./src/stickers/En fin.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Eres bonita`)) {
+        else if (budy.startsWith(`Eres bonita`)) {
 		if (budy.endsWith(`Eres bonita`)){
         	const none = fs.readFileSync('./src/stickers/Eres bonita.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`F en el chat`)) {
+        else if (budy.startsWith(`F en el chat`)) {
 		if (budy.endsWith(`F en el chat`)){
         	const none = fs.readFileSync('./src/stickers/F en el chat.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
-	if (budy.includes(`F el grupo`)) {
+	else if (budy.includes(`F el grupo`)) {
 		if (budy.endsWith(`F el grupo`)){
         	const none = fs.readFileSync('./src/stickers/F el grupo.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
-        if (budy.startsWith(`Facha`)) {
+        else if (budy.startsWith(`Facha`)) {
 		if (budy.endsWith(`Facha`)){
         	const none = fs.readFileSync('./src/stickers/Facha.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Fallesí`)) {
+        else if (budy.startsWith(`Fallesí`)) {
 		if (budy.endsWith(`Fallesí`)){
         	const none = fs.readFileSync('./src/stickers/Fallesí.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}							
-        if (budy.startsWith(`FBI`)) {
+        else if (budy.startsWith(`FBI`)) {
 		if (budy.endsWith(`FBI`)){
         	const none = fs.readFileSync('./src/stickers/FBI.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Flap`)) {
+        else if (budy.startsWith(`Flap`)) {
 		if (budy.endsWith(`Flap`)){
         	const none = fs.readFileSync('./src/stickers/Flap.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Hahaha`)) {
+        else if (budy.startsWith(`Hahaha`)) {
 		if (budy.endsWith(`Hahaha`)){
         	const none = fs.readFileSync('./src/stickers/Hahaha.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Helado?`)) {
+        else if (budy.startsWith(`Helado?`)) {
 		if (budy.endsWith(`Helado?`)){
         	const none = fs.readFileSync('./src/stickers/Helado.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
-	if (budy.includes(`Hentai`)) {
+	else if (budy.includes(`Hentai`)) {
 		if (budy.endsWith(`Hentai`)){
         	const none = fs.readFileSync('./src/stickers/Hentai.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
-        if (budy.startsWith(`Inflingir`)) {
+        else if (budy.startsWith(`Inflingir`)) {
 		if (budy.endsWith(`Inflingir`)){
         	const none = fs.readFileSync('./src/stickers/Inflingir.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Jiji`)) {
+        else if (budy.startsWith(`Jiji`)) {
 		if (budy.endsWith(`Jiji`)){
         	const none = fs.readFileSync('./src/stickers/Jiji.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Kuaker`)) {
+        else if (budy.startsWith(`Kuaker`)) {
 		if (budy.endsWith(`Kuaker`)){
         	const none = fs.readFileSync('./src/stickers/Kuaker.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Love`)) {
+        else if (budy.startsWith(`Love`)) {
 		if (budy.endsWith(`Love`)){
         	const none = fs.readFileSync('./src/stickers/Love.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Llegó papi`)) {
+        else if (budy.startsWith(`Llegó papi`)) {
 		if (budy.endsWith(`Llegó papi`)){
         	const none = fs.readFileSync('./src/stickers/Llegó papi.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Me dormí`)) {
+        else if (budy.startsWith(`Me dormí`)) {
 		if (budy.endsWith(`Me dormí`)){
         	const none = fs.readFileSync('./src/stickers/Me dormí.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Me prometiste`)) {
+        else if (budy.startsWith(`Me prometiste`)) {
 		if (budy.endsWith(`Me prometiste`)){
         	const none = fs.readFileSync('./src/stickers/Me prometiste.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Meyou`)) {
+        else if (budy.startsWith(`Meyou`)) {
 		if (budy.endsWith(`Meyou`)){
         	const none = fs.readFileSync('./src/stickers/Meyou.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Me vengo`)) {
+        else if (budy.startsWith(`Me vengo`)) {
 		if (budy.endsWith(`Me vengo`)){
         	const none = fs.readFileSync('./src/stickers/Me vengo.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`No antojes`)) {
+        else if (budy.startsWith(`No antojes`)) {
 		if (budy.endsWith(`No antojes`)){
         	const none = fs.readFileSync('./src/stickers/No antojes.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`No me interesa`)) {
+        else if (budy.startsWith(`No me interesa`)) {
 		if (budy.endsWith(`No me interesa`)){
         	const none = fs.readFileSync('./src/stickers/No me interesa.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
-	if (budy.includes(`No sé`)) {
+	else if (budy.includes(`No sé`)) {
 		if (budy.endsWith(`No sé`)){
         	const none = fs.readFileSync('./src/stickers/No sé.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
-        if (budy.startsWith(`Pack`)) {
+        else if (budy.startsWith(`Pack`)) {
 		if (budy.endsWith(`Pack`)){
         	const none = fs.readFileSync('./src/stickers/Pack.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}							
-        if (budy.startsWith(`Packsito`)) {
+        else if (budy.startsWith(`Packsito`)) {
 		if (budy.endsWith(`Packsito`)){
         	const none = fs.readFileSync('./src/stickers/packsito.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}						
-        if (budy.startsWith(`Paja`)) {
+        else if (budy.startsWith(`Paja`)) {
 		if (budy.endsWith(`Paja`)){
         	const none = fs.readFileSync('./src/stickers/Paja.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Pansito?`)) {
+        else if (budy.startsWith(`Pansito?`)) {
 		if (budy.endsWith(`Pansito?`)){
         	const none = fs.readFileSync('./src/stickers/Pansito.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
-	if (budy.includes(`Pero`)) {
+	else if (budy.includes(`Pero`)) {
 		if (budy.endsWith(`Pero`)){
         	const none = fs.readFileSync('./src/stickers/Pero.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
-        if (budy.startsWith(`Procede`)) {
+        else if (budy.startsWith(`Procede`)) {
 		if (budy.endsWith(`Procede`)){
         	const none = fs.readFileSync('./src/stickers/Procede.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}	
-        if (budy.startsWith(`Purga`)) {
+        else if (budy.startsWith(`Purga`)) {
 		if (budy.endsWith(`Purga`)){
         	const none = fs.readFileSync('./src/stickers/Purga.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Que weba`)) {
+        else if (budy.startsWith(`Que weba`)) {
 		if (budy.endsWith(`Que weba`)){
         	const none = fs.readFileSync('./src/stickers/Que weba.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}						
-        if (budy.startsWith(`Rico`)) {
+        else if (budy.startsWith(`Rico`)) {
 		if (budy.endsWith(`Rico`)){
         	const none = fs.readFileSync('./src/stickers/Rico.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Sad`)) {
+        else if (budy.startsWith(`Sad`)) {
 		if (budy.endsWith(`Sad`)){
         	const none = fs.readFileSync('./src/stickers/Sad.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Santas escrituras`)) {
+        else if (budy.startsWith(`Santas escrituras`)) {
 		if (budy.endsWith(`Santas escrituras`)){
         	const none = fs.readFileSync('./src/stickers/Santas escrituras.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Sapee`)) {
+        else if (budy.startsWith(`Sapee`)) {
 		if (budy.endsWith(`Sapee`)){
         	const none = fs.readFileSync('./src/stickers/Sapee.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
-	if (budy.includes(`Se encuera`)) {
+	else if (budy.includes(`Se encuera`)) {
 		if (budy.endsWith(`Se encuera`)){
         	const none = fs.readFileSync('./src/stickers/Se encuera.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
-        if (budy.startsWith(`Se ofendió`)) {
+        else if (budy.startsWith(`Se ofendió`)) {
 		if (budy.endsWith(`Se ofendió`)){
         	const none = fs.readFileSync('./src/stickers/Se ofendió.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Se va xd`)) {
+        else if (budy.startsWith(`Se va xd`)) {
 		if (budy.endsWith(`Se va xd`)){
         	const none = fs.readFileSync('./src/stickers/Se va xd.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Sex`)) {
+        else if (budy.startsWith(`Sex`)) {
 		if (budy.endsWith(`Sex`)){
         	const none = fs.readFileSync('./src/stickers/Sex.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}						
-        if (budy.startsWith(`Sexo`)) {
-		if (budy.endsWith(`Sexo`)){
+        else if (budy.startsWith(`Sexoo`)) {
+		if (budy.endsWith(`Sexoo`)){
         	const none = fs.readFileSync('./src/stickers/Sexo.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Shh`)) {
+        else if (budy.startsWith(`Shh`)) {
 		if (budy.endsWith(`Shh`)){
         	const none = fs.readFileSync('./src/stickers/Shh.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
-        if (budy.startsWith(`Si mi amor`)) {
+        else if (budy.startsWith(`Si mi amor`)) {
 		if (budy.endsWith(`Si mi amor`)){
         	const none = fs.readFileSync('./src/stickers/Si mi amor.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-	if (budy.includes(`Sit on me pls`)) {
+	else if (budy.includes(`Sit on me pls`)) {
 		if (budy.endsWith(`Sit on me pls`)){
         	const none = fs.readFileSync('./src/stickers/Sit on my face.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
-        if (budy.startsWith(`Ta fuerte`)) {
+        else if (budy.startsWith(`Ta fuerte`)) {
 		if (budy.endsWith(`Ta fuerte`)){
         	const none = fs.readFileSync('./src/stickers/Ta fuerte.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Toma tu galleta`)) {
+        else if (budy.startsWith(`Toma tu galleta`)) {
 		if (budy.endsWith(`Toma tu galleta`)){
         	const none = fs.readFileSync('./src/stickers/Toma tu galleta.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Triste`)) {
+        else if (budy.startsWith(`Triste`)) {
 		if (budy.endsWith(`Triste`)){
         	const none = fs.readFileSync('./src/stickers/Triste.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}						
-        if (budy.startsWith(`Tu culito`)) {
+        else if (budy.startsWith(`Tu culito`)) {
 		if (budy.endsWith(`Tu culito`)){
         	const none = fs.readFileSync('./src/stickers/Tu culito.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Turbio`)) {
+        else if (budy.startsWith(`Turbio`)) {
 		if (budy.endsWith(`Turbio`)){
         	const none = fs.readFileSync('./src/stickers/Turbio.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
-	if (budy.includes(`Uff`)) {
+	else if (budy.includes(`Uff`)) {
 		if (budy.endsWith(`Uff`)){
         	const none = fs.readFileSync('./src/stickers/Uff.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
-        if (budy.startsWith(`Uhm`)) {
+        else if (budy.startsWith(`Uhm`)) {
 		if (budy.endsWith(`Uhm`)){
         	const none = fs.readFileSync('./src/stickers/Uhm.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}							
-        if (budy.startsWith(`Uwu`)) {
+        else if (budy.startsWith(`Uwu`)) {
 		if (budy.endsWith(`Uwu`)){
         	const none = fs.readFileSync('./src/stickers/Uwu.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Vas a llorar`)) {
+        else if (budy.startsWith(`Vas a llorar`)) {
 		if (budy.endsWith(`Vas a llorar`)){
         	const none = fs.readFileSync('./src/stickers/Vas a llorar.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Volví`)) {
+        else if (budy.startsWith(`Volví`)) {
 		if (budy.endsWith(`Volví`)){
         	const none = fs.readFileSync('./src/stickers/Volví.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Wow`)) {
+        else if (budy.startsWith(`Wow`)) {
 		if (budy.endsWith(`Wow`)){
         	const none = fs.readFileSync('./src/stickers/Wow.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        if (budy.startsWith(`Xd`)) {
+        else if (budy.startsWith(`Xd`)) {
 		if (budy.endsWith(`Xd`)){
         	const none = fs.readFileSync('./src/stickers/Xd.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}							
-        if (budy.startsWith(`Ya es hora?`)) {
+        else if (budy.startsWith(`Ya es hora?`)) {
 		if (budy.endsWith(`Ya es hora?`)){
         	const none = fs.readFileSync('./src/stickers/Ya es hora.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}						
-	if (budy.includes(`Ya se enojó`)) {
+	else if (budy.includes(`Ya se enojó`)) {
 		if (budy.endsWith(`Ya se enojó`)){
         	const none = fs.readFileSync('./src/stickers/Se enojó.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}					
-	if (budy.includes(`Ya sabes`)) {
+	else if (budy.includes(`Ya sabes`)) {
 		if (budy.endsWith(`Ya sabes`)){
         	const none = fs.readFileSync('./src/stickers/Ya sabes.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
