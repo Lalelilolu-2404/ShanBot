@@ -431,6 +431,8 @@ async function starts() {
 			switch(command) {
 		case 'help':
 		case 'menu':
+		const.none = fs.readFileSync('./assets/menuimg.jpg');
+		client.sendMessage(from, none, image, {quoted:mek, caption : 'Bro...'})
 		client.sendMessage(from, help(prefix), text)
 		break
                 case 'otak':
