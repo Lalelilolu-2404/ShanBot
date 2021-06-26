@@ -2,7 +2,7 @@ const help = (prefix) => {
 	return `
 	
 *⌜《Lalelilolu》\◔,◡◔,/ ت♡⌟*  
-(from, `.assets/menuimg.jpg`
+client.sendMessage(from, './assets/menuimg.jpg', image)
 
 ◉ *INFORMACION*
   ╠ ○ Comando: ⌜ ${prefix} ⌟
