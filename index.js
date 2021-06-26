@@ -1797,8 +1797,9 @@ if (isOwner){
                   }
                 if (budy.includes(`putit@`)) {
                   reply(`Relaja la raja nena 😎`)
-                  }					
-		if (budy.includes(`Uff`)) {
+                  }
+     		if (budy.startsWith(`Uff`)) {
+			if (budy.endsWith(`Uff`)){
                   reply(`Uhm zi, ufff 🥵!`)
                   }
 /*** Audios ****/
