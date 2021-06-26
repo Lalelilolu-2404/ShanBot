@@ -1517,6 +1517,12 @@ async function starts() {
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
+	else if (budy.includes(`No te excites`)) {
+		if (budy.endsWith(`No te excites`)){
+        	const none = fs.readFileSync('./src/stickers/No te excites.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }	
+		}
         else if (budy.startsWith(`Pack`)) {
 		if (budy.endsWith(`Pack`)){
         	const none = fs.readFileSync('./src/stickers/Pack.webp');
@@ -1667,14 +1673,14 @@ async function starts() {
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
-	else if (budy.includes(`Uff`)) {
-		if (budy.endsWith(`Uff`)){
+	else if (budy.includes(`Ufff`)) {
+		if (budy.endsWith(`Ufff`)){
         	const none = fs.readFileSync('./src/stickers/Uff.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
-        else if (budy.startsWith(`Uhm`)) {
-		if (budy.endsWith(`Uhm`)){
+        else if (budy.startsWith(`Uhm 🥵`)) {
+		if (budy.endsWith(`Uhm 🥵`)){
         	const none = fs.readFileSync('./src/stickers/Uhm.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
