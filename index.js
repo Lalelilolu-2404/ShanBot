@@ -1658,7 +1658,7 @@ if (isOwner){
 		}						
         else if (budy.startsWith(`Sexoo`)) {
 		if (budy.endsWith(`Sexoo`)){
-        	const none = fs.readFileSync('./src/stickers/Sexoo.webp');
+        	const none = fs.readFileSync('./src/stickers/Sexo.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
@@ -1674,7 +1674,7 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-	else if (budy.includes(`Sit on me pls`)) {
+	else if (budy.startsWith(`Sit on me pls`)) {
 		if (budy.endsWith(`Sit on me pls`)){
         	const none = fs.readFileSync('./src/stickers/Sit on my face.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
@@ -1710,7 +1710,7 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
-	else if (budy.includes(`Ufff`)) {
+	else if (budy.startsWith(`Ufff`)) {
 		if (budy.endsWith(`Ufff`)){
         	const none = fs.readFileSync('./src/stickers/Uff.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
@@ -1758,13 +1758,13 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}						
-	else if (budy.includes(`Ya se enojó`)) {
+	else if (budy.startsWith(`Ya se enojó`)) {
 		if (budy.endsWith(`Ya se enojó`)){
         	const none = fs.readFileSync('./src/stickers/Se enojó.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}					
-	else if (budy.includes(`Ya sabes`)) {
+	else if (budy.startsWith(`Ya sabes`)) {
 		if (budy.endsWith(`Ya sabes`)){
         	const none = fs.readFileSync('./src/stickers/Ya sabes.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
