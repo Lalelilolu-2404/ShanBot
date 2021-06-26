@@ -1,6 +1,6 @@
 const help = (prefix) => {
 	return `
-`./menuimg.jpg`	
+`.assets/menuimg.jpg`	
 *⌜《Lalelilolu》\◔,◡◔,/ ت♡⌟*  
 
 ◉ *INFORMACION*
