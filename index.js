@@ -1301,6 +1301,12 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
+        else if (budy.startsWith(`Bien`)) {
+		if (budy.endsWith(`Bien`)){
+        	const none = fs.readFileSync('./src/stickers/Bien.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
         else if (budy.startsWith(`Buenas noches`)) {
 		if (budy.endsWith(`Buenas noches`)){
         	const none = fs.readFileSync('./src/stickers/Buenas noches.webp');
@@ -1451,6 +1457,12 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
+        else if (budy.startsWith(`Me morí`)) {
+		if (budy.endsWith(`Me morí`)){
+        	const none = fs.readFileSync('./src/stickers/Im dead.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
         else if (budy.startsWith(`Inflingir`)) {
 		if (budy.endsWith(`Inflingir`)){
         	const none = fs.readFileSync('./src/stickers/Inflingir.webp');
@@ -1511,6 +1523,12 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
+        else if (budy.startsWith(`Muy bien`)) {
+		if (budy.endsWith(`Muy bien`)){
+        	const none = fs.readFileSync('./src/stickers/Muy bien.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
         else if (budy.startsWith(`No antojes`)) {
 		if (budy.endsWith(`No antojes`)){
         	const none = fs.readFileSync('./src/stickers/No antojes.webp');
@@ -1558,6 +1576,12 @@ if (isOwner){
         	const none = fs.readFileSync('./src/stickers/Pansito.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
+		}
+        else if (budy.startsWith(`Pantsu`)) {
+		if (budy.endsWith(`Pantsu`)){
+        	const none = fs.readFileSync('./src/stickers/Pantsu.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
 		}
 	else if (budy.includes(`Pero`)) {
 		if (budy.endsWith(`Pero`)){
@@ -1809,7 +1833,7 @@ if (isOwner){
 			if (budy.endsWith(`Detente`)){
         			client.sendMessage(from, thumb, image, {quoted: mek, caption: 'Loading...'})
 				const none = fs.readFileSync('./anishan/videos/Detente.mp4');
-				client.sendMessage(from, none, video, {mimetype: 'video/mp4', quoted: mek})
+				client.sendMessage(from, none, MessageType.video, {quoted: mek, mimetype: 'video/mp4', ptt : true} )
 			}
 		}				
 	}	
