@@ -1295,8 +1295,8 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        else if (budy.startsWith(`Besito`)) {
-		if (budy.endsWith(`Besito`)){
+        else if (budy.startsWith(`Besos`)) {
+		if (budy.endsWith(`Besos`)){
         	const none = fs.readFileSync('./src/stickers/Besito.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
