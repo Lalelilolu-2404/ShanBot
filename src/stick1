@@ -10,7 +10,6 @@ const stick1 = (prefix, pushname) => {
 -  Ban
 -  Besito
 -  Buenas noches
--  Bye
 -  Segura?
 -  Cc
 -  Chelitas
@@ -42,6 +41,7 @@ const stick1 = (prefix, pushname) => {
 -  Me dormí
 -  Me prometiste
 -  Me vengo
+-  Me voy
 -  Meyou 
 
 _Ojito escribe tal como esta_
