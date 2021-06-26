@@ -432,8 +432,8 @@ async function starts() {
 		case 'help':
 		case 'menu':
 		const none = fs.readFileSync('./assets/menuimg.jpg');
-		client.sendMessage(from, none, image, {quoted:mek, caption : 'Bro...'})
-		client.sendMessage(from, help(prefix), text)
+		client.sendMessage(from, none, image, {quoted:mek, caption : help(prefix)})
+		/**client.sendMessage(from, help(prefix), text)**/
 		break
                 case 'otak':
 		client.sendMessage(from, otak(prefix, sender), text, {quoted: mek})
@@ -1660,7 +1660,7 @@ if (isOwner){
 		}						
         else if (budy.startsWith(`Sexoo`)) {
 		if (budy.endsWith(`Sexoo`)){
-        	const none = fs.readFileSync('./src/stickers/Sexo.webp');
+        	const none = fs.readFileSync('./src/stickers/Sexoo.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
