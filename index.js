@@ -3,11 +3,6 @@
 * ShanBot no tiene ningun fin de lucro
 * shanduy se reserva todos los derechos de autor
 * © 2021 shanduy, INC.
-
-Cualquier copia que utilize mi ApiKey sera dado de baja
-
-- Que hay de nuevo?
-* Nada
 */
 
 const {
@@ -47,9 +42,7 @@ const speed = require('performance-now')
 /******COMIENZO DE LA ENTRADA JSON******/
 const welkom = JSON.parse(fs.readFileSync('./database/json/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./database/json/nsfw.json'))
-
 const stick = JSON.parse(fs.readFileSync('./database/json/stick.json'))
-
 const samih = JSON.parse(fs.readFileSync('./database/json/simi.json'))
 const user = JSON.parse(fs.readFileSync('./database/json/user.json'))
 const _leveling = JSON.parse(fs.readFileSync('./database/json/leveling.json'))
@@ -1232,7 +1225,6 @@ async function starts() {
 					break
 		
 /*** Stickers***/	
-	
                          case 'stick':
 					/**if (!isGroupAdmins) return reply(mess.only.admin)**/
 					if (!isOwner) return reply(mess.only.ownerB)
@@ -1249,17 +1241,13 @@ async function starts() {
 					} else {
 						/**reply('Digite 1 para activarlo, 0 para desactivarlo')**/
 					}
-			break	
-					
-
-						
+			break						
 /***Stickers..............***/
 default:					
 					
 if (isOwner){				
 	if (isStick == 1) 
-	{			
-					
+	{								
         if (budy.startsWith(`Aa`)) {
 		if (budy.endsWith(`Aa`)){
         	const none = fs.readFileSync('./src/stickers/A2.webp');
@@ -1783,13 +1771,9 @@ if (isOwner){
                   }	
 		}					
 	}			
-}
-					
-					
+}					
 /******Otak and shnatera************************************/					
 				
-	
-					
 		if (budy.includes(`Todo bien`)) {
                   reply(`Si amig@ todo bien 🙄`)
                   }
@@ -1849,8 +1833,6 @@ if (isOwner){
 			}
 		}				
 	}	**/
-			
-			
 					
         if (budy.startsWith(`A`)) {
 		if (budy.endsWith(`A`)){
@@ -1973,12 +1955,10 @@ if (isOwner){
         	const none = fs.readFileSync('./anishan/Yamete kudasai.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }					
-		}					
-					
-		
-					
-					
-					
+		}	
+			
+/***Bananeraudios***/					
+				
         if (budy.startsWith(`Acm1pt`)) {
         	const none = fs.readFileSync('./anishan/Acm1pt.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
@@ -2050,9 +2030,7 @@ if (isOwner){
         	const none = fs.readFileSync('./anishan/Sapee.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
-				
-
-					
+/******/				
 
 	if (budy.startsWith(`Pasen sexo`)) {
         	const none = fs.readFileSync('./mp3/fernan.mp3');
