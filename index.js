@@ -1307,8 +1307,8 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        else if (budy.startsWith(`Buenas noches`)) {
-		if (budy.endsWith(`Buenas noches`)){
+        else if (budy.startsWith(`Buena noche`)) {
+		if (budy.endsWith(`Buena noche`)){
         	const none = fs.readFileSync('./src/stickers/Buenas noches.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
