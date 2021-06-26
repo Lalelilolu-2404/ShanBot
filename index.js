@@ -1232,7 +1232,7 @@ async function starts() {
 						/**reply('❬ ✅ ❭ La funcion Stick esta habilitado')**/
 					} else if (Number(args[0]) === 0) {
 						stick.splice(from, 1)
-						fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
+						fs.writeFileSync('./database/json/stick.json', JSON.stringify(stick))
 						/**reply('❬ ✅ ❭ La funcion Stick esta deshabilitado')**/
 					} else {
 						/**reply('Digite 1 para activarlo, 0 para desactivarlo')**/
