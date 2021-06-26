@@ -1301,12 +1301,6 @@ async function starts() {
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        else if (budy.startsWith(`Bye`)) {
-		if (budy.endsWith(`Bye`)){
-        	const none = fs.readFileSync('./src/stickers/Bye.webp');
-		client.sendMessage(from, none, sticker, {quoted: mek})
-                  }	
-		}
 	else if (budy.includes(`Segura?`)) {
 		if (budy.endsWith(`Segura?`)){
         	const none = fs.readFileSync('./src/stickers/Byebye.webp');
@@ -1334,12 +1328,6 @@ async function starts() {
         else if (budy.startsWith(`Colita`)) {
 		if (budy.endsWith(`Colita`)){
         	const none = fs.readFileSync('./src/stickers/Colita.webp');
-		client.sendMessage(from, none, sticker, {quoted: mek})
-                  }
-		}
-        else if (budy.startsWith(`Colita 🥵`)) {
-		if (budy.endsWith(`Colita 🥵`)){
-        	const none = fs.readFileSync('./src/stickers/Colitaxxx.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
@@ -1505,6 +1493,12 @@ async function starts() {
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
+        else if (budy.startsWith(`Me voy`)) {
+		if (budy.endsWith(`Me voy`)){
+        	const none = fs.readFileSync('./src/stickers/Bye.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }	
+		}
         else if (budy.startsWith(`No antojes`)) {
 		if (budy.endsWith(`No antojes`)){
         	const none = fs.readFileSync('./src/stickers/No antojes.webp');
@@ -1531,7 +1525,7 @@ async function starts() {
 		}							
         else if (budy.startsWith(`Packsito`)) {
 		if (budy.endsWith(`Packsito`)){
-        	const none = fs.readFileSync('./src/stickers/packsito.webp');
+        	const none = fs.readFileSync('./src/stickers/Packsito.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}						
@@ -2082,9 +2076,11 @@ async function starts() {
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
         if (budy.startsWith(`Sexo`)) { 
+		if (budy.endsWith(`Sexo`)){
         	const none = fs.readFileSync('./mp3/sexo.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
+	}
         if (budy.startsWith(`Momento epico`)) {
         	const none = fs.readFileSync('./mp3/sombare1.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
