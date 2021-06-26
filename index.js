@@ -966,6 +966,18 @@ async function starts() {
 						reply('Escribe el comando 1 para activarlo y 0 para desactivarlo Ejemplo: *welcome 1')
 					}
 					break
+					
+					case 'nsfwneko':
+						try {
+							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
+							res = await fetchJson(`https://meme-api.herokuapp.com/gimme/neko`, {method: 'get'})
+							buffer = await getBuffer(res.url)
+							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Pero que wea?'})
+						} catch (e) {
+							console.log(`Error :`, color(e,'red'))
+							reply('❌ *ERROR* ❌')
+						}
+					break
 
                               	case 'nsfw':
 					if (!isGroup) return reply(mess.only.group)
@@ -1009,7 +1021,7 @@ async function starts() {
 		                        client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 			break
 					
-                case 'level':
+            case 'level':
                 if (!isLevelingOn) return reply(mess.levelnoton)
                 if (!isGroup) return reply(mess.only.group)
                 const userLevel = getLevelingLevel(sender)
