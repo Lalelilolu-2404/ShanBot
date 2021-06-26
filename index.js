@@ -310,7 +310,7 @@ async function starts() {
 				only: {
 					group: '[❗] Este comando es solo para grupos!',
 					ownerG: '[❗] Este comando solo puede ser utilizado por un admin del grupo!',
-					ownerB: '[❗] Este comando solo lo usa ShanBot!',
+					ownerB: '[❗] Este comando solo lo usa Lalelilolu :v!',
 					admin: '[❗] Este comando solo puede ser utilizado por administradores del grupo!',
 					Badmin: '[❗] Este comando solo se puede usar cuando el bot se convierte en administrador!',
                                         pegatina: 'Relaja la raja, loading... 👏\n\n*Stickersgif son de 6 segundos ❗*',
@@ -320,7 +320,7 @@ async function starts() {
 					mpa: 'Euu flaco 🥴\n\n*Estoy decargando tu cancion 🔄*\n\nAguarde un momento, por favor\n\nby Lalelilolu',
                                         mpv: 'Calmao pa 😎\n\n*Estoy descargando tu video 🔄*\n\nAguarde un momento, por favor\n\nby Lalelilolu',
 					/**musica: 'Calmao pa estoy bucando tu canción 😎\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube ❗*\n\nby shanduy',**/
-					daftarB: `「NEFASTOOOOO」\n\nPERO PAAAAA!\n\nNo estas registrado en mi base de datos 😳 \n\nComando : ${prefix}daftar Nombre\nEjemplo : ${prefix}daftar Putit@`,
+					daftarB: `「NEFASTOOOOO」\n\nPERO PAAAAA!\nNo estas registrado en mi base de datos 😳 \nComando : ${prefix}daftar Nombre\nEjemplo : ${prefix}daftar Putit@`,
 				}
 			}
     			const apakah = ['Si','No']
@@ -747,7 +747,7 @@ async function starts() {
 					client.sendMessage(mentioned, 'Chao put@ gord@', text)
 					}
 					break
-				case 'exe':
+		case 'exe':
 	              client.updatePresence(from, Presence.composing) 
 	              if (!isOwner) return reply(mess.only.ownerB)
 	               const cmd = body.slice(5)
@@ -757,7 +757,8 @@ async function starts() {
 			       client.sendMessage(from, stdout, text, { quoted: mek })
 		           }
 	           })
-                  break
+                break
+					
                  case 'linkgroup':
 				case 'linkgrup':
 				case 'linkgc':
@@ -768,14 +769,14 @@ async function starts() {
 					linkgc = await client.groupInviteCode (from)
 					yeh = `Aqui esta el link del grupo 🤑\n\nhttps://chat.whatsapp.com/${linkgc}\n\nLink Del Grupo *${groupName}*`
 					client.sendMessage(from, yeh, text, {quoted: mek, detectLinks: false})
-					break
+		break
 					
                 case 'qrcode':
-                buff = await getBuffer(`https://api.qrserver.com/v1/create-qr-code/?data=${body.slice(8)}&size=1080%C3%971080`)
+                	buff = await getBuffer(`https://api.qrserver.com/v1/create-qr-code/?data=${body.slice(8)}&size=1080%C3%971080`)
 				client.sendMessage(from, buff, image, {quoted: mek})
-				break
+		break
 		          		
-			case 'closegc':
+		case 'closegc':
 					client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
@@ -787,7 +788,8 @@ async function starts() {
 					}
 					client.groupSettingChange (from, GroupSettingChange.messageSend, true);
 					reply(close)
-					break
+		break
+					
                 case 'opengc':
                 case 'bukagc':
 					client.updatePresence(from, Presence.composing) 
@@ -800,14 +802,16 @@ async function starts() {
 					}
 					client.groupSettingChange (from, GroupSettingChange.messageSend, false)
 					client.sendMessage(from, open, text, {quoted: mek})
-					break
-				                case 'attp':
+		break
+		
+		case 'attp':
 						if (!isUser) return reply(mess.only.daftarB)
 					        if (args.length < 1) return reply(`¿Dónde está el texto?\n*Ejemplo:* ${prefix}attp Lalelilolu`)
 						reply(mess.only.attp)
 					        attp2 = await getBuffer(`https://api.xteam.xyz/attp?file&text=${body.slice(6)}`)
 						client.sendMessage(from, attp2, MessageType.sticker, {quoted: mek})
-						break
+		break
+					
 				case 's':
 				case 'tucson':
 				case 'cuties':
@@ -900,6 +904,7 @@ async function starts() {
 						fs.unlinkSync(ran)
 					})
 					break
+					
                         case 'tomp3':
                 	client.updatePresence(from, Presence.composing) 
                         if (!isUser) return reply(mess.only.daftarB)
@@ -916,7 +921,8 @@ async function starts() {
 						fs.unlinkSync(ran)
 					})
 					break
-                case 'play':   
+                
+		case 'play':   
 	        if (args.length < 1) return reply('Donde esta el nombre de la canción?')
 		if (!isUser) return reply(mess.only.daftarB)
                 reply(mess.only.musica)
@@ -929,7 +935,8 @@ async function starts() {
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
                 client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
                 break
-                                case 'daftar':
+                               
+				case 'daftar':
 					client.updatePresence(from, Presence.composing)
 					if (isUser) return reply('Ya estas registrado 🧐')
 					if (args.length < 1) return reply(`Incorrecto \nComando : ${prefix}daftar Nombre\nComando : ${prefix}daftar Lalelilolu`)
@@ -938,7 +945,8 @@ async function starts() {
                                                 user.push(sender)
 						fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
 						client.sendMessage(from, `\`\`\`REGISTRADO ✅\`\`\`\n\n\`\`\`Hora EC: ${time}\`\`\`\n\n\`\`\`Fecha: ${date}\`\`\`\n\n\`\`\`[Usuario]: ${nombre}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`Para usar el bot\`\`\`\n\`\`\`Por favor\`\`\`\n\`\`\`enviar ${prefix}help\`\`\`\n\`\`\`\nTotal de usuários ${user.length}\`\`\``, text, {quoted: mek})
-					break
+				break
+					
                                 case 'welcome':
 					if (!isGroup) return reply(mess.only.group)
                                         if (!isUser) return reply(mess.only.daftarB)
@@ -958,18 +966,7 @@ async function starts() {
 						reply('Escribe el comando 1 para activarlo y 0 para desactivarlo Ejemplo: *welcome 1')
 					}
 					break
-                               case 'nsfwneko':
-				    try{
-						if (!isNsfw) return reply('❌ *NSFW NO ESTA ATIVADO* ❌')
-                                                if (!isUser) return reply(mess.only.daftarB)
-						res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwneko?apikey=BotWeA`, {method: 'get'})
-						buffer = await getBuffer(res.result)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'mesum'})
-					} catch (e) {
-						console.log(`Error :`, color(e,'red'))
-						reply('❌ *ERROR* ❌')
-					}
-					break
+
                               	case 'nsfw':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
@@ -1003,13 +1000,15 @@ async function starts() {
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break***/					
-                             case 'delete':
+
+                        case 'delete':
 					case 'del':
 					if (!isGroup)return reply(mess.only.group)
                                         if (!isUser) return reply(mess.only.daftarB)
 		                        client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
-					break
-                 case 'level':
+			break
+					
+                case 'level':
                 if (!isLevelingOn) return reply(mess.levelnoton)
                 if (!isGroup) return reply(mess.only.group)
                 const userLevel = getLevelingLevel(sender)
