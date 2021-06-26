@@ -1309,7 +1309,7 @@ if (isOwner){
 		}
         else if (budy.startsWith(`Buen día`)) {
 		if (budy.endsWith(`Buen día`)){
-        	const none = fs.readFileSync('./src/stickers/Buen día.webp');
+        	const none = fs.readFileSync('./src/stickers/Buen culo.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
@@ -1809,7 +1809,7 @@ if (isOwner){
 			if (budy.endsWith(`Detente`)){
         			client.sendMessage(from, thumb, image, {quoted: mek, caption: 'Loading...'})
 				const none = fs.readFileSync('./anishan/videos/Detente.mp4');
-				client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename: `Detente.mp4`, quoted: mek})
+				client.sendMessage(from, none, video, {mimetype: 'video/mp4', quoted: mek})
 			}
 		}				
 	}	
