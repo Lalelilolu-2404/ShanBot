@@ -1243,7 +1243,7 @@ async function starts() {
 /***Stickers..............***/
 	default:					
 					
-					
+if (isOwner){				
 	if (isStick == 1) 
 	{			
 					
@@ -1276,7 +1276,13 @@ async function starts() {
         	const none = fs.readFileSync('./src/stickers/Así me gusta.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
-		}					
+		}
+        else if (budy.startsWith(`Asustado`)) {
+		if (budy.endsWith(`Asustado`)){
+        	const none = fs.readFileSync('./src/stickers/Asustado.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
         else if (budy.startsWith(`Ay me asusté`)) {
 		if (budy.endsWith(`Ay me asusté`)){
         	const none = fs.readFileSync('./src/stickers/Ay me asusté.webp');
@@ -1298,6 +1304,12 @@ async function starts() {
         else if (budy.startsWith(`Buenas noches`)) {
 		if (budy.endsWith(`Buenas noches`)){
         	const none = fs.readFileSync('./src/stickers/Buenas noches.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
+        else if (budy.startsWith(`Buen día`)) {
+		if (budy.endsWith(`Buen día`)){
+        	const none = fs.readFileSync('./src/stickers/Buen día.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
@@ -1691,8 +1703,8 @@ async function starts() {
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        else if (budy.startsWith(`Vas a llorar`)) {
-		if (budy.endsWith(`Vas a llorar`)){
+        else if (budy.startsWith(`Vas a llorar?`)) {
+		if (budy.endsWith(`Vas a llorar?`)){
         	const none = fs.readFileSync('./src/stickers/Vas a llorar.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
@@ -1734,7 +1746,7 @@ async function starts() {
                   }	
 		}					
 	}			
-	
+]
 					
 					
 /******Otak and shnatera************************************/					
@@ -1796,7 +1808,7 @@ async function starts() {
 			if (budy.endsWith(`Detente`)){
         			client.sendMessage(from, thumb, image, {quoted: mek, caption: 'Loading...'})
 				const none = fs.readFileSync('./anishan/videos/Detente.mp4');
-				client.sendMessage(from, none, MessageType.video, {quoted: mek, mimetype: 'video/mp4', ptt:true})
+				client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename: `Detente.mp4`, quoted: mek})
 			}
 		}				
 	}	
