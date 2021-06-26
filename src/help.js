@@ -2,7 +2,6 @@ const help = (prefix) => {
 	return `
 	
 *⌜《Lalelilolu》\◔,◡◔,/ ت♡⌟*  
-'./assets/menuimg.jpg'
 
 ◉ *INFORMACION*
   ╠ ○ Comando: ⌜ ${prefix} ⌟
