@@ -1832,9 +1832,8 @@ if (isOwner){
 	if (isOwner){
         	if (budy.startsWith(`Detente`)) {
 			if (budy.endsWith(`Detente`)){
-        			client.sendMessage(from, thumb, image, {quoted: mek, caption: 'Loading...'})
 				const none = fs.readFileSync('./anishan/videos/Detente.mp4');
-				client.sendMessage(from, none, MessageType.video, {quoted: mek, mimetype: 'Detente/mp4', ptt : true} )
+				client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename:' ', quoted: mek})
 			}
 		}				
 	}	
