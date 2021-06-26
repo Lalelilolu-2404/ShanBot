@@ -1541,9 +1541,9 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}							
-        else if (budy.startsWith(`Packsito`)) {
-		if (budy.endsWith(`Packsito`)){
-        	const none = fs.readFileSync('./src/stickers/Packsito.webp');
+        else if (budy.startsWith(`Packsito pls`)) {
+		if (budy.endsWith(`Packsito pls`)){
+        	const none = fs.readFileSync('./src/stickers/Packsito pls.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}						
@@ -1633,7 +1633,7 @@ if (isOwner){
 		}						
         else if (budy.startsWith(`Sexoo`)) {
 		if (budy.endsWith(`Sexoo`)){
-        	const none = fs.readFileSync('./src/stickers/Sexo.webp');
+        	const none = fs.readFileSync('./src/stickers/Sexoo.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
