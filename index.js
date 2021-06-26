@@ -984,22 +984,23 @@ async function starts() {
 						reply('Digite 1 para activarlo, 0 para desactivarlo')
 					}
 					break	
-				/***case 'waifu':
+				case 'waifu':
 					gatauda = body.slice(7)
 					reply(mess.wait)
                                         if (!isUser) return reply(mess.only.daftarB)
 					anu = await fetchJson(`https://arugaz.my.id/api/nekonime`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image,{quoted: mek})
-					break***/
-				/***case 'randomanime':
+					break
+					
+				case 'randomanime':
 					gatauda = body.slice(13)
 					reply(mess.wait)
                                         if (!isUser) return reply(mess.only.daftarB)
 					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/randomanime?apikey=BotWeA`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
-					break***/					
+				break					
 
                         case 'delete':
 					case 'del':
