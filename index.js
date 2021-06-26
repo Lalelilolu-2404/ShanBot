@@ -1829,14 +1829,14 @@ if (isOwner){
                   }
 /*** Audios ****/
 		
-	if (isOwner){
+/**	if (isOwner){
         	if (budy.startsWith(`Detente`)) {
 			if (budy.endsWith(`Detente`)){
 				const none = fs.readFileSync('./anishan/videos/Detente.mp4');
 				client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename:' ', quoted: mek})
 			}
 		}				
-	}	
+	}	**/
 			
 			
 					
