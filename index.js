@@ -1242,7 +1242,7 @@ async function starts() {
 
 						
 /***Stickers..............***/
-	default:					
+default:					
 					
 if (isOwner){				
 	if (isStick == 1) 
