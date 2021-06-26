@@ -1457,12 +1457,6 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
-        else if (budy.startsWith(`Me morí`)) {
-		if (budy.endsWith(`Me morí`)){
-        	const none = fs.readFileSync('./src/stickers/Im dead.webp');
-		client.sendMessage(from, none, sticker, {quoted: mek})
-                  }
-		}
         else if (budy.startsWith(`Inflingir`)) {
 		if (budy.endsWith(`Inflingir`)){
         	const none = fs.readFileSync('./src/stickers/Inflingir.webp');
@@ -1496,6 +1490,12 @@ if (isOwner){
         else if (budy.startsWith(`Me dormí`)) {
 		if (budy.endsWith(`Me dormí`)){
         	const none = fs.readFileSync('./src/stickers/Me dormí.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
+        else if (budy.startsWith(`Me morí`)) {
+		if (budy.endsWith(`Me morí`)){
+        	const none = fs.readFileSync('./src/stickers/Im dead.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
