@@ -432,8 +432,22 @@ async function starts() {
 		
 		case 'menu':
 		case 'help':
-		const none = fs.readFileSync('./assets/menuimg.jpeg');
-		client.sendMessage(from, none, image, {quoted:mek, caption : help(prefix, sender)})
+		/**const none = fs.readFileSync('./assets/menuimg.jpeg');**/
+		'message':{
+			'productMessage':{
+				'product':{
+				'productImage':{'mimetype':'image/jpeg','jpegThumbnail':fs[_0x255328(0x2f8)]('./assets/menuimg.jpeg')},
+				'title' XV ',
+				\x20'+_0x56c581,
+				'retailerId':'Self\x20Bot',
+				'productImageCount':0x1
+				},
+				'businessOwnerJid':_0x255328(0x2bc)
+				}
+			}
+		}
+			
+		/**client.sendMessage(from, none, image, {quoted:mek, caption : help(prefix, sender)})**/
 		/**client.sendMessage(from, help(prefix), text)**/
 		break
                 case 'otak':
@@ -641,12 +655,13 @@ async function starts() {
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
-					teks += `  Total : ${groupMembers.length}\n`
+					teks += `  /nTotal : ${groupMembers.length}\n`
+					/**teks += `  Total : ${groupMembers.length}\n`**/
 					for (let mem of groupMembers) {
 						teks += `╠➥ @${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
-					mentions('╔══✪〘 MENCIONANDO 〙✪══\n╠➥'+teks+'╚═〘 by Lalelilolu 〙', members_id, true)
+					mentions('╔══✪〘 JUTSU EDO TENSEI 😎 〙✪══\n╠➥'+teks+'╚═〘 by Lalelilolu 〙', members_id, true)
 					break
                                 case 'send':
 					var pc = body.slice(6)
@@ -1253,9 +1268,21 @@ default:
 if (isOwner){				
 	if (isStick == 1) 
 	{								
-        if (budy.startsWith(`Aa`)) {
+        if (budy.startsWith(`69`)) {
+		if (budy.endsWith(`69`)){
+        	const none = fs.readFileSync('./src/stickers/69.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
+        else if (budy.startsWith(`Aa`)) {
 		if (budy.endsWith(`Aa`)){
         	const none = fs.readFileSync('./src/stickers/A2.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
+        else if (budy.startsWith(`Abrazo`)) {
+		if (budy.endsWith(`Abrazo`)){
+        	const none = fs.readFileSync('./src/stickers/Abrazo.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
@@ -1277,6 +1304,18 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
+        else if (budy.startsWith(`Anna`)) {
+		if (budy.endsWith(`Anna`)){
+        	const none = fs.readFileSync('./src/stickers/Anna.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}	
+        else if (budy.startsWith(`Anni`)) {
+		if (budy.endsWith(`Anni`)){
+        	const none = fs.readFileSync('./src/stickers/Anni.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
         else if (budy.startsWith(`Así me gusta`)) {
 		if (budy.endsWith(`Así me gusta`)){
         	const none = fs.readFileSync('./src/stickers/Así me gusta.webp');
@@ -1286,6 +1325,12 @@ if (isOwner){
         else if (budy.startsWith(`Asustado`)) {
 		if (budy.endsWith(`Asustado`)){
         	const none = fs.readFileSync('./src/stickers/Asustado.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
+        else if (budy.startsWith(`Ay caramba`)) {
+		if (budy.endsWith(`Ay caramba`)){
+        	const none = fs.readFileSync('./src/stickers/Ay caramba.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
@@ -1301,6 +1346,12 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
+        else if (budy.startsWith(`Ban2`)) {
+		if (budy.endsWith(`Ban2`)){
+        	const none = fs.readFileSync('./src/stickers/Ban2.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
         else if (budy.startsWith(`Besos`)) {
 		if (budy.endsWith(`Besos`)){
         	const none = fs.readFileSync('./src/stickers/Besito.webp');
@@ -1310,6 +1361,12 @@ if (isOwner){
         else if (budy.startsWith(`Bien`)) {
 		if (budy.endsWith(`Bien`)){
         	const none = fs.readFileSync('./src/stickers/Bien.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
+        else if (budy.startsWith(`Bragas`)) {
+		if (budy.endsWith(`Bragas`)){
+        	const none = fs.readFileSync('./src/stickers/Bragas.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
@@ -1330,6 +1387,12 @@ if (isOwner){
         	const none = fs.readFileSync('./src/stickers/Byebye.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
+		}
+        else if (budy.startsWith(`Calla put@`)) {
+		if (budy.endsWith(`Calla put@`)){
+        	const none = fs.readFileSync('./src/stickers/Calla put@.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
 		}
         else if (budy.startsWith(`Cc`)) {
 		if (budy.endsWith(`Cc`)){
@@ -1372,7 +1435,13 @@ if (isOwner){
         	const none = fs.readFileSync('./src/stickers/Ctm.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
-		}	
+		}
+        else if (budy.startsWith(`Cunni`)) {
+		if (budy.endsWith(`Cunni`)){
+        	const none = fs.readFileSync('./src/stickers/Cunni.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
         else if (budy.startsWith(`Dame`)) {
 		if (budy.endsWith(`Dame`)){
         	const none = fs.readFileSync('./src/stickers/Dame.webp');
@@ -1382,6 +1451,12 @@ if (isOwner){
         else if (budy.startsWith(`Delito`)) {
 		if (budy.endsWith(`Delito`)){
         	const none = fs.readFileSync('./src/stickers/Delito.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
+        else if (budy.startsWith(`Doncon`)) {
+		if (budy.endsWith(`Doncon`)){
+        	const none = fs.readFileSync('./src/stickers/Doncon.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
@@ -1439,6 +1514,18 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
+        else if (budy.startsWith(`Gansito`)) {
+		if (budy.endsWith(`Gansito`)){
+        	const none = fs.readFileSync('./src/stickers/Gansito.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
+        else if (budy.startsWith(`Gomitas`)) {
+		if (budy.endsWith(`Gomitas`)){
+        	const none = fs.readFileSync('./src/stickers/Gomitas.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
         else if (budy.startsWith(`Hahaha`)) {
 		if (budy.endsWith(`Hahaha`)){
         	const none = fs.readFileSync('./src/stickers/Hahaha.webp');
@@ -1475,9 +1562,39 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
+        else if (budy.startsWith(`La ahorca`)) {
+		if (budy.endsWith(`La ahorca`)){
+        	const none = fs.readFileSync('./src/stickers/La ahorca.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
+        else if (budy.startsWith(`La ata`)) {
+		if (budy.endsWith(`La ata`)){
+        	const none = fs.readFileSync('./src/stickers/La ata.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
+        else if (budy.startsWith(`Las bragitas`)) {
+		if (budy.endsWith(`Las bragitas`)){
+        	const none = fs.readFileSync('./src/stickers/Las bragitas.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
+        else if (budy.startsWith(`Lit`)) {
+		if (budy.endsWith(`Lit`)){
+        	const none = fs.readFileSync('./src/stickers/Lit.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
         else if (budy.startsWith(`Love`)) {
 		if (budy.endsWith(`Love`)){
         	const none = fs.readFileSync('./src/stickers/Love.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
+        else if (budy.startsWith(`Ly`)) {
+		if (budy.endsWith(`Ly`)){
+        	const none = fs.readFileSync('./src/stickers/Ly.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
@@ -1490,6 +1607,12 @@ if (isOwner){
         else if (budy.startsWith(`Me dormí`)) {
 		if (budy.endsWith(`Me dormí`)){
         	const none = fs.readFileSync('./src/stickers/Me dormí.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
+        else if (budy.startsWith(`Me encanta`)) {
+		if (budy.endsWith(`Me encanta`)){
+        	const none = fs.readFileSync('./src/stickers/Me encanta.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
@@ -1529,6 +1652,12 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
+        else if (budy.startsWith(`Nel`)) {
+		if (budy.endsWith(`Nel`)){
+        	const none = fs.readFileSync('./src/stickers/Nel.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
         else if (budy.startsWith(`No antojes`)) {
 		if (budy.endsWith(`No antojes`)){
         	const none = fs.readFileSync('./src/stickers/No antojes.webp');
@@ -1541,6 +1670,12 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
+        else if (budy.startsWith(`No puede ser`)) {
+		if (budy.endsWith(`No puede ser`)){
+        	const none = fs.readFileSync('./src/stickers/No puede ser.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
 	else if (budy.includes(`No sé`)) {
 		if (budy.endsWith(`No sé`)){
         	const none = fs.readFileSync('./src/stickers/No sé.webp');
@@ -1552,6 +1687,12 @@ if (isOwner){
         	const none = fs.readFileSync('./src/stickers/No te excites.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
+		}
+        else if (budy.startsWith(`Ouioui`)) {
+		if (budy.endsWith(`Ouioui`)){
+        	const none = fs.readFileSync('./src/stickers/Ouioui.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
 		}
         else if (budy.startsWith(`Pack`)) {
 		if (budy.endsWith(`Pack`)){
@@ -1583,11 +1724,23 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
+        else if (budy.startsWith(`Pérame`)) {
+		if (budy.endsWith(`Pérame`)){
+        	const none = fs.readFileSync('./src/stickers/Pérame.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
 	else if (budy.includes(`Pero`)) {
 		if (budy.endsWith(`Pero`)){
         	const none = fs.readFileSync('./src/stickers/Pero.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
+		}
+        else if (budy.startsWith(`Preséntate`)) {
+		if (budy.endsWith(`Preséntate`)){
+        	const none = fs.readFileSync('./src/stickers/Preséntate.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
 		}
         else if (budy.startsWith(`Procede`)) {
 		if (budy.endsWith(`Procede`)){
@@ -1610,6 +1763,12 @@ if (isOwner){
         else if (budy.startsWith(`Rico`)) {
 		if (budy.endsWith(`Rico`)){
         	const none = fs.readFileSync('./src/stickers/Rico.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
+        else if (budy.startsWith(`Rip`)) {
+		if (budy.endsWith(`Rip`)){
+        	const none = fs.readFileSync('./src/stickers/Rip.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
@@ -1673,9 +1832,21 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
+        else if (budy.startsWith(`Slap`)) {
+		if (budy.endsWith(`Slap`)){
+        	const none = fs.readFileSync('./src/stickers/Slap.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
         else if (budy.startsWith(`Ta fuerte`)) {
 		if (budy.endsWith(`Ta fuerte`)){
         	const none = fs.readFileSync('./src/stickers/Ta fuerte.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
+        else if (budy.startsWith(`Te me calmas`)) {
+		if (budy.endsWith(`Te me calmas`)){
+        	const none = fs.readFileSync('./src/stickers/Te me calmas.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
@@ -1703,6 +1874,12 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
+        else if (budy.startsWith(`Tuyyo`)) {
+		if (budy.endsWith(`Tuyyo`)){
+        	const none = fs.readFileSync('./src/stickers/Tuyyo.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
 	else if (budy.startsWith(`Ufff`)) {
 		if (budy.endsWith(`Ufff`)){
         	const none = fs.readFileSync('./src/stickers/Uff.webp');
@@ -1714,7 +1891,13 @@ if (isOwner){
         	const none = fs.readFileSync('./src/stickers/Uhm.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
-		}							
+		}	
+        else if (budy.startsWith(`Umm`)) {
+		if (budy.endsWith(`Umm`)){
+        	const none = fs.readFileSync('./src/stickers/Umm.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
         else if (budy.startsWith(`Uwu`)) {
 		if (budy.endsWith(`Uwu`)){
         	const none = fs.readFileSync('./src/stickers/Uwu.webp');
@@ -1762,7 +1945,38 @@ if (isOwner){
         	const none = fs.readFileSync('./src/stickers/Ya sabes.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
-		}					
+		}
+        else if (budy.startsWith(`Y mis nudes`)) {
+		if (budy.endsWith(`Y mis nudes`)){
+        	const none = fs.readFileSync('./src/stickers/Y mis nudes.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
+        else if (budy.startsWith(`Ya antojaron`)) {
+		if (budy.endsWith(`Ya antojaron`)){
+        	const none = fs.readFileSync('./src/stickers/Ya antojaron.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
+        else if (budy.startsWith(`Ya se durmieron`)) {
+		if (budy.endsWith(`Ya se durmieron`)){
+        	const none = fs.readFileSync('./src/stickers/Ya se durmieron.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
+        else if (budy.startsWith(`Yop`)) {
+		if (budy.endsWith(`Yop`)){
+        	const none = fs.readFileSync('./src/stickers/Yop.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
+        else if (budy.startsWith(`Youme`)) {
+		if (budy.endsWith(`Youme`)){
+        	const none = fs.readFileSync('./src/stickers/Youme.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
+		
 	}			
 }					
 /******Otak and shnatera************************************/					
@@ -1823,7 +2037,7 @@ if (isOwner){
         	if (budy.startsWith(`Detente`)) {
 			if (budy.endsWith(`Detente`)){
 				const none = fs.readFileSync('./anishan/videos/Detente.mp4');
-				client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename:' ', quoted: mek})
+				client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename:'Detente perro !!! ... FBI 😎', quoted: mek})
 			}
 		}				
 	}	
