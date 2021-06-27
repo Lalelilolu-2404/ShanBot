@@ -429,9 +429,10 @@ async function starts() {
 
 			}
 			switch(command) {
-		case 'help':
+		
 		case 'menu':
-		const none = fs.readFileSync('./assets/menuimg.jpg');
+		case 'help':
+		const none = fs.readFileSync('./assets/menuimg.jpeg');
 		client.sendMessage(from, none, image, {quoted:mek, caption : help(prefix)})
 		/**client.sendMessage(from, help(prefix), text)**/
 		break
