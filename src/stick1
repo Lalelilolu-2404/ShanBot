@@ -1,52 +1,27 @@
 const stick1 = (prefix, pushname) => {
     return `*Stickers :v*
 
--  Aa
--  Ah ok
--  Ahh :'c
--  Amistad
--  Así me gusta
--  Asustado
--  Ay me asusté
--  Ban
--  Besos
--  Bien
--  Buena noche
--  Buen día
--  Segura?
--  Cc
--  Chelitas
--  Chongo
--  Colita
--  Contesta
--  Contra el muro
--  Ctm
--  Dame
--  Delito
--  En fin
--  Encuerate
--  Eres bonita
--  F el grupo
--  F en el chat
--  Facha
--  Fallesí
--  FBI
--  Flap
--  Hahaha
--  Helado?
--  Hentai
--  Inflingir
--  Jiji
--  Kuaker
--  Llegó papi
--  Love
--  Me dormí
--  Me morí
--  Me prometiste
--  Me vengo
--  Me voy
--  Meyou 
--  Muy bien
+- 69	            - Dame
+- Aa	            - Delito
+- Ah ok	            - En fin
+- Ahh :'c	        - Encuerate
+- Amistad	        - Eres bonita
+- Así me gusta	    - F el grupo
+- Asustado	        - F en el chat
+- Ay me asusté	    - Facha
+- Ban	            - Fallesí
+- Besos	            - FBI
+- Bien	            - Flap
+- Buen día	        - Hahaha
+- Buena noche	    - Helado?
+- Cc	            - Hentai
+- Chelitas	        - Inflingir
+- Chongo	        - Jiji
+- Colita	        - Kuaker
+- Contesta	        - Llegó papi
+- Contra el muro	- Love
+- Ctm	            - Me dormí
+
 
 _Ojito escribe tal como esta_
 by Lalelilolu`
