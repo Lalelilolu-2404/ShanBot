@@ -43,6 +43,7 @@ const speed = require('performance-now')
 const welkom = JSON.parse(fs.readFileSync('./database/json/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./database/json/nsfw.json'))
 const stick = JSON.parse(fs.readFileSync('./database/json/stick.json'))
+const packsito = JSON.parse(fs.readFileSync('./database/json/packsito.json'))
 const samih = JSON.parse(fs.readFileSync('./database/json/simi.json'))
 const user = JSON.parse(fs.readFileSync('./database/json/user.json'))
 const _leveling = JSON.parse(fs.readFileSync('./database/json/leveling.json'))
@@ -336,6 +337,7 @@ async function starts() {
 			const isNsfw = isGroup ? nsfw.includes(from) : false
 			
 			const isStick = isGroup ? stick.includes(from) : false
+			const isPacksito = isGroup ? packsito.includes(from) : false
 			
 			const isSimi = isGroup ? samih.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
@@ -433,9 +435,9 @@ async function starts() {
 		
 		case 'menu':
 		case 'help':
-		const none = fs.readFileSync('./assets/menuimg.jpeg');			
-		client.sendMessage(from, none, image, {quoted:mek, caption : help(prefix, sender)})
-		/**client.sendMessage(from, help(prefix), text)**/
+			const none = fs.readFileSync('./assets/menuimg.jpeg');			
+			client.sendMessage(from, none, image, {quoted:mek, caption : help(prefix, sender)})
+			/**client.sendMessage(from, help(prefix), text)**/
 		break
                 case 'otak':
 		client.sendMessage(from, otak(prefix, sender), text, {quoted: mek})
@@ -646,7 +648,7 @@ async function starts() {
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
-					teks += `  '\n Total : ${groupMembers.length}\n`
+					teks += `  \n╠➥Total : ${groupMembers.length}\n`
 					/**teks += `  Total : ${groupMembers.length}\n`**/
 					for (let mem of groupMembers) {
 						teks += `╠➥ @${mem.jid.split('@')[0]}\n`
@@ -1253,7 +1255,27 @@ async function starts() {
 					} else {
 						/**reply('Digite 1 para activarlo, 0 para desactivarlo')**/
 					}
-			break						
+			break	
+					
+                         case 'packsito':
+					/**if (!isGroupAdmins) return reply(mess.only.admin)**/
+					if (!isOwner) return reply(mess.only.ownerB)
+					if (args.length < 1) return reply('Digita 1 para activar los PACKSITOS')
+					if (Number(args[0]) === 1) {
+						if (isPacksito) return reply('Activado ✅')
+						packsito.push(from)
+						fs.writeFileSync('./database/json/packsito.json', JSON.stringify(packsito))
+						/**reply('❬ ✅ ❭ La funcion Packsito esta habilitado')**/
+					} else if (Number(args[0]) === 0) {
+						packsito.splice(from, 1)
+						fs.writeFileSync('./database/json/packsito.json', JSON.stringify(packsito))
+						/**reply('❬ ✅ ❭ La funcion Packsito esta deshabilitado')**/
+					} else {
+						/**reply('Digite 1 para activarlo, 0 para desactivarlo')**/
+					}
+			break	
+					
+					
 /***Stickers..............***/
 default:					
 					
@@ -2012,8 +2034,35 @@ if (isOwner){
      		if (budy.startsWith(`Ola`)) {
 			if (budy.endsWith(`Ola`)){
         		reply(`Hola putit@ 🤭`)}
+		  }	
+      		if (budy.startsWith(`Hola botsito`)) {
+			if (budy.endsWith(`Hola botsito`)){
+        		reply(`Hola putit@ 🤭`)}
 		  }					
+     		if (budy.startsWith(`Ola botsito`)) {
+			if (budy.endsWith(`Ola botsito`)){
+        		reply(`Hola putit@ 🤭`)}
+		  }
+      		if (budy.startsWith(`Hola grupo`)) {
+			if (budy.endsWith(`Hola grupo`)){
+        		reply(`Hola putit@ 🤭`)}
+		  }					
+     		if (budy.startsWith(`Ola grupo`)) {
+			if (budy.endsWith(`Ola grupo`)){
+        		reply(`Hola putit@ 🤭`)}
+		  }	
+      		if (budy.startsWith(`Holii`)) {
+			if (budy.endsWith(`Holii`)){
+        		reply(`Hola putit@ 🤭`)}
+		  }					
+     		if (budy.startsWith(`Holli`)) {
+			if (budy.endsWith(`Holi`)){
+        		reply(`Hola putit@ 🤭`)}
+		  }	
                 if (budy.includes(`Put@`)) {
+                  reply(`Relaja la raja nena 😎`)
+                  }
+                if (budy.includes(`Puta`)) {
                   reply(`Relaja la raja nena 😎`)
                   }
                 if (budy.includes(`Putit@`)) {
@@ -2035,13 +2084,13 @@ if (isOwner){
 if (isStick == 1) {
 	if (isOwner){
         	if (budy.startsWith(`Detente perro`)) {
-			if (budy.endsWith(`Detente`)){
+			if (budy.endsWith(`Detente perro`)){
 				const none = fs.readFileSync('./anishan/videos/Detente.mp4');
 				/**client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename:'', caption : 'Detente perro !!! ... FBI 😎'})
 				client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', filename: `${anu.title}.mp4`, quoted: mek})**/
 		
 			
-		  		client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename : `Detente perro !!! ... FBI 😎.mp4`, quoted: mek})
+		  		client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename : `Detente perro !!! ... FBI 😎.mp4`, quoted: mek}, caption : 'Detente perro !!! ... FBI 😎')
 			}
 		}				
 	}	
@@ -2051,7 +2100,7 @@ if (isStick == 1) {
 			if (budy.endsWith(`Ultra pack`)){
 				const none = fs.readFileSync('./anishan/videos/Ultrapack.mp4');
 				/**client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename:'', caption : 'Megapack 🥵'})**/
-				client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename : `Ultrapack.mp4`, quoted: mek})
+				client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename : `Ultrapack.mp4`, quoted: mek}, caption : 'Uhm rico')
 			}
 		}				
 	}
