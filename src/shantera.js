@@ -37,7 +37,6 @@ const shantera = (prefix, pushname) => {
 - Boliviano
 
 _Ojito escribe tal y como esta en el mensaje_
-
 by Lalelilolu`
 
 }
