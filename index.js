@@ -2035,7 +2035,11 @@ if (isOwner){
         	if (budy.startsWith(`Detente perro`)) {
 			if (budy.endsWith(`Detente`)){
 				const none = fs.readFileSync('./anishan/videos/Detente.mp4');
-				client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename:'', caption : 'Detente perro !!! ... FBI 😎'})
+				/**client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename:'', caption : 'Detente perro !!! ... FBI 😎'})
+				client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', filename: `${anu.title}.mp4`, quoted: mek})**/
+		
+			
+		  		client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename : `Detente perro !!! ... FBI 😎`, quoted: mek})
 			}
 		}				
 	}	
@@ -2044,7 +2048,8 @@ if (isOwner){
         	if (budy.startsWith(`Ultra pack`)) {
 			if (budy.endsWith(`Ultra pack`)){
 				const none = fs.readFileSync('./anishan/videos/Ultrapack.mp4');
-				client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename:'', caption : 'Megapack 🥵'})
+				/**client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename:'', caption : 'Megapack 🥵'})**/
+				client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename : `Megapack`, quoted: mek})
 			}
 		}				
 	}
