@@ -433,10 +433,8 @@ async function starts() {
 		
 		case 'menu':
 		case 'help':
-		/**const none = fs.readFileSync('./assets/menuimg.jpeg');**/
-					/**'productMessage'('mimetype':'image/jpeg','jpegThumbnail':fs[_0x255328(0x2f8)]('./assets/menuimg.jpeg')**/
-		client.sendMessage(from,'./assets/menuimg.jpeg', image,{caption : help(prefix, sender)})			
-		/**client.sendMessage(from, none, image, {quoted:mek, caption : help(prefix, sender)})**/
+		const none = fs.readFileSync('./assets/menuimg.jpeg');			
+		client.sendMessage(from, none, image, {quoted:mek, caption : help(prefix, sender)})
 		/**client.sendMessage(from, help(prefix), text)**/
 		break
                 case 'otak':
@@ -1636,6 +1634,12 @@ if (isOwner){
         else if (budy.startsWith(`Me voy`)) {
 		if (budy.endsWith(`Me voy`)){
         	const none = fs.readFileSync('./src/stickers/Bye.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }	
+		}
+        else if (budy.startsWith(`Mimitos`)) {
+		if (budy.endsWith(`Mimitos`)){
+        	const none = fs.readFileSync('./src/stickers/Mimitos.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
