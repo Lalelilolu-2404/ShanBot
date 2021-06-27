@@ -434,9 +434,9 @@ async function starts() {
 		case 'menu':
 		case 'help':
 		/**const none = fs.readFileSync('./assets/menuimg.jpeg');**/
-		'message':{
-			'productMessage':{
-				'product':{
+		client.sendMessage{
+			'productMessage'{
+				'product'{
 				'productImage':{'mimetype':'image/jpeg','jpegThumbnail':fs[_0x255328(0x2f8)]('./assets/menuimg.jpeg')},
 				'title' XV ',
 				\x20'+_0x56c581,
