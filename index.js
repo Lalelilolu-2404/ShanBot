@@ -1000,6 +1000,7 @@ async function starts() {
 						reply('Digite 1 para activarlo, 0 para desactivarlo')
 					}
 					break	
+					
 				case 'waifu':
 					gatauda = body.slice(7)
 					reply(mess.wait)
@@ -1339,7 +1340,7 @@ if (isOwner){
 		}
         else if (budy.startsWith(`Banned`)) {
 		if (budy.endsWith(`Banned`)){
-        	const none = fs.readFileSync('./src/stickers/Ban2.webp');
+        	const none = fs.readFileSync('./src/stickers/Banned.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
@@ -2040,7 +2041,7 @@ if (isStick == 1) {
 				client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', filename: `${anu.title}.mp4`, quoted: mek})**/
 		
 			
-		  		client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename : 'Detente perro !!! ... FBI 😎', quoted: mek})
+		  		client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename : `Detente perro !!! ... FBI 😎.mp4`, quoted: mek})
 			}
 		}				
 	}	
@@ -2050,7 +2051,7 @@ if (isStick == 1) {
 			if (budy.endsWith(`Ultra pack`)){
 				const none = fs.readFileSync('./anishan/videos/Ultrapack.mp4');
 				/**client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename:'', caption : 'Megapack 🥵'})**/
-				client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename : 'Megapack', quoted: mek})
+				client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename : `Ultrapack.mp4`, quoted: mek})
 			}
 		}				
 	}
