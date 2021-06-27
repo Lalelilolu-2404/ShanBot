@@ -1,26 +1,26 @@
 const stick1 = (prefix, pushname) => {
     return `*Stickers :v*
 
-- 69                - Cc
-- Aa                - Chelitas
-- Abrazo            - Chongo
-- Ah ok             - Colita
-- Ahh :'c           - Contesta
-- Amistad           - Contra el muro
-- Anna              - Ctm
-- Anni              - Cunni
-- Así me gusta      - Dame
-- Asustado          - Delito
-- Ay caramba        - Doncon
-- Ay me asusté      - En fin
-- Ban               - Encuerate
-- Banned            - Eres bonita
-- Besos             - F el grupo
-- Bien              - F en el chat
-- Bragas            - Facha
-- Buen día          - Fallesí
-- Buena noche       - FBI
-- Cállate           - Flap
+- 69             - Cc
+- Aa             - Chelitas
+- Abrazo         - Chongo
+- Ah ok          - Colita
+- Ahh :'c        - Contesta
+- Amistad        - Contra el muro
+- Anna           - Ctm
+- Anni           - Cunni
+- Así me gusta   - Dame
+- Asustado       - Delito
+- Ay caramba     - Doncon
+- Ay me asusté   - En fin
+- Ban            - Encuerate
+- Banned         - Eres bonita
+- Besos          - F el grupo
+- Bien           - F en el chat
+- Bragas         - Facha
+- Buen día       - Fallesí
+- Buena noche    - FBI
+- Cállate        - Flap
 
 _Ojito escribe tal como esta_
 by Lalelilolu`
