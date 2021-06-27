@@ -313,7 +313,7 @@ async function starts() {
 					mpa: 'Euu flaco 🥴\n\n*Estoy decargando tu cancion 🔄*\n\nAguarde un momento, por favor\n\nby Lalelilolu',
                                         mpv: 'Calmao pa 😎\n\n*Estoy descargando tu video 🔄*\n\nAguarde un momento, por favor\n\nby Lalelilolu',
 					/**musica: 'Calmao pa estoy bucando tu canción 😎\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube ❗*\n\nby shanduy',**/
-					daftarB: `「NEFASTOOOOO」\n\nPERO PAAAAA!\nNo estas registrado en mi base de datos 😳 \nComando : ${prefix}daftar Nombre\nEjemplo : ${prefix}daftar Putit@`,
+					daftarB: `「PERO PAAA!!!」\n\nNo estas registrado en mi base de datos 😳 \nComando : ${prefix}daftar Nombre\nEjemplo : ${prefix}daftar Putit@`,
 				}
 			}
     			const apakah = ['Si','No']
@@ -433,7 +433,7 @@ async function starts() {
 		case 'menu':
 		case 'help':
 		const none = fs.readFileSync('./assets/menuimg.jpeg');
-		client.sendMessage(from, none, image, {quoted:mek, caption : help(prefix)})
+		client.sendMessage(from, none, image, {quoted:mek, caption : help(prefix, sender)})
 		/**client.sendMessage(from, help(prefix), text)**/
 		break
                 case 'otak':
@@ -594,7 +594,8 @@ async function starts() {
                                  case 'tts':
 				   client.updatePresence(from, Presence.recording) 
 				   if (args.length < 1) return client.sendMessage(from, 'Cual es el código de idioma?\n\nPara saber el codigo de idioma coloque el comando ${prefix}idioma', text, {quoted: mek})
-                                   if (!isUser) return reply(mess.only.daftarB)
+                                   /**if (!isUser) return reply(mess.only.daftarB)**/
+				   if (!isGroup) return reply(mess.only.group)
 					const gtts = require('./lib/gtts')(args[0])
 					if (args.length < 2) return client.sendMessage(from, 'Y el texto?', text, {quoted: mek})
 					dtt = body.slice(8)
@@ -816,7 +817,8 @@ async function starts() {
 				case 'sticker':
 				case 'stickergif':
 				case 'stikergif':
-			        if (!isUser) return reply(mess.only.daftarB)
+			        /**if (!isUser) return reply(mess.only.daftarB)**/
+				if (!isGroup) return reply(mess.only.group)
 				if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						const media = await client.downloadAndSaveMediaMessage(encmedia)
@@ -1353,12 +1355,6 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        else if (budy.startsWith(`Colita 🥵`)) {
-		if (budy.endsWith(`Colita 🥵`)){
-        	const none = fs.readFileSync('./src/stickers/Colitaxxx.webp');
-		client.sendMessage(from, none, sticker, {quoted: mek})
-                  }
-		}
         else if (budy.startsWith(`Contesta`)) {
 		if (budy.endsWith(`Contesta`)){
         	const none = fs.readFileSync('./src/stickers/Contesta.webp');
@@ -1659,12 +1655,6 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}						
-        else if (budy.startsWith(`Sexoo`)) {
-		if (budy.endsWith(`Sexoo`)){
-        	const none = fs.readFileSync('./src/stickers/Sexoo.webp');
-		client.sendMessage(from, none, sticker, {quoted: mek})
-                  }
-		}
         else if (budy.startsWith(`Shh`)) {
 		if (budy.endsWith(`Shh`)){
         	const none = fs.readFileSync('./src/stickers/Shh.webp');
