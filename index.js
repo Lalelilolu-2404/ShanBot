@@ -1363,16 +1363,29 @@ break
 				
 					case 'dolf':
 						try {
-							if (!isPacksito) return reply('❌ *NSFW Desactivado* ❌')
-							
-					 random2 = `${Math.floor(Math.random() * 8)}`		
-					
+							if (!isPacksito) return reply('❌ Dolf Desactivado* ❌')
+							random2 = `${Math.floor(Math.random() * 9)}`
+							const none = fs.readFileSync('./src//69.webp');
 							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'A?'})
 						} catch (e) {
 							console.log(`Error :`, color(e,'red'))
 							reply('❌ *ERROR* ❌')
 						}
-					break			
+					break	
+					
+					
+					case 'nsfwfeets':
+						try {
+							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
+							res = await fetchJson(`https://meme-api.herokuapp.com/gimme/animefeets`, {method: 'get'})
+							buffer = await getBuffer(res.url)
+							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'MMMMM PATAS'})
+						} catch (e) {
+							console.log(`Error :`, color(e,'red'))
+							reply('❌ *ERROR* ❌') 
+						}
+						break	
+				
 					
 /***Stickers..............***/
 default:
