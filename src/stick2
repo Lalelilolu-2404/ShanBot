@@ -1,26 +1,26 @@
 const stick2 = (prefix, pushname) => {
     return `*Stickers :3*
 
-- Gansito           - Me voy
-- Gomitas           - Meyou
-- Hahaha            - Muy bien
-- Helado?           - Nel
-- Hentai            - No antojes
-- Inflingir         - No me interesa
-- Jiji              - No puede ser
-- Kuaker            - No sé
-- La ahorca         - No te excites
-- La ata            - Ouioui
-- Las bragitas      - Pack
-- Lit               - Paja
-- Llegó papi        - Pansito?
-- Love              - Pantsu
-- Ly                - Pérame
-- Me dormí          - Pero
-- Me encanta        - Preséntate
-- Me morí           - Procede
-- Me prometiste     - Purga
-- Me vengo          - Que weba
+- Gansito        - Me voy
+- Gomitas        - Meyou
+- Hahaha         - Muy bien
+- Helado?        - Nel
+- Hentai         - No antojes
+- Inflingir      - No me interesa
+- Jiji           - No puede ser
+- Kuaker         - No sé
+- La ahorca      - No te excites
+- La ata         - Ouioui
+- Las bragitas   - Pack
+- Lit            - Paja
+- Llegó papi     - Pansito?
+- Love           - Pantsu
+- Ly             - Pérame
+- Me dormí       - Pero
+- Me encanta     - Preséntate
+- Me morí        - Procede
+- Me prometiste  - Purga
+- Me vengo       - Que weba
 - Mimitos
 
 _Ojito escribe tal como esta_
