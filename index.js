@@ -63,6 +63,7 @@ const { otak } = require('./src/otak')
 const { bana } = require('./src/bana')
 const { stick1 } = require('./src/stick1')
 const { stick2 } = require('./src/stick2')
+const { stick3 } = require('./src/stick3')
 /*const { mediamenu } = require('./database/menu/mediamenu')
 const { educationmenu } = require('./database/menu/educationmenu')
 const { downloadermenu } = require('./database/menu/downloadermenu')
@@ -464,6 +465,10 @@ async function starts() {
 		if (isOwner)
 		client.sendMessage(from, stick2(prefix, sender), text, {quoted: mek})
 		break
+		case 'stick3':
+		if (isOwner)
+		client.sendMessage(from, stick3(prefix, sender), text, {quoted: mek})
+		break	
 		case 'idioma':
 		client.sendMessage(from, bahasa(prefix, sender), text, {quoted: mek})
 		break
