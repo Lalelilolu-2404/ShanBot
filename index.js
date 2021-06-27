@@ -2212,9 +2212,7 @@ if (isStick == 1) {
 				const none = fs.readFileSync('./anishan/videos/Detente.mp4');
 				/**client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename:'', caption : 'Detente perro !!! ... FBI 😎'})
 				client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', filename: `${anu.title}.mp4`, quoted: mek})**/
-		
-			
-		  		client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename : `Detente perro !!! ... FBI 😎.mp4`, quoted: mek}, caption : 'Detente perro !!! ... FBI 😎')
+		  		client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename : `Detente perro !!! ... FBI 😎.mp4`, quoted: mek})
 			}
 		}				
 	}	
@@ -2224,7 +2222,7 @@ if (isStick == 1) {
 			if (budy.endsWith(`Ultra pack`)){
 				const none = fs.readFileSync('./anishan/videos/Ultrapack.mp4');
 				/**client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename:'', caption : 'Megapack 🥵'})**/
-				client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename : `Ultrapack.mp4`, quoted: mek}, caption : 'Uhm rico')
+				client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename : `Ultrapack.mp4`, quoted: mek})
 			}
 		}				
 	}
