@@ -1365,8 +1365,9 @@ break
 						try {
 							if (!isPacksito) return reply('❌ Dolf Desactivado* ❌')
 							random2 = `${Math.floor(Math.random() * 9)}`
-							const none = fs.readFileSync('./src//69.webp');
-							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'A?'})
+							reply(random2)
+							const none = fs.readFileSync('./src/dolf/Image${random2}.jpeg');
+							client.sendMessage(from, none, image, {quoted: mek, caption: 'UHM ZIII?'})
 						} catch (e) {
 							console.log(`Error :`, color(e,'red'))
 							reply('❌ *ERROR* ❌')
