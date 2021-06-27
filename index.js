@@ -1339,8 +1339,8 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-        else if (budy.startsWith(`Ban2`)) {
-		if (budy.endsWith(`Ban2`)){
+        else if (budy.startsWith(`Banned`)) {
+		if (budy.endsWith(`Banned`)){
         	const none = fs.readFileSync('./src/stickers/Ban2.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
@@ -1381,8 +1381,8 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
-        else if (budy.startsWith(`Calla put@`)) {
-		if (budy.endsWith(`Calla put@`)){
+        else if (budy.startsWith(`Cállate`)) {
+		if (budy.endsWith(`Cállate`)){
         	const none = fs.readFileSync('./src/stickers/Calla put@.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
@@ -1960,7 +1960,8 @@ if (isOwner){
         else if (budy.startsWith(`Yop`)) {
 		if (budy.endsWith(`Yop`)){
         	const none = fs.readFileSync('./src/stickers/Yop.webp');
-		client.sendMessage(from, none, sticker, {quoted: mek})
+		client.sendMessage(from, none, sticker)	
+		/**client.sendMessage(from, none, sticker, {quoted: mek})**/
                   }
 		}
         else if (budy.startsWith(`Youme`)) {
@@ -2027,13 +2028,22 @@ if (isOwner){
 /*** Audios ****/
 		
 	if (isOwner){
-        	if (budy.startsWith(`Detente`)) {
+        	if (budy.startsWith(`Detente perro`)) {
 			if (budy.endsWith(`Detente`)){
 				const none = fs.readFileSync('./anishan/videos/Detente.mp4');
-				client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename:'Detente perro !!! ... FBI 😎', quoted: mek})
+				client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename:'', {quoted: mek, caption : 'Detente perro !!! ... FBI 😎'}})
 			}
 		}				
 	}	
+
+	if (isOwner){
+        	if (budy.startsWith(`Ultra pack`)) {
+			if (budy.endsWith(`Ultra pack`)){
+				const none = fs.readFileSync('./anishan/videos/Ultrapack.mp4');
+				client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename:'', {quoted: mek, caption : 'Megapack 🥵'}})
+			}
+		}				
+	}
 					
         if (budy.startsWith(`A`)) {
 		if (budy.endsWith(`A`)){
