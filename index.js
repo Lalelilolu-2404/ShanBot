@@ -65,6 +65,7 @@ const { bana } = require('./src/bana')
 const { stick1 } = require('./src/stick1')
 const { stick2 } = require('./src/stick2')
 const { stick3 } = require('./src/stick3')
+const { packsito } = require('./src/packsito')
 /*const { mediamenu } = require('./database/menu/mediamenu')
 const { educationmenu } = require('./database/menu/educationmenu')
 const { downloadermenu } = require('./database/menu/downloadermenu')
@@ -1312,6 +1313,12 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
+	else if (budy.startsWith(`A mira nomás`)) {
+		if (budy.endsWith(`A mira nomás`)){
+        	const none = fs.readFileSync('./src/stickers/A mira nomás.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}		
         else if (budy.startsWith(`Amistad`)) {
 		if (budy.endsWith(`Amistad`)){
         	const none = fs.readFileSync('./src/stickers/Amistad.webp');
@@ -1471,6 +1478,12 @@ if (isOwner){
         else if (budy.startsWith(`Doncon`)) {
 		if (budy.endsWith(`Doncon`)){
         	const none = fs.readFileSync('./src/stickers/Doncon.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
+	else if (budy.startsWith(`Duren`)) {
+		if (budy.endsWith(`Duren`)){
+        	const none = fs.readFileSync('./src/stickers/Duren.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
