@@ -956,7 +956,7 @@ break
 					contextInfo: { mentionedJid: [nomor] }
 					}
 					client.groupSettingChange (from, GroupSettingChange.messageSend, true);
-					reply(close)
+					/**reply(close)**/
 		break
 					
                 case 'opengc':
@@ -970,7 +970,26 @@ break
 					contextInfo: { mentionedJid: [sender] }
 					}
 					client.groupSettingChange (from, GroupSettingChange.messageSend, false)
-					client.sendMessage(from, open, text, {quoted: mek})
+					/**client.sendMessage(from, open, text, {quoted: mek})**/
+		break
+					
+		case 'pesoff':
+					client.updatePresence(from, Presence.composing) 
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+					var nomor = mek.participant
+					client.groupSettingChange (from, GroupSettingChange.messageShort, true);
+					/**reply(close)**/
+		break
+					
+                case 'peson':
+					client.updatePresence(from, Presence.composing) 
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+					client.groupSettingChange (from, GroupSettingChange.messageShort, false)
+					/**client.sendMessage(from, open, text, {quoted: mek})**/
 		break
 		
 		case 'attp':
