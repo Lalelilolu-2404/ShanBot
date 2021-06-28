@@ -530,7 +530,7 @@ async function starts() {
 
 case 'gay':
 if (!isUser) return reply(mess.only.daftarB)
-rate = body.slice(10)
+rate = body.slice(9)
 client.updatePresence(from, Presence.composing) 
 random = `${Math.floor(Math.random() * 100)}`
 gay = random
@@ -550,7 +550,7 @@ break
 
 case 'cuties':
 if (!isUser) return reply(mess.only.daftarB)
-rate = body.slice(10).trim()
+rate = body.slice(9)
 client.updatePresence(from, Presence.composing) 
 random = `${Math.floor(Math.random() * 100)}`
 cuties = random
@@ -1355,25 +1355,13 @@ break
 				
 					case 'dolf':
 						if (!isPacksito) return reply('❌ Dolf Desactivado* ❌')
-							random2 = `${Math.floor(Math.random() * 20)}`
-							Texte = `Image${random2}`
+							random2 = `${Math.floor(Math.random() * 8)+1}`
+							/**Texte = `Image${random2}`**/
 							reply(Texte)
 							const none2 = fs.readFileSync(`./src/dolf/${Texte}.jpeg`);
 							client.sendMessage(from, none2, image, {quoted: mek, caption: 'UFFF ZIII?'})
 					break	
-					
-					
-					case 'nsfwfeets':
-						try {
-							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
-							res = await fetchJson(`https://meme-api.herokuapp.com/gimme/animefeets`, {method: 'get'})
-							buffer = await getBuffer(res.url)
-							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'MMMMM PATAS'})
-						} catch (e) {
-							console.log(`Error :`, color(e,'red'))
-							reply('❌ *ERROR* ❌') 
-						}
-						break	
+				
 				
 					
 /***Stickers..............***/
