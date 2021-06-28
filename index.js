@@ -436,9 +436,14 @@ async function starts() {
 		
 		case 'menu':
 		case 'help':
-			const none = fs.readFileSync('./assets/menuimg.jpeg');			
+			/**const none = fs.readFileSync('./assets/menuimg.jpeg');			
 			client.sendMessage(from, none, image, {quoted:mek, caption : help(prefix, sender)})
-			/**client.sendMessage(from, help(prefix), text)**/
+			/**client.sendMessage(from, help(prefix), text)**/**/
+					
+			wew = fs.readFileSync(`./src/menuimg.jpeg`)
+			zain = help(prefix, sender)
+			ShanBot.sendMessage(from, wew, image, {quoted: {key:{fromMe: false, participant: `0@s.whatsapp.net`, ...(from? {remoteJid: "status@broadcast"} : {})}, message: {"imageMessage":{"url": https://mmg.whatsapp.net/d/f/At0x7Zdlvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",  "mimetype": "image/jpeg","caption":"Lalelilolu*","fileSha256":"+la+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=","fileLenght":"28777","height":1080,"width":1079,"mediaKey":"vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=","fileEncSha256":"sR9D2RS5JSifw49HeBADgul23fWDz1aZu4faWG/CyRY=","directPath":"/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69","mediaKeyTimestamp":"1610993486","jpegThumbnail":fs.readFileSync('src/menuimg.jpeg')}}},caption: zain, pushname, prefix, getLevelingXp, getLevelingLevel, sender, role})
+								
 		break
                 case 'otak':
 		client.sendMessage(from, otak(prefix, sender), text, {quoted: mek})
@@ -531,7 +536,7 @@ async function starts() {
 case 'gay':
                 client.updatePresence(from, Presence.composing) 
                 if (!isUser) return reply(mess.only.daftarB)
-                teks = body.slice(9)
+                teks = body.slice(5)
                 group = await client.groupMetadata(from);
                 member = group['participants']
                 jids = [];
@@ -546,7 +551,7 @@ if (gay < 20 ) {ga = 'Usted es hetero 🤪🤙'}
 	else if (gay < 41 ) {ga = 'Tengo mi dudas 😑'} 
 	else if (gay < 51 ) {ga = 'Tengo razon? 😏'} 
 	else if (gay < 75 ) {ga = 'Eres o no? 🧐'} 
-	else if (gay < 85 ) {ga = 'Usted es gay 😉'}
+	else if (gay < 88 ) {ga = 'Usted es gay 😉'}
 	else {  ga = 'Paletazo 🥵'
 		const none = fs.readFileSync('./anishan/Ayy.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})       
@@ -565,7 +570,7 @@ break
 case 'lesb':
                 client.updatePresence(from, Presence.composing) 
                 if (!isUser) return reply(mess.only.daftarB)
-                teks = body.slice(9)
+                teks = body.slice(6)
                 group = await client.groupMetadata(from);
                 member = group['participants']
                 jids = [];
@@ -578,7 +583,7 @@ case 'lesb':
 	if (lesb < 20 ) {les = 'Uy nena, eres bien mujercita 😘'} 
 	else if (lesb < 41 ) {les = 'Hombres, los amo 😍'} 
 	else if (lesb < 61 ) {les = 'Uhm, no sé que quiero 🤔'}  
-	else if (lesb < 85 ) {les = 'Sale un tijerazo 🥵'} 
+	else if (lesb < 88 ) {les = 'Sale un tijerazo 🥵'} 
 	else {les = 'Solo conchitas thanks 🥵'	
 		const none = fs.readFileSync('./anishan/Concha.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})   
@@ -609,7 +614,7 @@ case 'lolicon':
 		else if (lolicon < 31 ) {lol = 'Te salvaste mijo 😎'}  
 		else if (lolicon < 41 ) {lol = 'Ey!, que hace viendo lolis 🤔'} 
 		else if (lolicon < 51 ) {lol = 'Mmm sospechoso mijo 🧐'}  
-		else if (lolicon < 85) {lol = 'Señores un autentico FAN DE LOLIS está en el grupo 🥸'}
+		else if (lolicon < 88) {lol = 'Bros un autentico FAN DE LOLIS está en el grupo 😎'}
 		else {lol = 'Te cayó la ley perro 😎'
 		     
 		const none = fs.readFileSync('./src/stickers/FBI.webp');
