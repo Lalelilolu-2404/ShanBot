@@ -529,25 +529,65 @@ async function starts() {
 					break
 
 case 'gay':
-if (!isUser) return reply(mess.only.daftarB)
-rate = body.slice(9)
-client.updatePresence(from, Presence.composing) 
-random = `${Math.floor(Math.random() * 100)}`
-gay = random
-if (gay < 20 ) {ga = 'Usted es hetero 🤪🤙'} else if (gay == 21 ) {ga = 'Mas o menos 🤔'} else if (gay == 23 ) {ga = 'Mas o menos 🤔'} else if (gay == 24 ) {ga = 'Mas o menos 🤔'} else if (gay == 25 ) {ga = 'Mas o menos 🤔'} else if (gay == 26 ) {ga = 'Mas o menos 🤔'} else if (gay == 27 ) {ga = 'Mas o menos 🤔'} else if (gay == 28 ) {ga = 'Mas o menos 🤔'} else if (gay == 29 ) {ga = 'Mas o menos 🤔'} else if (gay == 30 ) {ga = 'Mas o menos 🤔'} else if (gay == 31 ) {ga = 'Tengo mi dudas 😑'} else if (gay == 32 ) {ga = 'Tengo mi dudas 😑'} else if (gay == 33 ) {ga = 'Tengo mi dudas 😑'} else if (gay == 34 ) {ga = 'Tengo mi dudas 😑'} else if (gay == 35 ) {ga = 'Tengo mi dudas 😑'} else if (gay == 36 ) {ga = 'Tengo mi dudas 😑'} else if (gay == 37 ) {ga = 'Tengo mi dudas 😑'} else if (gay == 38 ) {ga = 'TTengo mi dudas 😑'} else if (gay == 39 ) {ga = 'Tengo mi dudas 😑'} else if (gay == 40 ) {ga = 'Tengo mi dudas 😑'} else if (gay == 41 ) {ga = 'Tengo razon? 😏'} else if (gay == 42 ) {ga = 'Tengo razon? 😏'} else if (gay == 43 ) {ga = 'Tengo razon? 😏'} else if (gay == 44 ) {ga = 'Tengo razon? 😏'} else if (gay == 45 ) {ga = 'Tengo razon? 😏'} else if (gay == 46 ) {ga = 'Tengo razon? 😏'} else if (gay == 47 ) {ga = 'Tengo razon? 😏'} else if (gay == 48 ) {ga = 'Tengo razon? 😏'} else if (gay == 49 ) {ga = 'Tengo razon? 😏'} else if (gay == 50 ) {ga = 'Eres o no? 🧐'} else if (gay > 51) {ga = 'Usted es gay 🥸'}
-hasil = `${rate}\n➥Usted es ${random}% gay\n✪\n➥${ga}`
-reply(hasil)
+                client.updatePresence(from, Presence.composing) 
+                if (!isUser) return reply(mess.only.daftarB)
+                teks = body.slice(9)
+                group = await client.groupMetadata(from);
+                member = group['participants']
+                jids = [];
+                member.map( async adm => {
+                jids.push(adm.id.replace('c.us', 's.whatsapp.net'));
+                 })
+             
+	random = `${Math.floor(Math.random() * 100)}`
+	ga = random
+if (gay < 20 ) {ga = 'Usted es hetero 🤪🤙'} 
+	else if (gay < 31 ) {ga = 'Mas o menos 🤔'}
+	else if (gay < 41 ) {ga = 'Tengo mi dudas 😑'} 
+	else if (gay < 51 ) {ga = 'Tengo razon? 😏'} 
+	else if (gay < 75 ) {ga = 'Eres o no? 🧐'} 
+	else if (gay < 90 ) {ga = 'Usted es gay 🥸'}
+	else {  ga = 'Paletazo 🥵'
+		const none = fs.readFileSync('./anishan/Ayy.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})       
+	     }	
+					
+	hasil = `${teks}\n➥${random}% fan de cuties\n✪\n➥${cu}`
+	    options = {
+                 text: hasil,
+                contextInfo: {mentionedJid: jids},
+                quoted: mek
+                }	
+               client.sendMessage(from, options, text)
 break
+					
 
 case 'cuties':
-if (!isUser) return reply(mess.only.daftarB)
-rate = body.slice(9)
-client.updatePresence(from, Presence.composing) 
-random = `${Math.floor(Math.random() * 100)}`
-cuties = random
-if (cuties < 20 ) {cu = 'Mi loco usted va para el cielo 👏'} else if (cuties == 21 ) {cu = 'Te salvaste ramirez 😎'} else if (cuties == 23 ) {cu = 'Te salvaste ramirez 😎'} else if (cuties == 24 ) {cu = 'Te salvaste ramirez 😎'} else if (cuties == 25 ) {cu = 'Te salvaste ramirez 😎'} else if (cuties == 26 ) {cu = 'Te salvaste ramirez 😎'} else if (cuties == 27 ) {cu = 'Te salvaste ramirez 😎'} else if (cuties == 28 ) {cu = 'Te salvaste ramirez 😎'} else if (cuties == 29 ) {cu = 'Te salvaste ramirez 😎'} else if (cuties == 30 ) {cu = 'Te salvaste ramirez 😎'} else if (cuties == 31 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 32 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 33 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 34 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 35 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 36 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 37 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 38 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 39 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 40 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 41 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 42 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 43 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 44 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 45 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 46 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 47 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 48 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 49 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 50 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties > 51) {cu = 'Señores un autentico FAN DE CUTIES está en el grupo 🥸'}
-hasil = `${rate}\n➥${random}% fan de cuties\n✪\n➥${cu}`
-reply(hasil)
+                client.updatePresence(from, Presence.composing) 
+                if (!isUser) return reply(mess.only.daftarB)
+                teks = body.slice(9)
+                group = await client.groupMetadata(from);
+                member = group['participants']
+                jids = [];
+                member.map( async adm => {
+                jids.push(adm.id.replace('c.us', 's.whatsapp.net'));
+                 })
+             
+	random = `${Math.floor(Math.random() * 100)}`
+	cuties = random
+	if (cuties < 20 ) {cu = 'Mi loco usted va para el cielo 👏'} 
+	else if (cuties <31 ) {cu = 'Te salvaste ramirez 😎'} 
+	else if (cuties < 31 ) {cu = 'Hey, que hace viendo cuties 🤔'}  
+	else if (cuties < 41 ) {cu = 'Mmm sospechoso perro 🧐'} 
+	else (cuties > 51) {cu = 'Señores un autentico FAN DE CUTIES está en el grupo 🥸'}	
+					
+	hasil = `${teks}\n➥${random}% fan de cuties\n✪\n➥${cu}`
+	    options = {
+                 text: hasil,
+                contextInfo: {mentionedJid: jids},
+                quoted: mek
+                }	
+               client.sendMessage(from, options, text)
 break
 					
 case 'lolicon':
@@ -563,7 +603,17 @@ case 'lolicon':
              
 	random = `${Math.floor(Math.random() * 100)}`
 	lolicon = random
-	if (lolicon < 20 ) {cu = 'Mi loco usted va para el cielo 👏'} else if (cuties == 21 ) {cu = 'Te salvaste mijo 😎'} else if (cuties == 23 ) {cu = 'Te salvaste mijo 😎'} else if (cuties == 24 ) {cu = 'Te salvaste mijo 😎'} else if (cuties == 25 ) {cu = 'Te salvaste mijo 😎'} else if (cuties == 26 ) {cu = 'Te salvaste mijo 😎'} else if (cuties == 27 ) {cu = 'Te salvaste mijo 😎'} else if (cuties == 28 ) {cu = 'Te salvaste mijo 😎'} else if (cuties == 29 ) {cu = 'Te salvaste mijo 😎'} else if (cuties == 30 ) {cu = 'Te salvaste mijo 😎'} else if (cuties == 31 ) {cu = 'Ey!, que hace viendo lolis 🤔'} else if (cuties == 32 ) {cu = 'Ey!, que hace viendo lolis 🤔'} else if (cuties == 33 ) {cu = 'Ey!, que hace viendo lolis 🤔'} else if (cuties == 34 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 35 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 36 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 37 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 38 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 39 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 40 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 41 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 42 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 43 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 44 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 45 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 46 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 47 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 48 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 49 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 50 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties > 51) {cu = 'Señores un autentico FAN DE CUTIES está en el grupo 🥸'}
+	if (lolicon < 20 ) {cu = 'Mi loco usted va para el cielo 👏'} 
+		else if (lolicon <31 ) {cu = 'Te salvaste mijo 😎'}  
+		else if (cuties < 41 ) {cu = 'Ey!, que hace viendo lolis 🤔'} 
+		else if (cuties < 51 ) {cu = 'Mmm sospechoso mijo 🧐'}  
+		else if (cuties < 90) {cu = 'Señores un autentico FAN DE LOLIS está en el grupo 🥸'}
+		else {cu = 'Te cayó la ley perro 😎'
+		     
+		const none = fs.readFileSync('./src/stickers/FBI.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})         
+		}	
+					
 	hasil = `${teks}\n➥${random}% fan de lolis\n✪\n➥${cu}`
 	    options = {
                  text: hasil,
