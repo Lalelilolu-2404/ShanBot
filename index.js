@@ -540,19 +540,19 @@ case 'gay':
                  })
              
 	random = `${Math.floor(Math.random() * 100)}`
-	ga = random
+	gay = random
 if (gay < 20 ) {ga = 'Usted es hetero 🤪🤙'} 
 	else if (gay < 31 ) {ga = 'Mas o menos 🤔'}
 	else if (gay < 41 ) {ga = 'Tengo mi dudas 😑'} 
 	else if (gay < 51 ) {ga = 'Tengo razon? 😏'} 
 	else if (gay < 75 ) {ga = 'Eres o no? 🧐'} 
-	else if (gay < 90 ) {ga = 'Usted es gay 🥸'}
+	else if (gay < 90 ) {ga = 'Usted es gay 😉'}
 	else {  ga = 'Paletazo 🥵'
 		const none = fs.readFileSync('./anishan/Ayy.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})       
 	     }	
 					
-	hasil = `${teks}\n➥${random}% fan de cuties\n✪\n➥${cu}`
+	hasil = `${teks}\n➥${random}% fan de cuties\n✪\n➥${ga}`
 	    options = {
                  text: hasil,
                 contextInfo: {mentionedJid: jids},
@@ -576,10 +576,10 @@ case 'cuties':
 	random = `${Math.floor(Math.random() * 100)}`
 	cuties = random
 	if (cuties < 20 ) {cu = 'Mi loco usted va para el cielo 👏'} 
-	else if (cuties <31 ) {cu = 'Te salvaste ramirez 😎'} 
-	else if (cuties < 31 ) {cu = 'Hey, que hace viendo cuties 🤔'}  
-	else if (cuties < 51 ) {cu = 'Mmm sospechoso perro 🧐'} 
-	else if (cuties > 51) {cu = 'Señores un autentico FAN DE CUTIES está en el grupo 🥸'}	
+	else if (cuties <41 ) {cu = 'Te salvaste ramirez 😎'} 
+	else if (cuties < 61 ) {cu = 'Hey, que hace viendo cuties 🤔'}  
+	else if (cuties < 81 ) {cu = 'Mmm sospechoso perro 🧐'} 
+	else {cu = 'Señores un autentico FAN DE CUTIES está en el grupo 🥸'}	
 					
 	hasil = `${teks}\n➥${random}% fan de cuties\n✪\n➥${cu}`
 	    options = {
@@ -603,18 +603,18 @@ case 'lolicon':
              
 	random = `${Math.floor(Math.random() * 100)}`
 	lolicon = random
-	if (lolicon < 20 ) {cu = 'Mi loco usted va para el cielo 👏'} 
-		else if (lolicon <31 ) {cu = 'Te salvaste mijo 😎'}  
-		else if (cuties < 41 ) {cu = 'Ey!, que hace viendo lolis 🤔'} 
-		else if (cuties < 51 ) {cu = 'Mmm sospechoso mijo 🧐'}  
-		else if (cuties < 90) {cu = 'Señores un autentico FAN DE LOLIS está en el grupo 🥸'}
-		else {cu = 'Te cayó la ley perro 😎'
+	if (lolicon < 20 ) {lol = 'Mi loco usted va para el cielo 👏'} 
+		else if (lolicon < 31 ) {lol = 'Te salvaste mijo 😎'}  
+		else if (lolicon < 41 ) {lol = 'Ey!, que hace viendo lolis 🤔'} 
+		else if (lolicon < 51 ) {lol = 'Mmm sospechoso mijo 🧐'}  
+		else if (lolicon < 90) {lol = 'Señores un autentico FAN DE LOLIS está en el grupo 🥸'}
+		else {lol = 'Te cayó la ley perro 😎'
 		     
 		const none = fs.readFileSync('./src/stickers/FBI.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})         
 		}	
 					
-	hasil = `${teks}\n➥${random}% fan de lolis\n✪\n➥${cu}`
+	hasil = `${teks}\n➥${random}% fan de lolis\n✪\n➥${lol}`
 	    options = {
                  text: hasil,
                 contextInfo: {mentionedJid: jids},
