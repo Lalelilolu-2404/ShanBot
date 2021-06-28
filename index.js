@@ -2250,7 +2250,7 @@ if (isOwner){
 		}	
 /*** Audios ****/
 	
-if (isStick == 1) {
+if (isPacksito == 1) {
 	if (isOwner){
         	if (budy.startsWith(`Detente perro`)) {
 			if (budy.endsWith(`Detente perro`)){
