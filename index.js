@@ -1370,7 +1370,7 @@ break
 				
 					case 'dolf':
 						if (!isPacksito) return reply('❌ Dolf Desactivado* ❌')
-							random2 = `${Math.floor(Math.random() * 10)}`
+							random2 = `${Math.floor(Math.random() * 20)}`
 							reply(random2)
 							Texte = 'Image'&random2
 							reply(Texte)
@@ -1378,7 +1378,6 @@ break
 					Reply(Texte2)
 							/**const none2 = fs.readFileSync('./src/dolf/Image'random2'.jpeg');**/
 							/**client.sendMessage(from, none2, image, {quoted: mek, caption: 'UHM ZIII?'})**/
-						else reply('❌ *ERROR* ❌') 
 					break	
 					
 					
