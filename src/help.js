@@ -65,7 +65,7 @@ Para usar estas funciones el bot necesita admin
   ╠ ○ ${prefix}linkgc
   ╠ Link del grupo
   ╠ ○ ${prefix}tagall
-  ╚ Nombra a todos los del grupo
+  ╚ Jutsu Edo Tensei xd
   
 ◉ *NSWF* 
   ╚ ○ ${prefix}nsfwmenu
