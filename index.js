@@ -442,27 +442,9 @@ async function starts() {
 			loli = fs.readFileSync(`./mp3/fernan.mp3`)		
 			wew = fs.readFileSync(`./assets/menuimg.jpeg`)
                       zain = `╭──❲ INFO BOT ❳
-│◨ Nombre: Felixcrack
-│◨ Wa: wa.me/12603763944
+│◨ Nombre: Lalelilolu
+│◨ Wa: wa.me/33749258491
 │◨ Prefix: 「  ${prefix}  」
-╰────────────────⊱
-
-╭──❲ INFO USUÁRIO ❳
-│◨ Nombre: ${pushname}
-│◨ Número: wa.me/${sender.split("@")[0]}
-│◨ XP : ${getLevelingXp(sender)}
-│◨ Rango: ${role}
-│◨ Nivel : ${getLevelingLevel(sender)}
-╰────────────────⊱
-
-╭──❲ LIST MENU ❳
-│◨ ${prefix}groupmenu
-│◨ ${prefix}ownermenu
-│◨ ${prefix}randommenu
-│◨ ${prefix}makermenu
-│◨ ${prefix}othermenu
-│◨ ${prefix}downloadmenu
-│◨ ${prefix}stalkmenu
 ╰────────────────⊱` 
 ShanBot.sendMessage(from, wew, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "FX BOT*", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('assets/menuimg.jpeg')} } }, caption: zain, pushname, prefix, getLevelingXp, getLevelingLevel, sender, role })
 
