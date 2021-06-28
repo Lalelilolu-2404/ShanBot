@@ -546,13 +546,13 @@ if (gay < 20 ) {ga = 'Usted es hetero 🤪🤙'}
 	else if (gay < 41 ) {ga = 'Tengo mi dudas 😑'} 
 	else if (gay < 51 ) {ga = 'Tengo razon? 😏'} 
 	else if (gay < 75 ) {ga = 'Eres o no? 🧐'} 
-	else if (gay < 90 ) {ga = 'Usted es gay 😉'}
+	else if (gay < 85 ) {ga = 'Usted es gay 😉'}
 	else {  ga = 'Paletazo 🥵'
 		const none = fs.readFileSync('./anishan/Ayy.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})       
 	     }	
 					
-	hasil = `${teks}\n➥${random}% fan de cuties\n✪\n➥${ga}`
+	hasil = `${teks}\n➥${random}% gay \n✪\n➥${ga}`
 	    options = {
                  text: hasil,
                 contextInfo: {mentionedJid: jids},
@@ -607,7 +607,7 @@ case 'lolicon':
 		else if (lolicon < 31 ) {lol = 'Te salvaste mijo 😎'}  
 		else if (lolicon < 41 ) {lol = 'Ey!, que hace viendo lolis 🤔'} 
 		else if (lolicon < 51 ) {lol = 'Mmm sospechoso mijo 🧐'}  
-		else if (lolicon < 90) {lol = 'Señores un autentico FAN DE LOLIS está en el grupo 🥸'}
+		else if (lolicon < 85) {lol = 'Señores un autentico FAN DE LOLIS está en el grupo 🥸'}
 		else {lol = 'Te cayó la ley perro 😎'
 		     
 		const none = fs.readFileSync('./src/stickers/FBI.webp');
