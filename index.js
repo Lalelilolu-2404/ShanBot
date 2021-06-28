@@ -437,8 +437,8 @@ async function starts() {
 		case 'menu':
 		case 'help':
 			/**const none = fs.readFileSync('./assets/menuimg.jpeg');			
-			client.sendMessage(from, none, image, {quoted:mek, caption : help(prefix, sender)})
-			/**client.sendMessage(from, help(prefix), text)**/**/
+			client.sendMessage(from, none, image, {quoted:mek, caption : help(prefix, sender)})**/
+			/**client.sendMessage(from, help(prefix), text)**/
 			loli = fs.readFileSync(`./mp3/fernan.mp3`)		
 			wew = fs.readFileSync(`./src/menuimg.jpeg`)
 			zain = help(prefix, sender)
