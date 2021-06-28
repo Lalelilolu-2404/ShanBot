@@ -1374,7 +1374,7 @@ break
 							reply(random2)
 							Texte = 'Image'&random2
 							reply(Texte)
-					Texte2 = 'Image'+${random2}
+					Texte2 = 'Image'+ random2
 					Reply(Texte2)
 							/**const none2 = fs.readFileSync('./src/dolf/Image'random2'.jpeg');**/
 							/**client.sendMessage(from, none2, image, {quoted: mek, caption: 'UHM ZIII?'})**/
