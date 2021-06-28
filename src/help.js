@@ -47,7 +47,10 @@ const help = (prefix) => {
   ╠ ○ ${prefix}wame
   ╠ Link de Whatsapp
   ╠ ○ ${prefix}qrcode
-  ╚ Coloca un texto
+  ╠ Coloca un texto
+  ╠ ○ ${prefix}gay @tag
+  ╠ ○ ${prefix}lesb @tag
+  ╚ ○ ${prefix}lolicon @tag
 
 Para usar estas funciones el bot necesita admin
 
@@ -69,7 +72,10 @@ Para usar estas funciones el bot necesita admin
   
 ◉ *NSWF* 
   ╚ ○ ${prefix}nsfwmenu
-
+  
+◉ *PACKSITO* 
+  ╚ ○ ${prefix}dolf 
+  
 ⌜《Lalelilolu》\◔,◡◔,/ ت♡⌟
 `
 }
