@@ -578,8 +578,8 @@ case 'cuties':
 	if (cuties < 20 ) {cu = 'Mi loco usted va para el cielo 👏'} 
 	else if (cuties <31 ) {cu = 'Te salvaste ramirez 😎'} 
 	else if (cuties < 31 ) {cu = 'Hey, que hace viendo cuties 🤔'}  
-	else if (cuties < 41 ) {cu = 'Mmm sospechoso perro 🧐'} 
-	else (cuties > 51) {cu = 'Señores un autentico FAN DE CUTIES está en el grupo 🥸'}	
+	else if (cuties < 51 ) {cu = 'Mmm sospechoso perro 🧐'} 
+	else if (cuties > 51) {cu = 'Señores un autentico FAN DE CUTIES está en el grupo 🥸'}	
 					
 	hasil = `${teks}\n➥${random}% fan de cuties\n✪\n➥${cu}`
 	    options = {
