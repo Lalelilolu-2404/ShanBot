@@ -562,7 +562,7 @@ if (gay < 20 ) {ga = 'Usted es hetero 🤪🤙'}
 break
 					
 
-case 'cuties':
+case 'lesb':
                 client.updatePresence(from, Presence.composing) 
                 if (!isUser) return reply(mess.only.daftarB)
                 teks = body.slice(9)
@@ -574,14 +574,16 @@ case 'cuties':
                  })
              
 	random = `${Math.floor(Math.random() * 100)}`
-	cuties = random
-	if (cuties < 20 ) {cu = 'Mi loco usted va para el cielo 👏'} 
-	else if (cuties <41 ) {cu = 'Te salvaste ramirez 😎'} 
-	else if (cuties < 61 ) {cu = 'Hey, que hace viendo cuties 🤔'}  
-	else if (cuties < 81 ) {cu = 'Mmm sospechoso perro 🧐'} 
-	else {cu = 'Señores un autentico FAN DE CUTIES está en el grupo 🥸'}	
-					
-	hasil = `${teks}\n➥${random}% fan de cuties\n✪\n➥${cu}`
+	lesb = random
+	if (lesb < 20 ) {les = 'Uy nena, eres bien mujercita 😘'} 
+	else if (lesb < 41 ) {les = 'Hombres, los amo 😍'} 
+	else if (lesb < 61 ) {les = 'Uhm, no sé que quiero 🤔'}  
+	else if (lesb < 85 ) {les = 'Sale un tijerazo 🥵'} 
+	else {les = 'Solo conchitas thanks 🥵'	
+		const none = fs.readFileSync('./anishan/Concha.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})   
+	     }
+	hasil = `${teks}\n➥${random}% lesb \n✪\n➥${les}`
 	    options = {
                  text: hasil,
                 contextInfo: {mentionedJid: jids},
