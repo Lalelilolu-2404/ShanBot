@@ -1386,16 +1386,12 @@ break
 					
 				
 					case 'dolf':
-						try {
-							if (!isPacksito) return reply('❌ Dolf Desactivado* ❌')
-							random2 = `${Math.floor(Math.random() * 9)}`
+						if (!isPacksito) return reply('❌ Dolf Desactivado* ❌')
+							random2 = `${Math.floor(Math.random() * 10)}`
 							reply(random2)
-							const none = fs.readFileSync('./src/dolf/Image${random2}.jpeg');
+							const none = fs.readFileSync('./src/dolf/Image&${random2}.jpeg');
 							client.sendMessage(from, none, image, {quoted: mek, caption: 'UHM ZIII?'})
-						} catch (e) {
-							console.log(`Error :`, color(e,'red'))
-							reply('❌ *ERROR* ❌')
-						}
+						else if reply('❌ *ERROR* ❌') 
 					break	
 					
 					
@@ -1499,12 +1495,6 @@ if (isOwner){
         else if (budy.startsWith(`Ban`)) {
 		if (budy.endsWith(`Ban`)){
         	const none = fs.readFileSync('./src/stickers/Ban.webp');
-		client.sendMessage(from, none, sticker, {quoted: mek})
-                  }
-		}
-        else if (budy.startsWith(`Banned`)) {
-		if (budy.endsWith(`Banned`)){
-        	const none = fs.readFileSync('./src/stickers/Banned.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
@@ -1673,6 +1663,12 @@ if (isOwner){
         else if (budy.startsWith(`Flap`)) {
 		if (budy.endsWith(`Flap`)){
         	const none = fs.readFileSync('./src/stickers/Flap.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
+        else if (budy.startsWith(`Funao`)) {
+		if (budy.endsWith(`Funao`)){
+        	const none = fs.readFileSync('./src/stickers/Funao.webp');
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
