@@ -538,15 +538,6 @@ if (gay < 20 ) {ga = 'Usted es hetero 🤪🤙'} else if (gay == 21 ) {ga = 'Mas
 hasil = `${rate}\n➥Usted es ${random}% gay\n✪\n➥${ga}`
 reply(hasil)
 break
-					
-				/**	members_id = []
-					teks = (args.length > 1) ? body.slice(8).trim() : ''
-					teks += `  Total : ${groupMembers.length}\n`
-					for (let mem of groupMembers) {
-						teks += `╠➥ @${mem.jid.split('@')[0]}\n`
-						members_id.push(mem.jid)
-					}
-					mentions('╔══✪〘 MENCIONANDO 〙✪══\n╠➥'+teks+'╚═〘 by shanduy 〙', members_id, true)   **/
 
 case 'cuties':
 if (!isUser) return reply(mess.only.daftarB)
@@ -558,22 +549,44 @@ if (cuties < 20 ) {cu = 'Mi loco usted va para el cielo 👏'} else if (cuties =
 hasil = `${rate}\n➥${random}% fan de cuties\n✪\n➥${cu}`
 reply(hasil)
 break
+					
+case 'lolicon':
+                client.updatePresence(from, Presence.composing) 
+                if (!isUser) return reply(mess.only.daftarB)
+                teks = body.slice(9)
+                group = await client.groupMetadata(from);
+                member = group['participants']
+                jids = [];
+                member.map( async adm => {
+                jids.push(adm.id.replace('c.us', 's.whatsapp.net'));
+                 })
+             
+	random = `${Math.floor(Math.random() * 100)}`
+	lolicon = random
+	if (lolicon < 20 ) {cu = 'Mi loco usted va para el cielo 👏'} else if (cuties == 21 ) {cu = 'Te salvaste mijo 😎'} else if (cuties == 23 ) {cu = 'Te salvaste mijo 😎'} else if (cuties == 24 ) {cu = 'Te salvaste mijo 😎'} else if (cuties == 25 ) {cu = 'Te salvaste mijo 😎'} else if (cuties == 26 ) {cu = 'Te salvaste mijo 😎'} else if (cuties == 27 ) {cu = 'Te salvaste mijo 😎'} else if (cuties == 28 ) {cu = 'Te salvaste mijo 😎'} else if (cuties == 29 ) {cu = 'Te salvaste mijo 😎'} else if (cuties == 30 ) {cu = 'Te salvaste mijo 😎'} else if (cuties == 31 ) {cu = 'Ey!, que hace viendo lolis 🤔'} else if (cuties == 32 ) {cu = 'Ey!, que hace viendo lolis 🤔'} else if (cuties == 33 ) {cu = 'Ey!, que hace viendo lolis 🤔'} else if (cuties == 34 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 35 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 36 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 37 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 38 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 39 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 40 ) {cu = 'Ramirez que hace viendo cuties 🤔'} else if (cuties == 41 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 42 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 43 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 44 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 45 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 46 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 47 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 48 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 49 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties == 50 ) {cu = 'Mmm sospechoso ramirez 🧐'} else if (cuties > 51) {cu = 'Señores un autentico FAN DE CUTIES está en el grupo 🥸'}
+	hasil = `${teks}\n➥${random}% fan de lolis\n✪\n➥${cu}`
+	    options = {
+                 text: hasil,
+                contextInfo: {mentionedJid: jids},
+                quoted: mek
+                }	
+               client.sendMessage(from, options, text)
+break
 				
 				
-				
-	case 'wa.me':
-	case 'wame':
+case 'wa.me':
+case 'wame':
   client.updatePresence(from, Presence.composing) 
       options = {
           text: `「 *LINK WHATSAPP* 」\n\n_Solicitado por_ : *@${sender.split("@s.whatsapp.net")[0]}\n\nSu link de Whatsapp : *https://wa.me/${sender.split("@s.whatsapp.net")[0]}*\n*O ( / )*\n*https://api.whatsapp.com/send?phone=${sender.split("@")[0]}*`,
           contextInfo: { mentionedJid: [sender] }
     }
     client.sendMessage(from, options, text, { quoted: mek } )
-	break
+break
 	if (data.error) return reply(data.error)
 		reply(data.result)
-	break
-		/*case 'tneon':
+break
+	/*case 'tneon':
                 data = await await getBuffer(`https://api.zeks.xyz/api/text3dbox?apikey=tshanduyx&text=${body.slice(8)}`)
                 if (!isUser) return reply(mess.only.daftarB)
                 client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(8)})
@@ -586,7 +599,8 @@ break
                 const none = fs.readFileSync('./mp3/shan.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                 break**/
-	case 'hidetag':
+
+  case 'hidetag':
                 client.updatePresence(from, Presence.composing) 
                 if (!isUser) return reply(mess.only.daftarB)
                 if (!isGroup) return reply(mess.only.group)
@@ -604,7 +618,8 @@ break
                 }
               await client.sendMessage(from, options, text)
                break
-               		       case 'ytmp3':
+					
+				case 'ytmp3':
 					if (args.length < 1) return reply('Donde esta la URL?')
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 					reply(mess.only.mpa)
@@ -856,6 +871,7 @@ break
 				    client.updatePresence(from, Presence.composing) 
 				    if (!isGroup) return reply(mess.only.group)
                                      if (!isUser) return reply(mess.only.daftarB)
+					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					linkgc = await client.groupInviteCode (from)
 					yeh = `Aqui esta el link del grupo 🤑\n\nhttps://chat.whatsapp.com/${linkgc}\n\nLink Del Grupo *${groupName}*`
@@ -1012,7 +1028,7 @@ break
 						client.sendMessage(from, buffer, audio, {mimetype: 'audio/mp4', quoted: mek})
 						fs.unlinkSync(ran)
 					})
-					break
+			break
                 
 		case 'play':   
 	        if (args.length < 1) return reply('Donde esta el nombre de la canción?')
@@ -1354,12 +1370,13 @@ break
 					
 				
 					case 'dolf':
+						if (!isUser) return reply(mess.only.daftarB)
 						if (!isPacksito) return reply('❌ Dolf Desactivado* ❌')
 							random2 = `${Math.floor(Math.random() * 8)+1}`
-							/**Texte = `Image${random2}`**/
-							reply(Texte)
+							Texte = `Image${random2}`
+							/**reply(Texte)**/
 							const none2 = fs.readFileSync(`./src/dolf/${Texte}.jpeg`);
-							client.sendMessage(from, none2, image, {quoted: mek, caption: 'UFFF ZIII?'})
+							client.sendMessage(from, none2, image, {quoted: mek, caption: 'UFFF ZIII!!!'})
 					break	
 				
 				
