@@ -535,7 +535,7 @@ client.updatePresence(from, Presence.composing)
 random = `${Math.floor(Math.random() * 100)}`
 gay = random
 					
-          	teks = (args.length > 1) ? body.slice(8).trim() : ''
+          	teks = body.slice(8).trim() 
         
                 member = group['participants']
                 jids = `${mem.jid.split('@')[0]}`
@@ -557,7 +557,7 @@ break
 
 case 'cuties':
 if (!isUser) return reply(mess.only.daftarB)
-teks = (args.length > 1) ? body.slice(8).trim() : ''
+teks = body.slice(10).trim() 
 /**rate = body.slice(9)**/
 client.updatePresence(from, Presence.composing) 
 random = `${Math.floor(Math.random() * 100)}`
@@ -1367,8 +1367,8 @@ break
 							reply(random2)
 							Texte = `Image${random2}`
 							reply(Texte)
-							/**const none2 = fs.readFileSync('./src/dolf/Image'random2'.jpeg');**/
-							/**client.sendMessage(from, none2, image, {quoted: mek, caption: 'UHM ZIII?'})**/
+							const none2 = fs.readFileSync('./src/dolf/'Texte'.jpeg');
+							client.sendMessage(from, none2, image, {quoted: mek, caption: 'UFFF ZIII?'})
 					break	
 					
 					
