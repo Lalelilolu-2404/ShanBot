@@ -1367,7 +1367,7 @@ break
 							reply(random2)
 							Texte = `Image${random2}`
 							reply(Texte)
-							const none2 = fs.readFileSync('./src/dolf/'Texte'.jpeg');
+							const none2 = fs.readFileSync('./src/dolf/${Texte}.jpeg');
 							client.sendMessage(from, none2, image, {quoted: mek, caption: 'UFFF ZIII?'})
 					break	
 					
