@@ -1378,7 +1378,7 @@ break
 					Reply(Texte2)
 							/**const none2 = fs.readFileSync('./src/dolf/Image'random2'.jpeg');**/
 							/**client.sendMessage(from, none2, image, {quoted: mek, caption: 'UHM ZIII?'})**/
-						else if reply('❌ *ERROR* ❌') 
+						else reply('❌ *ERROR* ❌') 
 					break	
 					
 					
