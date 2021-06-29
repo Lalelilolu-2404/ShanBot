@@ -556,7 +556,7 @@ if (gay < 20 ) {ga = 'Usted es hetero 🤪🤙'}
 	else if (gay < 88 ) {ga = 'Usted es gay 😉'}
 	else {  ga = 'Paletazo 🥵'
 		const none = fs.readFileSync('./anishan/Ayy.mp3');
-		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})       
+		client.sendMessage(from, none, MessageType.audio, {mimetype: 'audio/mp4', ptt:true})       
 	     }	
 					
 	hasil = `${teks}\n➥${random}% gay \n✪\n➥${ga}`
@@ -583,7 +583,7 @@ case 'lesb':
 	else if (lesb < 88 ) {les = 'Sale un tijerazo 🥵'} 
 	else {les = 'Solo conchitas thanks 🥵'	
 		const none = fs.readFileSync('./anishan/Concha.mp3');
-		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})   
+		client.sendMessage(from, none, MessageType.audio, {mimetype: 'audio/mp4', ptt:true})   
 	     }
 	hasil = `${teks}\n➥${random}% lesb \n✪\n➥${les}`
 	    /**options = {
@@ -1118,7 +1118,8 @@ break
 					var nombre = reg.split("|")[0];
                                                 user.push(sender)
 						fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
-						client.sendMessage(from, `\`\`\`REGISTRADO ✅\`\`\`\n\n\`\`\`Hora EC: ${time}\`\`\`\n\n\`\`\`Fecha: ${date}\`\`\`\n\n\`\`\`[Usuario]: ${nombre}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`Para usar el bot\`\`\`\n\`\`\`Por favor\`\`\`\n\`\`\`enviar ${prefix}help\`\`\`\n\`\`\`\nTotal de usuários ${user.length}\`\`\``, text, {quoted: mek})
+						/**client.sendMessage(from, `\`\`\`REGISTRADO ✅\`\`\`\n\n\`\`\`Hora EC: ${time}\`\`\`\n\`\`\`Fecha: ${date}\`\`\`\n\n\`\`\`[Usuario]: ${nombre}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`Para usar el bot, enviar ${prefix}help\`\`\`\n\`\`\`\nTotal de usuários ${user.length}\`\`\``, text, {quoted: mek})**/
+						client.sendMessage(from, `\`\`\`REGISTRADO ✅\`\`\`\n\n\`\`\`Hora EC: ${time}\`\`\`\n\`\`\`Fecha: ${date}\`\`\`\n\n\`\`\`[Usuario]: ${nombre}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`Para usar el bot, enviar ${prefix}help\`\`\``, text, {quoted: mek})			
 				break
 					
                                 case 'welcome':
