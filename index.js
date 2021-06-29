@@ -595,8 +595,9 @@ case 'lolicon':
                 client.updatePresence(from, Presence.composing) 
                 if (!isUser) return reply(mess.only.daftarB)
 		/**teks = body.slice(9)**/
-					
-teks = @${mentioned[0].split('@')[0]
+	mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid	
+/**mentions(`Pedido recibido✅\n\nAgregando cargo como administrador : @${mentioned[0].split('@')[0]}`, mentioned, true)**/
+	teks = `@${mentioned[0].split('@')[0]}`
 
 	random = `${Math.floor(Math.random() * 100)}`
 	lolicon = random
