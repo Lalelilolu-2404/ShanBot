@@ -452,7 +452,26 @@ async function starts() {
 
 			}
 /////////////////////////////////////////////////////////////
-		
+	
+         // Ucapan Waktu
+        const hour_now = moment().format('HH')
+        var ucapanWaktu = 'wenas👋'
+        if (hour_now >= '03' && hour_now <= '10') {
+          ucapanWaktu = 'wenas👋'
+        } else if (hour_now >= '10' && hour_now <= '14') {
+          ucapanWaktu = 'wenas👋'
+        } else if (hour_now >= '14' && hour_now <= '17') {
+          ucapanWaktu = 'wenas👋'
+        } else if (hour_now >= '17' && hour_now <= '18') {
+          ucapanWaktu = 'wenas👋'
+        } else if (hour_now >= '18' && hour_now <= '23') {
+          ucapanWaktu = 'wenas🌚'
+        } else {
+          ucapanWaktu = 'wenas🌚'
+        }			
+			
+/////////////////////////////////			
+			
         const fakethumb = (teks, yes) => {
             client.sendMessage(from, teks, image, {thumbnail:fs.readFileSync('./assets/menuimg.jpeg'),quoted:mek,caption:yes})
         }				
