@@ -543,7 +543,7 @@ case 'gay':
                 if (!isUser) return reply(mess.only.daftarB)
               /**  teks = body.slice(5)**/
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-teks = `@${mentioned[0].split('@')[0]}`
+teks = mentions(`@${mentioned[0].split('@')[0]}`, mentioned, true)
              
 	random = `${Math.floor(Math.random() * 100)}`
 	gay = random
@@ -573,7 +573,7 @@ case 'lesb':
                 if (!isUser) return reply(mess.only.daftarB)
               /**  teks = body.slice(6)**/
         mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-	teks = `@${mentioned[0].split('@')[0]}`     
+	teks = mentions(`@${mentioned[0].split('@')[0]}`, mentioned, true)    
 	random = `${Math.floor(Math.random() * 100)}`
 	lesb = random
 	if (lesb < 20 ) {les = 'Uy nena, eres bien mujercita 😘'} 
@@ -600,7 +600,7 @@ case 'lolicon':
 		/**teks = body.slice(9)**/
 	mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid	
 /**mentions(`Pedido recibido✅\n\nAgregando cargo como administrador : @${mentioned[0].split('@')[0]}`, mentioned, true)**/
-	teks = `@${mentioned[0].split('@')[0]}`
+	teks = mentions(`@${mentioned[0].split('@')[0]}`, mentioned, true)
 
 	random = `${Math.floor(Math.random() * 100)}`
 	lolicon = random
@@ -2589,13 +2589,7 @@ if (isPacksito == 1) {
 	if (budy.includes(`Lokita`)) {
         	const none = fs.readFileSync('./anishan/Lokita.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }	
-        if (budy.startsWith(`Onichan`)) {
-		if (budy.endsWith(`Onichan`)){
-        	const none = fs.readFileSync('./anishan/Onichan.mp3');
-		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }										
-		}	
+                  }		
 	if (budy.includes(`Orto`)) {
         	const none = fs.readFileSync('./anishan/Orto.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
