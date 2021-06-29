@@ -557,12 +557,12 @@ if (gay < 20 ) {ga = 'Usted es hetero 🤪🤙'}
 	     }	
 					
 	hasil = `${teks}\n➥${random}% gay \n✪\n➥${ga}`
-	    options = {
+	    /**options = {
                  text: hasil,
                 contextInfo: {mentionedJid: jids},
                 quoted: mek
-                }	
-               client.sendMessage(from, options, text)
+                }	**/
+               client.sendMessage(from, hasil, text,)
 break
 					
 
@@ -582,17 +582,19 @@ case 'lesb':
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})   
 	     }
 	hasil = `${teks}\n➥${random}% lesb \n✪\n➥${les}`
-	    options = {
+	    /**options = {
                  text: hasil,
                 contextInfo: {mentionedJid: jids},
                 quoted: mek
-                }	
-               client.sendMessage(from, options, text)
+                }	**/
+              /** client.sendMessage(from, options, text)**/
+	       client.sendMessage(from, hasil, text)
 break
 					
 case 'lolicon':
                 client.updatePresence(from, Presence.composing) 
                 if (!isUser) return reply(mess.only.daftarB)
+		teks = body.slice(9)
              
 	random = `${Math.floor(Math.random() * 100)}`
 	lolicon = random
@@ -608,12 +610,12 @@ case 'lolicon':
 		}	
 					
 	hasil = `${teks}\n➥${random}% fan de lolis\n✪\n➥${lol}`
-	    options = {
-                 text: hasil,
+	    /**options = {
+                text: hasil,
                 contextInfo: {mentionedJid: jids},
                 quoted: mek
-                }	
-               client.sendMessage(from, options, text)
+                }	**/
+               client.sendMessage(from, hasil, text,{quoted: mek})
 break
 				
 				
@@ -931,11 +933,11 @@ break
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					var nomor = mek.participant
-					const close = {
+					/**var nomor = mek.participant**/
+					/**const close = {
 					text: `Grupo cerrado por el administrador @${nomor.split("@s.whatsapp.net")[0]}\nAhora *solo administradores* puede enviar mensajes`,
 					contextInfo: { mentionedJid: [nomor] }
-					}
+					}**/
 					client.groupSettingChange (from, GroupSettingChange.messageSend, true);
 					/**reply(close)**/
 		break
@@ -946,10 +948,10 @@ break
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					open = {
+					/**open = {
 					text: `Grupo abierto por administrador @${sender.split("@")[0]}\nAhora *todos los participantes* pueden enviar mensajes`,
 					contextInfo: { mentionedJid: [sender] }
-					}
+					}**/
 					client.groupSettingChange (from, GroupSettingChange.messageSend, false)
 					/**client.sendMessage(from, open, text, {quoted: mek})**/
 		break
@@ -959,8 +961,8 @@ break
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					var nomor = mek.participant
-					client.groupSettingChange (from, GroupSettingChange.ephemeralMessage, true);
+					/**var nomor = mek.participant**/
+					client.groupSettingChange (from, GroupSettingChange.ephemeralMessage, false;
 					/**reply(close)**/
 		break
 					
@@ -969,7 +971,7 @@ break
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					client.groupSettingChange (from, GroupSettingChange.ephemeralMessage, false)
+					client.groupSettingChange (from, GroupSettingChange.ephemeralMessage, true)
 					/**client.sendMessage(from, open, text, {quoted: mek})**/
 		break
 		
@@ -1137,7 +1139,7 @@ break
 					}
 					break
 					
-                               case 'nsfwneko':
+                              /** case 'nsfwneko':
 				    try{
 						if (!isNsfw) return reply('❌ *NSFW NO ESTA ATIVADO* ❌')
                                                 if (!isUser) return reply(mess.only.daftarB)
@@ -1148,7 +1150,7 @@ break
 						console.log(`Error :`, color(e,'red'))
 						reply('❌ *ERROR* ❌')
 					}
-				break
+				break**/
 
                               	case 'nsfw':
 					if (!isGroup) return reply(mess.only.group)
@@ -1226,28 +1228,48 @@ break
                 }
             break
 					
-			case 'avatar':
+			case 'wallpaper':
+				try {
 					res = await fetchJson(`https://nekos.life/api/v2/img/wallpaper`, {method: 'get'})
 					buffer = await getBuffer(res.url)
 						client.sendMessage(from, buffer, image, {quoted: mek})
+				} catch (e) {
+				console.log(`Error :`, color(e,'red'))
+				reply('❌ *ERROR* ❌')
+						}
 			break
 			
-			case 'wallpaper':
+			case 'avatar':
+				try {
 					res = await fetchJson(`https://nekos.life/api/v2/img/avatar`, {method: 'get'})
 					buffer = await getBuffer(res.url)
 						client.sendMessage(from, buffer, image, {quoted: mek})
+				} catch (e) {
+				console.log(`Error :`, color(e,'red'))
+				reply('❌ *ERROR* ❌')
+						}
 			break
 					
 			case 'waifu':
+				try {
 					res = await fetchJson(`https://nekos.life/api/v2/img/waifu`, {method: 'get'})
 					buffer = await getBuffer(res.url)
 						client.sendMessage(from, buffer, image, {quoted: mek})
+				} catch (e) {
+				console.log(`Error :`, color(e,'red'))
+				reply('❌ *ERROR* ❌')
+						}
 			break
 					
 			case 'loli':
+				try {
 					res = await fetchJson(`https://nekos.life/api/v2/img/ero`, {method: 'get'})
 					buffer = await getBuffer(res.url)
 						client.sendMessage(from, buffer, image, {quoted: mek})
+				} catch (e) {
+				console.log(`Error :`, color(e,'red'))
+				reply('❌ *ERROR* ❌')
+						}
 			break					
 
                                 /*case 'nsfwtrap':
@@ -1323,7 +1345,7 @@ break
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://nekos.life/api/v2/img/pussy`, {method: 'get'})
 							buffer = await getBuffer(res.url)
-							client.sendMessage(from, buffer, image, {quoted: mek})
+							client.sendMessage(from, buffer, image/gif, {quoted: mek})
 						} catch (e) {
 							console.log(`Error :`, color(e,'red'))
 							reply('❌ *ERROR* ❌')
@@ -1334,7 +1356,7 @@ break
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://nekos.life/api/v2/img/anal`, {method: 'get'})
 							buffer = await getBuffer(res.url)
-							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Ese es el culo que querías?'})
+							client.sendMessage(from, buffer, image/gif, {quoted: mek, caption: 'Ese es el culo que querías?'})
 						} catch (e) {
 							console.log(`Error :`, color(e,'red'))
 							reply('❌ *ERROR* ❌')
