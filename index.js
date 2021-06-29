@@ -306,9 +306,7 @@ async function starts() {
 			const isCmd = body.startsWith(prefix)
 			const q = args.join(' ')
 			const arg = budy.slice(command.length + 1, budy.length)
-			const conts = mek.key.fromMe ? client.user.jid : client.contacts[] || { notify: jid.replace(/@.+/, '') }
-			const pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
-			  
+
 			mess = {
 				wait: 'Relaja la raja😎\n\n❗Loading...❗\n\nby lalelilolu',
 				success: '✔️ Listo ✔️',
@@ -378,6 +376,10 @@ async function starts() {
 			const mentions = (teks, memberr, id) => {
 				(id == null || id == undefined || id == false) ? client.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": memberr}})
 			}
+			
+			const conts = mek.key.fromMe ? client.user.jid : client.contacts[sender] || { notify: jid.replace(/@.+/, '') }
+			const pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
+			  
 
 	        //FUNCION DE LEVEL
             if (isGroup && isLevelingOn) {
