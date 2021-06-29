@@ -435,7 +435,7 @@ async function starts() {
 /////////////////////////////////////////////////////////////
 		
         const fakethumb = (teks, yes) => {
-            pato.sendMessage(from, teks, image, {thumbnail:fs.readFileSync('./asstes/menuimg.jpeg'),quoted:mek,caption:yes})
+            pato.sendMessage(from, teks, image, {thumbnail:fs.readFileSync('./assets/menuimg.jpeg'),quoted:mek,caption:yes})
         }				
 
 	        const fakestatus = (teks) => {
@@ -458,7 +458,7 @@ async function starts() {
                             "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=",
                             "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
                             "mediaKeyTimestamp": "1610993486",
-                            "jpegThumbnail": fs.readFileSync('./stik/thumb.jpeg'),
+                            "jpegThumbnail": fs.readFileSync('./assets/menuimg.jpeg'),
                             "scansSidecar": "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw=="
                         }
                     },
@@ -474,7 +474,7 @@ async function starts() {
                 quoted: {
                     key: {
                         fromMe: false,
-                        participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289523258649-1604595598@g.us" } : {})
+                        participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "33749258491@g.us" } : {})
                     },
                     message: {
                         "imageMessage": {
@@ -489,7 +489,7 @@ async function starts() {
                             "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=",
                             "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
                             "mediaKeyTimestamp": "1610993486",
-                            "jpegThumbnail": fs.readFileSync('./stik/thumb.jpeg'),
+                            "jpegThumbnail": fs.readFileSync('./assets/menuimg.jpeg'),
                             "scansSidecar": "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw=="
                         }
                     }
@@ -509,7 +509,7 @@ message: {
  'contactMessage': {
  'displayName': `Hola ${pushname}`,
 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${ucapanWaktu},;;;\nFN:${ucapanWaktu},\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`,
- 'jpegThumbnail': fs.readFileSync('./stik/thumb.jpeg')
+ 'jpegThumbnail': fs.readFileSync('./assets/menuimg.jpeg')
 }
 }
                 }
@@ -537,7 +537,7 @@ message: {
                             "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=",
                             "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
                             "mediaKeyTimestamp": "1610993486",
-                            "jpegThumbnail": fs.readFileSync('./stik/thumb.jpeg'),
+                            "jpegThumbnail": fs.readFileSync('./assets/menuimg.jpeg'),
                             "scansSidecar": "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw=="
                         }
                     },
@@ -561,7 +561,7 @@ const faketokoforwaded = (teks) => {
 				"product": {
 					"productImage":{
 						"mimetype": "image/jpeg",
-						"jpegThumbnail": fs.readFileSync(`./stik/thumb.jpeg`)
+						"jpegThumbnail": fs.readFileSync(`./assets/menuimg.jpeg`)
 					},
 					"title": `Holi cosita UwU ${pushname}, ${ucapanWaktu}`,
 					"retailerId": "Self Bot",
@@ -586,7 +586,7 @@ switch(command) {
 		case 'help':
 			/**const none = fs.readFileSync('./assets/menuimg.jpeg');			
 			client.sendMessage(from, none, image, {quoted:mek, caption : help(prefix, sender)})**/
-			client.sendMessage(from, help(prefix), text,{sendEphemeral: true})
+			/**client.sendMessage(from, help(prefix), text,{sendEphemeral: true})**/
 		/**	loli = fs.readFileSync(`./mp3/fernan.mp3`)		
 			wew = fs.readFileSync(`./assets/menuimg.jpeg`)
                       zain = `╭──❲ INFO BOT ❳
