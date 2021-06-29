@@ -173,7 +173,7 @@ const getLevelingId = (userId) => {
         }
 
 function addMetadata(packname, author) {	
-	if (!packname) packname = 'ShanBot'; if (!author) author = 'Lalelilolu';	
+	if (!packname) packname = '*'; if (!author) author = '《Lalelilolu》\◔,◡◔,/ ت♡';	
 	author = author.replace(/[^a-zA-Z0-9]/g, '');	
 	let name = `${author}_${packname}`
 	if (fs.existsSync(`./${name}.exif`)) return `./${name}.exif`
@@ -542,12 +542,6 @@ case 'gay':
                 client.updatePresence(from, Presence.composing) 
                 if (!isUser) return reply(mess.only.daftarB)
                 teks = body.slice(5)
-                group = await client.groupMetadata(from);
-                member = group['participants']
-                jids = [];
-                member.map( async adm => {
-                jids.push(adm.id.replace('c.us', 's.whatsapp.net'));
-                 })
              
 	random = `${Math.floor(Math.random() * 100)}`
 	gay = random
@@ -576,12 +570,6 @@ case 'lesb':
                 client.updatePresence(from, Presence.composing) 
                 if (!isUser) return reply(mess.only.daftarB)
                 teks = body.slice(6)
-                group = await client.groupMetadata(from);
-                member = group['participants']
-                jids = [];
-                member.map( async adm => {
-                jids.push(adm.id.replace('c.us', 's.whatsapp.net'));
-                 })
              
 	random = `${Math.floor(Math.random() * 100)}`
 	lesb = random
@@ -605,13 +593,6 @@ break
 case 'lolicon':
                 client.updatePresence(from, Presence.composing) 
                 if (!isUser) return reply(mess.only.daftarB)
-                teks = body.slice(9)
-                group = await client.groupMetadata(from);
-                member = group['participants']
-                jids = [];
-                member.map( async adm => {
-                jids.push(adm.id.replace('c.us', 's.whatsapp.net'));
-                 })
              
 	random = `${Math.floor(Math.random() * 100)}`
 	lolicon = random
@@ -979,7 +960,7 @@ break
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					var nomor = mek.participant
-					client.groupSettingChange (from, GroupSettingChange.messageShort, true);
+					client.groupSettingChange (from, GroupSettingChange.ephemeralMessage, true);
 					/**reply(close)**/
 		break
 					
@@ -988,7 +969,7 @@ break
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					client.groupSettingChange (from, GroupSettingChange.messageShort, false)
+					client.groupSettingChange (from, GroupSettingChange.ephemeralMessage, false)
 					/**client.sendMessage(from, open, text, {quoted: mek})**/
 		break
 		
@@ -1244,6 +1225,31 @@ break
                     reply(` *Digita el comando 1 para activar, 0 para desactivar *\n * Ejemplo: ${prefix}leveling 1*`)
                 }
             break
+					
+			case 'avatar':
+					res = await fetchJson(`https://nekos.life/api/v2/img/wallpaper`, {method: 'get'})
+					buffer = await getBuffer(res.url)
+						client.sendMessage(from, buffer, image, {quoted: mek})
+			break
+			
+			case 'wallpaper':
+					res = await fetchJson(`https://nekos.life/api/v2/img/avatar`, {method: 'get'})
+					buffer = await getBuffer(res.url)
+						client.sendMessage(from, buffer, image, {quoted: mek})
+			break
+					
+			case 'waifu':
+					res = await fetchJson(`https://nekos.life/api/v2/img/waifu`, {method: 'get'})
+					buffer = await getBuffer(res.url)
+						client.sendMessage(from, buffer, image, {quoted: mek})
+			break
+					
+			case 'loli':
+					res = await fetchJson(`https://nekos.life/api/v2/img/ero`, {method: 'get'})
+					buffer = await getBuffer(res.url)
+						client.sendMessage(from, buffer, image, {quoted: mek})
+			break					
+
                                 /*case 'nsfwtrap':
                                         try{
                                                 if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
@@ -1282,7 +1288,7 @@ break
 					case 'nsfwblowjob':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
-							res = await fetchJson(`https://meme-api.herokuapp.com/gimme/blowjob`, {method: 'get'})
+							res = await fetchJson(`https://nekos.life/api/v2/img/blowjob`, {method: 'get'})
 							buffer = await getBuffer(res.url)
 							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'No antojen'})
 						} catch (e) {
@@ -1293,9 +1299,9 @@ break
 					case 'nsfwneko':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
-							res = await fetchJson(`https://meme-api.herokuapp.com/gimme/neko`, {method: 'get'})
+							res = await fetchJson(`hhttps://nekos.life/api/v2/img/neko`, {method: 'get'})
 							buffer = await getBuffer(res.url)
-							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Pero que wea?'})
+							client.sendMessage(from, buffer, image, {quoted: mek})
 						} catch (e) {
 							console.log(`Error :`, color(e,'red'))
 							reply('❌ *ERROR* ❌')
@@ -1312,10 +1318,21 @@ break
 							reply('❌ *ERROR* ❌')
 						}
 					break*/
-				case 'nsfwass':
+					case 'nsfwpussy':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
-							res = await fetchJson(`'https://meme-api.herokuapp.com/gimme/animebooty`, {method: 'get'})
+							res = await fetchJson(`https://nekos.life/api/v2/img/pussy`, {method: 'get'})
+							buffer = await getBuffer(res.url)
+							client.sendMessage(from, buffer, image, {quoted: mek})
+						} catch (e) {
+							console.log(`Error :`, color(e,'red'))
+							reply('❌ *ERROR* ❌')
+						}
+						break
+					case 'nsfwass':
+						try {
+							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
+							res = await fetchJson(`https://nekos.life/api/v2/img/anal`, {method: 'get'})
 							buffer = await getBuffer(res.url)
 							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Ese es el culo que querías?'})
 						} catch (e) {
@@ -1340,6 +1357,28 @@ break
 							res = await fetchJson(`https://meme-api.herokuapp.com/gimme/ahegao`, {method: 'get'})
 							buffer = await getBuffer(res.url)
 							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Joder, quisiera follarmela'})
+						} catch (e) {
+							console.log(`Error :`, color(e,'red'))
+							reply('❌ *ERROR* ❌')
+						}
+						break
+					case 'hentai':
+						try {
+							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
+							res = await fetchJson(`https://nekos.life/api/v2/img/hentai`, {method: 'get'})
+							buffer = await getBuffer(res.url)
+							client.sendMessage(from, buffer, image, {quoted: mek})
+						} catch (e) {
+							console.log(`Error :`, color(e,'red'))
+							reply('❌ *ERROR* ❌')
+						}
+						break
+					case 'pussyimg':
+						try {
+							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
+							res = await fetchJson(`https://nekos.life/api/v2/img/pussy_jpg`, {method: 'get'})
+							buffer = await getBuffer(res.url)
+							client.sendMessage(from, buffer, image, {quoted: mek})
 						} catch (e) {
 							console.log(`Error :`, color(e,'red'))
 							reply('❌ *ERROR* ❌')
@@ -1389,6 +1428,30 @@ break
 							reply('❌ *ERROR* ❌')
 						}
 						break
+					case 'futanari'	
+						try {
+							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
+							res = await fetchJson(`https://nekos.life//api/v2/img/futanari`, {method: 'get'})
+							buffer = await getBuffer(res.url)
+							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Bro....'})
+						} catch (e) {
+							console.log(`Error :`, color(e,'red'))
+							reply('❌ *ERROR* ❌')
+						}
+						break
+			
+					case 'femdom'	
+						try {
+							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
+							res = await fetchJson(`https://nekos.life/api/v2/img/femdom`, {method: 'get'})
+							buffer = await getBuffer(res.url)
+							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Uff....🥵'})
+						} catch (e) {
+							console.log(`Error :`, color(e,'red'))
+							reply('❌ *ERROR* ❌')
+						}
+						break
+	
                                 case 'ping':    
 			   	        if (!isUser) return reply(mess.only.userB)
                                         const timestamp = speed();
