@@ -37,6 +37,11 @@ const imgbb = require('imgbb-uploader')
 const lolis = require('lolis.life')
 const loli = new lolis()
 const speed = require('performance-now')
+const axios = require("axios")
+const { EmojiAPI } = require("emoji-api")
+const emoji = new EmojiAPI()
+const gis = require('g-i-s');
+const imageToBase64 = require('image-to-base64');
 /******FIN DE ENTRADA DEL PAQUETE NPM******/
 
 /******COMIENZO DE LA ENTRADA JSON******/
@@ -435,11 +440,11 @@ async function starts() {
 /////////////////////////////////////////////////////////////
 		
         const fakethumb = (teks, yes) => {
-            pato.sendMessage(from, teks, image, {thumbnail:fs.readFileSync('./assets/menuimg.jpeg'),quoted:mek,caption:yes})
+            client.sendMessage(from, teks, image, {thumbnail:fs.readFileSync('./assets/menuimg.jpeg'),quoted:mek,caption:yes})
         }				
 
 	const fakestatus = (teks) => {
-            pato.sendMessage(from, teks, text, {
+            client.sendMessage(from, teks, text, {
                 quoted: {
                     key: {
                         fromMe: false,
@@ -470,7 +475,7 @@ async function starts() {
         }
 		
         const fakegroup = (teks) => {
-            pato.sendMessage(from, teks, text, {
+            client.sendMessage(from, teks, text, {
                 quoted: {
                     key: {
                         fromMe: false,
@@ -499,7 +504,7 @@ async function starts() {
 	
 	
 const fakekontak = (teks) => {
-pato.sendMessage(from, teks, MessageType.text, {
+client.sendMessage(from, teks, MessageType.text, {
 quoted: {
 key: {
 fromMe: false,
@@ -538,7 +543,7 @@ const faketokoforwaded = (teks) => {
 		}
 	}
 }
-	pato.sendMessage(from, teks, text, {
+	client.sendMessage(from, teks, text, {
 	  quoted: anu,
 	  contextInfo:{
 	    "forwardingScore": 999, "isForwarded": true
@@ -575,7 +580,7 @@ ShanBot.sendMessage(from, wew, image, {quoted: { key: { fromMe: false, participa
     }
     let timestampi = speed();
     let sepid = speed() - timestampi
-    var { device_manufacturer, device_model, mcc, mnc, os_version, os_build_number, wa_version  } = pato.user.phone
+    var { device_manufacturer, device_model, mcc, mnc, os_version, os_build_number, wa_version  } = client.user.phone
     anu = process.uptime()
     runtem = `${kyun(anu)}`
 //
@@ -1112,11 +1117,11 @@ break
 		break**/
 					
 				case prefix+ 'peson':
-					  pato.toggleDisappearingMessages(from, WA_DEFAULT_EPHEMERAL)
+					  client.toggleDisappearingMessages(from, WA_DEFAULT_EPHEMERAL)
 				break
 				
 				case prefix+ 'pesoff':
-					    pato.toggleDisappearingMessages(from, 0)
+					    client.toggleDisappearingMessages(from, 0)
 				break
 		
 		case 'attp':
@@ -1454,7 +1459,7 @@ break
             imageToBase64(pjr)
             .then((response) => {
             media =  Buffer.from(response, 'base64');
-            pato.sendMessage(from,media,image,{quoted:mek,caption:'NIH'})
+            client.sendMessage(from,media,image,{quoted:mek,caption:'NIH'})
             }
             )
             .catch((error) => {
@@ -1484,7 +1489,7 @@ if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 			  fs.unlinkSync(ranp)
 				if (err) return reply('error')
 				buffer = fs.readFileSync(rano)
-				pato.sendMessage(from, buffer, MessageType.sticker, {quoted: mek})
+				client.sendMessage(from, buffer, MessageType.sticker, {quoted: mek})
 				fs.unlinkSync(rano)
 			})
 break
@@ -1498,7 +1503,7 @@ if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 			  fs.unlinkSync(ranp)
 				if (err) return reply('error')
 				buffer = fs.readFileSync(rano)
-				pato.sendMessage(from, buffer, MessageType.sticker, {quoted: mek})
+				client.sendMessage(from, buffer, MessageType.sticker, {quoted: mek})
 				fs.unlinkSync(rano)
 			})
 break
@@ -1512,7 +1517,7 @@ if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 			  fs.unlinkSync(ranp)
 				if (err) return reply('error')
 				buffer = fs.readFileSync(rano)
-				pato.sendMessage(from, buffer, MessageType.sticker, {quoted: mek})
+				client.sendMessage(from, buffer, MessageType.sticker, {quoted: mek})
 				fs.unlinkSync(rano)
 			})
 break
