@@ -1347,7 +1347,7 @@ break
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://nekos.life/api/v2/img/pussy`, {method: 'get'})
 							buffer = await getBuffer(res.url)
-							client.sendMessage(from, buffer, image/gif, {quoted: mek})
+							client.sendMessage(from, buffer, image.gif, {quoted: mek})
 						} catch (e) {
 							console.log(`Error :`, color(e,'red'))
 							reply('❌ *ERROR* ❌')
@@ -1358,7 +1358,7 @@ break
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://nekos.life/api/v2/img/anal`, {method: 'get'})
 							buffer = await getBuffer(res.url)
-							client.sendMessage(from, buffer, image/gif, {quoted: mek, caption: 'Ese es el culo que querías?'})
+							client.sendMessage(from, buffer, image.gif, {quoted: mek, caption: 'Ese es el culo que querías?'})
 						} catch (e) {
 							console.log(`Error :`, color(e,'red'))
 							reply('❌ *ERROR* ❌')
