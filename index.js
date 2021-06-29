@@ -544,7 +544,7 @@ case 'gay':
                 if (!isUser) return reply(mess.only.daftarB)
               /**  teks = body.slice(5)**/
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-teks = mentions(`@${mentioned[0].split('@')[0]}`, mentioned, true)
+teks = (`@${mentioned[0].split('@')[0]}`, mentioned, true)
              
 	random = `${Math.floor(Math.random() * 100)}`
 	gay = random
@@ -574,7 +574,7 @@ case 'lesb':
                 if (!isUser) return reply(mess.only.daftarB)
               /**  teks = body.slice(6)**/
         mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-	teks = mentions(`@${mentioned[0].split('@')[0]}`, mentioned, true)    
+	teks = (`@${mentioned[0].split('@')[0]}`, mentioned, true)    
 	random = `${Math.floor(Math.random() * 100)}`
 	lesb = random
 	if (lesb < 20 ) {les = 'Uy nena, eres bien mujercita 😘'} 
@@ -601,7 +601,7 @@ case 'lolicon':
 		/**teks = body.slice(9)**/
 	mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid	
 /**mentions(`Pedido recibido✅\n\nAgregando cargo como administrador : @${mentioned[0].split('@')[0]}`, mentioned, true)**/
-	teks = mentions(`@${mentioned[0].split('@')[0]}`, mentioned, true)
+	teks = (`@${mentioned[0].split('@')[0]}`, mentioned, true)
 
 	random = `${Math.floor(Math.random() * 100)}`
 	lolicon = random
@@ -613,16 +613,11 @@ case 'lolicon':
 		else {lol = 'Te cayó la ley perro 😎'
 		     
 		const none = fs.readFileSync('./src/stickers/FBI.webp');
-		client.sendMessage(from, none, sticker, {quoted: mek})         
+		client.sendMessage(from, none, sticker)         
 		}	
 					
-	hasil = `${teks}\n➥${random}% fan de lolis\n✪\n➥${lol}`
-	    /**options = {
-                text: hasil,
-                contextInfo: {mentionedJid: jids},
-                quoted: mek
-                }	**/
-               client.sendMessage(from, hasil, text)
+		hasil = `${teks}\n➥${random}% fan de lolis\n✪\n➥${lol}`
+                client.sendMessage(from, hasil, text)
 break
 			
 				
