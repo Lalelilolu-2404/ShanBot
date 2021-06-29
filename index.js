@@ -8,6 +8,9 @@
 const {
     WAConnection,
     MessageType,
+    WA_MESSAGE_STUB_TYPES,
+    WA_DEFAULT_EPHEMERAL,
+    ReconnectMode,
     Presence,
     Mimetype,
     rugaapi,
@@ -360,7 +363,7 @@ async function starts() {
 				client.sendMessage(from, teks, text, {quoted:mek})
 			}
 			const sendMess = (hehe, teks) => {
-				client.sendMessage(hehe, teks, text)
+				client.sendMessage(hehe, teks, text, {sendEphemeral: true})
 			}
 			const mentions = (teks, memberr, id) => {
 				(id == null || id == undefined || id == false) ? client.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": memberr}})
@@ -478,7 +481,7 @@ async function starts() {
                 quoted: {
                     key: {
                         fromMe: false,
-                        participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "33749258491@g.us" } : {})
+                        participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "@g.us" } : {})
                     },
                     message: {
                         "imageMessage": {
@@ -553,8 +556,8 @@ const faketokoforwaded = (teks) => {
 
 switch(command) {
 
-		case 'menu':
-		case 'help':
+case 'menu':
+case 'help':
 			/**const none = fs.readFileSync('./assets/menuimg.jpeg');			
 			client.sendMessage(from, none, image, {quoted:mek, caption : help(prefix, sender)})**/
 			/**client.sendMessage(from, help(prefix), text,{sendEphemeral: true})**/
@@ -583,11 +586,33 @@ ShanBot.sendMessage(from, wew, image, {quoted: { key: { fromMe: false, participa
     anu = process.uptime()
     runtem = `${kyun(anu)}`
 //
-    var menu = `help(prefix)`
+    var menu = `
+                    SATANCITO ᵈᵃʳʸ⛥
+    
+Blackpink  -  How you like that 
+01:52 ━━━●───── 03:08
+     ⇆ㅤㅤ ◁ㅤ ❚❚ㅤ ▷ㅤ ㅤ↻﻿
+                  ılıılıılıılıılıılı
+ᴠᴏʟᴜᴍᴇ : ▮▮▮▮▮▮▮▯▯▯ 
+- *Hits de hoy : ${hit_today.length}*
+- *Celular :* ${device_manufacturer}
+- *Modelo :* ${device_model}
+- *RAM :* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
+- *Android :* ${os_version}
+- *Versión de WhatsApp* : ${wa_version}
+-  *Grupos :* ${giid.length}
+- *Chats :* ${totalchat.length - giid.length}
+- *Total de chat :* ${totalchat.length}
+- *Velocidad :* ${sepid.toFixed(4)} Second
+- *Mi tiempo vivo:* ${runtem}
+- Prefix : 「 ${prefix} 」
+Grupo oficial : https://chat.whatsapp.com/J72bXsh3gRxKufBl8iikDO
+    
+    `
     
         	faketokoforwaded(menu)		
 					
-		break
+break
                 case 'otak':
 		client.sendMessage(from, otak(prefix, sender), text, {quoted: mek})
 		break
@@ -676,6 +701,35 @@ ShanBot.sendMessage(from, wew, image, {quoted: { key: { fromMe: false, participa
 						client.groupMakeAdmin(from, mentioned)
 					}
 					break
+		
+		
+case 'spam':
+                if (!isOwner) return reply('No eres mi dueño UnU')
+                if (!arg) return reply(`Penggunaan ${prefix}spam teks|jumlahspam`)
+                argz = arg.split("|")
+                if (!argz) return reply(`Penggunaan ${prefix}spam teks|jumlah`)
+                if (isNaN(argz[1])) return reply(`harus berupa angka`)
+                for (let i = 0; i < argz[1]; i++){
+                pato.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
+                }
+break
+		
+case 'self':
+          	if (!isOwner) return fakestatus('No eres mi dueño UnU')
+          	if (banChats === true) return
+          	uptime = process.uptime()
+         	 // var taged = ben.message.extendedTextMessage.contextInfo.mentionedJid[0]
+         	banChats = true
+          	fakestatus(`「 *Privado UwU* 」`)
+break
+ //Set Owner For gc
+case 'public':
+          	if (!isOwner) return fakestatus('No eres mi dueño UnU')
+          	if (banChats === false) return
+          	// var taged = ben.message.extendedTextMessage.contextInfo.mentionedJid[0]
+          	banChats = false
+          	fakestatus(`「 *PUBLICO OwO* 」`)
+break
 
 case 'gay':
                 client.updatePresence(from, Presence.composing) 
@@ -1115,11 +1169,11 @@ break
 					
 		break**/
 					
-				case prefix+ 'peson':
+				case  'peson':
 					  client.toggleDisappearingMessages(from, WA_DEFAULT_EPHEMERAL)
 				break
 				
-				case prefix+ 'pesoff':
+				case 'pesoff':
 					    client.toggleDisappearingMessages(from, 0)
 				break
 		
@@ -1314,8 +1368,9 @@ break
 				break**/
 
                               	case 'nsfw':
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isOwner) return reply(mess.only.ownerB)
+					/**if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)**/
 					if (args.length < 1) return reply('Digita 1 para activar los NSFW')
 					if (Number(args[0]) === 1) {
 						if (isNsfw) return reply('Recursos Activados ✅')
@@ -1448,7 +1503,7 @@ case 'image':
             });
 break
 									
-    case 'anime':
+ /**   case 'anime':
             reply(mess.wait)
             fetch('https://raw.githubusercontent.com/pajaar/grabbed-results/master/pajaar-2020-gambar-anime.txt')
             .then(res => res.text())
@@ -1466,7 +1521,7 @@ break
             }
             )
             });
-            break
+            break**/
 					
 			case 'loli':
 				try {
@@ -1521,6 +1576,25 @@ if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 			})
 break
 
+case 'cumimg':
+if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
+			cumjpg = await axios.get('https://nekos.life/api/v2/img/cum_jpg')
+			bupjpg = await getBuffer(cumjpg.data.url)
+			client.sendMessage(from, bupjpg, image, { quoted: mek })
+			.catch(err => {
+			return('Error 7-7..')
+			})
+break
+		
+case 'oppai':
+if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
+			opai = await axios.get('https://nekos.life/api/v2/img/tits')
+			opaiz = await getBuffer(opai.data.url)
+			client.sendMessage(from, opaiz, image, { quoted: mek })
+			.catch(err => {
+			return('Error 7-7..')
+			})
+break
                                 /*case 'nsfwtrap':
                                         try{
                                                 if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
