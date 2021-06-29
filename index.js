@@ -1321,7 +1321,7 @@ break
 					case 'nsfwneko':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
-							res = await fetchJson(`hhttps://nekos.life/api/v2/img/neko`, {method: 'get'})
+							res = await fetchJson(`https://nekos.life/api/v2/img/neko`, {method: 'get'})
 							buffer = await getBuffer(res.url)
 							client.sendMessage(from, buffer, image, {quoted: mek})
 						} catch (e) {
