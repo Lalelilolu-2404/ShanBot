@@ -477,9 +477,10 @@ ShanBot.sendMessage(from, wew, image, {quoted: { key: { fromMe: false, participa
 		case 'menuadmin':
 		client.sendMessage(from, menuadmin(prefix, sender), text, {quoted: mek})
 		break
-		/**case 'nsfwmenu':
+		case 'nsfwmenu':
+		if (isOwner)
 		client.sendMessage(from, nsfwmenu(prefix, sender), text, {quoted: mek})
-		break**/
+		break
 		case 'desmenu':
 		client.sendMessage(from, desmenu(prefix, sender), text, {quoted: mek})
 		break
