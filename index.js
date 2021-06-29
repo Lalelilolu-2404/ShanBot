@@ -544,7 +544,7 @@ case 'gay':
                 if (!isUser) return reply(mess.only.daftarB)
               /**  teks = body.slice(5)**/
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-teks = (`@${mentioned[0].split('@')[0]}`, mentioned, true)
+mentions(`@${mentioned[0].split('@')[0]}`, mentioned, true)
              
 	random = `${Math.floor(Math.random() * 100)}`
 	gay = random
@@ -559,7 +559,7 @@ if (gay < 20 ) {ga = 'Usted es hetero 🤪🤙'}
 		client.sendMessage(from, none, MessageType.audio, {mimetype: 'audio/mp4', ptt:true})       
 	     }	
 					
-	hasil = `${teks}\n➥${random}% gay \n✪\n➥${ga}`
+	hasil = `➥${random}% gay \n✪\n➥${ga}`
 	    /**options = {
                  text: hasil,
                 contextInfo: {mentionedJid: jids},
@@ -574,7 +574,7 @@ case 'lesb':
                 if (!isUser) return reply(mess.only.daftarB)
               /**  teks = body.slice(6)**/
         mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-	teks = (`@${mentioned[0].split('@')[0]}`, mentioned, true)    
+	mentions(`@${mentioned[0].split('@')[0]}`, mentioned, true)    
 	random = `${Math.floor(Math.random() * 100)}`
 	lesb = random
 	if (lesb < 20 ) {les = 'Uy nena, eres bien mujercita 😘'} 
@@ -585,7 +585,7 @@ case 'lesb':
 		const none = fs.readFileSync('./anishan/Concha.mp3');
 		client.sendMessage(from, none, MessageType.audio, {mimetype: 'audio/mp4', ptt:true})   
 	     }
-	hasil = `${teks}\n➥${random}% lesb \n✪\n➥${les}`
+	hasil = `➥${random}% lesb \n✪\n➥${les}`
 	    /**options = {
                  text: hasil,
                 contextInfo: {mentionedJid: jids},
@@ -601,7 +601,7 @@ case 'lolicon':
 		/**teks = body.slice(9)**/
 	mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid	
 /**mentions(`Pedido recibido✅\n\nAgregando cargo como administrador : @${mentioned[0].split('@')[0]}`, mentioned, true)**/
-	teks = (`@${mentioned[0].split('@')[0]}`, mentioned, true)
+	mentions(`@${mentioned[0].split('@')[0]}`, mentioned, true)
 
 	random = `${Math.floor(Math.random() * 100)}`
 	lolicon = random
@@ -616,7 +616,7 @@ case 'lolicon':
 		client.sendMessage(from, none, sticker)         
 		}	
 					
-		hasil = `${teks}\n➥${random}% fan de lolis\n✪\n➥${lol}`
+		hasil = `➥${random}% fan de lolis\n✪\n➥${lol}`
                 client.sendMessage(from, hasil, text)
 break
 			
