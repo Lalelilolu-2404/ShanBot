@@ -1144,7 +1144,7 @@ break
 					text: `Grupo cerrado por el administrador @${nomor.split("@s.whatsapp.net")[0]}\nAhora *solo administradores* puede enviar mensajes`,
 					contextInfo: { mentionedJid: [nomor] }
 					}**/
-					client.groupSettingChange (from, GroupSettingChange.messageSend, true)
+					client.groupSettingChange (from, GroupSettingChange.messageSend, true);
 					/**reply(close)**/
 		break
 					
@@ -1186,7 +1186,7 @@ break
 				break
 				
 				case 'pesoff':
-					    client.toggleDisappearingMessages(from, WA_DEFAULT_EPHEMERAL, false)
+					    client.toggleDisappearingMessages(from, 0)
 				break
 		
 		case 'attp':
