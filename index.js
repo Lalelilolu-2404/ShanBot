@@ -8,12 +8,14 @@
 const {
     WAConnection,
     MessageType,
+    MessageOptions,
     WA_MESSAGE_STUB_TYPES,
     WA_DEFAULT_EPHEMERAL,
     ReconnectMode,
     Presence,
     Mimetype,
     rugaapi,
+    waChatKey,
     GroupSettingChange
 } = require('@adiwajshing/baileys')
 
@@ -102,6 +104,10 @@ const vcard = 'BEGIN:VCARD\n' // Tarjeta de contacto
 
 prefix = '*'
 blocked = []
+hit_today = []
+banChats = false
+offline = false
+fake = 'Lalelilolu ᵈᵃʳʸ⛥'
 
 /******CONFIGURACION DE CARGA******/
 const settingan = JSON.parse(fs.readFileSync('./admin/set.json'))
@@ -298,6 +304,11 @@ async function starts() {
 			const args = body.trim().split(/ +/).slice(1)
 			let authorname = client.contacts[from] != undefined ? client.contacts[from].vname || client.contacts[from].notify : undefined
 			const isCmd = body.startsWith(prefix)
+			const q = args.join(' ')
+			const arg = budy.slice(command.length + 1, budy.length)
+			const conts = mek.key.fromMe ? client.user.jid : client.contacts[sender] || { notify: jid.replace(/@.+/, '') }
+       			const pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
+
 
 			mess = {
 				wait: 'Relaja la raja😎\n\n❗Loading...❗\n\nby lalelilolu',
@@ -1174,7 +1185,7 @@ break
 				break
 				
 				case 'pesoff':
-					    client.toggleDisappearingMessages(from, 0)
+					    client.toggleDisappearingMessages(from, WA_DEFAULT_EPHEMERAL, false)
 				break
 		
 		case 'attp':
