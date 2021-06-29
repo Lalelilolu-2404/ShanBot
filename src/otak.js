@@ -5,6 +5,7 @@ const otak = (prefix, pushname) => {
 - Admin
 - A mimir
 - Banx
+- Ctm
 - Dime onichan
 - Feliz jueves
 - Gambare
@@ -17,8 +18,10 @@ const otak = (prefix, pushname) => {
 - Mi reina
 - Mujer
 - Nya
+- Onichan
 - Pack
 - Pasa pack
+- Pero en fin
 - Quien es tu sempai 
 - Setso
 - Sexual
