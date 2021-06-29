@@ -36,7 +36,7 @@ const { removeBackgroundFromImageFile } = require('remove.bg')
 const imgbb = require('imgbb-uploader')
 const lolis = require('lolis.life')
 const loli = new lolis()
-const emoji = new EmojiAPI()
+
 const speed = require('performance-now')
 const axios = require("axios")
 const gis = require('g-i-s');
