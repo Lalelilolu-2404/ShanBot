@@ -38,7 +38,6 @@ const lolis = require('lolis.life')
 const loli = new lolis()
 const speed = require('performance-now')
 const axios = require("axios")
-const { EmojiAPI } = require("emoji-api")
 const emoji = new EmojiAPI()
 const gis = require('g-i-s');
 const imageToBase64 = require('image-to-base64');
