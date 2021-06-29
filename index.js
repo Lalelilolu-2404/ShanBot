@@ -541,7 +541,9 @@ ShanBot.sendMessage(from, wew, image, {quoted: { key: { fromMe: false, participa
 case 'gay':
                 client.updatePresence(from, Presence.composing) 
                 if (!isUser) return reply(mess.only.daftarB)
-                teks = body.slice(5)
+              /**  teks = body.slice(5)**/
+mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+teks = `@${mentioned[0].split('@')[0]}`
              
 	random = `${Math.floor(Math.random() * 100)}`
 	gay = random
@@ -569,8 +571,9 @@ break
 case 'lesb':
                 client.updatePresence(from, Presence.composing) 
                 if (!isUser) return reply(mess.only.daftarB)
-                teks = body.slice(6)
-             
+              /**  teks = body.slice(6)**/
+        mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+	teks = `@${mentioned[0].split('@')[0]}`     
 	random = `${Math.floor(Math.random() * 100)}`
 	lesb = random
 	if (lesb < 20 ) {les = 'Uy nena, eres bien mujercita 😘'} 
