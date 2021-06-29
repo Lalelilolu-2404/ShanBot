@@ -306,7 +306,9 @@ async function starts() {
 			const isCmd = body.startsWith(prefix)
 			const q = args.join(' ')
 			const arg = budy.slice(command.length + 1, budy.length)
-
+			const conts = mek.key.fromMe ? client.user.jid : client.contacts[] || { notify: jid.replace(/@.+/, '') }
+			const pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
+			  
 			mess = {
 				wait: 'Relaja la raja😎\n\n❗Loading...❗\n\nby lalelilolu',
 				success: '✔️ Listo ✔️',
@@ -718,7 +720,7 @@ case 'spam':
                 if (!argz) return reply(`Penggunaan ${prefix}spam teks|jumlah`)
                 if (isNaN(argz[1])) return reply(`harus berupa angka`)
                 for (let i = 0; i < argz[1]; i++){
-                pato.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
+                client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
                 }
 break
 		
