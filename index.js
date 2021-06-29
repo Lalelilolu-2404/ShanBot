@@ -432,22 +432,189 @@ async function starts() {
 				})	
 
 			}
-			switch(command) {
+/////////////////////////////////////////////////////////////
 		
+        const fakethumb = (teks, yes) => {
+            pato.sendMessage(from, teks, image, {thumbnail:fs.readFileSync('./asstes/menuimg.jpeg'),quoted:mek,caption:yes})
+        }				
+
+	        const fakestatus = (teks) => {
+            pato.sendMessage(from, teks, text, {
+                quoted: {
+                    key: {
+                        fromMe: false,
+                        participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})
+                    },
+                    message: {
+                        "imageMessage": {
+                            "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",
+                            "mimetype": "image/jpeg",
+                            "caption": `Holi cosita ^-^${pushname}`,
+                            "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=",
+                            "fileLength": "28777",
+                            "height": 1080,
+                            "width": 1079,
+                            "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=",
+                            "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=",
+                            "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
+                            "mediaKeyTimestamp": "1610993486",
+                            "jpegThumbnail": fs.readFileSync('./stik/thumb.jpeg'),
+                            "scansSidecar": "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw=="
+                        }
+                    },
+                    contextInfo: {
+                      "forwardingScore": 999, "isForwarded": true
+                    }
+                }
+            })
+        }
+		
+        const fakegroup = (teks) => {
+            pato.sendMessage(from, teks, text, {
+                quoted: {
+                    key: {
+                        fromMe: false,
+                        participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289523258649-1604595598@g.us" } : {})
+                    },
+                    message: {
+                        "imageMessage": {
+                            "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",
+                            "mimetype": "image/jpeg",
+                            "caption": `Holi cosita UwU ${pushname}`,
+                            "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=",
+                            "fileLength": "28777",
+                            "height": 1080,
+                            "width": 1079,
+                            "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=",
+                            "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=",
+                            "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
+                            "mediaKeyTimestamp": "1610993486",
+                            "jpegThumbnail": fs.readFileSync('./stik/thumb.jpeg'),
+                            "scansSidecar": "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw=="
+                        }
+                    }
+                }
+            })
+        }	
+	
+	
+const fakekontak = (teks) => {
+pato.sendMessage(from, teks, MessageType.text, {
+quoted: {
+key: {
+fromMe: false,
+ participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: `0@s.whatsapp.net` } : {})
+ },
+message: {
+ 'contactMessage': {
+ 'displayName': `Hola ${pushname}`,
+'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${ucapanWaktu},;;;\nFN:${ucapanWaktu},\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`,
+ 'jpegThumbnail': fs.readFileSync('./stik/thumb.jpeg')
+}
+}
+                }
+            })
+        }
+
+
+ const fakestatus = (teks) => {
+            pato.sendMessage(from, teks, text, {
+                quoted: {
+                    key: {
+                        fromMe: false,
+                        participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})
+                    },
+                    message: {
+                        "imageMessage": {
+                            "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",
+                            "mimetype": "image/jpeg",
+                            "caption": `Holi cosita ^-^${pushname}`,
+                            "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=",
+                            "fileLength": "28777",
+                            "height": 1080,
+                            "width": 1079,
+                            "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=",
+                            "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=",
+                            "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
+                            "mediaKeyTimestamp": "1610993486",
+                            "jpegThumbnail": fs.readFileSync('./stik/thumb.jpeg'),
+                            "scansSidecar": "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw=="
+                        }
+                    },
+                    contextInfo: {
+                      "forwardingScore": 999, "isForwarded": true
+                    }
+                }
+            })
+        }
+		
+ 
+
+const faketokoforwaded = (teks) => {
+	anu = {
+	  key: {
+			fromMe: false,
+			participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})
+		},
+		message: {
+			"productMessage": {
+				"product": {
+					"productImage":{
+						"mimetype": "image/jpeg",
+						"jpegThumbnail": fs.readFileSync(`./stik/thumb.jpeg`)
+					},
+					"title": `Holi cosita UwU ${pushname}, ${ucapanWaktu}`,
+					"retailerId": "Self Bot",
+					"productImageCount": 1
+				},
+				"businessOwnerJid": `0@s.whatsapp.net`
+		}
+	}
+}
+	pato.sendMessage(from, teks, text, {
+	  quoted: anu,
+	  contextInfo:{
+	    "forwardingScore": 999, "isForwarded": true
+	  }
+	})
+}
+
+
+switch(command) {
+
 		case 'menu':
 		case 'help':
 			/**const none = fs.readFileSync('./assets/menuimg.jpeg');			
 			client.sendMessage(from, none, image, {quoted:mek, caption : help(prefix, sender)})**/
-			client.sendMessage(from, help(prefix), text)
+			client.sendMessage(from, help(prefix), text,{sendEphemeral: true})
 		/**	loli = fs.readFileSync(`./mp3/fernan.mp3`)		
 			wew = fs.readFileSync(`./assets/menuimg.jpeg`)
                       zain = `╭──❲ INFO BOT ❳
 │◨ Nombre: Lalelilolu
-│◨ Wa: wa.me/33749258491
-│◨ Prefix: 「  ${prefix}  」
+
 ╰────────────────⊱` 
 ShanBot.sendMessage(from, wew, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "FX BOT*", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('assets/menuimg.jpeg')} } }, caption: zain, pushname, prefix, getLevelingXp, getLevelingLevel, sender, role })
 **/
+
+  let i = []
+    let giid = []
+    for (mem of totalchat){
+      i.push(mem.jid)
+    }
+    for (id of i){
+      if (id && id.includes('g.us')){
+        giid.push(id)
+      }
+    }
+    let timestampi = speed();
+    let sepid = speed() - timestampi
+    var { device_manufacturer, device_model, mcc, mnc, os_version, os_build_number, wa_version  } = pato.user.phone
+    anu = process.uptime()
+    runtem = `${kyun(anu)}`
+//
+    var menu = `help(prefix)`
+    
+        	faketokoforwaded(menu)		
 					
 		break
                 case 'otak':
@@ -958,14 +1125,14 @@ break
 					/**client.sendMessage(from, open, text, {quoted: mek})**/
 		break
 					
-		case 'pesoff':
+		/**case 'pesoff':
 					client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					/**var nomor = mek.participant**/
+		
 					client.groupSettingChange (from, GroupSettingChange.ephemeralMessage, false)
-					/**reply(close)**/
+				
 		break
 					
                 case 'peson':
@@ -974,8 +1141,16 @@ break
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					client.groupSettingChange (from, GroupSettingChange.ephemeralMessage, true)
-					/**client.sendMessage(from, open, text, {quoted: mek})**/
-		break
+					
+		break**/
+					
+				case prefix+ 'peson':
+					  pato.toggleDisappearingMessages(from, WA_DEFAULT_EPHEMERAL)
+				break
+				
+				case prefix+ 'pesoff':
+					    pato.toggleDisappearingMessages(from, 0)
+				break
 		
 		case 'attp':
 						if (!isUser) return reply(mess.only.daftarB)
@@ -984,6 +1159,18 @@ break
 					        attp2 = await getBuffer(`https://api.xteam.xyz/attp?file&text=${body.slice(6)}`)
 						client.sendMessage(from, attp2, MessageType.sticker, {quoted: mek})
 		break
+					
+		case 'emoji':
+			qes = args.join(' ')
+			emoji.get(`${qes}`).then(emoji => {
+			teks = `${emoji.images[4].url}`
+    			sendStickerFromUrl(from,`${teks}`)	
+    			console.log(teks)
+   			})
+          	 .catch((err) => {
+         	   reply('Ahhh pwrdon T-T no pude'); 
+          	  })
+    		break
 					
 				case 's':
 				case 'tucson':
@@ -1242,7 +1429,7 @@ break
 						}
 			break
 			
-			case 'avatar':
+			/**case 'avatar':
 				try {
 					res = await fetchJson(`https://nekos.life/api/v2/img/avatar`, {method: 'get'})
 					buffer = await getBuffer(res.url)
@@ -1251,9 +1438,15 @@ break
 				console.log(`Error :`, color(e,'red'))
 				reply('❌ *ERROR* ❌')
 						}
+			break**/
+			
+			case 'avatar':
+				anu = await axios.get('https://nekos.life/api/v2/img/avatar')
+				avatars = await getBuffer(anu.data.url)
+				client.sendMessage(from, avatars, image, {quoted: mek})
 			break
 					
-			case 'waifu':
+			/**case 'waifu':
 				try {
 					res = await fetchJson(`https://nekos.life/api/v2/img/waifu`, {method: 'get'})
 					buffer = await getBuffer(res.url)
@@ -1262,7 +1455,47 @@ break
 				console.log(`Error :`, color(e,'red'))
 				reply('❌ *ERROR* ❌')
 						}
+			break**/
+					
+			case 'waifu':
+			waifud = await axios.get('https://nekos.life/api/v2/img/waifu')
+			nyed = await getBuffer(waifud.data.url)
+			client.sendMessage(from, nyed, image, { caption: 'Gatau caption nya apa', quoted: mek })
+			.catch(err => {
+				return('Pwrdon... T_T')
+			})
 			break
+			
+case 'image':
+            if (args.length < 1) return reply('Ingrese texto!')
+            const gimg = args.join('');
+            reply(mess.wait)
+            gis(gimg, async (error, result) => {
+            n = result
+            images = n[Math.floor(Math.random() * n.length)].url
+            client.sendMessage(from,{url:images},image,{quoted:mek})
+            });
+break
+									
+    case 'anime':
+            reply(mess.wait)
+            fetch('https://raw.githubusercontent.com/pajaar/grabbed-results/master/pajaar-2020-gambar-anime.txt')
+            .then(res => res.text())
+            .then(body => {
+            let tod = body.split("\n");
+            let pjr = tod[Math.floor(Math.random() * tod.length)];
+            imageToBase64(pjr)
+            .then((response) => {
+            media =  Buffer.from(response, 'base64');
+            pato.sendMessage(from,media,image,{quoted:mek,caption:'NIH'})
+            }
+            )
+            .catch((error) => {
+            console.log(error); 
+            }
+            )
+            });
+            break
 					
 			case 'loli':
 				try {
@@ -1273,7 +1506,49 @@ break
 				console.log(`Error :`, color(e,'red'))
 				reply('❌ *ERROR* ❌')
 						}
-			break					
+			break	
+					
+case 'pussy':
+if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
+      ranp = getRandom('.gif')
+      rano = getRandom('.webp')
+			anu = await axios.get('https://nekos.life/api/v2/img/pussy')
+			exec(`wget ${anu.data.url} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+			  fs.unlinkSync(ranp)
+				if (err) return reply('error')
+				buffer = fs.readFileSync(rano)
+				pato.sendMessage(from, buffer, MessageType.sticker, {quoted: mek})
+				fs.unlinkSync(rano)
+			})
+break
+					
+case 'boobs':
+if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')				
+      ranp = getRandom('.gif')
+      rano = getRandom('.webp')
+			anu = await axios.get('https://nekos.life/api/v2/img/boobs')
+			exec(`wget ${anu.data.url} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+			  fs.unlinkSync(ranp)
+				if (err) return reply('error')
+				buffer = fs.readFileSync(rano)
+				pato.sendMessage(from, buffer, MessageType.sticker, {quoted: mek})
+				fs.unlinkSync(rano)
+			})
+break
+					
+case 'anal':
+if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')					
+      ranp = getRandom('.gif')
+      rano = getRandom('.webp')
+			anu = await axios.get('https://nekos.life/api/v2/img/anal')
+			exec(`wget ${anu.data.url} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+			  fs.unlinkSync(ranp)
+				if (err) return reply('error')
+				buffer = fs.readFileSync(rano)
+				pato.sendMessage(from, buffer, MessageType.sticker, {quoted: mek})
+				fs.unlinkSync(rano)
+			})
+break
 
                                 /*case 'nsfwtrap':
                                         try{
@@ -1343,7 +1618,7 @@ break
 							reply('❌ *ERROR* ❌')
 						}
 					break*/
-					case 'nsfwpussy':
+					/**case 'nsfwpussy':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://nekos.life/api/v2/img/pussy`, {method: 'get'})
@@ -1364,7 +1639,7 @@ break
 							console.log(`Error :`, color(e,'red'))
 							reply('❌ *ERROR* ❌')
 						}
-						break
+						break**/
 					case 'nsfwsidebobs':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
