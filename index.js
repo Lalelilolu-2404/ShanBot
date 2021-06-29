@@ -1417,7 +1417,7 @@ break
 							reply('❌ *ERROR* ❌')
 						}
 						break
-					case 'nsfwtoin':
+					/**case 'nsfwtoin':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://tobz-api.herokuapp.com/nsfwtrap?apikey=BotWeA`, {method: 'get'})
@@ -1427,8 +1427,8 @@ break
 							console.log(`Error :`, color(e,'red'))
 							reply('❌ *ERROR* ❌')
 						}
-						break
-					case 'futanari'	
+						break**/
+					case 'futanari':	
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://nekos.life//api/v2/img/futanari`, {method: 'get'})
@@ -1440,7 +1440,7 @@ break
 						}
 						break
 			
-					case 'femdom'	
+					case 'femdom':	
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://nekos.life/api/v2/img/femdom`, {method: 'get'})
