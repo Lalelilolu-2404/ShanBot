@@ -562,7 +562,7 @@ if (gay < 20 ) {ga = 'Usted es hetero 🤪🤙'}
                 contextInfo: {mentionedJid: jids},
                 quoted: mek
                 }	**/
-               client.sendMessage(from, hasil, text,)
+               client.sendMessage(from, hasil, text)
 break
 					
 
@@ -594,8 +594,10 @@ break
 case 'lolicon':
                 client.updatePresence(from, Presence.composing) 
                 if (!isUser) return reply(mess.only.daftarB)
-		teks = body.slice(9)
-             
+		/**teks = body.slice(9)**/
+					
+teks = @${mentioned[0].split('@')[0]
+
 	random = `${Math.floor(Math.random() * 100)}`
 	lolicon = random
 	if (lolicon < 20 ) {lol = 'Mi loco usted va para el cielo 👏'} 
@@ -615,9 +617,9 @@ case 'lolicon':
                 contextInfo: {mentionedJid: jids},
                 quoted: mek
                 }	**/
-               client.sendMessage(from, hasil, text,{quoted: mek})
+               client.sendMessage(from, hasil, text)
 break
-				
+			
 				
 case 'wa.me':
 case 'wame':
