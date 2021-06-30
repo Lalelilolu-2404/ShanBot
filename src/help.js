@@ -1,8 +1,11 @@
 const help = (prefix) => {
-	return `
-	
+	return `	
 *⌜《Lalelilolu》\◔,◡◔,/ ت♡⌟* ⛥ 
-
+Nightcore  -  Rock mix  
+01:52 ━━━●───── 03:08
+     ⇆ㅤㅤ ◁ㅤ ❚❚ㅤ ▷ㅤ ㅤ↻﻿
+                  ılıılıılıılıılıılı
+ᴠᴏʟᴜᴍᴇ : ▮▮▮▮▮▮▮▯▯▯ 
 ◉ *INFORMACION*
   ╠ ○ Comando: ⌜ ${prefix} ⌟
   ╠ ○ Creador: Lalelilolu
@@ -78,7 +81,7 @@ Para usar estas funciones el bot necesita admin
   
 ⌜《Lalelilolu》\◔,◡◔,/ ت♡⌟
   ╠ √Shanduy ♥♦♣♠
-  ╚ https://github.com/shanduy
+  ╚ 'https://github.com/shanduy'
 `
 }
 
