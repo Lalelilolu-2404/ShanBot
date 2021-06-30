@@ -112,6 +112,8 @@ hit_today = []
 banChats = false
 offline = false
 fake = 'Lalelilolu ᵈᵃʳʸ⛥'
+promote = setting.promote
+demote = setting.demote
 
 /******CONFIGURACION DE CARGA******/
 const settingan = JSON.parse(fs.readFileSync('./admin/set.json'))
@@ -274,7 +276,47 @@ async function starts() {
 				num = anu.participants[0]
 				teks = `NOOOO, se nos fué un putit@ 😎 @${num.split('@')[0]}👋\n\nNadie te extrañará 😎`
 				client.sendMessage(mdata.id, teks, MessageType.text, {contextInfo: {"mentionedJid": [num]}})
-			}
+			} else if (anu.action == 'promote') {
+			const mdata = await client.groupMetadata(anu.jid)
+			num = anu.participants[0]
+			try {
+					ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
+				} catch {
+					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+				}
+			let buff = await getBuffer(ppimg)
+			
+			teks = `𝙉𝙐𝙀𝙑𝙊 𝘼𝙆𝙈𝙄𝙉
+			
+\`\`\`Nombre :\`\`\` ${num.replace('@s.whatsapp.net', '')}
+\`\`\`Usuario :\`\`\` @${num.split('@')[0]}
+\`\`\`Date : NOW\`\`\` 
+\`\`\`Grupo :\`\`\` ${mdata.subject}
+${promote}`
+			client.sendMessage(mdata.id, buff, MessageType.image, {caption : teks, contextInfo: {mentionedJid: [num]}, quoted: { "key": { "participant": `${numbernye}`, "remoteJid": `Kntl`, "fromMe": false, "id": "B391837A58338BA8186C47E51FFDFD4A" }, "message": { "documentMessage": { "jpegThumbnail": buff, "mimetype": "application/octet-stream", "title": `PROMOTE`, "fileLength": "36", "pageCount": 0, "fileName": `_Welcome_` }}, "messageTimestamp": "1614069378", "status": "PENDING"}})
+		} else if (anu.action == 'demote') {
+			num = anu.participants[0]
+			const mdata = await client.groupMetadata(anu.jid)
+			num = anu.participants[0]
+			try {
+					ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
+				} catch {
+					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+				}
+			let buff = await getBuffer(ppimg)
+			teks = `𝙎𝙀 𝙈𝘼𝙏𝙊 𝘼 𝙐𝙉 𝘼𝙆𝙈𝙄𝙉
+			
+\`\`\`Nombre :\`\`\` ${num.replace('@s.whatsapp.net', '')}
+\`\`\`Usuario :\`\`\` @${num.split('@')[0]}
+\`\`\`Dato : Reciente\`\`\`
+\`\`\`Grupo :\`\`\` ${mdata.subject}
+${demote}`
+			client.sendMessage(mdata.id, teks, MessageType.text, {contextInfo: {mentionedJid: [num]}, quoted: { "key": { "participant": `${numbernye}`, "remoteJid": `Ktl`, "fromMe": false, "id": "B391837A58338BA8186C47E51FFDFD4A" }, "message": { "documentMessage": { "jpegThumbnail": buff, "mimetype": "application/octet-stream", "title": `DEMOTE`, "fileLength": "36", "pageCount": 0, "fileName": `_Welcome_` }}, "messageTimestamp": "1614069378", "status": "PENDING"}})
+		}
+			
+/////////			
+			
+			
 		} catch (e) {
 			console.log('Error : %s', color(e, 'red'))
 		}
@@ -287,6 +329,7 @@ async function starts() {
 	    }
 	})
 
+//Chat update
 	client.on('chat-update', async (mek) => {
 		try {
                         if (!mek.hasNewMessage) return
@@ -573,7 +616,7 @@ const faketokoforwaded = (teks) => {
 						"mimetype": "image/jpeg",
 						"jpegThumbnail": fs.readFileSync(`./assets/menuimg.jpeg`)
 					},
-					"title": `UwU, holi: ${pushname}\n${ucapanWaktu}`,
+					"title": `UwU, holi: ${pushname}, ${ucapanWaktu}`,
 					"retailerId": "Self Bot",
 					"productImageCount": 1
 				},
@@ -713,7 +756,7 @@ break
 						client.groupDemoteAdmin(from, mentioned)
 					}
 					break
-               /**  case 'promote':
+                	case 'promote':
 					client.updatePresence(from, Presence.composing) 
                                         if (!isUser) return reply(mess.only.daftarB)
 					if (!isGroup) return reply(mess.only.group)
@@ -732,39 +775,7 @@ break
 						mentions(`Pedido recibido✅\n\nAgregando cargo como administrador : @${mentioned[0].split('@')[0]}`, mentioned, true)
 						client.groupMakeAdmin(from, mentioned)
 					}
-					break
-	**/	
-case 'promote':		
- 	client.updatePresence(from, Presence.composing) 
-	if (!isUser) return reply(mess.only.daftarB)
-	if (!isGroup) return reply(mess.only.group)
-	if (!isGroupAdmins) return reply(mess.only.admin)
-	if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-	if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('¡Etiqueta quien para Admin!')
-		/**mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid **/
-
-		
-mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-mentions(`@${mentioned[0].split('@')[0]}`, mentioned, true)
-		
-			const mdata = await client.groupMetadata(mentioned.jid)
-			num = mentioned.participants[0]
-			try {
-					ppimg = await client.getProfilePicture(`${mentioned.participants[0].split('@')[0]}@c.us`)
-				} catch {
-					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
-				}
-			let buff = await getBuffer(ppimg)
-			
-			teks = `𝙉𝙐𝙀𝙑𝙊 𝘼𝙆𝙈𝙄𝙉
-			
-\`\`\`Nombre :\`\`\` ${num.replace('@s.whatsapp.net', '')}
-\`\`\`Usuario :\`\`\` @${num.split('@')[0]}
-\`\`\`Grupo :\`\`\` ${mdata.subject}
-${promote}`
-client.sendMessage(mdata.id, buff, MessageType.image, {caption : teks, contextInfo: {mentionedJid: [num]}, quoted: { "key": { "participant": `${numbernye}`, "remoteJid": `Kntl`, "fromMe": false, "id": "B391837A58338BA8186C47E51FFDFD4A" }, "message": { "documentMessage": { "jpegThumbnail": buff, "mimetype": "application/octet-stream", "title": `PROMOTE`, "fileLength": "36", "pageCount": 0, "fileName": `_Welcome_` }}, "messageTimestamp": "1614069378", "status": "PENDING"}})
-			
-break	
+			break
 
 /***
 case prefix+ 'ban':
