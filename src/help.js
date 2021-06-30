@@ -1,7 +1,7 @@
 const help = (prefix) => {
 	return `
 	
-*⌜《Lalelilolu》\◔,◡◔,/ ت♡⌟*  
+*⌜《Lalelilolu》\◔,◡◔,/ ت♡⌟* ⛥ 
 
 ◉ *INFORMACION*
   ╠ ○ Comando: ⌜ ${prefix} ⌟
