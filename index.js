@@ -737,10 +737,10 @@ case 'promote':
 	if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('¡Etiqueta quien para Admin!')
 		/**mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid **/
 		
-			const mdata = await fxbot.groupMetadata(anu.jid)
+			const mdata = await client.groupMetadata(anu.jid)
 			num = anu.participants[0]
 			try {
-					ppimg = await fxbot.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
+					ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
