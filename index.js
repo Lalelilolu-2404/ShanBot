@@ -53,6 +53,7 @@ const welkom = JSON.parse(fs.readFileSync('./database/json/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./database/json/nsfw.json'))
 const stick = JSON.parse(fs.readFileSync('./database/json/stick.json'))
 const packsito = JSON.parse(fs.readFileSync('./database/json/packsito.json'))
+const interact = JSON.parse(fs.readFileSync('./database/json/interact.json'))
 const samih = JSON.parse(fs.readFileSync('./database/json/simi.json'))
 const user = JSON.parse(fs.readFileSync('./database/json/user.json'))
 const _leveling = JSON.parse(fs.readFileSync('./database/json/leveling.json'))
@@ -354,6 +355,7 @@ async function starts() {
 			
 			const isStick = isGroup ? stick.includes(from) : false
 			const isPacksito = isGroup ? packsito.includes(from) : false
+			const isInteract = isGroup ? interact.includes(from) : true
 			
 			const isSimi = isGroup ? samih.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
@@ -618,23 +620,16 @@ ShanBot.sendMessage(from, wew, image, {quoted: { key: { fromMe: false, participa
     runtem = `${kyun(anu)}`
 //
     var menu = `
-                    SATANCITO ᵈᵃʳʸ⛥
+*⌜《Lalelilolu》\◔,◡◔,/ ت♡⌟* ⛥ 
     
-Blackpink  -  How you like that 
+NIGHTCORE - Rock Mix 
 01:52 ━━━●───── 03:08
      ⇆ㅤㅤ ◁ㅤ ❚❚ㅤ ▷ㅤ ㅤ↻﻿
                   ılıılıılıılıılıılı
-ᴠᴏʟᴜᴍᴇ : ▮▮▮▮▮▮▮▯▯▯ 
-- *Hits de hoy : ${hit_today.length}*
-- *Celular :* ${device_manufacturer}
-- *Modelo :* ${device_model}
-- *Grupos :* ${giid.length}
-- *Chats :* ${totalchat.length - giid.length}
-- *Total de chat :* ${totalchat.length}
-- Prefix : 「 ${prefix} 」
-Grupo oficial : https://chat.whatsapp.com/J72bXsh3gRxKufBl8iikDO
-    
-    `
+ᴠᴏʟᴜᴍᴇ : ▮▮▮▮▮▮▮▯▯▯  
+${help(prefix)}
+
+`
     
         	faketokoforwaded(menu)		
 					
@@ -1893,6 +1888,24 @@ break
 					}
 			break	
 					
+                         case 'interact':
+					/**if (!isGroupAdmins) return reply(mess.only.admin)**/
+					if (!isOwner) return reply(mess.only.ownerB)
+					if (args.length < 1) return reply('Digita 1 para activar los INTERACT')
+					if (Number(args[0]) === 1) {
+						if (isInteract) return reply('Activado ✅')
+						interact.push(from)
+						fs.writeFileSync('./database/json/interact.json', JSON.stringify(interact))
+						/**reply('❬ ✅ ❭ La funcion Stick esta habilitado')**/
+					} else if (Number(args[0]) === 0) {
+						interact.splice(from, 1)
+						fs.writeFileSync('./database/json/interact.json', JSON.stringify(interact))
+						/**reply('❬ ✅ ❭ La funcion Stick esta deshabilitado')**/
+					} else {
+						/**reply('Digite 1 para activarlo, 0 para desactivarlo')**/
+					}
+			break	
+		
                          case 'packsito':
 					/**if (!isGroupAdmins) return reply(mess.only.admin)**/
 					if (!isOwner) return reply(mess.only.ownerB)
@@ -2666,86 +2679,7 @@ if (isOwner){
 		
 	}			
 }					
-/******Otak and shnatera************************************/					
-				
-		if (budy.includes(`Todo bien`)) {
-                  reply(`Si amig@ todo bien 🙄`)
-                  }
-
-		if (budy.includes(`Buenos días`)) {
-                  reply(`Buenos Dias trolos de mierda`)
-                  }
-
-		if (budy.includes(`Buenas noches`)) {
-                  reply(`Te violaré mientras duermas 🥵`)
-                  }
-		if (budy.includes(`Bye`)) {
-                  reply(`Bye bye beautiful 😉`)
-                  }
-		if (budy.includes(`Bot gay`)) {
-                  reply(`Miren a este boludito`)
-                  }
-
-		if (budy.includes(`Gracias`)) {
-                  reply(`De nada putit@ 🤭`)
-                  }
-		if (budy.includes(`gracias`)) {
-                  reply(`De nada putit@ 🤭`)
-                  }			
-
-      		if (budy.startsWith(`Hola`)) {
-			if (budy.endsWith(`Hola`)){
-        		reply(`Hola putit@ 🤭`)}
-		  }					
-     		if (budy.startsWith(`Ola`)) {
-			if (budy.endsWith(`Ola`)){
-        		reply(`Hola putit@ 🤭`)}
-		  }	
-      		if (budy.startsWith(`Hola botsito`)) {
-			if (budy.endsWith(`Hola botsito`)){
-        		reply(`Hola putit@ 🤭`)}
-		  }					
-     		if (budy.startsWith(`Ola botsito`)) {
-			if (budy.endsWith(`Ola botsito`)){
-        		reply(`Hola putit@ 🤭`)}
-		  }
-      		if (budy.startsWith(`Hola grupo`)) {
-			if (budy.endsWith(`Hola grupo`)){
-        		reply(`Hola putit@ 🤭`)}
-		  }					
-     		if (budy.startsWith(`Ola grupo`)) {
-			if (budy.endsWith(`Ola grupo`)){
-        		reply(`Hola putit@ 🤭`)}
-		  }	
-      		if (budy.startsWith(`Holii`)) {
-			if (budy.endsWith(`Holii`)){
-        		reply(`Hola putit@ 🤭`)}
-		  }					
-     		if (budy.startsWith(`Holli`)) {
-			if (budy.endsWith(`Holi`)){
-        		reply(`Hola putit@ 🤭`)}
-		  }	
-                if (budy.includes(`Put@`)) {
-                  reply(`Relaja la raja nena 😎`)
-                  }
-                if (budy.includes(`Puta`)) {
-                  reply(`Relaja la raja nena 😎`)
-                  }
-                if (budy.includes(`Putit@`)) {
-                  reply(`Relaja la raja nena 😎`)
-                  }
-                if (budy.includes(`put@`)) {
-                  reply(`Relaja la raja nena 😎`)
-                  }
-                if (budy.includes(`putit@`)) {
-                  reply(`Relaja la raja nena 😎`)
-                  }
-     		if (budy.startsWith(`Uff`)) {
-			if (budy.endsWith(`Uff`)){
-                  reply(`Uhm zi, ufff 🥵!`)
-                  }
-		}	
-/*** Audios ****/
+/******Otak and Audios ****/
 	
 if (isPacksito == 1) {
 	if (isOwner){
@@ -2988,7 +2922,86 @@ if (isPacksito == 1) {
         	const none = fs.readFileSync('./anishan/Sapee.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
-/******/				
+/***Shantera***/	
+		
+if (isInteract == 1) {
+		if (budy.includes(`Todo bien`)) {
+                  reply(`Si amig@ todo bien 🙄`)
+                  }
+
+		if (budy.includes(`Buenos días`)) {
+                  reply(`Buenos Dias trolos de mierda`)
+                  }
+
+		if (budy.includes(`Buenas noches`)) {
+                  reply(`Te violaré mientras duermas 🥵`)
+                  }
+		if (budy.includes(`Bye`)) {
+                  reply(`Bye bye beautiful 😉`)
+                  }
+		if (budy.includes(`Bot gay`)) {
+                  reply(`Miren a este boludito`)
+                  }
+
+		if (budy.includes(`Gracias`)) {
+                  reply(`De nada putit@ 🤭`)
+                  }
+		if (budy.includes(`gracias`)) {
+                  reply(`De nada putit@ 🤭`)
+                  }			
+
+      		if (budy.startsWith(`Hola`)) {
+			if (budy.endsWith(`Hola`)){
+        		reply(`Hola putit@ 🤭`)}
+		  }					
+     		if (budy.startsWith(`Ola`)) {
+			if (budy.endsWith(`Ola`)){
+        		reply(`Hola putit@ 🤭`)}
+		  }	
+      		if (budy.startsWith(`Hola botsito`)) {
+			if (budy.endsWith(`Hola botsito`)){
+        		reply(`Hola putit@ 🤭`)}
+		  }					
+     		if (budy.startsWith(`Ola botsito`)) {
+			if (budy.endsWith(`Ola botsito`)){
+        		reply(`Hola putit@ 🤭`)}
+		  }
+      		if (budy.startsWith(`Hola grupo`)) {
+			if (budy.endsWith(`Hola grupo`)){
+        		reply(`Hola putit@ 🤭`)}
+		  }					
+     		if (budy.startsWith(`Ola grupo`)) {
+			if (budy.endsWith(`Ola grupo`)){
+        		reply(`Hola putit@ 🤭`)}
+		  }	
+      		if (budy.startsWith(`Holii`)) {
+			if (budy.endsWith(`Holii`)){
+        		reply(`Hola putit@ 🤭`)}
+		  }					
+     		if (budy.startsWith(`Holli`)) {
+			if (budy.endsWith(`Holi`)){
+        		reply(`Hola putit@ 🤭`)}
+		  }	
+                if (budy.includes(`Put@`)) {
+                  reply(`Relaja la raja nena 😎`)
+                  }
+                if (budy.includes(`Puta`)) {
+                  reply(`Relaja la raja nena 😎`)
+                  }
+                if (budy.includes(`Putit@`)) {
+                  reply(`Relaja la raja nena 😎`)
+                  }
+                if (budy.includes(`put@`)) {
+                  reply(`Relaja la raja nena 😎`)
+                  }
+                if (budy.includes(`putit@`)) {
+                  reply(`Relaja la raja nena 😎`)
+                  }
+     		if (budy.startsWith(`Uff`)) {
+			if (budy.endsWith(`Uff`)){
+                  reply(`Uhm zi, ufff 🥵!`)
+                  }
+		}			
 
 	if (budy.startsWith(`Pasen sexo`)) {
         	const none = fs.readFileSync('./mp3/fernan.mp3');
@@ -3099,7 +3112,9 @@ if (isPacksito == 1) {
 	if (budy.startsWith(`Nefasto`)) {
         	const none = fs.readFileSync('./mp3/gaspi1.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }
+                  }	
+}
+		
 				if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
 						muehe = await simih(budy)
