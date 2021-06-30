@@ -611,6 +611,7 @@ ShanBot.sendMessage(from, wew, image, {quoted: { key: { fromMe: false, participa
         giid.push(id)
       }
     }
+    let timestampi = speed();		
     let sepid = speed() - timestampi
     var { device_manufacturer, device_model, mcc, mnc, os_build_number} = client.user.phone
     anu = process.uptime()
