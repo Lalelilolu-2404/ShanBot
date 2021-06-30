@@ -888,7 +888,7 @@ case 'profile':
                     }
                 }
             })
-fakethumb(`hola thumb`, yes)
+fakethumb(`hola thumb`, 'Hola')
 fakegroup(`「 *groupOwO* 」`)
 fakekontak(`kontak`)
 faketokoforwaded (`teks`)
