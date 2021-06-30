@@ -1,12 +1,12 @@
 const help = (prefix) => {
-	return 	
-`*⌜《Lalelilolu》\◔,◡◔,/ ت♡⌟* ⛥ 
+	return` 	
+*⌜《Lalelilolu》\◔,◡◔,/ ت♡⌟* ⛥ 
 
 Nightcore  -  Rock mix  
 01:52 ━━━●───── 03:08
      ⇆ㅤㅤ ◁ㅤ ❚❚ㅤ ▷ㅤ ㅤ↻﻿
                   ılıılıılıılıılıılı
-⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
+⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
 ◉ *INFORMACION*
   ╠ ○ Comando: ⌜ ${prefix} ⌟
   ╠ ○ Creador: Lalelilolu
