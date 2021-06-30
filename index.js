@@ -614,8 +614,8 @@ ShanBot.sendMessage(from, wew, image, {quoted: { key: { fromMe: false, participa
     anu = process.uptime()
     runtem = `${kyun(anu)}`
 //
+/***⌜《Lalelilolu》\◔,◡◔,/ ت♡⌟* ⛥ **/
     var menu = `
-*⌜《Lalelilolu》\◔,◡◔,/ ت♡⌟* ⛥ 
 ${help(prefix)}
 `
     
