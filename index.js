@@ -660,7 +660,9 @@ break
 		case 'switchmenu':
 		client.sendMessage(from, switchmenu(prefix, sender), text, {quoted: mek})
 		break
-		case 'adminmenu'
+		case 'adminmenu':
+		client.sendMessage(from, menuadmin(prefix, sender), text, {quoted: mek})
+		break
 		case 'menuadmin':
 		client.sendMessage(from, menuadmin(prefix, sender), text, {quoted: mek})
 		break
