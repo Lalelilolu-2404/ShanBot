@@ -621,7 +621,7 @@ const faketokoforwaded = (teks) => {
 						"mimetype": "image/jpeg",
 						"jpegThumbnail": fs.readFileSync(`./assets/menuimg.jpeg`)
 					},
-					"title": `UwU, holi: ${pushname}, ${ucapanWaktu}`,
+					"title": `UwU, holi : ${pushname}, ${ucapanWaktu}`,
 					"retailerId": "Self Bot",
 					"productImageCount": 1
 				},
@@ -875,7 +875,7 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 						"mimetype": "image/jpeg",
 						"jpegThumbnail": Mh
 					},
-					"title": `UwU ${mentioned[0].split('@')[0]}, ${ucapanWaktu}`,
+					"title": `UwU @${mentioned[0].split('@')[0]}, ${ucapanWaktu}`,
 					"retailerId": "Self Bot",
 					"productImageCount": 1
 				},
@@ -886,7 +886,7 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	client.sendMessage(from, teks, text, {
 	  quoted: anu,
 	  contextInfo:{
-	    "forwardingScore": 999, "isForwarded": true
+	    "forwardingScore": 1200, "isForwarded": true
 	  }
 	})
 		
