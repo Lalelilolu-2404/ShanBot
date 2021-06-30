@@ -77,6 +77,7 @@ Para usar estas funciones el bot necesita admin
   ╚ ○ ${prefix}dolf 
   
 ⌜《Lalelilolu》\◔,◡◔,/ ت♡⌟
+  ╚ √Shanduy ♥♦♣♠
 `
 }
 
