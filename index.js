@@ -401,7 +401,7 @@ ${demote}`
 			
 			const isStick = isGroup ? stick.includes(from) : false
 			const isPacksito = isGroup ? packsito.includes(from) : false
-			const isInteract = isGroup ? interact.includes(from) : true
+			const isInteract = isGroup ? interact.includes(from) : false
 			
 			const isSimi = isGroup ? samih.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
