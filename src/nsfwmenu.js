@@ -12,10 +12,14 @@ const nsfwmenu = (prefix, pushname) => {
 - ${prefix}femdom
 - ${prefix}hentai
 - ${prefix}pussyimg
+- ${prefix}oppai
+- ${prefix}cimimg
+*GIFS*
+- ${prefix}pussy
+- ${prefix}boobs
+- ${prefix}anal
 
 _El bot nesecita admin y tener activado los NSFW_\n _Digita_\n ${prefix}*nsfw 1*
-
-by Lalelilolu`
 
 }
 
