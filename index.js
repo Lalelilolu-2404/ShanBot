@@ -858,10 +858,10 @@ if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMes
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	
 	ppimg = await client.getProfilePicture(`${mentioned[0].split('@')[0]}@c.us`)
-	let buff = await getBuffer(ppimg)
+	let Mh = await getBuffer(ppimg)
 				
 	//client.sendMessage(from, buff, image, {quoted: mek, caption: 'Uwu'})
-	teks = `Uwu cosita :3`
+	teks = `「 *Uwu cosita :3* 」`
 		
 	anu = {
 	  key: {
@@ -873,9 +873,9 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 				"product": {
 					"productImage":{
 						"mimetype": "image/jpeg",
-						"jpegThumbnail": buff
+						"jpegThumbnail": Mh
 					},
-					"title": `UwU, holi: ${pushname}, ${ucapanWaktu}`,
+					"title": `UwU ${mentioned[0].split('@')[0]}, ${ucapanWaktu}`,
 					"retailerId": "Self Bot",
 					"productImageCount": 1
 				},
@@ -2801,6 +2801,28 @@ if (isPacksito == 1) {
 	}
 }
 	
+///Loli audios////
+		
+        if (budy.startsWith(`Daddy`)) {
+		if (budy.endsWith(`Daddy`)){
+        	const none = fs.readFileSync('./anishan/Daddy.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }
+		}
+        if (budy.startsWith(`La mimición`)) {
+		if (budy.endsWith(`La mimición`)){
+        	const none = fs.readFileSync('./anishan/La mimición.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }	
+		}
+        if (budy.startsWith(`Imposible`)) {
+		if (budy.endsWith(`Imposible`)){
+        	const none = fs.readFileSync('./anishan/Imposible.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }
+		}
+
+///////////////////
         if (budy.startsWith(`A`)) {
 		if (budy.endsWith(`A`)){
         	const none = fs.readFileSync('./anishan/A.mp3');
