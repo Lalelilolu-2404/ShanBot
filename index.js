@@ -264,7 +264,7 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-				teks = `Mi loco @${num.split('@')[0]}\nTodo bien NEFASTO!!!! Bienvenido a *${mdata.subject}* el mejor grupo 👉😎👈\n\nPara utilizar el bot registrate con el comando ${prefix}daftar y tu nombre\n\nPara ver los demas comandos utiliza ${prefix}help\n\nOjito con el spam 🧐\n\nby Lalelilolu`
+				teks = `Mi loco @${num.split('@')[0]}\nBienvenido a :*${mdata.subject}* 👉😎👈\n\nRegístrate con el comando ${prefix}daftar ⌜*Nombre*⌟  \n\nUtiliza ${prefix}help\nOjito con el spam 🧐`
                           client.sendMessage(mdata.id, teks, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
@@ -706,7 +706,7 @@ break
 						client.groupDemoteAdmin(from, mentioned)
 					}
 					break
-                 case 'promote':
+               /**  case 'promote':
 					client.updatePresence(from, Presence.composing) 
                                         if (!isUser) return reply(mess.only.daftarB)
 					if (!isGroup) return reply(mess.only.group)
@@ -726,14 +726,42 @@ break
 						client.groupMakeAdmin(from, mentioned)
 					}
 					break
+	**/	
+case 'promote':		
+ 	client.updatePresence(from, Presence.composing) 
+	if (!isUser) return reply(mess.only.daftarB)
+	if (!isGroup) return reply(mess.only.group)
+	if (!isGroupAdmins) return reply(mess.only.admin)
+	if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+	if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('¡Etiqueta quien para Admin!')
+		/**mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid **/
 		
+			const mdata = await fxbot.groupMetadata(anu.jid)
+			num = anu.participants[0]
+			try {
+					ppimg = await fxbot.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
+				} catch {
+					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+				}
+			let buff = await getBuffer(ppimg)
+			
+			teks = `𝙉𝙐𝙀𝙑𝙊 𝘼𝙆𝙈𝙄𝙉
+			
+\`\`\`Nombre :\`\`\` ${num.replace('@s.whatsapp.net', '')}
+\`\`\`Usuario :\`\`\` @${num.split('@')[0]}
+\`\`\`Grupo :\`\`\` ${mdata.subject}
+${promote}`
+client.sendMessage(mdata.id, buff, MessageType.image, {caption : teks, contextInfo: {mentionedJid: [num]}, quoted: { "key": { "participant": `${numbernye}`, "remoteJid": `Kntl`, "fromMe": false, "id": "B391837A58338BA8186C47E51FFDFD4A" }, "message": { "documentMessage": { "jpegThumbnail": buff, "mimetype": "application/octet-stream", "title": `PROMOTE`, "fileLength": "36", "pageCount": 0, "fileName": `_Welcome_` }}, "messageTimestamp": "1614069378", "status": "PENDING"}})
+			
+break	
+	
 		
 case 'spam':
                 if (!isOwner) return reply('No eres mi dueño UnU')
-                if (!arg) return reply(`Penggunaan ${prefix}spam teks|jumlahspam`)
+                if (!arg) return reply(`${prefix}spam Text|#`)
                 argz = arg.split("|")
-                if (!argz) return reply(`Penggunaan ${prefix}spam teks|jumlah`)
-                if (isNaN(argz[1])) return reply(`harus berupa angka`)
+                if (!argz) return reply(`${prefix}spam Text|#`)
+                if (isNaN(argz[1])) return reply(`# de veces?`)
                 for (let i = 0; i < argz[1]; i++){
                 client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
                 }
