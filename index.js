@@ -611,9 +611,8 @@ ShanBot.sendMessage(from, wew, image, {quoted: { key: { fromMe: false, participa
         giid.push(id)
       }
     }
-    let timestampi = speed();
     let sepid = speed() - timestampi
-    var { device_manufacturer, device_model, mcc, mnc, os_version, os_build_number, wa_version  } = client.user.phone
+    var { device_manufacturer, device_model, mcc, mnc, os_build_number} = client.user.phone
     anu = process.uptime()
     runtem = `${kyun(anu)}`
 //
@@ -628,14 +627,9 @@ Blackpink  -  How you like that
 - *Hits de hoy : ${hit_today.length}*
 - *Celular :* ${device_manufacturer}
 - *Modelo :* ${device_model}
-- *RAM :* ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}MB / ${Math.round(require('os').totalmem / 1024 / 1024)}MB
-- *Android :* ${os_version}
-- *Versión de WhatsApp* : ${wa_version}
--  *Grupos :* ${giid.length}
+- *Grupos :* ${giid.length}
 - *Chats :* ${totalchat.length - giid.length}
 - *Total de chat :* ${totalchat.length}
-- *Velocidad :* ${sepid.toFixed(4)} Second
-- *Mi tiempo vivo:* ${runtem}
 - Prefix : 「 ${prefix} 」
 Grupo oficial : https://chat.whatsapp.com/J72bXsh3gRxKufBl8iikDO
     
