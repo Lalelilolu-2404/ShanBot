@@ -571,7 +571,7 @@ const faketokoforwaded = (teks) => {
 						"mimetype": "image/jpeg",
 						"jpegThumbnail": fs.readFileSync(`./assets/menuimg.jpeg`)
 					},
-					"title": `Holi cosita UwU ${pushname}, ${ucapanWaktu}`,
+					"title": `UwU, holi: ${pushname}\n${ucapanWaktu}`,
 					"retailerId": "Self Bot",
 					"productImageCount": 1
 				},
@@ -592,15 +592,7 @@ switch(command) {
 
 case 'menu':
 case 'help':
-			/**const none = fs.readFileSync('./assets/menuimg.jpeg');			
-			client.sendMessage(from, none, image, {quoted:mek, caption : help(prefix, sender)})**/
-			/**client.sendMessage(from, help(prefix), text,{sendEphemeral: true})**/
-		/**	loli = fs.readFileSync(`./mp3/fernan.mp3`)		
-			wew = fs.readFileSync(`./assets/menuimg.jpeg`)
-                      zain = `╭──❲ INFO BOT ❳
-│◨ Nombre: Lalelilolu
-
-╰────────────────⊱` 
+/**
 ShanBot.sendMessage(from, wew, image, {quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg", "caption": "FX BOT*", "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=", "fileLength": "28777", "height": 1080, "width": 1079, "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=", "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=", "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69", "mediaKeyTimestamp": "1610993486", "jpegThumbnail": fs.readFileSync('assets/menuimg.jpeg')} } }, caption: zain, pushname, prefix, getLevelingXp, getLevelingLevel, sender, role })
 **/
 
@@ -692,6 +684,19 @@ break
 	       case 'troleo':
                client.sendMessage(from, virtex(prefix, sender), text, {quoted: mek})
                break*/
+		
+		
+/**	case prefix+ 'setthumb':
+		  if (isMe) return('No eres mi dueño UnU?')
+	        if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length == 0) {
+          	boij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+			delb = await pato.downloadMediaMessage(boij)
+			fs.writeFileSync(`./stik/thumb.jpeg`, delb)
+			fakestatus('Hecho mi amo 7~7')
+        	} else {
+            reply(`Kirim gambar dengan caption ${prefix}sethumb`)
+          	}**/
+		
                             case 'demote':
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
@@ -740,11 +745,15 @@ case 'promote':
 	if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 	if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('¡Etiqueta quien para Admin!')
 		/**mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid **/
+
 		
-			const mdata = await client.groupMetadata(anu.jid)
-			num = anu.participants[0]
+mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+mentions(`@${mentioned[0].split('@')[0]}`, mentioned, true)
+		
+			const mdata = await client.groupMetadata(mentioned.jid)
+			num = mentioned.participants[0]
 			try {
-					ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
+					ppimg = await client.getProfilePicture(`${mentioned.participants[0].split('@')[0]}@c.us`)
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
@@ -759,8 +768,39 @@ ${promote}`
 client.sendMessage(mdata.id, buff, MessageType.image, {caption : teks, contextInfo: {mentionedJid: [num]}, quoted: { "key": { "participant": `${numbernye}`, "remoteJid": `Kntl`, "fromMe": false, "id": "B391837A58338BA8186C47E51FFDFD4A" }, "message": { "documentMessage": { "jpegThumbnail": buff, "mimetype": "application/octet-stream", "title": `PROMOTE`, "fileLength": "36", "pageCount": 0, "fileName": `_Welcome_` }}, "messageTimestamp": "1614069378", "status": "PENDING"}})
 			
 break	
-	
-		
+
+/***
+case prefix+ 'ban':
+if (!isGroup) return reply(mess.only.group)
+if (!mek.key.fromMe) return fakestatus('「 ❗ 」ESTE COMANDO SOLO PUEDE SER USADO POR MI')
+if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return 
+mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+pru = '.\n'
+for (let _ of mentioned) {
+pru += `@${_.split('@')[0]}\n`
+}
+ban.push(`${mentioned}`)
+fs.writeFileSync('./database/banned.json', JSON.stringify(ban))
+susp = `🚫@${mentioned[0].split('@')[0]} ha sido prohibido y ya no podrá usar comandos de bot🚫`
+mentions(`${susp}`, mentioned, true)   
+break
+
+case prefix+ 'unban':
+if (!isGroup) return reply(mess.only.group)
+if (!mek.key.fromMe) return fakestatus('「 ❗ 」ESTE COMANDO SOLO PUEDE SER USADO POR MI')
+if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return 
+mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+pru = '.\n'
+for (let _ of mentioned) {
+pru += `@${_.split('@')[0]}\n`
+}
+ban.splice(`${mentioned}`)
+fs.writeFileSync('./database/banned.json', JSON.stringify(ban))
+susp = `❎@${mentioned[0].split('@')[0]} se ha desbloqueado y puede volver a utilizar los comandos del bot❎`
+mentions(`${susp}`, mentioned, true)   
+break		
+***/
+			
 case 'spam':
                 if (!isOwner) return reply('No eres mi dueño UnU')
                 if (!arg) return reply(`${prefix}spam Text|#`)
@@ -787,6 +827,15 @@ case 'public':
           	// var taged = ben.message.extendedTextMessage.contextInfo.mentionedJid[0]
           	banChats = false
           	fakestatus(`「 *PUBLICO OwO* 」`)
+break
+
+	
+case  'peson':
+	client.toggleDisappearingMessages(from, WA_DEFAULT_EPHEMERAL)
+break
+				
+case 'pesoff':
+	client.toggleDisappearingMessages(from, 0)
 break
 
 case 'gay':
@@ -1207,33 +1256,6 @@ break
 					client.groupSettingChange (from, GroupSettingChange.messageSend, false)
 					/**client.sendMessage(from, open, text, {quoted: mek})**/
 		break
-					
-		/**case 'pesoff':
-					client.updatePresence(from, Presence.composing) 
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-		
-					client.groupSettingChange (from, GroupSettingChange.ephemeralMessage, false)
-				
-		break
-					
-                case 'peson':
-					client.updatePresence(from, Presence.composing) 
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					client.groupSettingChange (from, GroupSettingChange.ephemeralMessage, true)
-					
-		break**/
-					
-				case  'peson':
-					  client.toggleDisappearingMessages(from, WA_DEFAULT_EPHEMERAL)
-				break
-				
-				case 'pesoff':
-					    client.toggleDisappearingMessages(from, 0)
-				break
 		
 		case 'attp':
 						if (!isUser) return reply(mess.only.daftarB)
@@ -1244,15 +1266,16 @@ break
 		break
 					
 		case 'emoji':
+			if (!q) return fakegroup('Y El Puto Emoji Pedazo De Gil?')
 			qes = args.join(' ')
 			emoji.get(`${qes}`).then(emoji => {
 			teks = `${emoji.images[4].url}`
     			sendStickerFromUrl(from,`${teks}`)	
     			console.log(teks)
-   			})
+   				})
           	 .catch((err) => {
-         	   reply('Ahhh pwrdon T-T no pude'); 
-          	  })
+           	 reply('Solo Un Emoji Weon'); 
+            	})
     		break
 					
 				case 's':
@@ -1468,6 +1491,12 @@ break
                                         if (!isUser) return reply(mess.only.daftarB)
 		                        client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 			break
+		
+	case 'clean':
+                if (!isOwner) return reply('「 ❗ 」F')
+                console.log('Éxito Al Eliminar Chat = ' + from)
+                client.modifyChat(from, ChatModification.delete)
+        break
 					
             case 'level':
                 if (!isLevelingOn) return reply(mess.levelnoton)
@@ -2851,9 +2880,11 @@ if (isPacksito == 1) {
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }						
         if (budy.startsWith(`Ahhh`)) {
+		if(budy.endsWith(`Ahhh`)){
         	const none = fs.readFileSync('./anishan/Ahhh.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }						
+                  }
+		}
         if (budy.startsWith(`Arrecha`)) {
         	const none = fs.readFileSync('./anishan/Arrecha.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
@@ -2883,9 +2914,11 @@ if (isPacksito == 1) {
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }	
         if (budy.startsWith(`Concha`)) {
+		if(budy.endsWith(`Concha`)){
         	const none = fs.readFileSync('./anishan/Concha.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
+		}
         if (budy.startsWith(`Ctm`)) {
 		if (budy.endsWith(`Ctm`)){
         	const none = fs.readFileSync('./anishan/Ctm.mp3');
@@ -2893,9 +2926,11 @@ if (isPacksito == 1) {
                   }										
 		}	
         if (budy.startsWith(`Japi`)) {
+		if(budy.endsWith(`Japi`)){
         	const none = fs.readFileSync('./anishan/Japi.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
+		}
         if (budy.startsWith(`Las pelotas`)) {
         	const none = fs.readFileSync('./anishan/Las pelotas.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
@@ -2904,10 +2939,12 @@ if (isPacksito == 1) {
         	const none = fs.readFileSync('./anishan/Lokita.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }		
-	if (budy.includes(`Orto`)) {
+	if (budy.startsWith(`Orto`)) {
+		if(budy.endsWith(`Orto`)){
         	const none = fs.readFileSync('./anishan/Orto.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }	
+		}
         if (budy.startsWith(`Pero en fin`)) {
 		if (budy.endsWith(`Pero en fin`)){
         	const none = fs.readFileSync('./anishan/Pero en fin.mp3');
