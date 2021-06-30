@@ -728,16 +728,17 @@ break
                break*/
 		
 		
-/**	case prefix+ 'setthumb':
-		  if (isMe) return('No eres mi dueño UnU?')
+	case 'setprofil':
+		if (!isOwner) return('No eres mi dueño UnU?')
 	        if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length == 0) {
           	boij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-			delb = await pato.downloadMediaMessage(boij)
-			fs.writeFileSync(`./stik/thumb.jpeg`, delb)
+			delb = await client.downloadMediaMessage(boij)
+			fs.writeFileSync(`./assets/menuimg.jpeg`, delb)
 			fakestatus('Hecho mi amo 7~7')
         	} else {
-            reply(`Kirim gambar dengan caption ${prefix}sethumb`)
-          	}**/
+            reply(`Kirim gambar dengan caption ${prefix}setprofil`)
+          	}
+	break
 		
                             case 'demote':
 					if (!isGroup) return reply(mess.only.group)
@@ -1276,7 +1277,7 @@ break
 		break
 					
 		case 'emoji':
-			if (!q) return fakegroup('Y El Puto Emoji Pedazo De Gil?')
+			if (!q) return fakegroup('emoji UnU?')
 			qes = args.join(' ')
 			emoji.get(`${qes}`).then(emoji => {
 			teks = `${emoji.images[4].url}`
@@ -1284,10 +1285,10 @@ break
     			console.log(teks)
    				})
           	 .catch((err) => {
-           	 reply('Solo Un Emoji Weon'); 
+           	  reply('Ahhh pwrdon T-T no pude'); 
             	})
     		break
-					
+           						
 				case 's':
 				case 'tucson':
 				case 'cuties':
