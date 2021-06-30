@@ -663,9 +663,9 @@ ShanBot.sendMessage(from, wew, image, {quoted: { key: { fromMe: false, participa
     runtem = `${kyun(anu)}`
 //
 /***⌜《Lalelilolu》\◔,◡◔,/ ت♡⌟* ⛥ **/
-    var menu = `${help(prefix)}`
-    
-        	faketokoforwaded(menu)		
+    var menu = `${help(prefix)}
+    `
+    faketokoforwaded(menu)		
 					
 break
                 case 'otak':
@@ -860,7 +860,7 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	ppimg = await client.getProfilePicture(`${mentioned[0].split('@')[0]}@c.us`)
 	let buff = await getBuffer(ppimg)
 				
-	client.sendMessage(from, buff, image, {quoted: mek, caption: 'uwu'})
+	client.sendMessage(from, buff, image, {quoted: mek, caption: 'Uwu'})
 		
 break	
 
