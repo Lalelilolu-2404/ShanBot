@@ -616,14 +616,7 @@ ShanBot.sendMessage(from, wew, image, {quoted: { key: { fromMe: false, participa
 //
     var menu = `
 *⌜《Lalelilolu》\◔,◡◔,/ ت♡⌟* ⛥ 
-    
-NIGHTCORE - Rock Mix 
-01:52 ━━━●───── 03:08
-     ⇆ㅤㅤ ◁ㅤ ❚❚ㅤ ▷ㅤ ㅤ↻﻿
-                  ılıılıılıılıılıılı
-ᴠᴏʟᴜᴍᴇ : ▮▮▮▮▮▮▮▯▯▯  
 ${help(prefix)}
-
 `
     
         	faketokoforwaded(menu)		
