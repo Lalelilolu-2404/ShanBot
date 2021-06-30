@@ -114,6 +114,7 @@ hit_today = []
 banChats = false
 offline = false
 fake = 'Lalelilolu ᵈᵃʳʸ⛥'
+numbernye = '0'
 promote = setting.promote
 demote = setting.demote
 
@@ -272,11 +273,11 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-				teks = `Mi loco @${num.split('@')[0]}\nBienvenido a :*${mdata.subject}* 👉😎👈\n\nRegístrate con el comando ${prefix}daftar ⌜*Nombre*⌟  \n\nUtiliza ${prefix}help\nOjito con el spam 🧐`
+				teks = `Mi loco @${num.split('@')[0]}\nBienvenido a :*${mdata.subject}*😎\n\nRegístrate con el comando ${prefix}daftar ⌜Nombre⌟\n\nUtiliza ${prefix}help para ver los comandos\nOjito con el spam 🧐`
                           client.sendMessage(mdata.id, teks, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
-				teks = `NOOOO, se nos fué un putit@ 😎 @${num.split('@')[0]}👋\n\nNadie te extrañará 😎`
+				teks = `NOOOO, se nos fué @${num.split('@')[0]}👋\n\nNadie te extrañará 😎`
 				client.sendMessage(mdata.id, teks, MessageType.text, {contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'promote') {
 			const mdata = await client.groupMetadata(anu.jid)
@@ -316,8 +317,7 @@ ${demote}`
 			client.sendMessage(mdata.id, teks, MessageType.text, {contextInfo: {mentionedJid: [num]}, quoted: { "key": { "participant": `${numbernye}`, "remoteJid": `Ktl`, "fromMe": false, "id": "B391837A58338BA8186C47E51FFDFD4A" }, "message": { "documentMessage": { "jpegThumbnail": buff, "mimetype": "application/octet-stream", "title": `DEMOTE`, "fileLength": "36", "pageCount": 0, "fileName": `_Welcome_` }}, "messageTimestamp": "1614069378", "status": "PENDING"}})
 		}
 			
-/////////			
-			
+/////////				
 			
 		} catch (e) {
 			console.log('Error : %s', color(e, 'red'))
@@ -767,14 +767,14 @@ break
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('¡La etiqueta de destino que desea promocionar!')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 					if (mentioned.length > 1) {
-						teks = 'Pedido recibido✅\n\nAgregando cargo como administrador :\n'
+						teks = 'Ok, \n\nAgregando cargo como administrador :\n'
 						for (let _ of mentioned) {
 							teks += `@${_.split('@')[0]}\n`
 						}
 						mentions(teks, mentioned, true)
 						client.groupMakeAdmin(from, mentioned)
 					} else {
-						mentions(`Pedido recibido✅\n\nAgregando cargo como administrador : @${mentioned[0].split('@')[0]}`, mentioned, true)
+						mentions(`Ok\n\Ahora eres administrador : @${mentioned[0].split('@')[0]}`, mentioned, true)
 						client.groupMakeAdmin(from, mentioned)
 					}
 			break
