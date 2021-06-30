@@ -76,6 +76,7 @@ const { stick1 } = require('./src/stick1')
 const { stick2 } = require('./src/stick2')
 const { stick3 } = require('./src/stick3')
 const { packmenu } = require('./src/packmenu')
+const { switchmenu } = require('./src/switchmenu')
 /*const { mediamenu } = require('./database/menu/mediamenu')
 const { educationmenu } = require('./database/menu/educationmenu')
 const { downloadermenu } = require('./database/menu/downloadermenu')
@@ -658,6 +659,10 @@ break
 		case 'shanmenu':
 		client.sendMessage(from, toinmenu(prefix, sender), text, {quoted: mek})
 		break
+		case 'switchmenu':
+		client.sendMessage(from, switchmenu(prefix, sender), text, {quoted: mek})
+		break
+		case 'adminmenu'
 		case 'menuadmin':
 		client.sendMessage(from, menuadmin(prefix, sender), text, {quoted: mek})
 		break
