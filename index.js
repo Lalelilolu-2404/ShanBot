@@ -860,7 +860,35 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	ppimg = await client.getProfilePicture(`${mentioned[0].split('@')[0]}@c.us`)
 	let buff = await getBuffer(ppimg)
 				
-	client.sendMessage(from, buff, image, {quoted: mek, caption: 'Uwu'})
+	//client.sendMessage(from, buff, image, {quoted: mek, caption: 'Uwu'})
+	teks = `Uwu cosita :3`
+		
+	anu = {
+	  key: {
+			fromMe: false,
+			participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})
+		},
+		message: {
+			"productMessage": {
+				"product": {
+					"productImage":{
+						"mimetype": "image/jpeg",
+						"jpegThumbnail": buff
+					},
+					"title": `UwU, holi: ${pushname}, ${ucapanWaktu}`,
+					"retailerId": "Self Bot",
+					"productImageCount": 1
+				},
+				"businessOwnerJid": `0@s.whatsapp.net`
+		}
+	}
+}
+	client.sendMessage(from, teks, text, {
+	  quoted: anu,
+	  contextInfo:{
+	    "forwardingScore": 999, "isForwarded": true
+	  }
+	})
 		
 break	
 
