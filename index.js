@@ -16,7 +16,9 @@ const {
     Mimetype,
     rugaapi,
     waChatKey,
-    GroupSettingChange
+    GroupSettingChange,
+    ChatModification,	
+    mentionedJid,
 } = require('@adiwajshing/baileys')
 
 /******COMIENZO DE LA ENTRADA DEL ARCHIVO******/
@@ -117,6 +119,7 @@ fake = 'Lalelilolu ᵈᵃʳʸ⛥'
 numbernye = '0'
 promote = setting.promote
 demote = setting.demote
+public = false
 
 /******CONFIGURACION DE CARGA******/
 const settingan = JSON.parse(fs.readFileSync('./admin/set.json'))
@@ -660,9 +663,7 @@ ShanBot.sendMessage(from, wew, image, {quoted: { key: { fromMe: false, participa
     runtem = `${kyun(anu)}`
 //
 /***⌜《Lalelilolu》\◔,◡◔,/ ت♡⌟* ⛥ **/
-    var menu = `
-${help(prefix)}
-`
+    var menu = `${help(prefix)}`
     
         	faketokoforwaded(menu)		
 					
@@ -755,7 +756,7 @@ break
 						mentions(teks, mentioned, true)
 						client.groupDemoteAdmin(from, mentioned)
 					} else {
-						mentions(`Pedido recibido✅\n\nRetirando cargo como administrador @${mentioned[0].split('@')[0]}\n*${groupMetadata.subject}*_`, mentioned, true)
+						mentions(`Pedido recibido✅\n\Un admin menos @${mentioned[0].split('@')[0]}`, mentioned, true)
 						client.groupDemoteAdmin(from, mentioned)
 					}
 					break
@@ -848,6 +849,50 @@ break
 case 'pesoff':
 	client.toggleDisappearingMessages(from, 0)
 break
+		
+case 'profile':
+		
+	client.updatePresence(from, Presence.composing) 
+	if (isOwner)
+	mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+	ppimg = await client.getProfilePicture(`${mentioned[0].split('@')[0]}@c.us`)
+        let buff = await getBuffer(ppimg)
+		
+	teks = `${mentioned[0].split('@')[0]}@c.us` 
+
+	 client.sendMessage(from, teks, text, {
+                quoted: {
+                    key: {
+                        fromMe: false,
+                        participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})
+                    },
+                    message: {
+                        "imageMessage": {
+                            "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",
+                            "mimetype": "image/jpeg",
+                            "caption": `Holi cosita ^-^${mentioned}`,
+                            "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=",
+                            "fileLength": "28777",
+                            "height": 1080,
+                            "width": 1079,
+                            "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=",
+                            "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=",
+                            "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
+                            "mediaKeyTimestamp": "1610993486",
+                            "jpegThumbnail": ppimg,
+                            "scansSidecar": "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw=="
+                        }
+                    },
+                    contextInfo: {
+                      "forwardingScore": 999, "isForwarded": true
+                    }
+                }
+            })
+fakethumb(`hola thumb`, yes)
+fakegroup(`「 *groupOwO* 」`)
+fakekontak(`kontak`)
+faketokoforwaded (`teks`)
+break	
 
 case 'gay':
                 client.updatePresence(from, Presence.composing) 
@@ -1503,11 +1548,16 @@ break
 		                        client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 			break
 		
-	case 'clean':
-                if (!isOwner) return reply('「 ❗ 」F')
-                console.log('Éxito Al Eliminar Chat = ' + from)
-                client.modifyChat(from, ChatModification.delete)
-        break
+//clear all chat
+				case 'clearall':
+					if (!isOwner) return reply('Estas seguro?')
+					anu = await client.chats.all()
+					client.setMaxListeners(25)
+					for (let _ of anu) {
+						client.deleteChat(_.jid)
+					}
+					reply('Se borraron todos los mensajes :)')
+					break
 					
             case 'level':
                 if (!isLevelingOn) return reply(mess.levelnoton)
