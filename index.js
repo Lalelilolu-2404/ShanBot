@@ -858,7 +858,7 @@ case 'profile':
 	ppimg = await client.getProfilePicture(`${mentioned[0].split('@')[0]}@c.us`)
         let buff = await getBuffer(ppimg)
 		
-	teks = `${mentioned[0].split('@')[0]}@c.us` 
+/**	teks = `${mentioned[0].split('@')[0]}@c.us` 
 
 	 client.sendMessage(from, teks, text, {
                 quoted: {
@@ -887,11 +887,16 @@ case 'profile':
                       "forwardingScore": 999, "isForwarded": true
                     }
                 }
-            })
-fakethumb(`hola thumb`, 'Hola')
+            })**/
+	
+/**const none2 = fs.readFileSync(`./src/dolf/${Texte}.jpeg`);**/
+client.sendMessage(from, ppimg, image, {quoted: mek, caption: 'Quien es?!!'})
+	
+
 fakegroup(`「 *groupOwO* 」`)
-fakekontak(`kontak`)
-faketokoforwaded (`teks`)
+//fakekontak(`kontak`)
+/**fakethumb(`hola thumb`, 'Hola')**/
+
 break	
 
 case 'gay':
