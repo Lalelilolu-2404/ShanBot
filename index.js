@@ -855,8 +855,9 @@ case 'profile':
 	client.updatePresence(from, Presence.composing) 
 	//**if (isOwner)
 	mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-	ppimg = await client.getProfilePicture(`${mentioned[0].split('@')[0]}@c.us`)
-        let buff = await getBuffer(ppimg)
+	num = mentioned.participants[0]
+
+	ppimg = await client.getProfilePicture(`${num.split('@')[0]}@c.us`)
 		
 /**	teks = `${mentioned[0].split('@')[0]}@c.us` 
 
@@ -890,7 +891,7 @@ case 'profile':
             })**/
 	
 /**const none2 = fs.readFileSync(`./src/dolf/${Texte}.jpeg`);**/
-client.sendMessage(from, ppimg, image, {quoted: mek, caption: 'Quien es?!!'})
+client.sendMessage(from, `${ppimg}`, image, {quoted: mek, caption: 'Quien es?!!'})
 	
 
 fakegroup(`「 *groupOwO* 」`)
