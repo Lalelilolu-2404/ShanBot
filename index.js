@@ -659,6 +659,10 @@ break
 		case 'shanmenu':
 		client.sendMessage(from, toinmenu(prefix, sender), text, {quoted: mek})
 		break
+		case 'packmenu':
+		if (isOwner)
+		client.sendMessage(from, packmenu(prefix, sender), text, {quoted: mek})
+		break	
 		case 'switchmenu':
 		client.sendMessage(from, switchmenu(prefix, sender), text, {quoted: mek})
 		break
