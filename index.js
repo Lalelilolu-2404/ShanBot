@@ -853,7 +853,7 @@ break
 case 'profile':
 		
 	client.updatePresence(from, Presence.composing) 
-	if (isOwner)
+	//**if (isOwner)
 	mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	ppimg = await client.getProfilePicture(`${mentioned[0].split('@')[0]}@c.us`)
         let buff = await getBuffer(ppimg)
