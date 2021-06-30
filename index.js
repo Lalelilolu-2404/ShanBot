@@ -856,15 +856,12 @@ client.updatePresence(from, Presence.composing)
 
 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('¡La etiqueta?!')
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-
-mentions(`Ok\n\Ahora eres administrador : @${mentioned[0].split('@')[0]}`, mentioned, true)
 	
 	ppimg = await client.getProfilePicture(`${mentioned[0].split('@')[0]}@c.us`)
 	let buff = await getBuffer(ppimg)
 				
-	client.sendMessage(from, buff, image, {quoted: mek})
-	fakegroup(`「 *uwu* 」`)
-	
+	client.sendMessage(from, buff, image, {quoted: mek, caption: 'uwu'})
+		
 break	
 
 case 'gay':
