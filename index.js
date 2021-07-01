@@ -929,7 +929,7 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	//client.sendMessage(from, buff, image, {quoted: mek, caption: 'Uwu'})
 //	teks =  mentions(`⊱ღ꧁ ${pushname} ꧂ღ⊱ \n @${mentioned[0].split('@')[0]}`, mentioned,true)
 
-	teks =  ``
+	teks =  `⊱ღ @${pushname} ღ⊱`
 //	`⊱ღ꧁ ${pushname} ꧂ღ⊱ 
             client.sendMessage(from, teks, text, {
                 quoted: {
