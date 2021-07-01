@@ -632,7 +632,7 @@ const faketokoforwaded = (teks) => {
 	client.sendMessage(from, teks, text, {
 	  quoted: anu,
 	  contextInfo:{
-	    "forwardingScore": 999, "isForwarded": true
+	    "forwardingScore": 1200, "isForwarded": true
 	  }
 	})
 }
@@ -856,6 +856,8 @@ client.updatePresence(from, Presence.composing)
 
 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('¡La etiqueta?!')
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+	console.log(anu)
+	num = anu.participants[0]
 	
 	ppimg = await client.getProfilePicture(`${mentioned[0].split('@')[0]}@c.us`)
 	let Mh = await getBuffer(ppimg)
@@ -875,7 +877,7 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 						"mimetype": "image/jpeg",
 						"jpegThumbnail": Mh
 					},
-					"title": `UwU @${mentioned[0].split('@')[0]}, ${ucapanWaktu}`,
+					"title": `UwU @${num.split('@')[0]}, ${ucapanWaktu}`,
 					"retailerId": "Self Bot",
 					"productImageCount": 1
 				},
