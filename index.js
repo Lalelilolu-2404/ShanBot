@@ -621,7 +621,7 @@ const faketokoforwaded = (teks) => {
 						"mimetype": "image/jpeg",
 						"jpegThumbnail": fs.readFileSync(`./assets/menuimg.jpeg`)
 					},
-					"title": `UwU, holi : ${pushname}, ${ucapanWaktu}`,
+					"title": `UwU : ${pushname}, ${ucapanWaktu}`,
 					"retailerId": "Self Bot",
 					"productImageCount": 1
 				},
@@ -905,10 +905,7 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	
 	ppimg = await client.getProfilePicture(`${mentioned[0].split('@')[0]}@c.us`)
 	let Mh = await getBuffer(ppimg)
-	
-	console.log(anu)
-	num = anu.participants[0]
-					
+						
 	//client.sendMessage(from, buff, image, {quoted: mek, caption: 'Uwu'})
 	teks = `「 *Uwu cosita :3* 」${nombre}`
 	
@@ -922,7 +919,7 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
                         "imageMessage": {
                             "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",
                             "mimetype": "image/jpeg",
-                            "caption": `Cosita ^-^ @${num.split('@')[0]} `,
+                            "caption": `Cosita ^-^ @${mentioned.split('@')[0]} `,
                             "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=",
                             "fileLength": "28777",
                             "height": 1080,
