@@ -905,11 +905,9 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	
 	ppimg = await client.getProfilePicture(`${mentioned[0].split('@')[0]}@c.us`)
 	let Mh = await getBuffer(ppimg)
-	console.log(anu)
-	num = anu.mentioned[0]
 						
 	//client.sendMessage(from, buff, image, {quoted: mek, caption: 'Uwu'})
-	teks = `「 *Uwu cosita :3* ${nombre.num} 」\n ${num.replace('@s.whatsapp.net', '')}\n @${num}\n@${num.split('@')[0]} `
+	teks = `「 *Uwu cosita :3* ${nombre.mentioned[0]} 」\n ${mentioned[0].replace('@s.whatsapp.net', '')}\n @${mentioned[0]}\n@${mentioned[0].split('@')[0]} `
 	
             client.sendMessage(from, teks, text, {
                 quoted: {
