@@ -632,7 +632,7 @@ const faketokoforwaded = (teks) => {
 	client.sendMessage(from, teks, text, {
 	  quoted: anu,
 	  contextInfo:{
-	    "forwardingScore": 1200, "isForwarded": true
+	    "forwardingScore": 999, "isForwarded": true
 	  }
 	})
 }
@@ -850,20 +850,21 @@ case 'pesoff':
 	client.toggleDisappearingMessages(from, 0)
 break
 		
-case 'profile':
+/**case 'profile':
 
 client.updatePresence(from, Presence.composing) 
 
 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('¡La etiqueta?!')
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-	console.log(anu)
-	num = anu.participants[0]
 	
 	ppimg = await client.getProfilePicture(`${mentioned[0].split('@')[0]}@c.us`)
 	let Mh = await getBuffer(ppimg)
-				
+	
+	console.log(anu)
+	num = anu.participants[0]
+					
 	//client.sendMessage(from, buff, image, {quoted: mek, caption: 'Uwu'})
-	teks = `「 *Uwu cosita :3* 」`
+	teks = `「 *Uwu cosita :3* 」${nombre}`
 		
 	anu = {
 	  key: {
@@ -888,11 +889,60 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	client.sendMessage(from, teks, text, {
 	  quoted: anu,
 	  contextInfo:{
-	    "forwardingScore": 1200, "isForwarded": true
+	    "forwardingScore": 999, "isForwarded": true
 	  }
 	})
 		
+break	**/
+		
+
+case 'profile':
+
+client.updatePresence(from, Presence.composing) 
+
+if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('¡La etiqueta?!')
+mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+	
+	ppimg = await client.getProfilePicture(`${mentioned[0].split('@')[0]}@c.us`)
+	let Mh = await getBuffer(ppimg)
+	
+	console.log(anu)
+	num = anu.participants[0]
+					
+	//client.sendMessage(from, buff, image, {quoted: mek, caption: 'Uwu'})
+	teks = `「 *Uwu cosita :3* 」${nombre}`
+	
+            client.sendMessage(from, teks, text, {
+                quoted: {
+                    key: {
+                        fromMe: false,
+                        participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})
+                    },
+                    message: {
+                        "imageMessage": {
+                            "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",
+                            "mimetype": "image/jpeg",
+                            "caption": `Cosita ^-^ @${num.split('@')[0]} `,
+                            "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=",
+                            "fileLength": "28777",
+                            "height": 1080,
+                            "width": 1079,
+                            "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=",
+                            "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=",
+                            "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
+                            "mediaKeyTimestamp": "1610993486",
+                            "jpegThumbnail": Mh),
+                            "scansSidecar": "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw=="
+                        }
+                    },
+                    contextInfo: {
+                      "forwardingScore": 999, "isForwarded": true
+                    }
+                }
+            })
+		
 break	
+
 
 case 'gay':
                 client.updatePresence(from, Presence.composing) 
