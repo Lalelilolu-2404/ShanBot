@@ -905,13 +905,10 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	
 	ppimg = await client.getProfilePicture(`${mentioned[0].split('@')[0]}@c.us`)
 	let Mh = await getBuffer(ppimg)
-	async (anu) 
-	console.log(anu)
-	const mdata = await client.groupMetadata(anu.jid)
-	num = anu.participants[0]
+	num = mentioned.participants[0]
 						
 	//client.sendMessage(from, buff, image, {quoted: mek, caption: 'Uwu'})
-	teks = `「 *Uwu cosita :3* 」\n ${num.replace('@s.whatsapp.net', '')}\n @${num.split('@')[0]}\n @${num.split('@')[0]}`
+	teks = `「 *Uwu cosita :3* ${name.pushname} 」\n ${num.replace('@s.whatsapp.net', '')}\n @${num.split('@')[0]}\n @${num.split('@')[0]}`
 	
             client.sendMessage(from, teks, text, {
                 quoted: {
