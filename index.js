@@ -904,7 +904,9 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	let Mh = await getBuffer(ppimg)
 						
 	//client.sendMessage(from, buff, image, {quoted: mek, caption: 'Uwu'})
-	teks =  mentions(`⊱ღ꧁ ${pushname} ꧂ღ⊱ \n @${mentioned[0].split('@')[0]}`, mentioned,true)
+//	teks =  mentions(`⊱ღ꧁ ${pushname} ꧂ღ⊱ \n @${mentioned[0].split('@')[0]}`, mentioned,true)
+
+	teks =  (`⊱ღ꧁ ${pushname} ꧂ღ⊱ \n @${mentioned[0].split('@')[0]}`, mentioned,true)
 //	`⊱ღ꧁ ${pushname} ꧂ღ⊱ \n Hola perros 
             client.sendMessage(from, teks, text, {
                 quoted: {
