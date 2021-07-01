@@ -905,7 +905,7 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	
 	ppimg = await client.getProfilePicture(`${mentioned[0].split('@')[0]}@c.us`)
 	let Mh = await getBuffer(ppimg)
-	
+	console.log(anu)
 	const mdata = await client.groupMetadata(anu.jid)
 	num = anu.participants[0]
 						
