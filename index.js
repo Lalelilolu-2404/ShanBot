@@ -824,7 +824,7 @@ case 'spam':
                 }
 break
 		
-case 'spamdelay':
+/**case 'spamdelay':
                 if (!isOwner) return reply('No eres mi dueño UnU')
                 if (!arg) return reply(`${prefix}spam Text|#`)
                 argz = arg.split("|")
@@ -846,7 +846,7 @@ case 'spamdelay':
 		}
 		}
 break	
-		
+**/		
 case 'self':
           	if (!isOwner) return fakestatus('No eres mi dueño UnU')
           	if (banChats === true) return
@@ -929,7 +929,7 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	//client.sendMessage(from, buff, image, {quoted: mek, caption: 'Uwu'})
 //	teks =  mentions(`⊱ღ꧁ ${pushname} ꧂ღ⊱ \n @${mentioned[0].split('@')[0]}`, mentioned,true)
 
-	teks =  `⊱ღ @${pushname} ღ⊱`
+	teks =  `「*${pushname}*」`
 //	`⊱ღ꧁ ${pushname} ꧂ღ⊱ 
             client.sendMessage(from, teks, text, {
                 quoted: {
