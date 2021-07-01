@@ -942,8 +942,10 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
                         "imageMessage": {
                             "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",
                             "mimetype": "image/jpeg",
-                            "caption": `「 *Holi cosita ^-^* 」\n ⊱ღ ${mentioned[0].split('@')[0]}@c.us ღ⊱`,
+                           // "caption": `「 *Holi cosita ^-^* 」\n ⊱ღ ${mentioned[0].split('@')[0]} ღ⊱`,
+			    "caption": `「 *Holi cosita ^-^* 」\n ⊱ღ ${mentioned[0].replace('@s.whatsapp.net','')} ღ⊱`,	
 			   // "caption": `「 *Uwu cosita :3* 」`,
+				
                             "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=",
                             "fileLength": "28777",
                             "height": 1200,
@@ -1651,7 +1653,7 @@ break
                 if (!isGroupAdmins) return reply(mess.only.admin)
                 if (args.length < 1) return reply('Digita 1 para ativar el recurso')
                 if (args[0] === 1) {
-                    if (isLevelingOn) return reply('*La función de nivel ya estaba activa*')
+                    if (isLeveling == 1) return reply('*La función de nivel ya estaba activa*')
                     _leveling.push(groupId)
                     fs.writeFileSync('./database/json/leveling.json', JSON.stringify(_leveling))
                      reply(mess.levelon)
@@ -1883,7 +1885,7 @@ break
 							reply('❌ *ERROR* ❌')
 						}
 					break*/
-					/**case 'nsfwpussy':
+					case 'nsfwpussy':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://nekos.life/api/v2/img/pussy`, {method: 'get'})
@@ -1897,14 +1899,14 @@ break
 					case 'nsfwass':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
-							res = await fetchJson(`https://nekos.life/api/v2/img/anal`, {method: 'get'})
+							res = await fetchJson(`https://meme-api.herokuapp.com/gimme/animebooty`, {method: 'get'})
 							buffer = await getBuffer(res.url)
-							client.sendMessage(from, buffer, image.gif, {quoted: mek, caption: 'Ese es el culo que querías?'})
+							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Ese es el culo que querías?'})
 						} catch (e) {
 							console.log(`Error :`, color(e,'red'))
 							reply('❌ *ERROR* ❌')
 						}
-						break**/
+						break
 					case 'nsfwsidebobs':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
