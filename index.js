@@ -824,6 +824,18 @@ case 'spam':
                 }
 break
 		
+case 'spamdelay':
+                if (!isOwner) return reply('No eres mi dueño UnU')
+                if (!arg) return reply(`${prefix}spam Text|#`)
+                argz = arg.split("|")
+                if (!argz) return reply(`${prefix}spam Text|#`)
+                if (isNaN(argz[1])) return reply(`# de veces?`)
+                for (let i = 0; i < argz[1]; i++){
+                client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
+		time.sleep(argz[2])
+                }
+break	
+		
 case 'self':
           	if (!isOwner) return fakestatus('No eres mi dueño UnU')
           	if (banChats === true) return
@@ -906,8 +918,8 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	//client.sendMessage(from, buff, image, {quoted: mek, caption: 'Uwu'})
 //	teks =  mentions(`⊱ღ꧁ ${pushname} ꧂ღ⊱ \n @${mentioned[0].split('@')[0]}`, mentioned,true)
 
-	teks =  (`⊱ღ꧁ ${pushname} ꧂ღ⊱ \n @${mentioned[0].split('@')[0]}`, mentioned,true)
-//	`⊱ღ꧁ ${pushname} ꧂ღ⊱ \n Hola perros 
+	teks =  `⊱ღ꧁ ${pushname} ꧂ღ⊱`
+//	`⊱ღ꧁ ${pushname} ꧂ღ⊱ 
             client.sendMessage(from, teks, text, {
                 quoted: {
                     key: {
@@ -918,8 +930,8 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
                         "imageMessage": {
                             "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",
                             "mimetype": "image/jpeg",
-                            //"caption": `Cosita ^-^ @${mentioned[0].split('@')[0]}`,
-			    "caption": `「 *Uwu cosita :3* 」`,
+                            "caption": (`Cosita ^-^ @${mentioned[0].split('@')[0]}`,mentioned, true),
+			   // "caption": `「 *Uwu cosita :3* 」`,
                             "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=",
                             "fileLength": "28777",
                             "height": 1200,
