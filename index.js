@@ -917,7 +917,7 @@ break	**/
 		
 
 case 'profile':
-If(isInteract == ) {
+If(isInteract == 1) {
 
 client.updatePresence(from, Presence.composing) 
 
