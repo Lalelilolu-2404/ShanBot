@@ -917,7 +917,7 @@ break	**/
 		
 
 case 'profile':
-If(isInteract == 1) {
+if (!isInteract) 
 
 client.updatePresence(from, Presence.composing) 
 
@@ -961,7 +961,7 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
                     }
                 }
             })
-}	
+	
 break	
 
 
