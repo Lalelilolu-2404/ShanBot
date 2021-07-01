@@ -13,4 +13,4 @@ _El bot nesecita admin y tener activado los SWITCH_\n
 
 }
 
-exports.switchwmenu = switchmenu
+exports.switchmenu = switchmenu
