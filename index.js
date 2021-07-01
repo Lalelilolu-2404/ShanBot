@@ -905,6 +905,7 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	
 	ppimg = await client.getProfilePicture(`${mentioned[0].split('@')[0]}@c.us`)
 	let Mh = await getBuffer(ppimg)
+	async (anu) 
 	console.log(anu)
 	const mdata = await client.groupMetadata(anu.jid)
 	num = anu.participants[0]
@@ -922,7 +923,8 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
                         "imageMessage": {
                             "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",
                             "mimetype": "image/jpeg",
-                            "caption": `Cosita ^-^ @${mentioned[0].split('@')[0]}`,
+                            //"caption": `Cosita ^-^ @${mentioned[0].split('@')[0]}`,
+			    "caption": `╰⊱♥⊱╮ღ꧁ ${pushname} ꧂ღ╭⊱♥≺`,
                             "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=",
                             "fileLength": "28777",
                             "height": 1080,
