@@ -838,12 +838,12 @@ case 'spamdelay':
 		
                 for (let i = 0; i < argz[1]; i++){
            //     client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
-		while (hour_now - Ahora <= dly){	
+		while (hour_now - Ahora <= dly)	
 		if (hour_now - Ahora >= dly){
 		client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
 		Ahora = hour_now	
                 }
-		}
+		end while
 		}
 break	
 		
