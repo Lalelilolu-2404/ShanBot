@@ -832,7 +832,7 @@ case 'spamdelay':
                 if (isNaN(argz[1])) return reply(`# de veces?`)
                 for (let i = 0; i < argz[1]; i++){
                 client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
-		time.sleep(argz[2])
+		delay(argz[2])
                 }
 break	
 		
@@ -930,7 +930,7 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
                         "imageMessage": {
                             "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",
                             "mimetype": "image/jpeg",
-                            "caption": (`Cosita ^-^ @${mentioned[0].split('@')[0]}`,mentioned, true),
+                            "caption": `Cosita ^-^\n@${mentioned[0].split('@')[0]}`
 			   // "caption": `「 *Uwu cosita :3* 」`,
                             "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=",
                             "fileLength": "28777",
