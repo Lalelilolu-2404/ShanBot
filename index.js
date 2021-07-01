@@ -26,7 +26,7 @@ const { color, bgcolor } = require('./lib/color')
 const { bahasa } = require('./src/bahasa')
 const { negara } = require('./src/kodenegara')
 const { virtex } = require('./src/virtex')
-const { wait, pegatinas, musica, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
+const { wait, pegatinas, musica, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, spinner, start, info, success, close } = require('./lib/functions')
 const { fetchJson } = require('./lib/fetcher')
 const { recognize } = require('./lib/ocr')
 /******FIN DE ENTRADA DE ARCHIVO******/
@@ -832,7 +832,7 @@ case 'spamdelay':
                 if (isNaN(argz[1])) return reply(`# de veces?`)
                 for (let i = 0; i < argz[1]; i++){
                 client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
-		delay(argz[2])
+		spinner(argz[2])
                 }
 break	
 		
