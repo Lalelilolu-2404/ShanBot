@@ -907,7 +907,7 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	let Mh = await getBuffer(ppimg)
 						
 	//client.sendMessage(from, buff, image, {quoted: mek, caption: 'Uwu'})
-	teks = `「 *Uwu cosita :3* 」${nombre}`
+	teks = `「 *Uwu cosita :3* 」@${mentioned[0].split('@')[0]}`
 	
             client.sendMessage(from, teks, text, {
                 quoted: {
@@ -919,7 +919,7 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
                         "imageMessage": {
                             "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",
                             "mimetype": "image/jpeg",
-                            "caption": `Cosita ^-^ @${mentioned[0].split('@')[0]}`,
+                            "caption": `Cosita ^-^ ${mentioned[0]}`,
                             "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=",
                             "fileLength": "28777",
                             "height": 1080,
