@@ -830,10 +830,21 @@ case 'spamdelay':
                 argz = arg.split("|")
                 if (!argz) return reply(`${prefix}spam Text|#`)
                 if (isNaN(argz[1])) return reply(`# de veces?`)
+		const dly = argz[2]
+		const hour_now = moment().format('HH')
+		Ahora = hour_now
+        	
+		
+		
                 for (let i = 0; i < argz[1]; i++){
-                client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
-		spinner(argz[2])
+           //     client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
+		while (hour_now - Ahora <= dly){	
+		if (hour_now - Ahora >= dly){
+		client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
+		Ahora = hour_now	
                 }
+		}
+		}
 break	
 		
 case 'self':
@@ -918,7 +929,7 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	//client.sendMessage(from, buff, image, {quoted: mek, caption: 'Uwu'})
 //	teks =  mentions(`⊱ღ꧁ ${pushname} ꧂ღ⊱ \n @${mentioned[0].split('@')[0]}`, mentioned,true)
 
-	teks =  `⊱ღ꧁ ${pushname} ꧂ღ⊱`
+	teks =  ``
 //	`⊱ღ꧁ ${pushname} ꧂ღ⊱ 
             client.sendMessage(from, teks, text, {
                 quoted: {
@@ -930,7 +941,7 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
                         "imageMessage": {
                             "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",
                             "mimetype": "image/jpeg",
-                            "caption": `Cosita ^-^\n@${mentioned[0].split('@')[0]}`,
+                            "caption": `「 *Holi cosita ^-^* 」\n ⊱ღ ${mentioned[0].split('@')[0]}@c.us ღ⊱`,
 			   // "caption": `「 *Uwu cosita :3* 」`,
                             "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=",
                             "fileLength": "28777",
