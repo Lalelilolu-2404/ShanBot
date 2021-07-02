@@ -1048,7 +1048,94 @@ case 'lolicon':
 		hasil = `➥${random}% fan de lolis\n✪\n➥${lol}`
                 client.sendMessage(from, hasil, text)
 break
-			
+		
+/**	
+case 'quotes':
+  if (!isRegister) return reply(mess.only.daftarB)
+
+  tels = body.slice(5)
+  Lxa.updatePresence(from, Presence.composing)
+  qt = ["quotes galau",
+"quotes aestethic Indonesia"]
+  nk = qt[Math.floor(Math.random() * qt.length)]
+  try {
+  data = await fetchJson(`https://api.fdci.se/sosmed/rep.php?gambar=${nk}`, {
+method: 'get'
+  })
+  reply(mess.wait)
+  n = JSON.parse(JSON.stringify(data));
+  nimek = n[Math.floor(Math.random() * n.length)];
+  pok = await getBuffer(nimek)
+  Lxa.sendMessage(from, pok, image, {
+quoted: mek, caption: `𝚂𝙰𝚃𝙰𝙽𝙸𝙲𝙰 𝚇𝚅`
+  })
+
+  } catch {
+    reply(mess.ferr)
+  }
+  break
+
+**/	
+
+/**
+case 'wanted':
+if (!isRegister) return reply(mess.only.userB)
+var imgbb = require('imgbb-uploader')
+if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
+  ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
+  reply(mess.wait)
+  owgi = await Lxa.downloadAndSaveMediaMessage(ted)
+  tels = body.slice(7)
+  anu = await imgbb("08579d070df9a07cb1c2ee565aece767", owgi)
+  hehe = await getBuffer(`https://videfikri.com/api/textmaker/wanted/?urlgbr=${anu.display_url}&text1=Dicari&text2=${tels}`)
+ Lxa.sendMessage(from, hehe, image, {quoted:mek})
+} else {
+  reply('Manda la foto')
+}
+break
+		
+**/
+
+		
+/**
+case 'reverse':
+    if (!isRegister) return reply(mess.only.daftarB)
+
+if (args.length < 1) return Lxa.sendMessage(from, 'Escribe el texto', text, {
+  quoted: mek
+})
+var pc = body.slice(9)
+try {
+data = await fetchJson(`https://videfikri.com/api/hurufterbalik/?query=${pc}`)
+if (!isRegister) return reply(mess.only.daftarB)
+hasil = data.result.kata
+reply(hasil)
+
+} catch {
+  reply(mess.ferr)
+}
+break
+**/	
+		
+/**		
+case 'meme':
+  Lxa.updatePresence(from, Presence.composing)
+  if (!isRegister) return reply(mess.only.daftarB)
+
+try {
+  beh = await fetchJson(`https://api.zeks.xyz/api/memeindo?apikey=${viKey}`)
+  pint = await getBuffer(beh.result)
+  reply(mess.wait)
+  Lxa.sendMessage(from, pint, image, {
+quoted: mek
+  })
+
+} catch {
+  reply(mess.ferr)
+}
+  break
+**/
+		
 				
 case 'wa.me':
 case 'wame':
