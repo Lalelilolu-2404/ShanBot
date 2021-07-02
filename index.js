@@ -1631,6 +1631,28 @@ break
 						/**client.sendMessage(from, `\`\`\`REGISTRADO ✅\`\`\`\n\n\`\`\`Hora EC: ${time}\`\`\`\n\`\`\`Fecha: ${date}\`\`\`\n\n\`\`\`[Usuario]: ${nombre}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`Para usar el bot, enviar ${prefix}help\`\`\`\n\`\`\`\nTotal de usuários ${user.length}\`\`\``, text, {quoted: mek})**/
 						client.sendMessage(from, `\`\`\`REGISTRADO ✅\`\`\`\n\n\`\`\`Hora EC: ${time}\`\`\`\n\`\`\`Fecha: ${date}\`\`\`\n\n\`\`\`[Usuario]: ${nombre}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`Para usar el bot, enviar ${prefix}help\`\`\``, text, {quoted: mek})			
 				break
+
+/**
+case 'verify':
+case 'daftar':
+  case 'register':
+if (isRegister) return reply('Tu cuenta ya estaba verificada')
+const namaUser = `${pushname}`
+const umurUser = `${sender}`
+const serialUser = createSerial(20)
+veri = sender
+if (isGroup) {
+  addRegisteredUser(sender, namaUser, umurUser, time, serialUser)
+  hasil = `〘  *Vericación* 〙
+Código : *${serialUser}*
+╔════════════════════
+╠≽️ *Nombre* : *${namaUser}*
+╠≽️ *Número* : *${sender.split("@")[0]}*
+╚════════════════════`
+reply(hasil)
+**/		
+		
+		
 					
                                 case 'welcome':
 					if (!isGroup) return reply(mess.only.group)
