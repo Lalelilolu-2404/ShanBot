@@ -2060,7 +2060,7 @@ break
 							reply('❌ *ERROR* ❌')
 						}
 						break
-					/**case 'nsfwthighs':
+					case 'nsfwthighs':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://meme-api.herokuapp.com/gimme/animethighss`, {method: 'get'})
@@ -2070,7 +2070,7 @@ break
 							console.log(`Error :`, color(e,'red'))
 							reply('❌ *ERROR* ❌')
 						}
-						break**/
+						break
 					case 'nsfwfeets':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
@@ -2531,6 +2531,12 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
+        else if (budy.startsWith(`Jutsu`)) {
+		if (budy.endsWith(`Jutsu`)){
+        	const none = fs.readFileSync('./src/stickers/Jutsu.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
         else if (budy.startsWith(`Kuaker`)) {
 		if (budy.endsWith(`Kuaker`)){
         	const none = fs.readFileSync('./src/stickers/Kuaker.webp');
@@ -2903,6 +2909,12 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
+        else if (budy.startsWith(`Wtf`)) {
+		if (budy.endsWith(`Wtf`)){
+        	const none = fs.readFileSync('./src/stickers/Wtf.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}
         else if (budy.startsWith(`Xdxd`)) {
 		if (budy.endsWith(`Xdxd`)){
         	const none = fs.readFileSync('./src/stickers/Xd.webp');
@@ -3236,7 +3248,7 @@ if (isPacksito == 1) {
                   }
 /***Shantera***/	
 		
-if (isInteract == 1) {
+	if (isInteract == 1) {
 		if (budy.includes(`Todo bien`)) {
                   reply(`Si amig@ todo bien 🙄`)
                   }
@@ -3254,14 +3266,12 @@ if (isInteract == 1) {
 		if (budy.includes(`Bot gay`)) {
                   reply(`Miren a este boludito`)
                   }
-
 		if (budy.includes(`Gracias`)) {
                   reply(`De nada putit@ 🤭`)
                   }
 		if (budy.includes(`gracias`)) {
                   reply(`De nada putit@ 🤭`)
                   }			
-
       		if (budy.startsWith(`Hola`)) {
 			if (budy.endsWith(`Hola`)){
         		reply(`Hola putit@ 🤭`)}
@@ -3313,7 +3323,8 @@ if (isInteract == 1) {
 			if (budy.endsWith(`Uff`)){
                   reply(`Uhm zi, ufff 🥵!`)
                   }
-		}			
+		}
+	}
 
 	if (budy.startsWith(`Pasen sexo`)) {
         	const none = fs.readFileSync('./mp3/fernan.mp3');
@@ -3425,7 +3436,6 @@ if (isInteract == 1) {
         	const none = fs.readFileSync('./mp3/gaspi1.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }	
-}
 		
 				if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
