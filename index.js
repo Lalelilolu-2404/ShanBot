@@ -417,6 +417,13 @@ ${demote}`
                         const NomerOwner = '33749258491@s.whatsapp.net'
                         /******Entrada ApiKey******/
                         const BarBarKey = 'Mn2Bf58QHQ8kABoLq80g'
+			
+			//BarBarKey = up.BarBarKey;
+			vKey = up.Vhtearkey;
+			viKey = up.Vinzapi
+			meKey = up.Itsmeikyapi
+			lolKey = up.LolHumanKey
+			
                         /******Fin de la entrada de ApiKey******/
 
 			const isUrl = (url) => {
@@ -1941,7 +1948,7 @@ break
                                         }
 										break*/				
 				
-					case 'nsfwloli':
+					/**case 'nsfwloli':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://meme-api.herokuapp.com/gimme/lolis`, {method: 'get'})
@@ -1951,7 +1958,8 @@ break
 							console.log(`Error :`, color(e,'red'))
 							reply('❌ *ERROR* ❌')
 						}
-						break
+						break**/
+	
 					case 'nsfwbobs': 
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
@@ -1996,6 +2004,7 @@ break
 							reply('❌ *ERROR* ❌')
 						}
 					break*/
+	
 					case 'nsfwpussy':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
