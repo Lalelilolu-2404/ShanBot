@@ -1102,7 +1102,6 @@ break
 		
 
 		
-/**
 case 'reverse':
     if (!isRegister) return reply(mess.only.daftarB)
 
@@ -1119,19 +1118,18 @@ reply(hasil)
 } catch {
   reply(mess.ferr)
 }
-break
-**/	
+break	
 		
-/**		
+		
 case 'meme':
-  Lxa.updatePresence(from, Presence.composing)
+  client.updatePresence(from, Presence.composing)
   if (!isRegister) return reply(mess.only.daftarB)
 
 try {
   beh = await fetchJson(`https://api.zeks.xyz/api/memeindo?apikey=${viKey}`)
   pint = await getBuffer(beh.result)
   reply(mess.wait)
-  Lxa.sendMessage(from, pint, image, {
+  client.sendMessage(from, pint, image, {
 quoted: mek
   })
 
@@ -1139,8 +1137,7 @@ quoted: mek
   reply(mess.ferr)
 }
   break
-**/
-		
+	
 				
 case 'wa.me':
 case 'wame':
