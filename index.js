@@ -933,7 +933,8 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	
 	try {
 		ppimg = await client.getProfilePicture(`${mentioned[0].split('@')[0]}@c.us`)
-		catch {
+	}
+	catch {
 		ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 	}
 		let Mh = await getBuffer(ppimg)
