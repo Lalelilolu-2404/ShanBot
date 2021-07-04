@@ -8,6 +8,8 @@ const nsfwmenu = (prefix, pushname) => {
 - ${prefix}nsfwfeets
 - ${prefix}nsfwblowjob
 - ${prefix}nsfwneko
+- ${prefix}nsfwthighs
+- ${prefix}nsfwarmpits
 - ${prefix}futanari
 - ${prefix}femdom
 - ${prefix}hentai
