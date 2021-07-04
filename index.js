@@ -43,7 +43,6 @@ const {removeBackgroundFromImageFile} = require('remove.bg');
 const imgbb = require('imgbb-uploader');
 const { EmojiAPI } = require("emoji-api");
 const emoji = new EmojiAPI()
-const { removeBackgroundFromImageFile } = require('remove.bg')
 const imgbb = require('imgbb-uploader')
 const lolis = require('lolis.life')
 const loli = new lolis()
