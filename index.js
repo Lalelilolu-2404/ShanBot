@@ -924,8 +924,15 @@ client.updatePresence(from, Presence.composing)
 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('¡La etiqueta?!')
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	
-	ppimg = await client.getProfilePicture(`${mentioned[0].split('@')[0]}@c.us`)
-	let Mh = await getBuffer(ppimg)
+	try {
+		ppimg = await client.getProfilePicture(`${mentioned[0].split('@')[0]}@c.us`)
+		catch {
+		ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+	}
+		let Mh = await getBuffer(ppimg)
+		
+///	ppimg = await client.getProfilePicture(`${mentioned[0].split('@')[0]}@c.us`)
+//	let Mh = await getBuffer(ppimg)
 						
 	//client.sendMessage(from, buff, image, {quoted: mek, caption: 'Uwu'})
 //	teks =  mentions(`⊱ღ꧁ ${pushname} ꧂ღ⊱ \n @${mentioned[0].split('@')[0]}`, mentioned,true)
@@ -1048,13 +1055,12 @@ case 'lolicon':
 		hasil = `➥${random}% fan de lolis\n✪\n➥${lol}`
                 client.sendMessage(from, hasil, text)
 break
-		
-/**	
+			
 case 'quotes':
   if (!isRegister) return reply(mess.only.daftarB)
 
   tels = body.slice(5)
-  Lxa.updatePresence(from, Presence.composing)
+  client.updatePresence(from, Presence.composing)
   qt = ["quotes galau",
 "quotes aestethic Indonesia"]
   nk = qt[Math.floor(Math.random() * qt.length)]
@@ -1066,35 +1072,32 @@ method: 'get'
   n = JSON.parse(JSON.stringify(data));
   nimek = n[Math.floor(Math.random() * n.length)];
   pok = await getBuffer(nimek)
-  Lxa.sendMessage(from, pok, image, {
-quoted: mek, caption: `𝚂𝙰𝚃𝙰𝙽𝙸𝙲𝙰 𝚇𝚅`
+  client.sendMessage(from, pok, image, {
+quoted: mek, caption: `Lalelilolu`
   })
 
   } catch {
     reply(mess.ferr)
   }
-  break
+  break	
 
-**/	
 
-/**
 case 'wanted':
 if (!isRegister) return reply(mess.only.userB)
 var imgbb = require('imgbb-uploader')
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
   ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
   reply(mess.wait)
-  owgi = await Lxa.downloadAndSaveMediaMessage(ted)
+  owgi = await client.downloadAndSaveMediaMessage(ted)
   tels = body.slice(7)
-  anu = await imgbb("08579d070df9a07cb1c2ee565aece767", owgi)
-  hehe = await getBuffer(`https://videfikri.com/api/textmaker/wanted/?urlgbr=${anu.display_url}&text1=Dicari&text2=${tels}`)
- Lxa.sendMessage(from, hehe, image, {quoted:mek})
+  Wtd = await imgbb("08579d070df9a07cb1c2ee565aece767", owgi)
+  hehe = await getBuffer(`https://videfikri.com/api/textmaker/wanted/?urlgbr=${Wtf.display_url}&text1=Dicari&text2=${tels}`)
+ client.sendMessage(from, hehe, image, {quoted:mek})
 } else {
   reply('Manda la foto')
 }
 break
 		
-**/
 
 		
 /**
