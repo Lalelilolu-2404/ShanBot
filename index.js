@@ -1066,7 +1066,7 @@ case 'lolicon':
 break
 			
 case 'quotes':
-  if (!isRegister) return reply(mess.only.daftarB)
+  if (!isUser) return reply(mess.only.daftarB)
 
   tels = body.slice(5)
   client.updatePresence(from, Presence.composing)
@@ -1092,7 +1092,7 @@ quoted: mek, caption: `Lalelilolu`
 
 
 case 'wanted':
-if (!isRegister) return reply(mess.only.userB)
+if (!isUser) return reply(mess.only.userB)
 var imgbb = require('imgbb-uploader')
 if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
   ted = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo: mek
@@ -1110,7 +1110,7 @@ break
 
 		
 case 'reverse':
-    if (!isRegister) return reply(mess.only.daftarB)
+    if (!isUser) return reply(mess.only.daftarB)
 
 if (args.length < 1) return Lxa.sendMessage(from, 'Escribe el texto', text, {
   quoted: mek
@@ -1130,7 +1130,7 @@ break
 		
 case 'meme':
   client.updatePresence(from, Presence.composing)
-  if (!isRegister) return reply(mess.only.daftarB)
+  if (!isUser) return reply(mess.only.daftarB)
 
 try {
   beh = await fetchJson(`https://api.zeks.xyz/api/memeindo?apikey=${viKey}`)
@@ -1628,39 +1628,95 @@ break
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
                 client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
                 break
-                               
-				case 'daftar':
-					client.updatePresence(from, Presence.composing)
-					if (isUser) return reply('Ya estas registrado 🧐')
-					if (args.length < 1) return reply(`Incorrecto \nComando : ${prefix}daftar Nombre\nComando : ${prefix}daftar Lalelilolu`)
-					var reg = body.slice(8)
-					var nombre = reg.split("|")[0];
-                                                user.push(sender)
-						fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
-						/**client.sendMessage(from, `\`\`\`REGISTRADO ✅\`\`\`\n\n\`\`\`Hora EC: ${time}\`\`\`\n\`\`\`Fecha: ${date}\`\`\`\n\n\`\`\`[Usuario]: ${nombre}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`Para usar el bot, enviar ${prefix}help\`\`\`\n\`\`\`\nTotal de usuários ${user.length}\`\`\``, text, {quoted: mek})**/
-						client.sendMessage(from, `\`\`\`REGISTRADO ✅\`\`\`\n\n\`\`\`Hora EC: ${time}\`\`\`\n\`\`\`Fecha: ${date}\`\`\`\n\n\`\`\`[Usuario]: ${nombre}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`Para usar el bot, enviar ${prefix}help\`\`\``, text, {quoted: mek})			
-				break
+ 
+/**		
+case 'daftar':
+	client.updatePresence(from, Presence.composing)
+	if (isUser) return reply('Ya estas registrado 🧐')
+	if (args.length < 1) return reply(`Incorrecto \nComando : ${prefix}daftar Nombre\nComando : ${prefix}daftar Lalelilolu`)
+	var reg = body.slice(8)
+	var nombre = reg.split("|")[0];
+        	user.push(sender)
+		fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
+		//client.sendMessage(from, `\`\`\`REGISTRADO ✅\`\`\`\n\n\`\`\`Hora EC: ${time}\`\`\`\n\`\`\`Fecha: ${date}\`\`\`\n\n\`\`\`[Usuario]: ${nombre}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`Para usar el bot, enviar ${prefix}help\`\`\`\n\`\`\`\nTotal de usuários ${user.length}\`\`\``, text, {quoted: mek})
+		client.sendMessage(from, `\`\`\`REGISTRADO ✅\`\`\`\n\n\`\`\`Hora EC: ${time}\`\`\`\n\`\`\`Fecha: ${date}\`\`\`\n\n\`\`\`[Usuario]: ${nombre}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`Para usar el bot, enviar ${prefix}help\`\`\``, text, {quoted: mek})			
+break
+**/
 
-/**
 case 'verify':
 case 'daftar':
-  case 'register':
-if (isRegister) return reply('Tu cuenta ya estaba verificada')
-const namaUser = `${pushname}`
+if (isUser) return reply('Ya estas registrado 🤭')
+if (args.length < 1) return reply(`Incorrecto \nComando : ${prefix}daftar Nombre\nComando : ${prefix}daftar Lalelilolu`)
+	var reg = body.slice(8)
+	var nombre = reg.split("|")[0];	
+	user.push(sender)	
+	fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
+const nameUser = `${pushname}`
 const umurUser = `${sender}`
-const serialUser = createSerial(20)
+const serialUser = `${status.sender}`
 veri = sender
-if (isGroup) {
-  addRegisteredUser(sender, namaUser, umurUser, time, serialUser)
-  hasil = `〘  *Vericación* 〙
-Código : *${serialUser}*
-╔════════════════════
-╠≽️ *Nombre* : *${namaUser}*
-╠≽️ *Número* : *${sender.split("@")[0]}*
-╚════════════════════`
-reply(hasil)
-**/		
+	
+/**client.sendMessage(from, `\`\`\`REGISTRADO ✅\`\`\`\n\n\`\`\`
+	Hora EC: ${time}\`\`\`\n\`\`\`
+	Fecha: ${date}\`\`\`\n\`\`\`
+	[Usuario]: ${nombre}\`\`\`\n\`\`\`
+	[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`
+	Para usar el bot, enviar ${prefix}help\`\`\``, text, {quoted: mek})			
+**/
 		
+	try {
+		ppimg = await client.getProfilePicture(`${sender.split('@')[0]}@c.us`)
+	}
+	catch {
+		ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+	}
+		let Mh = await getBuffer(ppimg)
+				
+		
+  teks = `〘  *VERIFICADO ✅* 〙
+╔════════════════════
+╠≽️ *Nombre* : *${nombre}*
+╠≽️ *User*\`\: *${nameUser}*
+╠≽️ *Número* : *${sender.split("@")[0]}*
+╠≽️ *Status* : *${serialUser}*
+╚════════════════════`
+//reply(hasil)
+		
+//	teks =  `「*${pushname}*」`
+//	`⊱ღ꧁ ${pushname} ꧂ღ⊱ 
+            client.sendMessage(from, teks, text, {
+                quoted: {
+                    key: {
+                        fromMe: false,
+                        participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})
+                    },
+                    message: {
+                        "imageMessage": {
+                            "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",
+                            "mimetype": "image/jpeg",
+                           // "caption": `「 *Holi cosita ^-^* 」\n ⊱ღ ${mentioned[0].split('@')[0]} ღ⊱`,
+			    "caption": `「 *Holi cosita ^-^* 」\n ⊱ღ ${pushname} ღ⊱`,	
+			   // "caption": `「 *Uwu cosita :3* 」`,
+				
+                            "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=",
+                            "fileLength": "28777",
+                            "height": 1200,
+                            "width": 1199,
+                            "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=",
+                            "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=",
+                            "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
+                            "mediaKeyTimestamp": "1610993486",
+                            "jpegThumbnail": Mh,
+                            "scansSidecar": "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw=="
+                        }
+                    },
+                    contextInfo: {
+                      "forwardingScore": 999, "isForwarded": true
+                    }
+                }
+            })		
+			
+break		
 		
 					
                                 case 'welcome':
