@@ -1654,7 +1654,7 @@ if (args.length < 1) return reply(`Incorrecto \nComando : ${prefix}daftar Nombre
 	fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
 const nameUser = `${pushname}`
 const umurUser = `${sender}`
-const serialUser = `${actu.sender}`
+//const serialUser = `${actu.sender}`
 veri = sender
 	
 /**client.sendMessage(from, `\`\`\`REGISTRADO ✅\`\`\`\n\n\`\`\`
@@ -1679,9 +1679,10 @@ veri = sender
 ╠≽️ *Nombre* : *${nombre}*
 ╠≽️ *User*\`\: *${nameUser}*
 ╠≽️ *Número* : *${sender.split("@")[0]}*
-╠≽️ *Status* : *${serialUser}*
 ╚════════════════════`
 //reply(hasil)
+  
+//	╠≽️ *Status* : *${serialUser}  
 		
 //	teks =  `「*${pushname}*」`
 //	`⊱ღ꧁ ${pushname} ꧂ღ⊱ 
