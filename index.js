@@ -1653,7 +1653,7 @@ if (args.length < 1) return reply(`Incorrecto \nComando : ${prefix}daftar Nombre
 	fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
 const nameUser = `${pushname}`
 const umurUser = `${sender}`
-const serialUser = `${status.sender}`
+const serialUser = `${actu.sender}`
 veri = sender
 	
 /**client.sendMessage(from, `\`\`\`REGISTRADO ✅\`\`\`\n\n\`\`\`
