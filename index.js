@@ -1677,11 +1677,10 @@ veri = sender
   teks = `〘  *VERIFICADO ✅* 〙
 ╔════════════════════
 ╠≽️ *Nombre* : *${nombre}*
-╠≽️ *User*\`\: *${nameUser}*
 ╠≽️ *Número* : *${sender.split("@")[0]}*
 ╚════════════════════`
 //reply(hasil)
-  
+ // 	╠≽️ *User*\`\: *${nameUser}*
 //	╠≽️ *Status* : *${serialUser}  
 		
 //	teks =  `「*${pushname}*」`
@@ -1697,7 +1696,7 @@ veri = sender
                             "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",
                             "mimetype": "image/jpeg",
                            // "caption": `「 *Holi cosita ^-^* 」\n ⊱ღ ${mentioned[0].split('@')[0]} ღ⊱`,
-			    "caption": `「 *Holi cosita ^-^* 」\n ⊱ღ ${pushname} ღ⊱`,	
+			    "caption": `「 *Holi cosita ^-^* 」\n ⊱ღ *${pushname}* ღ⊱`,	
 			   // "caption": `「 *Uwu cosita :3* 」`,
 				
                             "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=",
