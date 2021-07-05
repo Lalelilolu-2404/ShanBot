@@ -64,7 +64,7 @@ const _leveling = JSON.parse(fs.readFileSync('./database/json/leveling.json'))
 const _level = JSON.parse(fs.readFileSync('./database/json/level.json'))
 const image = JSON.parse(fs.readFileSync('./database/img.json'))
 const setting = JSON.parse(fs.readFileSync('./database/setting.json'))
-const up = JSON.parse(fs.readFileSync('./data/settings.json'));
+const up = JSON.parse(fs.readFileSync('./database/setting.json'));
 /******FIN DE ENTRADA JSON******/
 
 /******INICIO DE LA ENTRADA DEL MENÚ******/
