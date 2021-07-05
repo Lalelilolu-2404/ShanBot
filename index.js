@@ -952,7 +952,7 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
                 quoted: {
                     key: {
                         fromMe: false,
-                        participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})
+                        participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "Lalelilolu ♫☼" } : {}) //status@broadcast
                     },
                     message: {
                         "imageMessage": {
@@ -1070,7 +1070,7 @@ case 'quotes':
 
   tels = body.slice(5)
   client.updatePresence(from, Presence.composing)
-  qt = ["quotes galau",
+  qt = ["quotes english",  //galau
 //"quotes aestethic Indonesia"]
 "quotes aestethic English"]		
   nk = qt[Math.floor(Math.random() * qt.length)]
@@ -1677,7 +1677,8 @@ veri = sender
   teks = `〘  *VERIFICADO ✅* 〙
 ╔════════════════════
 ╠≽️ *Nombre* : *${nombre}*
-╠≽️ *Número* : *${sender.split("@")[0]}*
+╠≽️ *Número* : *+${sender.split("@")[0]}*
+╠≽️ *Use* : *${prefixe}help* 
 ╚════════════════════`
 //reply(hasil)
  // 	╠≽️ *User*\`\: *${nameUser}*
@@ -1689,7 +1690,7 @@ veri = sender
                 quoted: {
                     key: {
                         fromMe: false,
-                        participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})
+                        participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "LaleliloluBot :3" } : {})  //status@broadcast
                     },
                     message: {
                         "imageMessage": {
