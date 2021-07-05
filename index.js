@@ -952,8 +952,8 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
                 quoted: {
                     key: {
                         fromMe: false,
-                        participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "Lalelilolu ♫☼" } : {}) //status@broadcast
-                    },
+                        participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) 
+                    },							
                     message: {
                         "imageMessage": {
                             "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",
@@ -1083,7 +1083,7 @@ method: 'get'
   nimek = n[Math.floor(Math.random() * n.length)];
   pok = await getBuffer(nimek)
   client.sendMessage(from, pok, image, {
-quoted: mek, caption: `Lalelilolu`
+quoted: mek, caption: `Lalelilolu ᵈᵃʳʸ⛥`
   })
 
   } catch {
@@ -1128,7 +1128,7 @@ reply(hasil)
 }
 break	
 		
-		
+/**		
 case 'meme':
   client.updatePresence(from, Presence.composing)
   if (!isUser) return reply(mess.only.daftarB)
@@ -1145,7 +1145,7 @@ quoted: mek
   reply(mess.ferr)
 }
   break
-	
+**/	
 				
 case 'wa.me':
 case 'wame':
@@ -1690,7 +1690,7 @@ veri = sender
                 quoted: {
                     key: {
                         fromMe: false,
-                        participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "LaleliloluBot :3" } : {})  //status@broadcast
+                        participant: `0@s.whatsapp.net`, ...(from `Lalelilolu ᵈᵃʳʸ⛥` ? { remoteJid: "status@broadcast" } : {})  
                     },
                     message: {
                         "imageMessage": {
