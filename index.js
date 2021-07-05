@@ -1070,9 +1070,8 @@ case 'quotes':
 
   tels = body.slice(5)
   client.updatePresence(from, Presence.composing)
-  qt = ["quotes english",  //galau
-//"quotes aestethic Indonesia"]
-"quotes aestethic English"]		
+  qt = ["quotes galau",
+"quotes aestethic Indonesia"]		
   nk = qt[Math.floor(Math.random() * qt.length)]
   try {
   data = await fetchJson(`https://api.fdci.se/sosmed/rep.php?gambar=${nk}`, {
@@ -1677,7 +1676,7 @@ veri = sender
   teks = `〘  *VERIFICADO ✅* 〙
 ╔════════════════════
 ╠≽️ *Nombre* : *${nombre}*
-╠≽️ *Número* : *+${sender.split("@")[0]}*
+╠≽️ *Número* : *wa.me/${sender.split("@")[0]}*
 ╠≽️ *Use* : *${prefixe}help* 
 ╚════════════════════`
 //reply(hasil)
@@ -1689,8 +1688,8 @@ veri = sender
             client.sendMessage(from, teks, text, {
                 quoted: {
                     key: {
-                        fromMe: false,
-                        participant: `0@s.whatsapp.net`, ...(from `Lalelilolu ᵈᵃʳʸ⛥` ? { remoteJid: "status@broadcast" } : {})  
+                        fromMe: true,
+                        participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {})  
                     },
                     message: {
                         "imageMessage": {
