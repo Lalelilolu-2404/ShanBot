@@ -1071,7 +1071,8 @@ case 'quotes':
   tels = body.slice(5)
   client.updatePresence(from, Presence.composing)
   qt = ["quotes galau",
-"quotes aestethic Indonesia"]
+//"quotes aestethic Indonesia"]
+"quotes aestethic English"]		
   nk = qt[Math.floor(Math.random() * qt.length)]
   try {
   data = await fetchJson(`https://api.fdci.se/sosmed/rep.php?gambar=${nk}`, {
@@ -1112,13 +1113,13 @@ break
 case 'reverse':
     if (!isUser) return reply(mess.only.daftarB)
 
-if (args.length < 1) return Lxa.sendMessage(from, 'Escribe el texto', text, {
+if (args.length < 1) return client.sendMessage(from, 'Escribe el texto', text, {
   quoted: mek
 })
 var pc = body.slice(9)
 try {
 data = await fetchJson(`https://videfikri.com/api/hurufterbalik/?query=${pc}`)
-if (!isRegister) return reply(mess.only.daftarB)
+if (!isUser) return reply(mess.only.daftarB)
 hasil = data.result.kata
 reply(hasil)
 
