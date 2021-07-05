@@ -1677,7 +1677,7 @@ veri = sender
 ╔════════════════════
 ╠≽️ *Nombre* : *${nombre}*
 ╠≽️ *Número* : *wa.me/${sender.split("@")[0]}*
-╠≽️ *Use* : *${prefixe}help* 
+╠≽️ *Use* : *${prefix}help* 
 ╚════════════════════`
 //reply(hasil)
  // 	╠≽️ *User*\`\: *${nameUser}*
