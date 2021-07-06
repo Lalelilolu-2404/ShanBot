@@ -936,7 +936,8 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 		ppimg = await client.getProfilePicture(`${mentioned[0].split('@')[0]}@c.us`)
 	}
 	catch {
-		ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+		ppimg = fs.readFileSync('./assets/Unkown.jpeg')
+			//'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 	}
 		let Mh = await getBuffer(ppimg)
 		
@@ -1118,7 +1119,6 @@ if (args.length < 1) return client.sendMessage(from, 'Escribe el texto', text, {
 var pc = body.slice(9)
 try {
 data = await fetchJson(`https://videfikri.com/api/hurufterbalik/?query=${pc}`)
-if (!isUser) return reply(mess.only.daftarB)
 hasil = data.result.kata
 reply(hasil)
 
