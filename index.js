@@ -1668,7 +1668,8 @@ veri = sender
 		ppimg = await client.getProfilePicture(`${sender.split('@')[0]}@c.us`)
 	}
 	catch {
-		ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+		ppimg = fs.readFileSync('./assets/Unkown.jpeg')
+		//ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 	}
 		let Mh = await getBuffer(ppimg)
 				
