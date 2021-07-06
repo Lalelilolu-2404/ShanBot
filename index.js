@@ -2745,6 +2745,12 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }	
 		}
+        else if (budy.startsWith(`Onichan`)) {
+		if (budy.endsWith(`Onichan`)){
+        	const none = fs.readFileSync('./src/stickers/Onii chan.webp');
+		client.sendMessage(from, none, sticker, {quoted: mek})
+                  }
+		}	
         else if (budy.startsWith(`Ouioui`)) {
 		if (budy.endsWith(`Ouioui`)){
         	const none = fs.readFileSync('./src/stickers/Ouioui.webp');
