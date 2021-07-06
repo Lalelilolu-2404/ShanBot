@@ -938,6 +938,7 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	catch {
 		ppimg = fs.readFileSync('./assets/Unkown.jpeg')
 			//'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+		//https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png
 	}
 		let Mh = await getBuffer(ppimg)
 		
