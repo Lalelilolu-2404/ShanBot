@@ -15,6 +15,7 @@ const otak = (prefix, pushname) => {
 - Help
 - Hentai
 - Iluminati
+- Jaa
 - La toca :3
 - Me gimes?
 - Me vengo
