@@ -682,10 +682,18 @@ break
 		case 'bana':
 		client.sendMessage(from, bana(prefix, sender), text, {quoted: mek})
 		break	
-		case 'stick1':
+		/**case 'stick1':
 		if (isOwner)			
 		client.sendMessage(from, stick1(prefix, sender), text, {quoted: mek})
-		break						
+		break	**/
+		
+		case 'stick1':
+		if (isOwner)
+			var List = `${stick1(prefix)}
+    			`
+    		fakestatus(List)			
+		break		
+		
 		case 'stick2':
 		if (isOwner)
 		client.sendMessage(from, stick2(prefix, sender), text, {quoted: mek})
