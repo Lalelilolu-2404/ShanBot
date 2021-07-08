@@ -3076,6 +3076,14 @@ if (isPacksito == 1) {
 	
 ///Loli audios////
 		
+	if (isOwner){	
+        if (budy.startsWith(`Jaa`)) {
+		if (budy.endsWith(`Jaa`)){
+        	const none = fs.readFileSync('./anishan/Jaa.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }
+		}
+	}
         if (budy.startsWith(`Daddy`)) {
 		if (budy.endsWith(`Daddy`)){
         	const none = fs.readFileSync('./anishan/Daddy.mp3');
