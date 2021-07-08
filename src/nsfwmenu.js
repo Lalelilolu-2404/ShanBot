@@ -15,7 +15,7 @@ const nsfwmenu = (prefix, pushname) => {
 - ${prefix}hentai
 - ${prefix}pussyimg
 - ${prefix}oppai
-- ${prefix}cimimg
+- ${prefix}cumimg
 *GIFS*
 - ${prefix}pussy
 - ${prefix}boobs
