@@ -3127,18 +3127,19 @@ if(isGroupAdmins){
 		}
 
 ///////////////////
-        if (budy.startsWith(`A`)) {
-		if (budy.lenght == 1){
+         if (budy.lenght == 1){
+		if (budy.startsWith(`A`)){
         	const none = fs.readFileSync('./anishan/A.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
 		}
-        if (budy.startsWith(`a`)) {
-		if (budy.lenght == 1){
+          if (budy.lenght == 1){
+		if (budy.startsWith(`a`)){
         	const none = fs.readFileSync('./anishan/A.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }	
 		}
+		
 	if (budy.includes(`Admin`)) {
         	const none = fs.readFileSync('./anishan/Admin.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
