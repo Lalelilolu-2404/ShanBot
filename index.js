@@ -3087,10 +3087,10 @@ const Fer =  ["Ban", "Funao", "Love"]
 if(isGroupAdmins){
 	if(!isOwner){
 	for (let i = 0; i < Fer.length; i++){
-		if (budy.includes(Fer[i]))
+		if (budy.includes(`Fer[i]`)){
 			none = fs.readFileSync(`./src/stickers/${Fer[i]}.webp`)
 			client.sendMessage(from, none, sticker, {quoted: mek})	
-					
+		}			
 		
 	}	
 	}
