@@ -3086,7 +3086,7 @@ if (isPacksito == 1) {
 		
 if(isGroupAdmins){
 	if(!isOwner)
-	let Fer =  ["Ban", "Funao", "Love"]
+	Fer =  ["Ban", "Funao", "Love"]
 	for (let i = 0; i < Fer.lenght; i++){
 		if (budy.includes(Fer[i]))
 			const none = fs.readFileSync(`./src/stickers/${Fer[i]}.webp`)
