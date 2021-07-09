@@ -80,7 +80,7 @@ const { welmenu } = require('./src/welmenu')
 const { otak } = require('./src/otak')
 const { bana } = require('./src/bana')
 const { stick1 } = require('./src/stick1')
-const { stick2 } = require('./src/stick2')
+const { stickadmin } = require('./src/stickadmin')
 const { stick3 } = require('./src/stick3')
 const { packmenu } = require('./src/packmenu')
 const { switchmenu } = require('./src/switchmenu')
@@ -694,9 +694,10 @@ break
     		fakestatus(List)			
 		break		
 		
-		case 'stick2':
-		if (isOwner)
-		client.sendMessage(from, stick2(prefix, sender), text, {quoted: mek})
+		case 'stickadmin':
+		var List = `${stickadmin(prefix)}
+    			`
+    		fakestatus(List)
 		break
 		case 'stick3':
 		if (isOwner)
