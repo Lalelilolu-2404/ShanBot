@@ -13,6 +13,8 @@ Nightcore  -  Rock mix
  
 ◉ *PARA USAR EL BOT*
   ╠ ○ Regístrate con : ${prefix}daftar + ⌜Tu nombre⌟ 
+  ╠ ○ ${prefix}stickadmin
+  ╚ Stickers (solo admins :v)    
 
 ◉ *NUEVO COMANDO*
   ╠ ○ ${prefix}otak
