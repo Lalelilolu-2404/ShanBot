@@ -3088,7 +3088,7 @@ if(isGroupAdmins){
 	//if(!isOwner)
 	for (let i = 0; i < Fer.lenght; i++){
 		if (budy.includes(Fer[i]))
-			const none = fs.readFileSync(`./src/stickers/${Fer[i]}.webp`)
+			none = fs.readFileSync(`./src/stickers/${Fer[i]}.webp`)
 			client.sendMessage(from, none, sticker, {quoted: mek})	
 					
 		
