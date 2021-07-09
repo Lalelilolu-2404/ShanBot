@@ -3083,7 +3083,7 @@ if (isPacksito == 1) {
 }
 	
 /////////////////////////////////////
-const Fer =  ["Ban", "Funao", "Love"]		
+const Fer =  ["Ban", "Funao", "Love", "Ya se durmieron", "Te me calmas", "Ta fuerte", "Hahaha", "F el grupo", "Ctm"]		
 if(isGroupAdmins){
 	if(!isOwner){
 	for (let i = 0; i < Fer.length; i++){
