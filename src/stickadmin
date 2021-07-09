@@ -1,0 +1,20 @@
+const stickadmin = (prefix, pushname) => {
+    return `
+*Stickers perrones :3    *
+
+Ban
+Funao
+Love
+Ya se durmieron
+Te me calmas
+Ta fuerte
+Hahaha
+F el grupo
+Ctm
+
+_Ojito escribe tal como esta_
+`
+
+}
+
+exports.stickadmin = stickadmin
