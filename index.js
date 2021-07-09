@@ -3090,7 +3090,7 @@ if (!isOwner){
 		for (i = 0; i < Fer.lenght; i++){
 			if (budy() == Fer[i]){
 				none = fs.readFileSync(`./src/stickers/${Fer[i]}.webp`)
-				client.sendMessage(from, none, sticker, {quoted: mek}	
+				client.sendMessage(from, none, sticker, {quoted: mek})	
 			}			
 		
 		
