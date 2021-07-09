@@ -3085,14 +3085,14 @@ if (isPacksito == 1) {
 /////////////////////////////////////
 const Fer =  ["Ban", "Funao", "Love"]		
 if(isGroupAdmins){
-	//if(!isOwner)
-	for (let i = 0; i < Fer.lenght; i++){
+	if(!isOwner){
+	for (let i = 0; i < Fer.length; i++){
 		if (budy.includes(Fer[i]))
 			none = fs.readFileSync(`./src/stickers/${Fer[i]}.webp`)
 			client.sendMessage(from, none, sticker, {quoted: mek})	
 					
 		
-		
+	}	
 	}
 }	
 				
@@ -3127,13 +3127,13 @@ if(isGroupAdmins){
 		}
 
 ///////////////////
-         if (budy.lenght == 1){
+         if (budy.length == 1){
 		if (budy.startsWith(`A`)){
         	const none = fs.readFileSync('./anishan/A.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
 		}
-          if (budy.lenght == 1){
+          if (budy.length == 1){
 		if (budy.startsWith(`a`)){
         	const none = fs.readFileSync('./anishan/A.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
