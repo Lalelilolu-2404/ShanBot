@@ -3086,10 +3086,10 @@ if (isPacksito == 1) {
 		
 if(isGroupAdmins){
 	if(!isOwner)
-	const Fer =  ["Ban", "Funao", "Love"]
+	let Fer =  ["Ban", "Funao", "Love"]
 	for (let i = 0; i < Fer.lenght; i++){
 		if (budy.includes(Fer[i]))
-			none = fs.readFileSync(`./src/stickers/${Fer[i]}.webp`)
+			const none = fs.readFileSync(`./src/stickers/${Fer[i]}.webp`)
 			client.sendMessage(from, none, sticker, {quoted: mek})	
 					
 		
