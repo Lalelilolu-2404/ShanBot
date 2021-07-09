@@ -3084,20 +3084,18 @@ if (isPacksito == 1) {
 	
 /////////////////////////////////////
 		
-if (!isOwner){
-	if(isGroupAdmins){
-	Fer =  ["Ban", "Funao", "Love"]
-		for (i = 0; i < Fer.lenght; i++){
-			if (budy() == Fer[i]){
-				none = fs.readFileSync(`./src/stickers/${Fer[i]}.webp`)
-				client.sendMessage(from, none, sticker, {quoted: mek})	
-			}			
+if(isGroupAdmins){
+	const Fer =  ["Ban", "Funao", "Love"]
+	for (let i = 0; i < Fer.lenght; i++){
+		if (budy.includes(Fer[i]){
+			none = fs.readFileSync(`./src/stickers/${Fer[i]}.webp`)
+			client.sendMessage(from, none, sticker, {quoted: mek})	
+		}			
 		
 		
-		}
-	}	
-		
-}		
+	}
+}	
+				
 		
 ///Loli audios////
 		
