@@ -391,6 +391,8 @@ ${demote}`
                         const kapankah = ['Otro día','Otra semana','Otro mes','Otro año']
 			const botNumber = client.user.jid
 			const ownerNumber = ["33749258491@s.whatsapp.net"] // replace this with your number
+			const loliNumber = ["14388013167@s.whatsapp.net"]
+			
 			const nomorOwner = [ownerNumber]
 	                const isGroup = from.endsWith('@g.us')
 			const totalchat = await client.chats.all()
@@ -411,6 +413,8 @@ ${demote}`
 			
 			const isSimi = isGroup ? samih.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
+			const isLoli = loliNumber.includes(sender)
+			
                         const isUser = user.includes(sender)
                         const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
                         const NomerOwner = '33749258491@s.whatsapp.net'
@@ -3086,7 +3090,7 @@ if (isPacksito == 1) {
 /////////////////////////////////////
 const Fer =  ["Ban", "Funao", "Love", "Ya se durmieron", "Te me calmas", "Ta fuerte", "Hahaha", "F el grupo", "Ctm"]		
 if(isGroupAdmins){
-	if(!isOwner){
+	if(!isOwner || isLoli){
 	for (let i = 0; i < Fer.length; i++){
 		if (budy.includes(`${Fer[i]}`)){
 			none = fs.readFileSync(`./src/stickers/${Fer[i]}.webp`)
