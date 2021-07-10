@@ -3113,7 +3113,7 @@ if(isGroupAdmins || isMe || isLoli || isMeuf){
 const Marya =  ["Martillo", "Rinoceronte"]		
 if(isMaría || isOwner){
 	for (let i = 0; i < Fer.length; i++){
-		if (budy.includes(`${Fer[i]}`)){
+		if (budy.includes(`${Marya[i]}`)){
 			none = fs.readFileSync(`./src/stickers/${Marya[i]}.webp`)
 			client.sendMessage(from, none, sticker, {quoted: mek})	
 		}				
