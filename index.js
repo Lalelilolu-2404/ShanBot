@@ -3111,7 +3111,7 @@ if(isGroupAdmins || isMe || isLoli || isMeuf){
 ////////////María
 		
 const Marya =  ["Martillo", "Rinoceronte"]		
-if(isMaría){
+if(isMaría || isOwner){
 	for (let i = 0; i < Fer.length; i++){
 		if (budy.includes(`${Fer[i]}`)){
 			none = fs.readFileSync(`./src/stickers/${Marya[i]}.webp`)
