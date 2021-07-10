@@ -1,6 +1,6 @@
 const stickadmin = (prefix, pushname) => {
     return `
-*Stickers perrones :3    *
+*Stickers perrones :3*
 
 Ban
 Funao
@@ -13,8 +13,7 @@ F el grupo
 Ctm
 Shh
 
-_Ojito escribe tal como esta_
-`
+_Ojito escribe tal como esta_`
 
 }
 
