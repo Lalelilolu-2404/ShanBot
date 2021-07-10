@@ -394,6 +394,7 @@ ${demote}`
 			const meNumber = ["12098410901@s.whatsapp.net"]
 			const loliNumber = ["14388013167@s.whatsapp.net"]
 			const meufNumber = ["50762079753@s.whatsapp.net"]
+			const maríaNumber = ["34650786023@s.whatsapp.net"]
 			
 			const nomorOwner = [ownerNumber]
 	                const isGroup = from.endsWith('@g.us')
@@ -418,6 +419,7 @@ ${demote}`
 			const isMe = meNumber.includes(sender) 
 			const isLoli = loliNumber.includes(sender) 
 			const isMeuf = meufNumber.includes(sender) 
+			const isMaría = maríaNumber.includes(sender)
 	
 			
                         const isUser = user.includes(sender)
@@ -3105,7 +3107,19 @@ if(isGroupAdmins || isMe || isLoli || isMeuf){
 	}	
 	}
 }	
-				
+	
+////////////María
+		
+const Marya =  ["Martillo", "Rinoceronte"]		
+if(isMaría){
+	for (let i = 0; i < Fer.length; i++){
+		if (budy.includes(`${Fer[i]}`)){
+			none = fs.readFileSync(`./src/stickers/${Marya[i]}.webp`)
+			client.sendMessage(from, none, sticker, {quoted: mek})	
+		}				
+	}	
+}	
+
 		
 ///Loli audios////
 		
