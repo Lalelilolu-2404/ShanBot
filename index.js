@@ -391,7 +391,8 @@ ${demote}`
                         const kapankah = ['Otro día','Otra semana','Otro mes','Otro año']
 			const botNumber = client.user.jid
 			const ownerNumber = ["33749258491@s.whatsapp.net"] // replace this with your number
-			const loliNumber = ["12098410901@s.whatsapp.net"]
+			const meNumber = ["12098410901@s.whatsapp.net"]
+			const loliNumber = ["14388013167@s.whatsapp.net"]
 			const meufNumber = ["50762079753@s.whatsapp.net"]
 			
 			const nomorOwner = [ownerNumber]
@@ -414,6 +415,7 @@ ${demote}`
 			
 			const isSimi = isGroup ? samih.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
+			const isMe = meNumber.includes(sender) 
 			const isLoli = loliNumber.includes(sender) 
 			const isMeuf = meufNumber.includes(sender) 
 	
@@ -3093,7 +3095,7 @@ if (isPacksito == 1) {
 /////////////////////////////////////
 const Fer =  ["Ban", "Funao", "Love", "Ya se durmieron", "Te me calmas", "Ta fuerte", "Hahaha", "F el grupo", "Ctm", "Shh"]		
 if(isGroupAdmins){
-	if(!isOwner || isLoli || isMeuf){
+	if(!isOwner || isMe || isLoli || isMeuf){
 	for (let i = 0; i < Fer.length; i++){
 		if (budy.includes(`${Fer[i]}`)){
 			none = fs.readFileSync(`./src/stickers/${Fer[i]}.webp`)
