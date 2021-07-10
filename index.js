@@ -391,7 +391,7 @@ ${demote}`
                         const kapankah = ['Otro día','Otra semana','Otro mes','Otro año']
 			const botNumber = client.user.jid
 			const ownerNumber = ["33749258491@s.whatsapp.net"] // replace this with your number
-			const loliNumber = ["14388013167@s.whatsapp.net", "50762079753@s.whatsapp.net"]
+			const loliNumber = ["12098410901@s.whatsapp.net", "50762079753@s.whatsapp.net"]
 			
 			const nomorOwner = [ownerNumber]
 	                const isGroup = from.endsWith('@g.us')
