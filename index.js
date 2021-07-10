@@ -1639,7 +1639,7 @@ break
 		if (!isUser) return reply(mess.only.daftarB)
                 reply(mess.only.musica)
                 play = body.slice(5)
-                anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=shanduy25`)
+                anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=shanduy89`)
                if (anu.error) return reply(anu.error)
                  infomp3 = `*⌈ Canción Encontrada ✅ ⌉*\n◉ *Título* : ${anu.result.title}\nFuente : ${anu.result.source}\nTamaño : ${anu.result.size}\n\n*ESPERE ENVIANDO ARCHIVO, NO SPAMES LA CONCHA DE TU MADRE*`
                 buffer = await getBuffer(anu.result.thumbnail)
@@ -1697,7 +1697,7 @@ veri = sender
 ╔═══════════════════
 ╠≽️ *Nombre* : *${nombre}*
 ╠≽️ *Número* : *wa.me/${sender.split("@")[0]}*
-╠≽️ *Use* : *${prefix}help* para el bot :3
+╠≽️ *${prefix}help* para ver los comandos del bot :3
 ╚═══════════════════`
 //reply(hasil)
  // 	╠≽️ *User*\`\: *${nameUser}*
@@ -1912,7 +1912,7 @@ break
 case 'image':
             if (args.length < 1) return reply('Ingrese texto!')
             const gimg = args.join('');
-            reply(mess.wait)
+            //reply(mess.wait)
             gis(gimg, async (error, result) => {
             n = result
             images = n[Math.floor(Math.random() * n.length)].url
