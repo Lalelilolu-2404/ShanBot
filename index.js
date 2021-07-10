@@ -413,7 +413,8 @@ ${demote}`
 			
 			const isSimi = isGroup ? samih.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
-			const isLoli = loliNumber.includes(sender)
+			const isLoli = loliNumber[0].includes(sender) && loliNumber[1].includes(sender)
+			
 			
                         const isUser = user.includes(sender)
                         const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
@@ -3088,7 +3089,7 @@ if (isPacksito == 1) {
 }
 	
 /////////////////////////////////////
-const Fer =  ["Ban", "Funao", "Love", "Ya se durmieron", "Te me calmas", "Ta fuerte", "Hahaha", "F el grupo", "Ctm"]		
+const Fer =  ["Ban", "Funao", "Love", "Ya se durmieron", "Te me calmas", "Ta fuerte", "Hahaha", "F el grupo", "Ctm", "Shh"]		
 if(isGroupAdmins){
 	if(!isOwner || isLoli){
 	for (let i = 0; i < Fer.length; i++){
