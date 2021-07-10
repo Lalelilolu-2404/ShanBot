@@ -3094,8 +3094,8 @@ if (isPacksito == 1) {
 	
 /////////////////////////////////////
 const Fer =  ["Ban", "Funao", "Love", "Ya se durmieron", "Te me calmas", "Ta fuerte", "Hahaha", "F el grupo", "Ctm", "Shh"]		
-if(isGroupAdmins){
-	if(!isOwner || isMe || isLoli || isMeuf){
+if(isGroupAdmins || isMe || isLoli || isMeuf){
+	if(!isOwner){
 	for (let i = 0; i < Fer.length; i++){
 		if (budy.includes(`${Fer[i]}`)){
 			none = fs.readFileSync(`./src/stickers/${Fer[i]}.webp`)
