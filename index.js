@@ -81,7 +81,7 @@ const { otak } = require('./src/otak')
 const { bana } = require('./src/bana')
 const { stick1 } = require('./src/stick1')
 const { stickadmin } = require('./src/stickadmin')
-const { stick3 } = require('./src/stick3')
+const { onlyme } = require('./src/onlyme')
 const { packmenu } = require('./src/packmenu')
 const { switchmenu } = require('./src/switchmenu')
 /*const { mediamenu } = require('./database/menu/mediamenu')
@@ -710,10 +710,14 @@ break
     			`
     		fakestatus(List)
 		break
-		case 'stick3':
+		
+		case 'onlyme':
 		if (isOwner)
-		client.sendMessage(from, stick3(prefix, sender), text, {quoted: mek})
-		break	
+			var List = `${onlyme(prefix)}
+    			`
+    		fakestatus(List)			
+		break
+		
 		case 'idioma':
 		client.sendMessage(from, bahasa(prefix, sender), text, {quoted: mek})
 		break
