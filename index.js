@@ -3134,7 +3134,7 @@ if(isLoli || isOwner){
 		
 //////Owner :  Me
 		
-const Me =  ["kha", "Ya veo", "Oh yeah mami"]		
+const Me =  ["Nani", "Ya veo", "Oh yeah mami"]		
 if(isOwner){
 	for (let i = 0; i < Me.length; i++){
 		if (budy.includes(`${Me[i]}`)){
