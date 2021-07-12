@@ -3112,14 +3112,37 @@ if(isGroupAdmins || isMe || isLoli || isMeuf){
 		
 const Marya =  ["Martillo", "Rinoceronte"]		
 if(isMaría || isOwner){
-	for (let i = 0; i < Fer.length; i++){
+	for (let i = 0; i < Marya.length; i++){
 		if (budy.includes(`${Marya[i]}`)){
-			none = fs.readFileSync(`./src/stickers/${Marya[i]}.webp`)
+			none = fs.readFileSync(`./src/stickers2/${Marya[i]}.webp`)
 			client.sendMessage(from, none, sticker, {quoted: mek})	
 		}				
 	}	
 }	
 
+//////////Laura
+		
+const Laura =  ["Pollito frito", "Háblame bonito"]		
+if(isLoli || isOwner){
+	for (let i = 0; i < Laura.length; i++){
+		if (budy.includes(`${Laura[i]}`)){
+			none = fs.readFileSync(`./src/stickers2/${Laura[i]}.webp`)
+			client.sendMessage(from, none, sticker, {quoted: mek})	
+		}				
+	}	
+}	
+		
+//////Owner :  Me
+		
+const Me =  ["kha?", "Ya veo", "Oh yeah mami"]		
+if(isOwner){
+	for (let i = 0; i < Me.length; i++){
+		if (budy.includes(`${Me[i]}`)){
+			none = fs.readFileSync(`./src/stickers2/${Me[i]}.webp`)
+			client.sendMessage(from, none, sticker, {quoted: mek})	
+		}				
+	}	
+}	
 		
 ///Loli audios////
 		
