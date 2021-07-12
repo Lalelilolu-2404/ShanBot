@@ -1,30 +1,13 @@
-const stick3 = (prefix, pushname) => {
+const onlyme = (prefix, pushname) => {
     return `*Stickers perrones :3     *
 
-- Rico               - Tuyyo
-- Rip                - Ufff
-- Sad                - Uhm 🥵
-- Santas escrituras  - Umm
-- Sapee              - Uwu
-- Se encuera         - Vas a llorar?
-- Se ofendió         - Volví
-- Se va xd           - Wow
-- Segura?            - Xdxd
-- Sex                - Y mis nudes
-- Shh                - Ya antojaron
-- Si mi amor         - Ya es hora?
-- Sit on me pls      - Ya sabes
-- Slap               - Ya se durmieron
-- Ta fuerte          - Ya se enojó
-- Te me calmas       - Yop
-- Toma tu galleta    - Youme
-- Triste	         - Wtf
-- Tu culito	
-- Turbio	
+Nani
+Oh yeah mami
+Safa ctv
+Ya veo
 
-_Ojito escribe tal como esta_
-by Lalelilolu`
+_Ojito escribe tal como esta_`
 
 }
 
-exports.stick3 = stick3
+exports.onlyme = onlyme
