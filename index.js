@@ -2362,9 +2362,7 @@ break
 /***Stickers..............***/
 default:
 					
-if (isOwner){				
-	if (isStick == 1) 
-	{								
+if (isOwner){												
         if (budy.startsWith(`69`)) {
 		if (budy.endsWith(`69`)){
         	const none = fs.readFileSync('./src/stickers/69.webp');
@@ -3116,8 +3114,7 @@ if (isOwner){
 		client.sendMessage(from, none, sticker, {quoted: mek})
                   }
 		}
-		
-	}			
+					
 }					
 /******Otak and Audios ****/
 	
