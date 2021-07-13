@@ -395,6 +395,7 @@ ${demote}`
 			const loliNumber = ["14388351141@s.whatsapp.net"]
 			const meufNumber = ["50762079753@s.whatsapp.net"]
 			const maríaNumber = ["34650786023@s.whatsapp.net"]
+			const puwiNumber = ["34635867240@s.whatsapp.net"]
 			
 			const nomorOwner = [ownerNumber]
 	                const isGroup = from.endsWith('@g.us')
@@ -420,6 +421,7 @@ ${demote}`
 			const isLoli = loliNumber.includes(sender) 
 			const isMeuf = meufNumber.includes(sender) 
 			const isMaría = maríaNumber.includes(sender)
+			const isPuwi = puwiNumber.includes(sender)
 	
 			
                         const isUser = user.includes(sender)
@@ -3145,6 +3147,18 @@ if(isLoli || isOwner){
 	for (let i = 0; i < Laura.length; i++){
 		if (budy.includes(`${Laura[i]}`)){
 			none = fs.readFileSync(`./src/stickers2/${Laura[i]}.webp`)
+			client.sendMessage(from, none, sticker, {quoted: mek})	
+		}				
+	}	
+}	
+	
+//////////Puwi
+		
+const Puwy =  ["Simp", "Dame"]		
+if(isPuwi){
+	for (let i = 0; i < Puwy.length; i++){
+		if (budy.includes(`${Puwy[i]}`)){
+			none = fs.readFileSync(`./src/stickers2/${Puwy[i]}.webp`)
 			client.sendMessage(from, none, sticker, {quoted: mek})	
 		}				
 	}	
