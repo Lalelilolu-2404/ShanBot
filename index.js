@@ -873,7 +873,7 @@ case 'spamstick':
 	for (let i = 0; i < Say.length; i++){
 		if (argz[0] == `${Say[i]}`){
 		stickspam = fs.readFileSync(`./src/stickers2/${Say[i]}.webp`)
-			client.sendMessage(from, ${Say[i]}, MessageType.text, {quoted: mek})	
+			client.sendMessage(from, `${Say[i]}`, MessageType.text, {quoted: mek})	
 		}				
 	}	
 	
