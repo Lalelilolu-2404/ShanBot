@@ -858,18 +858,32 @@ case 'spam':
                 }
 break
 		
-/**case 'spamdelay':
+case 'spamstick':
                 if (!isOwner) return reply('No eres mi dueño UnU')
                 if (!arg) return reply(`${prefix}spam Text|#`)
                 argz = arg.split("|")
-                if (!argz) return reply(`${prefix}spam Text|#`)
+                if (!argz) return reply(`${prefix}spam Sticker|#`)
                 if (isNaN(argz[1])) return reply(`# de veces?`)
-		const dly = argz[2]
-		const hour_now = moment().format('HH')
-		Ahora = hour_now
+		//const dly = argz[2]
+		//const hour_now = moment().format('HH')
+		//Ahora = hour_now
         	
+		const Me =  ["Nani", "Ya veo", "Oh yeah mami", "Safa ctv"]		
+
+	for (let i = 0; i < Me.length; i++){
+		if (argz[0] == `${Me[i]}`){
+			none = fs.readFileSync(`./src/stickers2/${Me[i]}.webp`)
+			//client.sendMessage(from, none, sticker, {quoted: mek})	
+		}				
+	}	
+	
+                for (let i = 0; i < argz[1]; i++){
+                client.sendMessage(from, argz[0], MessageType.sticker, {sendEphemeral: true})
+                }
 		
-		
+	
+break		
+/**		
                 for (let i = 0; i < argz[1]; i++){
            //     client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
 		while (hour_now - Ahora <= dly)	{
@@ -880,7 +894,8 @@ break
 		}
 		}
 break	
-**/		
+**/	
+		
 case 'self':
           	if (!isOwner) return fakestatus('No eres mi dueño UnU')
           	if (banChats === true) return
