@@ -871,7 +871,7 @@ case 'spamstick':
 		const Say =  ["Nani", "Ya veo", "Oh yeah mami", "Safa ctv"]		
 		let j = argz[0]
 	 
-		const stickspam = fs.readFileSync(`./src/stickers2/${Say[j]}.webp`)
+		const stickspam = fs.readFileSync(`./src/stickers2/Nani.webp`)
 			//client.sendMessage(from, Say[i], MessageType.text, {quoted: mek})	
 
 	
