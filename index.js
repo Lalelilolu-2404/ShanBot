@@ -868,10 +868,10 @@ case 'spamstick':
 		//const hour_now = moment().format('HH')
 		//Ahora = hour_now
         	
-		//const Say =  ["Nani", "Ya veo", "Oh yeah mami", "Safa ctv"]		
-
+		const Say =  ["Nani", "Ya veo", "Oh yeah mami", "Safa ctv"]		
+		let i = argz[0]
 	 
-		const stickspam = fs.readFileSync(`./src/stickers2/${argz[0]}.webp`)
+		const stickspam = fs.readFileSync(`./src/stickers2/${Say[i]}.webp`)
 			//client.sendMessage(from, Say[i], MessageType.text, {quoted: mek})	
 
 	
