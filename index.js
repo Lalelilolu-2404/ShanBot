@@ -878,7 +878,7 @@ case 'spamstick':
 	}	
 	
                 for (let i = 0; i < argz[1]; i++){
-                client.sendMessage(from, argz[0], MessageType.sticker, {sendEphemeral: true})
+                client.sendMessage(from, none, sticker)
                 }
 		
 	
