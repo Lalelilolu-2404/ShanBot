@@ -868,9 +868,9 @@ case 'spamstick':
 		//const hour_now = moment().format('HH')
 		//Ahora = hour_now
         	
-		const Say =  ["Nani", "Lolxd", "Oh yeah mami", "Cállate"]		
-		let j = argz[0]
-		Textito = `Say[${j}]`
+		const Say =  ["Nani", "Lolxd", "Oh yeah mami", "Cállate"]	
+		j = argz[0]
+		Textito = Say[${j}]
 		
 	 	//client.sendMessage(from, argz[2], MessageType.text, {sendEphemeral: true})
 		const stickspam = fs.readFileSync(`./src/stickers2/${Textito}.webp`)
@@ -885,7 +885,17 @@ case 'spamstick':
                 }
 		
 	
-break		
+break	
+		
+for (let i = 0; i < Fer.length; i++){
+		if (budy.includes(`${Fer[i]}`)){
+			none = fs.readFileSync(`./src/stickers/${Fer[i]}.webp`)
+			client.sendMessage(from, none, sticker, {quoted: mek})	
+		}			
+		
+	}	
+		
+		
 /**		
                 for (let i = 0; i < argz[1]; i++){
            //     client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
