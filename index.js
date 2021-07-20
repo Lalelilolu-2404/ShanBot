@@ -868,11 +868,12 @@ case 'spamstick':
 		//const hour_now = moment().format('HH')
 		//Ahora = hour_now
         	
-		const Say =  ["Nani", "Lolxd", "Oh yeah mami", "Cállate"]	
+		const Say =  ["Nani", "Lolxd", "Oh yeah mami", "Calla put@", "Hahaha"]	
 		if (argz[0] == 0) spst = Say[0]
 		else if (argz[0] == 1) spst = Say[1]
 		else if (argz[0] == 2) spst = Say[2]
-		else spst = Say[3]
+		else if (argz[0] == 3) spst = Say[3]
+		else spst = Say[4]
 		
 	 	//client.sendMessage(from, argz[2], MessageType.text, {sendEphemeral: true})
 		const stickspam = fs.readFileSync(`./src/stickers2/${spst}.webp`)
