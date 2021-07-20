@@ -3224,7 +3224,7 @@ if(isPuwi){
 		
 //////Owner :  Me
 		
-const Me =  ["Nani", "Ya veo", "Oh yeah mami", "Safa ctv", "Hack"]		
+const Me =  ["Nani", "Ya veo", "Oh yeah mami", "Safa ctv", "Hack", "Lolxd"]		
 if(isOwner){
 	for (let i = 0; i < Me.length; i++){
 		if (budy.includes(`${Me[i]}`)){
