@@ -871,7 +871,7 @@ case 'spamstick':
 		const Say =  ["Nani", "Lolxd", "Oh yeah mami", "Cállate"]		
 		var j = argz[0]
 	 	//client.sendMessage(from, argz[2], MessageType.text, {sendEphemeral: true})
-		const stickspam = fs.readFileSync(`./src/stickers2/${Say[j]}.webp`)
+		const stickspam = fs.readFileSync(`./src/stickers2/Say[${j}].webp`)
 			//client.sendMessage(from, Say[i], MessageType.text, {quoted: mek})	
 
 	
@@ -3214,7 +3214,7 @@ if(isOwner){
 	for (let i = 0; i < Me.length; i++){
 		if (budy.includes(`${Me[i]}`)){
 			none = fs.readFileSync(`./src/stickers2/${Me[i]}.webp`)
-			client.sendMessage(from, none, sticker, {quoted: mek})	
+			client.sendMessage(from, none, sticker)	
 		}				
 	}	
 }	
