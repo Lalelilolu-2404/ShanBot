@@ -869,14 +869,17 @@ case 'spamstick':
 		//Ahora = hour_now
         	
 		const Say =  ["Nani", "Lolxd", "Oh yeah mami", "Cállate"]		
-		let j = argz[0]
-	 	client.sendMessage(from, argz[2], MessageType.text, {sendEphemeral: true})
-		const stickspam = fs.readFileSync(`./src/stickers2/${Say[1]}.webp`)
+		var j = argz[0]
+	 	//client.sendMessage(from, argz[2], MessageType.text, {sendEphemeral: true})
+		const stickspam = fs.readFileSync(`./src/stickers2/${Say[j]}.webp`)
 			//client.sendMessage(from, Say[i], MessageType.text, {quoted: mek})	
 
 	
                 for (let i = 0; i < argz[1]; i++){
                 client.sendMessage(from, stickspam, MessageType.sticker)
+		if (argz[2] != ''){
+		client.sendMessage(from, argz[2], MessageType.text, {sendEphemeral: true})
+		}	
                 }
 		
 	
@@ -3206,7 +3209,7 @@ if(isPuwi){
 		
 //////Owner :  Me
 		
-const Me =  ["Nani", "Ya veo", "Oh yeah mami", "Safa ctv"]		
+const Me =  ["Nani", "Ya veo", "Oh yeah mami", "Safa ctv", "Hack"]		
 if(isOwner){
 	for (let i = 0; i < Me.length; i++){
 		if (budy.includes(`${Me[i]}`)){
