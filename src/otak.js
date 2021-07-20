@@ -34,8 +34,7 @@ const otak = (prefix, pushname) => {
 - Yamete 
 - Yamete kudasai
 
-_Ojito escribe tal como esta_
-by Lalelilolu`
+_Ojito escribe tal como esta_`
 
 }
 
