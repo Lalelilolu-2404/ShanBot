@@ -870,10 +870,10 @@ case 'spamstick':
         	
 		const Say =  ["Nani", "Lolxd", "Oh yeah mami", "Cállate"]		
 		let j = argz[0]
-		Texte = `Say[${j}]`
+		Textito = `Say[j]`
 		
 	 	//client.sendMessage(from, argz[2], MessageType.text, {sendEphemeral: true})
-		const stickspam = fs.readFileSync(`./src/stickers2/${Texte}.webp`)
+		const stickspam = fs.readFileSync(`./src/stickers2/${Textito}.webp`)
 			//client.sendMessage(from, Say[i], MessageType.text, {quoted: mek})	
 
 	
