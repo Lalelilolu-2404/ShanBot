@@ -3225,7 +3225,7 @@ if(isPuwi){
 //////Owner :  Me
 		
 const Me =  ["Nani", "Ya veo", "Oh yeah mami", "Safa ctv", "Hack", "Lolxd", "Ily", "Pichula", "Si xd", "Haha no", "F"]		
-if(isOwner){
+if(isOwner || isLoli){
 	for (let i = 0; i < Me.length; i++){
 		if (budy.includes(`${Me[i]}`) && budy.length == Me[i].length){
 			none = fs.readFileSync(`./src/stickers2/${Me[i]}.webp`)
