@@ -847,18 +847,18 @@ mentions(`${susp}`, mentioned, true)
 break		
 ***/
 		
-case 'Swt':
+case 'swt':
 	client.updatePresence(from, Presence.composing) 
 	if (!isOwner) return reply(mess.only.ownerB)
 	if (!arg) return reply(`${prefix}spam Text|#`)
        		argz = arg.split("|")
         	if (!argz) return reply(`${prefix}spam Text|#`)
         	if (isNaN(argz[1])) return reply(`# de veces?`)
-	mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-	let target = Mentioned 
+	let mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+ 	client.sendMessage(from, mentioned[0], MessageType.text, {sendEphemeral: true})
 	//`${mentioned[0].split('@')[0]}@c.us`
 		for (let i = 0; i < argz[1]; i++){
-		sendMess(Mentioned, `*「 ${argz[2]} 」*`)
+		sendMess(mentioned[0], `*「 ${argz[2]} 」*`)
 		}
 break	
 		
