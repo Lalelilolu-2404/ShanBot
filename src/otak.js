@@ -31,6 +31,7 @@ const otak = (prefix, pushname) => {
 - Sexual
 - Sparta
 - Te amo botsito
+- Umm
 - Yamete 
 - Yamete kudasai
 
