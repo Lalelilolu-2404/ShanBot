@@ -3313,7 +3313,13 @@ if(isOwner || isLoli){
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }	
 		}
-		
+          if (budy.length == 3){
+		if (budy.startsWith(`Umm`)){
+        	const none = fs.readFileSync('./anishan/Umm.mp3');
+		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                  }	
+		}		
+
 	if (budy.includes(`Admin`)) {
         	const none = fs.readFileSync('./anishan/Admin.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
