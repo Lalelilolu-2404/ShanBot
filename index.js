@@ -858,7 +858,7 @@ case 'swt':
  	//client.sendMessage(from, mentioned[0], MessageType.text, {sendEphemeral: true})
 	//`${mentioned[0].split('@')[0]}@c.us`
 		for (let i = 0; i < argz[1]; i++){
-		sendMess(mentioned[0], `*${argz[2]}*`)
+		sendMess(mentioned[0], `* ${argz[2]} *`)
 		}
 break	
 		
