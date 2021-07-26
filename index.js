@@ -846,6 +846,23 @@ susp = `❎@${mentioned[0].split('@')[0]} se ha desbloqueado y puede volver a ut
 mentions(`${susp}`, mentioned, true)   
 break		
 ***/
+		
+case 'Swt':
+	client.updatePresence(from, Presence.composing) 
+	if (!isOwner) return reply(mess.only.ownerB)
+	if (!arg) return reply(`${prefix}spam Text|#`)
+       		argz = arg.split("|")
+        	if (!argz) return reply(`${prefix}spam Text|#`)
+        	if (isNaN(argz[1])) return reply(`# de veces?`)
+	mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+	let target = Mentioned 
+	//`${mentioned[0].split('@')[0]}@c.us`
+		for (let i = 0; i < argz[1]; i++){
+		sendMess(Mentioned, `*「 ${argz[2]} 」*`)
+		}
+break	
+		
+		
 			
 case 'spam':
                 if (!isOwner) return reply('No eres mi dueño UnU')
@@ -885,11 +902,10 @@ case 'spamstick':
 		if (argz[2] != ''){
 		client.sendMessage(from, argz[2], MessageType.text, {sendEphemeral: true})
 		}	
-                }
-		
+                }		
 	
 break	
-		
+/**		
 for (let i = 0; i < Fer.length; i++){
 		if (budy.includes(`${Fer[i]}`)){
 			none = fs.readFileSync(`./src/stickers/${Fer[i]}.webp`)
@@ -898,8 +914,7 @@ for (let i = 0; i < Fer.length; i++){
 		
 	}	
 		
-		
-/**		
+				
                 for (let i = 0; i < argz[1]; i++){
            //     client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
 		while (hour_now - Ahora <= dly)	{
