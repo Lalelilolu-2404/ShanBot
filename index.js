@@ -855,10 +855,10 @@ case 'swt':
         	if (!argz) return reply(`${prefix}spam Text|#`)
         	if (isNaN(argz[1])) return reply(`# de veces?`)
 	let mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
- 	client.sendMessage(from, mentioned[0], MessageType.text, {sendEphemeral: true})
+ 	//client.sendMessage(from, mentioned[0], MessageType.text, {sendEphemeral: true})
 	//`${mentioned[0].split('@')[0]}@c.us`
 		for (let i = 0; i < argz[1]; i++){
-		sendMess(mentioned[0], `*「 ${argz[2]} 」*`)
+		sendMess(mentioned[0], `*${argz[2]}*`)
 		}
 break	
 		
@@ -2017,6 +2017,28 @@ case 'image':
             client.sendMessage(from,{url:images},image,{quoted:mek})
             });
 break
+		
+case 'pinterest':
+	tels = body.slice(11)
+	if (!isUser) return reply(mess.only.daftarB)
+
+	if (args.length < 1) return reply('Ingresa lo que quieres buscar')
+	client.updatePresence(from, Presence.composing)
+	try {
+	data = await fetchJson(`https://api.fdci.se/sosmed/rep.php?gambar=${tels}`, {
+	method: 'get'
+	})
+	reply(mess.wait)
+	n = JSON.parse(JSON.stringify(data));
+	nimek = n[Math.floor(Math.random() * n.length)];
+	pok = await getBuffer(nimek)
+	client.sendMessage(from, pok, image, {quoted: mek, caption: `Resultado : *${tels}*`})
+
+} catch {
+  reply(mess.ferr)
+}
+break		
+
 									
  /**   case 'anime':
             reply(mess.wait)
