@@ -854,15 +854,13 @@ case 'swt':
        		argz = arg.split("|")
         	if (!argz) return reply(`${prefix}spam Text|#`)
         	if (isNaN(argz[1])) return reply(`# de veces?`)
-	let mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+	var mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
  	//client.sendMessage(from, mentioned[0], MessageType.text, {sendEphemeral: true})
 	//`${mentioned[0].split('@')[0]}@c.us`
 		for (let i = 0; i < argz[1]; i++){
 		sendMess(mentioned[0], ` *${argz[2]}* `)
 		}
-break	
-		
-		
+break			
 			
 case 'spam':
                 if (!isOwner) return reply('No eres mi dueño UnU')
@@ -891,6 +889,7 @@ case 'spamstick':
 		else if (argz[0] == 2) spst = Say[2]
 		else if (argz[0] == 3) spst = Say[3]
 		else spst = Say[4]
+		//fs.writeFileSync(`./temp/sticker/${q}.webp`, mediaData)
 		
 	 	//client.sendMessage(from, argz[2], MessageType.text, {sendEphemeral: true})
 		const stickspam = fs.readFileSync(`./src/stickers2/${spst}.webp`)
@@ -905,27 +904,6 @@ case 'spamstick':
                 }		
 	
 break	
-/**		
-for (let i = 0; i < Fer.length; i++){
-		if (budy.includes(`${Fer[i]}`)){
-			none = fs.readFileSync(`./src/stickers/${Fer[i]}.webp`)
-			client.sendMessage(from, none, sticker, {quoted: mek})	
-		}			
-		
-	}	
-		
-				
-                for (let i = 0; i < argz[1]; i++){
-           //     client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
-		while (hour_now - Ahora <= dly)	{
-		if (hour_now - Ahora >= dly){
-		client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
-		Ahora = hour_now	
-                }
-		}
-		}
-break	
-**/	
 		
 case 'self':
           	if (!isOwner) return fakestatus('No eres mi dueño UnU')
@@ -952,7 +930,7 @@ break
 case 'pesoff':
 	client.toggleDisappearingMessages(from, 0)
 break
-		
+	
 /**case 'profile':
 
 client.updatePresence(from, Presence.composing) 
@@ -1999,9 +1977,10 @@ break
 			break**/
 					
 			case 'waifu':
-			waifud = await axios.get('https://nekos.life/api/v2/img/waifu')
+			waifud = await axios.get('https://api.waifu.pics/nsfw/waifu')
+			//waifud = await axios.get('https://nekos.life/api/v2/img/waifu')
 			nyed = await getBuffer(waifud.data.url)
-			client.sendMessage(from, nyed, image, { caption: 'Gatau caption nya apa', quoted: mek })
+			client.sendMessage(from, nyed, image, { caption: 'Nyaaa', quoted: mek })
 			.catch(err => {
 				return('Pwrdon... T_T')
 			})
