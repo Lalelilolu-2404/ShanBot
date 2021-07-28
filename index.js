@@ -873,7 +873,27 @@ case 'swt':
 		sendMess(targetspam, ` *${argz[2]}* `)
 		}
 	  }
-break			
+break	
+		
+case 'swtyou':
+	client.updatePresence(from, Presence.composing) 
+	if (!isOwner) return reply(mess.only.ownerB)
+	if (!arg) return reply(`${prefix}spam Text|#`)
+       		argz = arg.split("|")
+        	if (!argz) return reply(`${prefix}spam Text|#`)
+        	if (isNaN(argz[1])) return reply(`# de veces?`)
+	var mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+	var target = argz[0]
+		
+		targetspam = target+"@s.whatsapp.net"
+		client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
+		client.sendMessage(from, target, MessageType.text, {sendEphemeral: true})
+		client.sendMessage(from, targetspam, MessageType.text, {sendEphemeral: true})
+		for (let i = 0; i < argz[1]; i++){
+		sendMess(targetspam, ` *${argz[2]}* `)
+		}
+	  }
+break	
 			
 case 'spam':
                 if (!isOwner) return reply('No eres mi dueño UnU')
