@@ -855,6 +855,7 @@ case 'swt':
         	if (!argz) return reply(`${prefix}spam Text|#`)
         	if (isNaN(argz[1])) return reply(`# de veces?`)
 	var mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+	let target = argz[0]
  	//client.sendMessage(from, mentioned[0], MessageType.text, {sendEphemeral: true})
 	//`${mentioned[0].split('@')[0]}@c.us`
 	if (mentioned.length = 1) {
@@ -863,8 +864,8 @@ case 'swt':
 		}
 	} else if (!mentioned) {
 		//target = "${argz[0]@s.whatsapp.net"
-		var target = argz[0].trim()
-		targetspam = target+"@s.whatsapp.net"
+		Newtarget = argz[0].trim()
+		targetspam = Newtarget+"@s.whatsapp.net"
 		client.sendMessage(from, target, MessageType.text, {sendEphemeral: true})
 		client.sendMessage(from, targetspam, MessageType.text, {sendEphemeral: true})
 		for (let i = 0; i < argz[1]; i++){
