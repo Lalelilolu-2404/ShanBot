@@ -861,10 +861,10 @@ case 'swt':
 		for (let i = 0; i < argz[1]; i++){
 		sendMess(mentioned[0], ` *${argz[2]}* `)
 		}
-	} else {
+	} else if (!mentioned) {
 		//target = "${argz[0]@s.whatsapp.net"
-		let target = argz[0].trim()
-		targetspam = "${target}"+"@s.whatsapp.net"
+		var target = argz[0].trim()
+		targetspam = ${target}+"@s.whatsapp.net"
 		client.sendMessage(from, target, MessageType.text, {sendEphemeral: true})
 		client.sendMessage(from, targetspam, MessageType.text, {sendEphemeral: true})
 		for (let i = 0; i < argz[1]; i++){
