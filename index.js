@@ -882,7 +882,8 @@ case 'swtyou':
        		argz = arg.split("|")
         	if (!argz) return reply(`${prefix}spam Text|#`)
         	if (isNaN(argz[1])) return reply(`# de veces?`)
-		Targetyou = `${argz[0]}@s.whatsapp.net`
+		//Targetyou = `${argz[0]}@s.whatsapp.net`
+		Targetyou = `${argz[0].replace(/ /g, '')}@s.whatsapp.net`
 	
 		client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
 		client.sendMessage(from, Targetyou, MessageType.text, {sendEphemeral: true})
