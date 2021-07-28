@@ -892,7 +892,7 @@ case 'swtyou':
 		for (let i = 0; i < argz[1]; i++){
 		sendMess(targetspam, ` *${argz[2]}* `)
 		}
-	  }
+	  
 break	
 			
 case 'spam':
