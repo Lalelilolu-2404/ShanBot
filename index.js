@@ -914,12 +914,15 @@ case 'spamstick':
 		//const hour_now = moment().format('HH')
 		//Ahora = hour_now
         	
-		const Say =  ["Nani", "Lolxd", "Oh yeah mami", "Calla put@", "Hahaha"]	
+		const Say =  ["Nani", "Lolxd", "Oh yeah mami", "Calla put@", "Hahaha", "Lau", "Pollita", "C rasca"]	
 		if (argz[0] == 0) spst = Say[0]
 		else if (argz[0] == 1) spst = Say[1]
 		else if (argz[0] == 2) spst = Say[2]
 		else if (argz[0] == 3) spst = Say[3]
-		else spst = Say[4]
+		else if (argz[0] == 4) spst = Say[4]
+		else if (argz[0] == 5) spst = Say[5]
+		else if (argz[0] == 6) spst = Say[6]
+		else if (argz[0] == 7) spst = Say[7]
 		//fs.writeFileSync(`./temp/sticker/${q}.webp`, mediaData)
 		
 	 	//client.sendMessage(from, argz[2], MessageType.text, {sendEphemeral: true})
@@ -3271,7 +3274,7 @@ if(isPuwi){
 		
 //////Owner :  Me
 		
-const Me =  ["Nani", "Ya veo", "Oh yeah mami", "Safa ctv", "Hack", "Lolxd", "Ily", "Pichula", "Si xd", "Haha no", "F"]		
+const Me =  ["Nani", "Ya veo", "Oh yeah mami", "Safa ctv", "Hack", "Lolxd", "Ily", "Pichula", "Si xd", "Haha no", "F", "Lau", "Pollita", "C rasca", "Vamos a culear"]		
 if(isOwner || isLoli){
 	for (let i = 0; i < Me.length; i++){
 		if (budy.includes(`${Me[i]}`) && budy.length == Me[i].length){
