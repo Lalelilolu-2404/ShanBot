@@ -882,14 +882,13 @@ case 'swtyou':
        		argz = arg.split("|")
         	if (!argz) return reply(`${prefix}spam Text|#`)
         	if (isNaN(argz[1])) return reply(`# de veces?`)
-		var targetyou = argz[0]
-		
-		targetspam = targetyou+"@s.whatsapp.net"
+		var targetyou = `${argz[0]}@s.whatsapp.net`
+	
 		client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
 		client.sendMessage(from, targetyou, MessageType.text, {sendEphemeral: true})
-		client.sendMessage(from, targetspam, MessageType.text, {sendEphemeral: true})
+
 		for (let i = 0; i < argz[1]; i++){
-		sendMess(targetspam, ` *${argz[2]}* `)
+		sendMess(targetyou, ` *${argz[2]}* `)
 		}
 	  
 break	
