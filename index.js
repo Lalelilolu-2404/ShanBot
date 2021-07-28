@@ -890,26 +890,25 @@ case 'swtyou':
 		
 		const Inc =  ["Lau", "Pollita"]	
 		
-		for (let i = 0; i < argz[1]; i++){
-		sendMess(Targetyou, ` *${argz[2].trim()}* `)
 		if (argz[3] != ''){
-			if (argz[3] == 1){
+			if (argz[3] == 0){
+	  			for (let i = 0; i < argz[1]; i++){
+				sendMess(Targetyou, ` *${argz[2].trim()}* `)
+				}
+			}else if (argz[3] == 1){
 				Abc = Inc[0]
 				Abcx = fs.readFileSync(`./src/stickers2/${Abc}.webp`)
 	  			for (let i = 0; i < argz[1]; i++){
 				client.sendMessage(Targetyou, Abcx, MessageType.sticker)
-				//sendMess(Targetyou, Abcx, MessageType.sticker)
 				}
 			}else if (argz[3] == 2){
 				Abc = Inc[1]
 				Abcx = fs.readFileSync(`./src/stickers2/${Abc}.webp`)
 				for (let i = 0; i < argz[1]; i++){
 				client.sendMessage(Targetyou, Abcx, MessageType.sticker)
-				//sendMess(Targetyou, Abcx, MessageType.sticker)
 				}
 			}
-		}		
-		}	
+		}			
 break	
 			
 case 'spam':
