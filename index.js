@@ -862,12 +862,12 @@ case 'swt':
 		sendMess(mentioned[0], ` *${argz[2]}* `)
 		}
 	} else {
-		target = `${argz[0]@s.whatsapp.net`
+		//target = "${argz[0]@s.whatsapp.net"
+		target = ${argz[0].replace('','@s.whatsapp.net')}
 		for (let i = 0; i < argz[1]; i++){
 		sendMess(target, ` *${argz[2]}* `)
 		}
-	
-		}
+	  }
 break			
 			
 case 'spam':
