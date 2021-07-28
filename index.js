@@ -863,7 +863,7 @@ case 'swt':
 		}
 	} else {
 		//target = "${argz[0]@s.whatsapp.net"
-		target = ${argz[0].replace('','@s.whatsapp.net')}
+		target = argz[0].replace('','@s.whatsapp.net')
 		for (let i = 0; i < argz[1]; i++){
 		sendMess(target, ` *${argz[2]}* `)
 		}
