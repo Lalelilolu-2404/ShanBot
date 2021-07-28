@@ -857,8 +857,16 @@ case 'swt':
 	var mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
  	//client.sendMessage(from, mentioned[0], MessageType.text, {sendEphemeral: true})
 	//`${mentioned[0].split('@')[0]}@c.us`
+	if (mentioned.length = 1) {
 		for (let i = 0; i < argz[1]; i++){
 		sendMess(mentioned[0], ` *${argz[2]}* `)
+		}
+	} else {
+		target = `${argz[0]@s.whatsapp.net`
+		for (let i = 0; i < argz[1]; i++){
+		sendMess(target, ` *${argz[2]}* `)
+		}
+	
 		}
 break			
 			
