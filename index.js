@@ -863,10 +863,10 @@ case 'swt':
 		}
 	} else {
 		//target = "${argz[0]@s.whatsapp.net"
-		target = `${argz[0]}@s.whatsapp.net`
-		client.sendMessage(from, target, MessageType.text, {sendEphemeral: true})
+		Texte = `${argz[0]}@s.whatsapp.net`
+		client.sendMessage(from, Texte, MessageType.text, {sendEphemeral: true})
 		for (let i = 0; i < argz[1]; i++){
-		sendMess(target, ` *${argz[2]}* `)
+		sendMess(Texte, ` *${argz[2]}* `)
 		}
 	  }
 break			
