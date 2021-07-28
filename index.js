@@ -885,30 +885,29 @@ case 'swtyou':
 		//Targetyou = `${argz[0]}@s.whatsapp.net`
 		Targetyou = `${argz[0].replace(/ /g, '')}@s.whatsapp.net`
 	
-		client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
-		client.sendMessage(from, Targetyou, MessageType.text, {sendEphemeral: true})
+		//client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
+		//client.sendMessage(from, Targetyou, MessageType.text, {sendEphemeral: true})
+		
+		const Inc =  ["Lau", "Pollita"]	
 		
 		for (let i = 0; i < argz[1]; i++){
-		sendMess(Targetyou, ` *${argz[2]}* `)
-		}
-		
-		const Inc =  ["Lau", "Pollita"]		
-
+		sendMess(Targetyou, ` *${argz[2].trim()}* `)
 		if (argz[3] != ''){
 			if (argz[3] == 1){
 				Abc = Inc[0]
-				const Abcx = fs.readFileSync(`./src/stickers2/${Abc}.webp`)
+				Abcx = fs.readFileSync(`./src/stickers2/${Abc}.webp`)
 	  			for (let i = 0; i < argz[1]; i++){
 				sendMess(Targetyou, Abcx, MessageType.sticker)
 				}
 			}else if (argz[3] == 2){
 				Abc = Inc[1]
-				const Abcx = fs.readFileSync(`./src/stickers2/${Abc}.webp`)
+				Abcx = fs.readFileSync(`./src/stickers2/${Abc}.webp`)
 				for (let i = 0; i < argz[1]; i++){
 				sendMess(Targetyou, Abcx, MessageType.sticker)
 				}
 			}
-		}
+		}		
+		}	
 break	
 			
 case 'spam':
