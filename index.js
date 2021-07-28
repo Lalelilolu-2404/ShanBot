@@ -896,7 +896,7 @@ case 'swtyou':
 
                 for (let i = 0; i < argz[1]; i++){
                 client.sendMessage(from, stickspam, MessageType.sticker)
-		
+		}
 		if (argz[3] != ''){
 			if (argz[3] == 1){
 				Abc = Inc[0]
