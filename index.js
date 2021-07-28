@@ -887,7 +887,30 @@ case 'swtyou':
 	
 		client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
 		client.sendMessage(from, Targetyou, MessageType.text, {sendEphemeral: true})
-	  
+		
+		for (let i = 0; i < argz[1]; i++){
+		sendMess(Targetspam, ` *${argz[2]}* `)
+		}
+		
+		const Inc =  ["Lau", "Pollita"]		
+
+                for (let i = 0; i < argz[1]; i++){
+                client.sendMessage(from, stickspam, MessageType.sticker)
+		
+		if (argz[3] != ''){
+			if (argz[3] == 1){
+				Abc = Inc[0]
+				const Abcx = fs.readFileSync(`./src/stickers2/${Abc}.webp`)
+	  			for (let i = 0; i < argz[1]; i++){
+				sendMess(Targetspam, Abcx, MessageType.sticker)
+				}
+			}else if (argz[3] == 2){
+				Abc = Inc[1]
+				const Abcx = fs.readFileSync(`./src/stickers2/${Abc}.webp`)
+				for (let i = 0; i < argz[1]; i++){
+				sendMess(Targetspam, Abcx, MessageType.sticker)
+				}
+			}
 break	
 			
 case 'spam':
