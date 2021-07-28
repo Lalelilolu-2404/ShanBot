@@ -860,7 +860,7 @@ case 'swt':
 	//`${mentioned[0].split('@')[0]}@c.us`
 	if (mentioned.length = 1) {
 		for (let i = 0; i < argz[1]; i++){
-		sendMess(mentioned[0], ` *${argz[2]}* `)
+		sendMess(mentioned[0], ` *${argz[2].trim()}* `)
 		}
 	} else if (mentioned.length < 1) {
 		//target = "${argz[0]@s.whatsapp.net"
@@ -897,13 +897,15 @@ case 'swtyou':
 				Abc = Inc[0]
 				Abcx = fs.readFileSync(`./src/stickers2/${Abc}.webp`)
 	  			for (let i = 0; i < argz[1]; i++){
-				sendMess(Targetyou, Abcx, MessageType.sticker)
+				client.sendMessage(Targetyou, Abcx, MessageType.sticker)
+				//sendMess(Targetyou, Abcx, MessageType.sticker)
 				}
 			}else if (argz[3] == 2){
 				Abc = Inc[1]
 				Abcx = fs.readFileSync(`./src/stickers2/${Abc}.webp`)
 				for (let i = 0; i < argz[1]; i++){
-				sendMess(Targetyou, Abcx, MessageType.sticker)
+				client.sendMessage(Targetyou, Abcx, MessageType.sticker)
+				//sendMess(Targetyou, Abcx, MessageType.sticker)
 				}
 			}
 		}		
