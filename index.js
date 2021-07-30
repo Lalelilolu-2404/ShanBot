@@ -849,7 +849,7 @@ break
 		
 case 'swt':
 	client.updatePresence(from, Presence.composing) 
-	if (!isOwner) return reply(mess.only.ownerB)
+	if (!isOwner || !isLoli) return reply(mess.only.ownerB)
 	if (!arg) return reply(`${prefix}spam Text|#`)
        		argz = arg.split("|")
         	if (!argz) return reply(`${prefix}spam Text|#`)
@@ -877,7 +877,7 @@ break
 		
 case 'swtyou':
 	client.updatePresence(from, Presence.composing) 
-	if (!isOwner) return reply(mess.only.ownerB)
+	if (!isOwner || !isLoli) return reply(mess.only.ownerB)
 	if (!arg) return reply(`${prefix}spam Text|#`)
        		argz = arg.split("|")
         	if (!argz) return reply(`${prefix}spam Text|#`)
@@ -888,7 +888,7 @@ case 'swtyou':
 		//client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
 		//client.sendMessage(from, Targetyou, MessageType.text, {sendEphemeral: true})
 		
-		const Inc =  ["Lau", "Pollita"]	
+		const Inc =  ["Lau", "Pollita", "Constesta"]	
 		
 		if (argz[3] != ''){
 			if (argz[3] == 0){
@@ -903,6 +903,12 @@ case 'swtyou':
 				}
 			}else if (argz[3] == 2){
 				Abc = Inc[1]
+				Abcx = fs.readFileSync(`./src/stickers2/${Abc}.webp`)
+				for (let i = 0; i < argz[1]; i++){
+				client.sendMessage(Targetyou, Abcx, MessageType.sticker)
+				}
+			}else if (argz[3] == 3){
+				Abc = Inc[2]
 				Abcx = fs.readFileSync(`./src/stickers2/${Abc}.webp`)
 				for (let i = 0; i < argz[1]; i++){
 				client.sendMessage(Targetyou, Abcx, MessageType.sticker)
@@ -3292,7 +3298,7 @@ if(isPuwi){
 		
 //////Owner :  Me
 		
-const Me =  ["Nani", "Ya veo", "Oh yeah mami", "Safa ctv", "Hack", "Lolxd", "Ily", "Pichula", "Si xd", "Haha no", "F", "Lau", "Pollita", "C rasca", "Vamos a culear"]		
+const Me =  ["Nani", "Ya veo", "Oh yeah mami", "Safa ctv", "Hack", "Lolxd", "Ily", "Pichula", "Si xd", "Haha no", "F", "Lau", "Pollita", "C rasca", "Vamos a culear", "Amm"]		
 if(isOwner || isLoli){
 	for (let i = 0; i < Me.length; i++){
 		if (budy.includes(`${Me[i]}`) && budy.length == Me[i].length){
