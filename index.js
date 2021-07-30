@@ -849,7 +849,8 @@ break
 		
 case 'swt':
 	client.updatePresence(from, Presence.composing) 
-	if (!isOwner || !isLoli) return reply(mess.only.ownerB)
+	//if (!isOwner) return reply(mess.only.ownerB)
+	if (isOwner || isLoli)
 	if (!arg) return reply(`${prefix}spam Text|#`)
        		argz = arg.split("|")
         	if (!argz) return reply(`${prefix}spam Text|#`)
@@ -877,7 +878,8 @@ break
 		
 case 'swtyou':
 	client.updatePresence(from, Presence.composing) 
-	if (!isOwner || !isLoli) return reply(mess.only.ownerB)
+	//if (!isOwner) return reply(mess.only.ownerB)
+	if (isOwner || isLoli)
 	if (!arg) return reply(`${prefix}spam Text|#`)
        		argz = arg.split("|")
         	if (!argz) return reply(`${prefix}spam Text|#`)
