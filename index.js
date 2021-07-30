@@ -890,7 +890,7 @@ case 'swtyou':
 		//client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
 		//client.sendMessage(from, Targetyou, MessageType.text, {sendEphemeral: true})
 		
-		const Inc =  ["Lau", "Pollita", "Constesta"]	
+		const Inc =  ["Lau", "Pollita", "Contesta"]	
 		
 		if (argz[3] != ''){
 			if (argz[3] == 0){
