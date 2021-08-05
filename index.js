@@ -918,8 +918,8 @@ case 'swtyou':
 			}else if (argz[3] == 4){
 				for (let i = 0; i < argz[1]; i++){
 				random3 = `${Math.floor(Math.random() * 2)+1}`
-				Xdlau = `Desprecio${random3}`
-				Abcx = fs.readFileSync(`./src/sticker2/${Xdlau}.webp`);
+				Abc = `Desprecio${random3}`
+				Abcx = fs.readFileSync(`./src/stickers2/${Xdlau}.webp`);
 				client.sendMessage(Targetyou, Abcx, MessageType.sticker)
 				}
 			}
