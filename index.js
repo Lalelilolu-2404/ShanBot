@@ -919,7 +919,7 @@ case 'swtyou':
 				for (let i = 0; i < argz[1]; i++){
 				random3 = `${Math.floor(Math.random() * 2)+1}`
 				Abc = `Desprecio${random3}`
-				Abcx = fs.readFileSync(`./src/stickers2/${Xdlau}.webp`);
+				Abcx = fs.readFileSync(`./src/stickers2/${Abc}.webp`);
 				client.sendMessage(Targetyou, Abcx, MessageType.sticker)
 				}
 			}
