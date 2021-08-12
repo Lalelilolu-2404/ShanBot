@@ -930,8 +930,8 @@ break
 	
 			case 'die':	
 				if (args.length < 1) return reply('.......')
-				if (!isOwner) return reply('No eres mi dueño UnU')
-				if (!isQuotedText) return reply('No eres mi dueño UnU')
+				if (!isOwner) return reply('No eres mi dueño UnU'){
+				if (!isQuotedText) return reply('No eres mi dueño UnU'){
 				argz = arg.split("|")
 				if (isNaN(argz[0])) return reply(`# de veces?`){
 					const encmedia = isQuotedText ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
@@ -942,8 +942,8 @@ break
                 			}
 	
 				}
-		
-				if (!isQuotedSticker) return reply('marque um sticker')
+	
+				}else if (!isQuotedSticker) return reply('marque um sticker'){
 				argz = arg.split("|")
 				if (isNaN(argz[0])) return reply(`# de veces?`){
 					const encmedia = isQuotedText ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
@@ -953,7 +953,9 @@ break
                 			client.sendMessage(from, buff, MessageType.sticker, {sendEphemeral: true})
                 			}
 				}
-		
+				}
+			}
+			break
 		/**
 				svst = body.slice(5)
 				if (!svst) return reply('Qual é o nome do sticker?')
