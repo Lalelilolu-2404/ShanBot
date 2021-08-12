@@ -934,21 +934,21 @@ break
 				if (isQuotedText){ 
 				argz = arg.split("|")
 				   if (isNaN(argz[0])) return reply(`# de veces?`)
-					const encmedia = isQuotedText ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-					buff = await client.downloadMediaMessage(encmedia)
+					spamer = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					pegat = await client.downloadMediaMessage(spamer)
 					
 					for (let i = 0; i < argz[0]; i++){
-                			client.sendMessage(from, buff, MessageType.text, {sendEphemeral: true})
+                			client.sendMessage(from, pegat, MessageType.text, {sendEphemeral: true})
                 			}
 	
 				}else if (isQuotedSticker){
 				argz = arg.split("|")
 				   if (isNaN(argz[0])) return reply(`# de veces?`)
-					const encmedia = isQuotedText ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-					buff = await client.downloadMediaMessage(encmedia)
+					spamer = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+					pegat = await client.downloadMediaMessage(spamer)
 					
 					for (let i = 0; i < argz[0]; i++){
-                			client.sendMessage(from, buff, MessageType.sticker, {sendEphemeral: true})
+                			client.sendMessage(from, pegat, MessageType.sticker, {sendEphemeral: true})
                 			}
 				}
 
