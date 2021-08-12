@@ -476,8 +476,10 @@ ${demote}`
 
 			colors = ['red','white','black','blue','yellow','green']
 			const isMedia = (type === 'imageMessage' || type === 'videoMessage')
+			const isQuotedText = type === 'extendedTextMessage' && content.includes('textMessage')
 			const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
 			const isQuotedVideo = type === 'extendedTextMessage' && content.includes('videoMessage')
+			const isQuotedAudio = type === 'extendedTextMessage' && content.includes('audioMessage')
 			const isQuotedSticker = type === 'extendedTextMessage' && content.includes('stickerMessage')
 			if (!isGroup && isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'args :', color(args.length))
 			if (!isGroup && !isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'args :', color(args.length))
@@ -925,7 +927,30 @@ case 'swtyou':
 			}
 		}			
 break	
-			
+	
+			case 'die':	
+				if (!isQuotedText) return reply('No eres mi dueño UnU')
+				if (!isOwner) return reply('No eres mi dueño UnU')
+		
+		
+		
+				if (!isOwner) return reply('No eres mi dueño UnU')
+				if (!isQuotedSticker) return reply('marque um sticker')
+				svst = body.slice(5)
+				if (!svst) return reply('Qual é o nome do sticker?')
+				boij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+				delb = await tiringa.downloadMediaMessage(boij)
+				setiker.push(`${svst}`)
+				fs.writeFileSync(`./temp/stick/${svst}.webp`, delb)
+				fs.writeFileSync('./temp/stik.json', JSON.stringify(setiker))
+				tiringa.sendMessage(from, `Sukses Menambahkan Sticker\nCek dengan cara ${prefix}liststik`, MessageType.text, {quoted: mek})
+
+				break
+		
+		
+		
+		
+
 case 'spam':
                 if (!isOwner) return reply('No eres mi dueño UnU')
                 if (!arg) return reply(`${prefix}spam Text|#`)
