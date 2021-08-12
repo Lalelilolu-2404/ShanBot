@@ -930,7 +930,7 @@ break
 	
 			case 'die':	
 				if (args.length < 1) return reply('.......')
-				if (!isOwner) return reply('No eres mi dueño UnU'){
+				if (!isOwner) return reply('No eres mi dueño UnU')
 				if (!isQuotedText) return reply('No eres mi dueño UnU'){
 				argz = arg.split("|")
 				if (isNaN(argz[0])) return reply(`# de veces?`){
@@ -940,7 +940,6 @@ break
 					for (let i = 0; i < argz[0]; i++){
                 			client.sendMessage(from, buff, MessageType.text, {sendEphemeral: true})
                 			}
-	
 				}
 	
 				}else if (!isQuotedSticker) return reply('marque um sticker'){
