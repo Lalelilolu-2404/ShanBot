@@ -930,28 +930,28 @@ break
 	
 			case 'die':	
 				if (args.length < 1) return reply('.......')
-				if (!isOwner) return reply('No eres mi dueño UnU')
-				if (!isQuotedText) return reply('No eres mi dueño UnU'){
+				if (!isOwner) return reply('No eres mi dueño UnU'){
+				if (!isQuotedText) return reply('Text?') {
 				argz = arg.split("|")
-				if (isNaN(argz[0])) return reply(`# de veces?`){
+				   if (isNaN(argz[0])) return reply(`# de veces?`){
 					const encmedia = isQuotedText ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 					buff = await client.downloadMediaMessage(encmedia)
 					
 					for (let i = 0; i < argz[0]; i++){
                 			client.sendMessage(from, buff, MessageType.text, {sendEphemeral: true})
                 			}
-				}
+				   }
 	
 				}else if (!isQuotedSticker) return reply('marque um sticker'){
 				argz = arg.split("|")
-				if (isNaN(argz[0])) return reply(`# de veces?`){
+				   if (isNaN(argz[0])) return reply(`# de veces?`){
 					const encmedia = isQuotedText ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 					buff = await client.downloadMediaMessage(encmedia)
 					
 					for (let i = 0; i < argz[0]; i++){
                 			client.sendMessage(from, buff, MessageType.sticker, {sendEphemeral: true})
                 			}
-				}
+				   }
 				}
 			}
 			break
