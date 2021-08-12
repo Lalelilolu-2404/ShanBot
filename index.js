@@ -929,13 +929,32 @@ case 'swtyou':
 break	
 	
 			case 'die':	
+				if (args.length < 1) return reply('.......')
+				if (!isOwner) return reply('No eres mi dueño UnU')
 				if (!isQuotedText) return reply('No eres mi dueño UnU')
-				if (!isOwner) return reply('No eres mi dueño UnU')
+				argz = arg.split("|")
+				if (isNaN(argz[0])) return reply(`# de veces?`){
+					const encmedia = isQuotedText ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+					buff = await client.downloadMediaMessage(encmedia)
+					
+					for (let i = 0; i < argz[0]; i++){
+                			client.sendMessage(from, buff, MessageType.text, {sendEphemeral: true})
+                			}
+	
+				}
 		
-		
-		
-				if (!isOwner) return reply('No eres mi dueño UnU')
 				if (!isQuotedSticker) return reply('marque um sticker')
+				argz = arg.split("|")
+				if (isNaN(argz[0])) return reply(`# de veces?`){
+					const encmedia = isQuotedText ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+					buff = await client.downloadMediaMessage(encmedia)
+					
+					for (let i = 0; i < argz[0]; i++){
+                			client.sendMessage(from, buff, MessageType.sticker, {sendEphemeral: true})
+                			}
+				}
+		
+		/**
 				svst = body.slice(5)
 				if (!svst) return reply('Qual é o nome do sticker?')
 				boij = JSON.parse(JSON.stringify(mek).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
@@ -947,8 +966,23 @@ break
 
 				break
 		
-		
-		
+					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
+						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+						buff = await client.downloadMediaMessage(encmedia)
+						for (let _ of groupMembers) {
+							client.sendMessage(_.jid, buff, image, {caption: `*「 GRUPO : ${groupName} 」*\n\n${body.slice(6)}`})
+						}
+						reply('')
+					} else {
+						for (let _ of groupMembers) {
+							sendMess(_.jid, `*「 BC GROUP 」*\n*Group* : ${groupName}\n\n${body.slice(6)}`)
+							
+							sendMess(_.jid, `*「 GROUP : ${groupName} 」*\n\n${body.slice(6)}`)
+						}
+						reply('Grupo de transmisión exitoso')
+					}
+					break 
+		**/
 		
 
 case 'spam':
