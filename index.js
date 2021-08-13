@@ -453,7 +453,8 @@ ${demote}`
 			
 			const conts = mek.key.fromMe ? client.user.jid : client.contacts[sender] || { notify: jid.replace(/@.+/, '') }
 			//let pushname = client.contacts[sender] != undefined ? client.contacts[sender].vname || client.contacts[sender].notify: undefined
-			const pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
+			//const pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
+			let pushname = client.contacts[sender] != undefined ? client.contacts[sender].vname || client.contacts[sender].notify: undefined
 			  
 
 	        //FUNCION DE LEVEL
