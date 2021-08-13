@@ -849,6 +849,20 @@ mentions(`${susp}`, mentioned, true)
 break		
 ***/
 		
+case 'reiniciar':
+if (!isGroupAdmins || !isOwner) return reply(mess.only.admin)
+//if (!isOwner) return reply(mess.only.ownerB)
+                   npm = `npm start`
+                   reply('Reiniciando em alguns segundos...')       
+	               exec(npm, (err, stdout) => {
+		           if(err) return client.sendMessage(from, "Comando inexistente", text, {quoted: mek})
+
+		           if (stdout) {
+			       client.sendMessage(from, stdout, text, {quoted: mek})
+} 
+                   })
+break
+		
 case 'swt':
 	client.updatePresence(from, Presence.composing) 
 	//if (!isOwner) return reply(mess.only.ownerB)
@@ -934,11 +948,11 @@ break
 				if (isQuotedText){ 
 				argz = arg.split("|")
 				   if (isNaN(argz[0])) return reply(`# de veces?`)
-					spamer = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					pegat = await client.downloadMediaMessage(spamer)
+					spamcito = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					Textspam = await client.downloadMediaMessage(spamcito)
 					
 					for (let i = 0; i < argz[0]; i++){
-                			client.sendMessage(from, pegat, MessageType.text, {sendEphemeral: true})
+                			client.sendMessage(from, Textspam, MessageType.text, {sendEphemeral: true})
                 			}
 	
 				}else if (isQuotedSticker){
@@ -1371,7 +1385,7 @@ break
 					if (args.length < 1) return reply('Donde esta la URL?')
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 					reply(mess.only.mpa)
-					anu = await fetchJson(`https://st4rz.herokuapp.com/api/yta2?url=${args[0]}`, {method: 'get'})
+					anu = await fetchJson(`https://api-tiringa.italuh.repl.co/api/yta?url=${play}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					teks = `*DESCARGA EXITOSA ✅*\n◉ *Título* : ${anu.title}\n\nDALE NEFASTO NO SPAMES TE ESTOY ENVIANDO EL AUDIO ESPERAME 😡`
 					thumb = await getBuffer(anu.thumb)
@@ -1383,7 +1397,7 @@ break
 					if (args.length < 1) return reply('Donde esta la URL?')
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 					reply(mess.only.mpv)
-					anu = await fetchJson(`https://st4rz.herokuapp.com/api/ytv2?url=${args[0]}`, {method: 'get'})
+					anu = await fetchJson(`https://api.zeks.xyz/api/ytmp4?url=${play}&apikey=apivinz`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					teks = `*DESCARGA EXITOSA ✅*\n◉ *Título* : ${anu.title}\n\n*EL VIDEO SE ESTÁ ENVIANDO, NO SPAM PEDAZO DE DOWN*`
 					thumb = await getBuffer(anu.thumb)
@@ -1814,7 +1828,7 @@ case 'play':
   reply(mess.wait)
   play = body.slice(6)
   try {
-  anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=apivinz`)
+  anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=hamilton40`)
   if (anu.error) return reply(anu.error)
   infomp3 = `*Audio*\n‣ *Nombre* : ${anu.result.title}\n‣ *Fuente* : ${anu.result.source}\n‣ *Tamaño* : ${anu.result.size}\n\n_El audio se esta mandando, si no llega descargue por el link_\n‣ *Link* : ${anu.result.url_audio}
   `
@@ -1840,7 +1854,7 @@ mimetype: 'audio/mp4', filename: `${anu.result.title}.mp3`, quoted: mek
 		if (!isUser) return reply(mess.only.daftarB)
                 reply(mess.only.musica2)
                 play = body.slice(5)
-                anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=shanduy20`)
+                anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=shanduy40`)
                if (anu.error) return reply(anu.error)
                  infomp3 = `*⌈ Canción Encontrada ✅ ⌉*\n◉ *Título* : ${anu.result.title}\nFuente : ${anu.result.source}\nTamaño : ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*`
                 buffer = await getBuffer(anu.result.thumbnail)
@@ -2021,9 +2035,9 @@ break
 //clear all chat
 				case 'clearall':
 					if (!isOwner) return reply('Estas seguro?')
-					anu = await client.chats.all()
+					aest = await client.chats.all()
 					client.setMaxListeners(25)
-					for (let _ of anu) {
+					for (let _ of aest) {
 						client.deleteChat(_.jid)
 					}
 					reply('Se borraron todos los mensajes :)')
