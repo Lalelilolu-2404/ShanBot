@@ -453,8 +453,8 @@ ${demote}`
 			
 			const conts = mek.key.fromMe ? client.user.jid : client.contacts[sender] || { notify: jid.replace(/@.+/, '') }
 			//let pushname = client.contacts[sender] != undefined ? client.contacts[sender].vname || client.contacts[sender].notify: undefined
-			//const pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
-			let pushname = client.contacts[sender] != undefined ? client.contacts[sender].vname || client.contacts[sender].notify: undefined
+			let pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
+		
 			  
 
 	        //FUNCION DE LEVEL
@@ -1156,9 +1156,9 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	//client.sendMessage(from, buff, image, {quoted: mek, caption: 'Uwu'})
 //	teks =  mentions(`⊱ღ꧁ ${pushname} ꧂ღ⊱ \n @${mentioned[0].split('@')[0]}`, mentioned,true)
 
-	teks =  `「*${pushname}*」`
+	youp =  `「*${pushname}*」`
 //	`⊱ღ꧁ ${pushname} ꧂ღ⊱ 
-            client.sendMessage(from, teks, text, {
+            client.sendMessage(from, youp, text, {
                 quoted: {
                     key: {
                         fromMe: false,
@@ -1905,10 +1905,10 @@ if (args.length < 1) return reply(`Incorrecto \nComando : ${prefix}daftar Nombre
 	var nombre = reg.split("|")[0];	
 	user.push(sender)	
 	fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
-//const nameUser = `${pushname}`
-//const umurUser = `${sender}`
+const nameUser = `${pushname}`
+const umurUser = `${sender}`
 //const serialUser = `${actu.sender}`
-//veri = sender
+veri = sender
 	
 /**client.sendMessage(from, `\`\`\`REGISTRADO ✅\`\`\`\n\n\`\`\`
 	Hora EC: ${time}\`\`\`\n\`\`\`
