@@ -551,7 +551,7 @@ ${demote}`
 /////////////////////////////////			
 			
         const fakethumb = (teks, yes) => {
-            client.sendMessage(from, teks, image, {thumbnail:fs.readFileSync('./assets/menuimg.jpeg'),quoted:mek,caption:yes})
+            client.sendMessage(from, teks, image, {thumbnail:fs.readFileSync('./assets/menuimg.jpg'),quoted:mek,caption:yes})
         }				
 
 	const fakestatus = (teks) => {
@@ -574,7 +574,7 @@ ${demote}`
                             "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=",
                             "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
                             "mediaKeyTimestamp": "1610993486",
-                            "jpegThumbnail": fs.readFileSync('./assets/menuimg.jpeg'),
+                            "jpegThumbnail": fs.readFileSync('./assets/menuimg.jpg'),
                             "scansSidecar": "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw=="
                         }
                     },
@@ -605,7 +605,7 @@ ${demote}`
                             "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=",
                             "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
                             "mediaKeyTimestamp": "1610993486",
-                            "jpegThumbnail": fs.readFileSync('./assets/menuimg.jpeg'),
+                            "jpegThumbnail": fs.readFileSync('./assets/menuimg.jpg'),
                             "scansSidecar": "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw=="
                         }
                     }
@@ -625,7 +625,7 @@ message: {
  'contactMessage': {
  'displayName': `Hola ${pushname}`,
 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${ucapanWaktu},;;;\nFN:${ucapanWaktu},\nitem1.TEL;waid=${sender.split('@')[0]}:${sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`,
- 'jpegThumbnail': fs.readFileSync('./assets/menuimg.jpeg')
+ 'jpegThumbnail': fs.readFileSync('./assets/menuimg.jpg')
 }
 }
                 }
@@ -644,7 +644,7 @@ const faketokoforwaded = (teks) => {
 				"product": {
 					"productImage":{
 						"mimetype": "image/jpeg",
-						"jpegThumbnail": fs.readFileSync(`./assets/menuimg.jpeg`)
+						"jpegThumbnail": fs.readFileSync(`./assets/menuimg.jpg`)
 					},
 					"title": `UwU : ${pushname}, ${ucapanWaktu}`,
 					"retailerId": "Self Bot",
@@ -772,10 +772,10 @@ break
 	        if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length == 0) {
           	boij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 			delb = await client.downloadMediaMessage(boij)
-			fs.writeFileSync(`./assets/menuimg.jpeg`, delb)
+			fs.writeFileSync(`./assets/menuimg.jpg`, delb)
 			fakestatus('Hecho mi amo 7~7')
         	} else {
-            reply(`Kirim gambar dengan caption ${prefix}setprofil`)
+            reply(`Get caption ${prefix}setprofil`)
           	}
 	break
 		
