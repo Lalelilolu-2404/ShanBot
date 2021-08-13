@@ -743,7 +743,7 @@ break
 		client.sendMessage(from, menuadmin(prefix, sender), text, {quoted: mek})
 		break
 		case 'nsfwmenu':
-		if (isOwner)
+		//if (isOwner)
 		client.sendMessage(from, nsfwmenu(prefix, sender), text, {quoted: mek})
 		break
 		case 'desmenu':
