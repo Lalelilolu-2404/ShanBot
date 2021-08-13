@@ -3341,6 +3341,18 @@ if(isGroupAdmins || isMe || isLoli || isMeuf){
 	}
 }	
 	
+/////////////////////////////////////
+const Puw =  ["Nani", "Lolxd", "F", "Amm", "Pichula"]		
+if(isGroup){
+	for (let i = 0; i < Fer.length; i++){
+		if (budy.includes(`${Fer[i]}`)){
+			none = fs.readFileSync(`./src/stickers2/${Puw[i]}.webp`)
+			client.sendMessage(from, none, sticker)	
+		}			
+		
+	}	
+	}			
+		
 ////////////María
 		
 const Marya =  ["Martillo", "Rinoceronte"]		
@@ -3360,18 +3372,6 @@ if(isLoli || isOwner){
 	for (let i = 0; i < Laura.length; i++){
 		if (budy.includes(`${Laura[i]}`)){
 			none = fs.readFileSync(`./src/stickers2/${Laura[i]}.webp`)
-			client.sendMessage(from, none, sticker, {quoted: mek})	
-		}				
-	}	
-}	
-	
-//////////Puwi
-		
-const Puwy =  ["Simp", "Dame"]		
-if(isPuwi){
-	for (let i = 0; i < Puwy.length; i++){
-		if (budy.includes(`${Puwy[i]}`)){
-			none = fs.readFileSync(`./src/stickers2/${Puwy[i]}.webp`)
 			client.sendMessage(from, none, sticker, {quoted: mek})	
 		}				
 	}	
