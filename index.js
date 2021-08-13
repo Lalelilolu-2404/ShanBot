@@ -945,6 +945,7 @@ case 'swtyou':
 break	
 		
 				case 'add':
+					client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
@@ -961,7 +962,8 @@ break
 		
 		
 	
-			case 'die':	
+			case 'die':
+				client.updatePresence(from, Presence.composing) 
 				if (args.length < 1) return reply('.......')
 				if (!isOwner) return reply('No eres mi dueño UnU')
 				if (isQuotedText){ 
