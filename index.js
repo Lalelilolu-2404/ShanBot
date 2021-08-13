@@ -452,8 +452,8 @@ ${demote}`
 			}
 			
 			const conts = mek.key.fromMe ? client.user.jid : client.contacts[sender] || { notify: jid.replace(/@.+/, '') }
-			let pushname = client.contacts[sender] != undefined ? client.contacts[sender].vname || client.contacts[sender].notify: undefined
-			//const pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
+			//let pushname = client.contacts[sender] != undefined ? client.contacts[sender].vname || client.contacts[sender].notify: undefined
+			let pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
 			  
 
 	        //FUNCION DE LEVEL
@@ -3361,10 +3361,10 @@ if(isGroupAdmins || isMe || isLoli || isMeuf){
 }	
 	
 /////////////////////////////////////
-const Puw =  ["Nani", "Lolxd", "F", "Amm", "Pichula"]	
+const Puw =  ["Nani", "Lolxd", "F", "Amm", "Pichula", "Si xd", "Haha no"]	
 if (!isGroup) return reply(mess.only.group)
-	for (let i = 0; i < Fer.length; i++){
-		if (budy.includes(`${Fer[i]}`)){
+	for (let i = 0; i < Puw.length; i++){
+		if (budy.includes(`${Puw[i]}`)){
 			none = fs.readFileSync(`./src/stickers2/${Puw[i]}.webp`)
 			client.sendMessage(from, none, sticker)	
 		}			
