@@ -1385,7 +1385,8 @@ break
 					if (args.length < 1) return reply('Donde esta la URL?')
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 					reply(mess.only.mpa)
-					anu = await fetchJson(`https://api-tiringa.italuh.repl.co/api/yta?url=${play}`, {method: 'get'})
+					play = body.slice(7)
+					anu = await fetchJson(`https://api.zeks.xyz/api/ytmp3/2?url=${play}&apikey=${viKey}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					teks = `*DESCARGA EXITOSA ✅*\n◉ *Título* : ${anu.title}\n\nDALE NEFASTO NO SPAMES TE ESTOY ENVIANDO EL AUDIO ESPERAME 😡`
 					thumb = await getBuffer(anu.thumb)
@@ -1397,7 +1398,7 @@ break
 					if (args.length < 1) return reply('Donde esta la URL?')
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 					reply(mess.only.mpv)
-					anu = await fetchJson(`https://api.zeks.xyz/api/ytmp4?url=${play}&apikey=apivinz`, {method: 'get'})
+					anu = await fetchJson(`https://st4rz.herokuapp.com/api/ytv2?url=${args[0]}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					teks = `*DESCARGA EXITOSA ✅*\n◉ *Título* : ${anu.title}\n\n*EL VIDEO SE ESTÁ ENVIANDO, NO SPAM PEDAZO DE DOWN*`
 					thumb = await getBuffer(anu.thumb)
@@ -3342,16 +3343,15 @@ if(isGroupAdmins || isMe || isLoli || isMeuf){
 }	
 	
 /////////////////////////////////////
-const Puw =  ["Nani", "Lolxd", "F", "Amm", "Pichula"]		
-if(isGroup){
+const Puw =  ["Nani", "Lolxd", "F", "Amm", "Pichula"]	
+if (!isGroup) return reply(mess.only.group)
 	for (let i = 0; i < Fer.length; i++){
 		if (budy.includes(`${Fer[i]}`)){
 			none = fs.readFileSync(`./src/stickers2/${Puw[i]}.webp`)
 			client.sendMessage(from, none, sticker)	
 		}			
 		
-	}	
-	}			
+	}				
 		
 ////////////María
 		
