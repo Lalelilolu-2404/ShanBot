@@ -1940,7 +1940,7 @@ veri = sender
  // 	╠≽️ *User*\`\: *${nameUser}*
 //	╠≽️ *Status* : *${serialUser}  
 		
-	teks =  `「*${pushname}*」`
+//	teks =  `「*${pushname}*」`
 //	`⊱ღ꧁ ${pushname} ꧂ღ⊱ 
             client.sendMessage(from, teks, text, {
                 quoted: {
