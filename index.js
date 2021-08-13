@@ -941,6 +941,23 @@ case 'swtyou':
 			}
 		}			
 break	
+		
+				case 'add':
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+					if (args.length < 1) return reply('Ingresa el número')
+					if (args[0].startsWith('08')) return reply('Usa el código de país')
+					try {
+						aggr = `${args[0].replace(/ /g, '')}@s.whatsapp.net`
+						client.groupAdd(from, [aggr])
+					} catch (e) {
+						console.log('Error :', e)
+						reply('No se pudo agregar al miembro probablemente este bloqueado por el bot')
+					}
+					break
+		
+		
 	
 			case 'die':	
 				if (args.length < 1) return reply('.......')
