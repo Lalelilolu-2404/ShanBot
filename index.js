@@ -950,7 +950,7 @@ case 'swtyou':
 		}			
 break	
 		
-				case 'add':
+	/**			case 'add':
 					client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
@@ -965,7 +965,7 @@ break
 						reply('No se pudo agregar al miembro probablemente este bloqueado por el bot')
 					}
 					break
-		
+	**/
 		
 	
 			case 'die':
