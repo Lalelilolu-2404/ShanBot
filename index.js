@@ -884,7 +884,7 @@ case 'swt':
 			spst = "Haha no"
 			Noperro = fs.readFileSync(`./src/stickers2/${spst}.webp`)
 			client.sendMessage(from, Noperro, MessageType.sticker, {quoted: mek})
-			argz[1] = 50}
+			argz[1] = 10}
 		for (let i = 0; i < argz[1]; i++){
 		sendMess(mentioned[0], ` *${argz[2].trim()}* `)
 		}
@@ -1035,7 +1035,7 @@ case 'spam':
 				spst = "Haha no"
 				Noperro = fs.readFileSync(`./src/stickers2/${spst}.webp`)
 				client.sendMessage(from, Noperro, MessageType.sticker, {quoted: mek})
-				argz[1] = 30
+				argz[1] = 10
 			}
                 for (let i = 0; i < argz[1]; i++){
                 client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
