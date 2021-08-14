@@ -768,6 +768,7 @@ break
 		
 		
 	case 'setprofil':
+		client.updatePresence(from, Presence.composing) 
 		if (!isOwner) return('No eres mi dueño UnU?')
 	        if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length == 0) {
           	boij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
@@ -780,6 +781,7 @@ break
 	break
 		
                             case 'demote':
+					client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
