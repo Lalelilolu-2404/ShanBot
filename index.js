@@ -868,7 +868,7 @@ break
 case 'swt':
 	client.updatePresence(from, Presence.composing) 
 	//if (!isOwner) return reply(mess.only.ownerB)
-	if (isOwner || isLoli)
+	if (!isOwner || !isLoli || !isGroupAdmins) return reply('Haha no')
 	if (!arg) return reply(`${prefix}spam Text|#`)
        		argz = arg.split("|")
         	if (!argz) return reply(`${prefix}spam Text|#`)
@@ -878,6 +878,11 @@ case 'swt':
  	//client.sendMessage(from, mentioned[0], MessageType.text, {sendEphemeral: true})
 	//`${mentioned[0].split('@')[0]}@c.us`
 	if (mentioned.length = 1) {
+		if (argz[1] > 50) {
+			spst = "Haha no"
+			Noperro = fs.readFileSync(`./src/stickers2/${spst}.webp`)
+			client.sendMessage(from, Noperro, MessageType.sticker, {quoted: mek})
+			argz[1] = 50}
 		for (let i = 0; i < argz[1]; i++){
 		sendMess(mentioned[0], ` *${argz[2].trim()}* `)
 		}
@@ -885,7 +890,6 @@ case 'swt':
 		//target = "${argz[0]@s.whatsapp.net"
 		Newtarget = argz[0].trim()
 		targetspam = Newtarget+"@s.whatsapp.net"
-		client.sendMessage(from, target, MessageType.text, {sendEphemeral: true})
 		client.sendMessage(from, Newtarget, MessageType.text, {sendEphemeral: true})
 		client.sendMessage(from, targetspam, MessageType.text, {sendEphemeral: true})
 		for (let i = 0; i < argz[1]; i++){
@@ -897,7 +901,7 @@ break
 case 'swtyou':
 	client.updatePresence(from, Presence.composing) 
 	//if (!isOwner) return reply(mess.only.ownerB)
-	if (isOwner || isLoli)
+	if (!isOwner || !isLoli) return reply('Haha no')
 	if (!arg) return reply(`${prefix}spam Text|#`)
        		argz = arg.split("|")
         	if (!argz) return reply(`${prefix}spam Text|#`)
@@ -970,7 +974,7 @@ break
 				argz = arg.split("|")
 				   if (isNaN(argz[0])) return reply(`# de veces?`)
 					spamcito = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					Textspam = await client.downloadMediaMessage(spamcito)
+					Textspam = await `${spamcito}`
 					
 					for (let i = 0; i < argz[0]; i++){
                 			client.sendMessage(from, Textspam, MessageType.text, {sendEphemeral: true})
@@ -1020,16 +1024,35 @@ break
 		
 
 case 'spam':
-                if (!isOwner) return reply('No eres mi dueño UnU')
+                //if (!isOwner) return reply('No eres mi dueño UnU')
                 if (!arg) return reply(`${prefix}spam Text|#`)
                 argz = arg.split("|")
                 if (!argz) return reply(`${prefix}spam Text|#`)
                 if (isNaN(argz[1])) return reply(`# de veces?`)
+			if (argz[1] > 30) {
+				spst = "Haha no"
+				Noperro = fs.readFileSync(`./src/stickers2/${spst}.webp`)
+				client.sendMessage(from, Noperro, MessageType.sticker, {quoted: mek})
+				argz[1] = 30
+			}
                 for (let i = 0; i < argz[1]; i++){
                 client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
                 }
 break
 		
+case 'ospam':
+                if (!isOwner) return reply('No eres mi dueño UnU')
+                if (!arg) return reply(`${prefix}spam Text|#`)
+                argz = arg.split("|")
+                if (!argz) return reply(`${prefix}spam Text|#`)
+                if (isNaN(argz[1])) return reply(`# de veces?`)
+
+                for (let i = 0; i < argz[1]; i++){
+                client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
+                }
+break
+			
+
 case 'spamstick':
                 if (!isOwner) return reply('No eres mi dueño UnU')
                 if (!arg) return reply(`${prefix}spam Text|#`)
@@ -1646,7 +1669,7 @@ break
 	    if (!isOwner) return reply(mess.only.ownerB)
             const allMeq = await tobz.getGroupMembers(groupId)
             for (let i = 0; i < allMeq.length; i++) {
-                if ((botNumber, ownerNumber).includes(allMeq[i].id)) {
+                if ((botNumber, ownerNumber, groupAdmins).includes(allMeq[i].id)) {
                     console.log('Upss :')
                 } else {
                     await client.removeParticipant(groupId, allMeq[i].id)
