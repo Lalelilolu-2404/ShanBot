@@ -1679,10 +1679,6 @@ break
             }
     		fakestatus(`「 *Brutality!!!* 」`)
             break
-       /**
-            const isGroupOwner = sender.id === chat.groupMetadata.owner
-            if (!isGroupOwner) return tobz.reply(from, 'Perintah ini hanya bisa di gunakan oleh O **/
- 
 		
 		case 'exe':
 	              client.updatePresence(from, Presence.composing) 
