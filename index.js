@@ -1637,6 +1637,28 @@ break
 					client.sendMessage(mentioned, 'Chao put@ gord@', text)
 					}
 					break
+		
+		
+        case 'kickall':
+            if (!isGroup) return reply(mess.only.group)
+            if (!isGroupAdmins) return reply(mess.only.admin)
+	    if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+	    if (!isOwner) return reply(mess.only.ownerB)
+            const allMeq = await tobz.getGroupMembers(groupId)
+            for (let i = 0; i < allMeq.length; i++) {
+                if ((botNumber, ownerNumber).includes(allMeq[i].id)) {
+                    console.log('Upss :')
+                } else {
+                    await client.removeParticipant(groupId, allMeq[i].id)
+                }
+            }
+    		fakestatus(`「 *Brutality!!!* 」`)
+            break
+       /**
+            const isGroupOwner = sender.id === chat.groupMetadata.owner
+            if (!isGroupOwner) return tobz.reply(from, 'Perintah ini hanya bisa di gunakan oleh Ow
+ *//
+		
 		case 'exe':
 	              client.updatePresence(from, Presence.composing) 
 	              if (!isOwner) return reply(mess.only.ownerB)
