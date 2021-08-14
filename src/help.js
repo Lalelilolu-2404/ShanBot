@@ -15,6 +15,12 @@ Nightcore  -  Rock mix
   ╠ ○ Regístrate con : ${prefix}daftar + ⌜Tu nombre⌟ 
   ╠ ○ ${prefix}stickadmin
   ╚ Stickers (solo admins :v)    
+  
+◉ *SPAM :3*
+  ╠ ○ ${prefix}swt ⌜@Tag⌟ | # de veces | ⌜Texte⌟ 
+  ╠ Spam al privado, max 50 #. Solo admins
+  ╠ ○ ${prefix}swt ⌜Texte⌟ | # de veces 
+  ╚ Spam grupo, max 30. Todos 
 
 ◉ *NUEVO COMANDO*
   ╠ ○ ${prefix}otak
