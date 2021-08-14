@@ -19,7 +19,7 @@ Nightcore  -  Rock mix
 ◉ *SPAM :3*
   ╠ ○ ${prefix}swt ⌜@Tag⌟ | # de veces | ⌜Texte⌟ 
   ╠ Spam al privado, max 50 #. Solo admins
-  ╠ ○ ${prefix}swt ⌜Texte⌟ | # de veces 
+  ╠ ○ ${prefix}spam ⌜Texte⌟ | # de veces 
   ╚ Spam grupo, max 30. Todos 
 
 ◉ *NUEVO COMANDO*
