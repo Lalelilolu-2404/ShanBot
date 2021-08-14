@@ -771,9 +771,9 @@ break
 		client.updatePresence(from, Presence.composing) 
 		if (!isOwner) return('No eres mi dueño UnU?')
 	        if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length == 0) {
-          	boij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-			delb = await client.downloadMediaMessage(boij)
-			fs.writeFileSync(`./assets/menuimg.jpg`, delb)
+          	menusos = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+			profileb = await client.downloadMediaMessage(menusos)
+			fs.writeFileSync(`./assets/menuimg.jpg`, profileb)
 			fakestatus('Hecho mi amo 7~7')
         	} else {
             reply(`Get caption ${prefix}setprofil`)
