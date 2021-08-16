@@ -2060,7 +2060,7 @@ break
                               	case 'nsfw':
 					if (!isOwner) return reply(mess.only.ownerB)
 					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)**/
+					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (args.length < 1) return reply('Digita 1 para activar los NSFW')
 					if (Number(args[0]) === 1) {
 						if (isNsfw) return reply('Recursos Activados ✅')
