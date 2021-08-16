@@ -428,7 +428,7 @@ ${demote}`
                         const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
                         const NomerOwner = '33749258491@s.whatsapp.net'
                         /******Entrada ApiKey******/
-                        const BarBarKey = 'Mn2Bf58QHQ8kABoLq80g'
+                        const BarBarKey = '8'
 			
 			//BarBarKey = up.BarBarKey;
 			vKey = up.Vhtearkey;
@@ -1477,7 +1477,7 @@ break
                                 case 'listadmins':
 				case 'adminlist':
 					client.updatePresence(from, Presence.composing) 
-                                        if (!isUser) return reply(mess.only.daftarB)
+                                       // if (!isUser) return reply(mess.only.daftarB)
 					if (!isGroup) return reply(mess.only.group)
 					teks = `Lista De Nefastos Del Grupo*${groupMetadata.subject}*\nTotal : ${groupAdmins.length}\n\n`
 					no = 0
@@ -1896,7 +1896,7 @@ case 'play':
   reply(mess.wait)
   play = body.slice(6)
   try {
-  anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=hamilton40`)
+  anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=hamilton43`)
   if (anu.error) return reply(anu.error)
   infomp3 = `*Audio*\n‣ *Nombre* : ${anu.result.title}\n‣ *Fuente* : ${anu.result.source}\n‣ *Tamaño* : ${anu.result.size}\n\n_El audio se esta mandando, si no llega descargue por el link_\n‣ *Link* : ${anu.result.url_audio}
   `
@@ -1923,7 +1923,7 @@ mimetype: 'audio/mp4', filename: `${anu.result.title}.mp3`, quoted: mek
 		//if (!isUser) return reply(mess.only.daftarB)
                 reply(mess.only.musica2)
                 play = body.slice(5)
-                anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=shanduy40`)
+                anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=shanduy43`)
                if (anu.error) return reply(anu.error)
                  infomp3 = `*⌈ Canción Encontrada ✅ ⌉*\n◉ *Título* : ${anu.result.title}\nFuente : ${anu.result.source}\nTamaño : ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*`
                 buffer = await getBuffer(anu.result.thumbnail)
