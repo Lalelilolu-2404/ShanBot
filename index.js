@@ -432,7 +432,7 @@ ${demote}`
 			
 			//BarBarKey = up.BarBarKey;
 			vKey = up.Vhtearkey;
-			viKey = up.Vinzapi
+			viKey = 'LEUJU9ybLwAHbLqnGShv'
 			meKey = up.Itsmeikyapi
 			lolKey = up.LolHumanKey
 			
