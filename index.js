@@ -1223,7 +1223,7 @@ break
 
 case 'gay':
                 client.updatePresence(from, Presence.composing) 
-                if (!isUser) return reply(mess.only.daftarB)
+               // if (!isUser) return reply(mess.only.daftarB)
               /**  teks = body.slice(5)**/
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 mentions(`@${mentioned[0].split('@')[0]}`, mentioned, true)
@@ -1253,7 +1253,7 @@ break
 
 case 'lesb':
                 client.updatePresence(from, Presence.composing) 
-                if (!isUser) return reply(mess.only.daftarB)
+               // if (!isUser) return reply(mess.only.daftarB)
               /**  teks = body.slice(6)**/
         mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 	mentions(`@${mentioned[0].split('@')[0]}`, mentioned, true)    
@@ -1279,7 +1279,7 @@ break
 					
 case 'lolicon':
                 client.updatePresence(from, Presence.composing) 
-                if (!isUser) return reply(mess.only.daftarB)
+             //   if (!isUser) return reply(mess.only.daftarB)
 		/**teks = body.slice(9)**/
 	mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid	
 /**mentions(`Pedido recibido✅\n\nAgregando cargo como administrador : @${mentioned[0].split('@')[0]}`, mentioned, true)**/
@@ -1498,7 +1498,7 @@ break
 			case 'tagall':
 				client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
-                                        if (!isUser) return reply(mess.only.daftarB)
+                                     //   if (!isUser) return reply(mess.only.daftarB)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
@@ -1632,7 +1632,8 @@ break
 					client.sendMessage(from, 'Chao Pa👋', text) // ur cods
 					}, 0)
               break
-       /*case 'ownergrup':
+       
+	case 'ownergroup':
 				  case 'ownergroup':
                client.updatePresence(from, Presence.composing) 
               options = {
@@ -1640,7 +1641,9 @@ break
           contextInfo: { mentionedJid: [from] }
            }
            client.sendMessage(from, options, text, { quoted: mek } )
-				break*/
+		
+	break
+		
                                       case 'kick':
 					case 'pafuera':
 					client.updatePresence(from, Presence.composing) 
@@ -1739,7 +1742,7 @@ break
 		break
 		
 		case 'attp':
-						if (!isUser) return reply(mess.only.daftarB)
+						//if (!isUser) return reply(mess.only.daftarB)
 					        if (args.length < 1) return reply(`¿Dónde está el texto?\n*Ejemplo:* ${prefix}attp Lalelilolu`)
 						reply(mess.only.attp)
 					        attp2 = await getBuffer(`https://api.xteam.xyz/attp?file&text=${body.slice(6)}`)
@@ -1838,7 +1841,7 @@ break
 					
 			            case 'toimg':
 				    client.updatePresence(from, Presence.composing)
-                                    if (!isUser) return reply(mess.only.daftarB)
+                                   // if (!isUser) return reply(mess.only.daftarB)
 					if (!isQuotedSticker) return reply('❌ Solo stickers')
 					reply(mess.only.imgs)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -1855,7 +1858,7 @@ break
 					
                         case 'tomp3':
                 	client.updatePresence(from, Presence.composing) 
-                        if (!isUser) return reply(mess.only.daftarB)
+                       // if (!isUser) return reply(mess.only.daftarB)
 					if (!isQuotedVideo) return reply('❌ Solo videos')
 					reply(mess.only.mpcancion)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -1887,8 +1890,8 @@ break
 ///////////
 		
 case 'play':
-  if (!isUser) return reply(mess.only.daftarB)
-
+ // if (!isUser) return reply(mess.only.daftarB)
+  if (!isGroup) return reply(mess.only.group)
   if (args.length < 1) return reply('Escribe el nombre')
   reply(mess.wait)
   play = body.slice(6)
@@ -1915,8 +1918,9 @@ mimetype: 'audio/mp4', filename: `${anu.result.title}.mp3`, quoted: mek
 //////////		
 
 		case 'play2':   
+		if (!isGroup) return reply(mess.only.group)
 	        if (args.length < 1) return reply('Donde esta el nombre de la canción?')
-		if (!isUser) return reply(mess.only.daftarB)
+		//if (!isUser) return reply(mess.only.daftarB)
                 reply(mess.only.musica2)
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=shanduy40`)
@@ -2022,7 +2026,7 @@ break
 					
                                 case 'welcome':
 					if (!isGroup) return reply(mess.only.group)
-                                        if (!isUser) return reply(mess.only.daftarB)
+                                        //if (!isUser) return reply(mess.only.daftarB)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isGroupAdmins) return reply(mess.only.Badmin)
 					if (args.length < 1) return reply('Para activar está funcion coloca *welcome 1')
@@ -2055,7 +2059,7 @@ break
 
                               	case 'nsfw':
 					if (!isOwner) return reply(mess.only.ownerB)
-					/**if (!isGroup) return reply(mess.only.group)
+					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)**/
 					if (args.length < 1) return reply('Digita 1 para activar los NSFW')
 					if (Number(args[0]) === 1) {
@@ -2520,7 +2524,7 @@ break
 						break
 	
                                 case 'ping':    
-			   	        if (!isUser) return reply(mess.only.userB)
+			   	       // if (!isUser) return reply(mess.only.userB)
                                         const timestamp = speed();
                                         const latensi = speed() - timestamp
                                         client.updatePresence(from, Presence.composing) 
@@ -2599,7 +2603,7 @@ break
 					
 				
 					case 'dolf':
-						if (!isUser) return reply(mess.only.daftarB)
+						//if (!isUser) return reply(mess.only.daftarB)
 						if (!isPacksito) return reply('❌ Dolf Desactivado* ❌')
 							random2 = `${Math.floor(Math.random() * 8)+1}`
 							Texte = `Image${random2}`
