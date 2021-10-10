@@ -408,24 +408,30 @@ const faketokoforwaded = (teks) => {
 switch(command) {
 case 'menu':
 case 'help':
-const menu1 =`Nightcore  -  Rock mix  
+var menu =`Nightcore  -  Rock mix  
 01:52 ━━━●───── 03:08
      ⇆ㅤㅤ ◁ㅤ ❚❚ㅤ ▷ㅤ ㅤ↻﻿
-➥ *INFO*           ılıılıılıılıılıılı
+          ılıılıılıılıılıılı
+➥ *INFO* 
   ╠ Prefijo : ⌜ ${prefix} ⌟  
+  
 ➥ *SPAM :3*
   ╠ ${prefix}swt ⌜@Tag⌟ | # | ⌜Text⌟ 
-  ╠ ${prefix}spam ⌜Text⌟ | # `
-const menu2 = `➥ *COMANDOS*
+  ╠ ${prefix}spam ⌜Text⌟ | # 
+
+➥ *COMANDOS*
   ╠ ${prefix}s / ticker
   ╠ ${prefix}toimg
   ╠ ${prefix}imagen + ⌜Text⌟
+  ╠ ${prefix}kick + ⌜@Tag⌟
+  ╠ ${prefix}antigp 1/0
+
 ➥ *AUDIO*
   ╠ ${prefix}tts ⌜Code⌟ + ⌜Text⌟
   ╠ ${prefix}play + ⌜Text⌟
   ╠ ${prefix}play2 + ⌜Text⌟
   ╠ ${prefix}ytmp4 + ⌜Link⌟ `	
-faketokoforwaded(`${menu1}\n${menu2}`)							
+faketokoforwaded(menu)							
 break	
 		
 case 'swt':
