@@ -203,7 +203,7 @@ const mentionByReply = type == "extendedTextMessage" && mek.message.extendedText
 			const isCmd = body.startsWith(prefix)
 			const q = args.join(' ')
 			const arg = budy.slice(command.length + 1, budy.length)
-			selectedButton = (type == 'buttonsResponseMessage') ? sam.message.buttonsResponseMessage.selectedButtonId : ''
+			//selectedButton = (type == 'buttonsResponseMessage') ? sam.message.buttonsResponseMessage.selectedButtonId : ''
 
 			mess = {
 				wait: 'Relaja la raja😎\n\n❗Loading...❗',
