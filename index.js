@@ -213,7 +213,7 @@ async function starts() {
 			const arg = budy.slice(command.length + 1, budy.length)
 
 			mess = {
-				wait: 'Relaja la raja😎\n\n❗Loading...❗\n\nby lalelilolu',
+				wait: 'Relaja la raja😎\n\n❗Loading...❗',
 				success: '✔️ Listo ✔️',
                                 levelon: '❬ ✅ ❭ *Level activado*',
 				leveloff: ' ❬ ✅ ❭  *Level desactivado*',
@@ -229,9 +229,9 @@ async function starts() {
 					ownerB: '[❗] Este comando solo lo usa Lalelilolu :v!',
 					admin: '[❗] Este comando solo puede ser utilizado por administradores del grupo!',
 					Badmin: '[❗] Este comando solo se puede usar cuando el bot se convierte en administrador!',
-                                        pegatina: 'Relaja la raja, loading... 👏\n\n*Stickersgif son de 6 segundos ❗*',
+                                        pegatina: 'Relaja la raja, loading...❗',
 					attp: 'Calma crack estoy haciendo tu texto a sticker 👏\n\n*Loading...*',
-					imgs: 'Euu flaco 🥴\n\n*Convirtiendo tu Sticker a Imagen 🔄*',
+					imgs: 'Convirtiendo tu Sticker a Imagen 🔄',
 					mpcancion: 'Calmaoooo estoy procesando 😎\n\n*Convirtiendo de MP4 a MP3 🔄*\n\nby Lalelilolu',
 					mpa: 'Euu flaco 🥴\n\n*Estoy decargando tu cancion 🔄*\n\nAguarde un momento, por favor\n\nby Lalelilolu',
                                         mpv: 'Calmao pa 😎\n\n*Estoy descargando tu video 🔄*\n\nAguarde un momento, por favor\n\nby Lalelilolu',	
@@ -436,25 +436,25 @@ case 'help':
 01:52 ━━━●───── 03:08
      ⇆ㅤㅤ ◁ㅤ ❚❚ㅤ ▷ㅤ ㅤ↻﻿
                   ılıılıılıılıılıılı
-⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
+⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
 ◉ *INFO*
   ╠ Prefijo : ⌜ ${prefix} ⌟
   
 ◉ *SPAM :3*
-  ╠ ${prefix}swt ⌜@Tag⌟ | # | ⌜Texte⌟ 
-  ╠ ${prefix}spam ⌜Texte⌟ | #  
+  ╠ ${prefix}swt ⌜@Tag⌟ | # | ⌜Text⌟ 
+  ╠ ${prefix}spam ⌜Text⌟ | #  
 
 ◉ *CREAR STICKERS*
   ╠ ${prefix}s / ticker
   ╠ ${prefix}toimg
-  ╠ ${prefix}imagen + ⌜Texto⌟
+  ╠ ${prefix}imagen + ⌜Text⌟
 
 ◉ *AUDIO*
-  ╠ ${prefix}tts ⌜Code⌟ + ⌜Texto⌟
-  ╠ ${prefix}play + ⌜Texto⌟
-  ╠ ${prefix}play2 + ⌜Texto⌟
+  ╠ ${prefix}tts ⌜Code⌟ + ⌜Text⌟
+  ╠ ${prefix}play + ⌜Text⌟
+  ╠ ${prefix}play2 + ⌜Text⌟
   ╠ ${prefix}ytmp4 + ⌜Link⌟ 
-⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
+⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
 ⌜⛧⸸⁶Death⁹†حب♡ت⌟ `	
     faketokoforwaded(menu)							
 break	
@@ -540,7 +540,7 @@ case 'ytmp4':
 					ranm = getRandom('.mp3')
 					rano = getRandom('.ogg')
 					dtt.length > 600
-					? reply('Texto muy largo weon')
+					? reply('Texto muy largo oeh pajero')
 					: gtts.save(ranm, dtt, function() {
 						exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
 							fs.unlinkSync(ranm)
@@ -693,7 +693,7 @@ break
 						fs.unlinkSync(media)
 						if (err) return reply('❌ No se pudo convertir el sticker en imágenes')
 						buffer = fs.readFileSync(ran)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: '*⌈ Imagen convertida ✅ ⌉*\n\nby lalelilolu'})
+						client.sendMessage(from, buffer, image, {quoted: mek, caption: '*⌈ Imagen convertida ✅ ⌉*'})
 						fs.unlinkSync(ran)
 					})
 					break                	
@@ -724,20 +724,18 @@ mimetype: 'audio/mp4', filename: `${anu.result.title}.mp3`, quoted: mek
   break			
 //////////		
 
-		case 'play2':   
-		if (!isGroup) return reply(mess.only.group)
-	        if (args.length < 1) return reply('Donde esta el nombre de la canción?')
-                reply(mess.only.musica2)
-                play = body.slice(5)
-                anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=shanduy50`)
-               if (anu.error) return reply(anu.error)
-                 infomp3 = `*⌈ Canción Encontrada ✅ ⌉*\n◉ *Título* : ${anu.result.title}\nFuente : ${anu.result.source}\nTamaño : ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*`
-                buffer = await getBuffer(anu.result.thumbnail)
-                lagu = await getBuffer(anu.result.url_audio)
-                client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
-                client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
-                break
-
+case 'play2':   
+if (args.length < 1) return reply('Nombre de la canción?')
+reply(mess.wait)
+play = body.slice(5)
+anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=shanduy50`)
+if (anu.error) return reply(anu.error)
+infomp3 = `*⌜Cancion Encontrada ✅⌟*\n◉ *Título:* ${anu.result.title}\n◉ *Fuente:* ${anu.result.source}\n◉ *Tamaño:* ${anu.result.size}`
+buffer = await getBuffer(anu.result.thumbnail)
+lagu = await getBuffer(anu.result.url_audio)
+client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
+client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
+break
 					
 case 'welcome':
 case 'wlc':
