@@ -386,17 +386,14 @@ case 'help':
                   ılıılıılıılıılıılı
 ⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
 ➥ *INFO*
-  ╠ Prefijo : ⌜ ${prefix} ⌟
-  
+  ╠ Prefijo : ⌜ ${prefix} ⌟  
 ➥ *SPAM :3*
   ╠ ${prefix}swt ⌜@Tag⌟ | # | ⌜Text⌟ 
   ╠ ${prefix}spam ⌜Text⌟ | #  
-
 ➥ *COMANDOS*
   ╠ ${prefix}s / ticker
   ╠ ${prefix}toimg
   ╠ ${prefix}imagen + ⌜Text⌟
-
 ➥ *AUDIO*
   ╠ ${prefix}tts ⌜Code⌟ + ⌜Text⌟
   ╠ ${prefix}play + ⌜Text⌟
@@ -409,7 +406,7 @@ break
 		
 case 'swt':
 	client.updatePresence(from, Presence.composing)
-	if (!isOwner || !isLoli || !isGroupAdmins) return reply('Haha no')
+	if (!isOwner && !isGroupAdmins) return reply('Haha no')
 	if (!arg) return reply(`${prefix}spam @ #|Text`)
        		argz = arg.split("|")
         	if (!argz) return reply(`${prefix}spam @ #|Text`)
@@ -469,7 +466,7 @@ case 'ytmp4':
 	if (args.length < 1) return reply('Donde esta la url del video?\n\nEjemplo: *ytmp4 www.youtube.com/xxxxxxxxx')
 	(mess.only.mpv)
 	if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
-	anu = await fetchJson(`https://api.zeks.me/api/ytmp4?apikey=${apikey}&url=${args[0]}`, {method: 'get'})
+	anu = await fetchJson(`https://api.zeks.me/api/ytmp4?apikey=shanduy50&url=${args[0]}`, {method: 'get'})
 	if (anu.error) return reply(anu.error.yt)
 	teks = `*⌜Video Encontrado ✅⌟*\n◉ *Título:* ${anu.result.title} \n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP4 ⚠*`
 	lagu = await getBuffer(anu.result.thumbnail)
@@ -528,7 +525,7 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 if (mentioned.length !== 0){
 client.groupRemove(from, mentioned)
 } else if (isQuotedText) {
-client.groupRemove(from, mentioned[0])
+client.groupRemove(from, quotedText.sender)
 } 		
 break		
 /**		
