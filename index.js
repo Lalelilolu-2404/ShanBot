@@ -69,6 +69,8 @@ const vcard = 'BEGIN:VCARD\n' // Tarjeta de contacto
             + 'ORG:Lalelilolu;\n' // Propietario
             + 'TEL;type=CELL;type=VOICE;waid=33749258491:+33 7 49 25 84 91\n' // ID de WhatsApp + número de teléfono
             + 'END:VCARD'
+
+selectedButton = (type == 'buttonsResponseMessage') ? sam.message.buttonsResponseMessage.selectedButtonId : ''
 /******FIN DE ENTRADA VCARD******/
 
 prefix = '.'
