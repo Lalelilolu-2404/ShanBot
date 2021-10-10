@@ -422,7 +422,7 @@ const faketokoforwaded = (teks) => {
 						"mimetype": "image/jpeg",
 						"jpegThumbnail": fs.readFileSync(`./assets/menuimg.jpg`)
 					},
-					"title": `UwU : ${pushname}, ${ucapanWaktu}`,
+					"title": `UwU : ${pushname}`,
 					"retailerId": "Self Bot",
 					"productImageCount": 1
 				},
@@ -444,8 +444,7 @@ case 'menu':
 case 'help':
     var menu = `${help(prefix)}
     `
-    faketokoforwaded(menu)		
-					
+    faketokoforwaded(menu)							
 break	
 		
 case 'swt':
