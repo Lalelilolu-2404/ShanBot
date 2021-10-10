@@ -432,8 +432,36 @@ switch(command) {
 
 case 'menu':
 case 'help':
-    var menu = `${help(prefix)}
-    `
+    var menu = ` 	
+⌜⛧⸸⁶Death⁹†حب♡ت⌟  
+Nightcore  -  Rock mix  
+01:52 ━━━●───── 03:08
+     ⇆ㅤㅤ ◁ㅤ ❚❚ㅤ ▷ㅤ ㅤ↻﻿
+                  ılıılıılıılıılıılı
+⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
+◉ *INFORMACION*
+  ╠ ○ Comando: ⌜ ${prefix} ⌟
+  ╠ ○ ${prefix}kick
+  ╠ ○ ${prefix}leave
+  
+◉ *SPAM :3*
+  ╠ ○ ${prefix}swt ⌜@Tag⌟ | # de veces | ⌜Texte⌟ 
+  ╠ Spam al privado, max 50 #. Solo admins
+  ╠ ○ ${prefix}spam ⌜Texte⌟ | # de veces 
+  ╚ Spam grupo, max 30. Todos 
+
+◉ *CREAR STICKERS*
+  ╠ ○ ${prefix}s / ticker
+  ╠ ○ ${prefix}toimg
+  ╠ ○ ${prefix}imagen + ⌜Texto⌟
+  ╠ ○ ${prefix}pin + ⌜Texto⌟
+
+◉ *AUDIO*
+  ╠ ○ ${prefix}tts ⌜Code⌟ + ⌜Texto⌟
+  ╠ ○ ${prefix}play + ⌜Texto⌟
+  ╠ ○ ${prefix}play2 + ⌜Texto⌟
+  ╠ ○ ${prefix}ytmp4 + ⌜Link⌟ 
+`	
     faketokoforwaded(menu)							
 break	
 		
@@ -465,6 +493,22 @@ case 'swt':
 		}
 	  }
 break			
+	
+case 'spam':
+                if (!arg) return reply(`${prefix}spam Text|#`)
+                argz = arg.split("|")
+                if (!argz) return reply(`${prefix}spam Text|#`)
+                if (isNaN(argz[1])) return reply(`# de veces?`)
+			if (argz[1] > 30) {
+				spst = "Haha no"
+				Noperro = fs.readFileSync(`./src/stickers2/${spst}.webp`)
+				client.sendMessage(from, Noperro, MessageType.sticker, {quoted: mek})
+				argz[1] = 10
+			}
+                for (let i = 0; i < argz[1]; i++){
+                client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
+                }
+break
 		
 case 'self':
           	if (!isOwner) return fakestatus('No eres mi dueño UnU')
@@ -473,7 +517,7 @@ case 'self':
          	banChats = true
           	fakestatus(`「 *Privado UwU* 」`)
 break
- //Set Owner For gc
+
 case 'public':
           	if (!isOwner) return fakestatus('No eres mi dueño UnU')
           	if (banChats === false) return
@@ -536,26 +580,17 @@ case 'ytmp4':
 					}, 0)
               break
 
-                                      case 'kick':
-					client.updatePresence(from, Presence.composing) 
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marca al que vamos a funar')
-					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-					if (mentioned.length > 1) {
-						teks = 'Pedido recibido, chao nefastooo 👋 :\n'
-						for (let _ of mentioned) {
-							teks += `@${_.split('@')[0]}\n`
-						}
-						mentions(teks, mentioned, true)
-						client.groupRemove(from, mentioned)
-					} else {
-						mentions(`Pedido recibido, chao putit@ 👋 : @${mentioned[0].split('@')[0]}`, mentioned, true)
-						client.groupRemove(from, mentioned)
-					client.sendMessage(mentioned, 'Chao put@ gord@', text)
-					}
-					break
+case 'kick':
+if (!isGroup) return reply(mess.only.group)
+if (!isGroupAdmins) return reply(mess.only.admin)
+if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+if (mentioned.length !== 0){
+client.groupRemove(from, mentioned)
+} else if (isQuotedText) {
+client.groupRemove(from, mentioned)
+} 		
+break		
 /**		
         case 'kickall':
             if (!isGroup) return reply(mess.only.group)
@@ -747,7 +782,7 @@ case 'imagen':
             });
 break
 		
-case 'pinterest':
+case 'pin':
 	tels = body.slice(11)
 	if (args.length < 1) return reply('Ingresa lo que quieres buscar')
 	client.updatePresence(from, Presence.composing)
