@@ -314,6 +314,7 @@ async function starts() {
 
 			colors = ['red','white','black','blue','yellow','green']
 			const isMedia = (type === 'imageMessage' || type === 'videoMessage')
+			const isQuoted = type == 'extendedTextMessage'
 			const isQuotedText = type === 'extendedTextMessage' && content.includes('textMessage')
 			const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
 			const isQuotedVideo = type === 'extendedTextMessage' && content.includes('videoMessage')
@@ -378,7 +379,7 @@ async function starts() {
                         "imageMessage": {
                             "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",
                             "mimetype": "image/jpeg",
-                            "caption": `Holi cosita ^-^${pushname}`,
+                            "caption": `Holi cosita ^-^`,
                             "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=",
                             "fileLength": "28777",
                             "height": 1080,
@@ -431,36 +432,30 @@ switch(command) {
 
 case 'menu':
 case 'help':
-    var menu = ` 	
-⌜⛧⸸⁶Death⁹†حب♡ت⌟  
-Nightcore  -  Rock mix  
+    var menu =`Nightcore  -  Rock mix  
 01:52 ━━━●───── 03:08
      ⇆ㅤㅤ ◁ㅤ ❚❚ㅤ ▷ㅤ ㅤ↻﻿
                   ılıılıılıılıılıılı
-⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
-◉ *INFORMACION*
-  ╠ ○ Comando: ⌜ ${prefix} ⌟
-  ╠ ○ ${prefix}kick
-  ╠ ○ ${prefix}leave
+⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
+◉ *INFO*
+  ╠ Prefijo : ⌜ ${prefix} ⌟
   
 ◉ *SPAM :3*
-  ╠ ○ ${prefix}swt ⌜@Tag⌟ | # de veces | ⌜Texte⌟ 
-  ╠ Spam al privado, max 50 #. Solo admins
-  ╠ ○ ${prefix}spam ⌜Texte⌟ | # de veces 
-  ╚ Spam grupo, max 30. Todos 
+  ╠ ${prefix}swt ⌜@Tag⌟ | # | ⌜Texte⌟ 
+  ╠ ${prefix}spam ⌜Texte⌟ | #  
 
 ◉ *CREAR STICKERS*
-  ╠ ○ ${prefix}s / ticker
-  ╠ ○ ${prefix}toimg
-  ╠ ○ ${prefix}imagen + ⌜Texto⌟
-  ╠ ○ ${prefix}pin + ⌜Texto⌟
+  ╠ ${prefix}s / ticker
+  ╠ ${prefix}toimg
+  ╠ ${prefix}imagen + ⌜Texto⌟
 
 ◉ *AUDIO*
-  ╠ ○ ${prefix}tts ⌜Code⌟ + ⌜Texto⌟
-  ╠ ○ ${prefix}play + ⌜Texto⌟
-  ╠ ○ ${prefix}play2 + ⌜Texto⌟
-  ╠ ○ ${prefix}ytmp4 + ⌜Link⌟ 
-`	
+  ╠ ${prefix}tts ⌜Code⌟ + ⌜Texto⌟
+  ╠ ${prefix}play + ⌜Texto⌟
+  ╠ ${prefix}play2 + ⌜Texto⌟
+  ╠ ${prefix}ytmp4 + ⌜Link⌟ 
+⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
+⌜⛧⸸⁶Death⁹†حب♡ت⌟ `	
     faketokoforwaded(menu)							
 break	
 		
@@ -475,20 +470,18 @@ case 'swt':
 	let target = argz[0]
 	if (mentioned.length = 1) {
 		if (argz[1] > 50) {
-			spst = "Haha no"
-			Noperro = fs.readFileSync(`./src/stickers2/${spst}.webp`)
+			Noperro = fs.readFileSync(`./src/stickers2/Haha no.webp`)
 			client.sendMessage(from, Noperro, MessageType.sticker, {quoted: mek})
 			argz[1] = 10}
 		for (let i = 0; i < argz[1]; i++){
-		sendMess(mentioned[0], ` *${argz[2].trim()}* `)
+		sendMess(mentioned[0], `${argz[2].trim()}`)
 		}
 	} else if (mentioned.length < 1) {
 		Newtarget = argz[0].trim()
 		targetspam = Newtarget+"@s.whatsapp.net"
-		client.sendMessage(from, Newtarget, MessageType.text, {sendEphemeral: true})
-		client.sendMessage(from, targetspam, MessageType.text, {sendEphemeral: true})
+		client.sendMessage(from, targetspam, MessageType.text)
 		for (let i = 0; i < argz[1]; i++){
-		sendMess(targetspam, ` *${argz[2]}* `)
+		sendMess(targetspam, `${argz[2]}`)
 		}
 	  }
 break			
@@ -505,7 +498,7 @@ case 'spam':
 				argz[1] = 10
 			}
                 for (let i = 0; i < argz[1]; i++){
-                client.sendMessage(from, argz[0], MessageType.text, {sendEphemeral: true})
+                client.sendMessage(from, argz[0], MessageType.text)
                 }
 break
 		
@@ -539,7 +532,7 @@ case 'ytmp4':
 			
                                  case 'tts':
 				   client.updatePresence(from, Presence.recording) 
-				   if (args.length < 1) return client.sendMessage(from, 'Cual es el código de idioma?\n\nPara saber el codigo de idioma coloque el comando ${prefix}idioma', text, {quoted: mek})
+				   if (args.length < 1) return client.sendMessage(from, 'Código de idioma?', text, {quoted: mek})
 				   if (!isGroup) return reply(mess.only.group)
 					const gtts = require('./lib/gtts')(args[0])
 					if (args.length < 2) return client.sendMessage(from, 'Y el texto?', text, {quoted: mek})
@@ -587,7 +580,7 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 if (mentioned.length !== 0){
 client.groupRemove(from, mentioned)
 } else if (isQuotedText) {
-client.groupRemove(from, mentioned)
+client.groupRemove(from, mentioned[0])
 } 		
 break		
 /**		
@@ -746,30 +739,31 @@ mimetype: 'audio/mp4', filename: `${anu.result.title}.mp3`, quoted: mek
                 break
 
 					
-                                case 'welcome':
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (!isGroupAdmins) return reply(mess.only.Badmin)
-					if (args.length < 1) return reply('Para activar está funcion coloca *welcome 1')
-					if (Number(args[0]) === 1) {
-						if (isWelkom) return reply('Ya esta activada!!!')
-						welkom.push(from)
-						fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
-						reply('❬ ✅ ❭ La funcion de bienvenida esta habilitada en este grupo')
-					} else if (Number(args[0]) === 0) {
-						welkom.splice(from)
-						fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
-						reply('❬ ✅ ❭ La funcion de bienvenida esta deshabilitada en este grupo')
-					} else {
-						reply('Escribe el comando 1 para activarlo y 0 para desactivarlo Ejemplo: *welcome 1')
-					}
-					break
+case 'welcome':
+case 'wlc':
+if (!isGroup) return reply(mess.only.group)
+if (!isGroupAdmins) return reply(mess.only.admin)
+if (!isGroupAdmins) return reply(mess.only.Badmin)
+if (args.length < 1) return reply('Para activar está funcion coloca *welcome 1')
+	if (Number(args[0]) === 1) {
+	if (isWelkom) return reply('Ya esta activada!!!')
+	welkom.push(from)
+	fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
+	reply('❬ ✅ ❭ Función habilitada')
+	} else if (Number(args[0]) === 0) {
+	welkom.splice(from)
+	fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
+	reply('❬ ✅ ❭ Función deshabilitada')
+	} else {
+	reply('wlc 1 /wlc 0')
+	}
+break
 
-                        case 'delete':
-					case 'del':
-					if (!isGroup)return reply(mess.only.group)
-		                        client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
-			break	
+case 'delete':
+case 'del':
+	if (!isGroup)return reply(mess.only.group)
+	client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
+break	
 			
 case 'imagen':
             if (args.length < 1) return reply('Ingrese texto!')
@@ -780,40 +774,14 @@ case 'imagen':
             client.sendMessage(from,{url:images},image,{quoted:mek})
             });
 break
-		
-case 'pin':
-	tels = body.slice(11)
-	if (args.length < 1) return reply('Ingresa lo que quieres buscar')
-	client.updatePresence(from, Presence.composing)
-	try {
-	data = await fetchJson(`https://api.fdci.se/sosmed/rep.php?gambar=${tels}`, {
-	method: 'get'
-	})
-	reply(mess.wait)
-	n = JSON.parse(JSON.stringify(data));
-	nimek = n[Math.floor(Math.random() * n.length)];
-	pok = await getBuffer(nimek)
-	client.sendMessage(from, pok, image, {quoted: mek, caption: `Resultado : *${tels}*`})
 
-} catch {
-  reply(mess.ferr)
-}
-break		
-
-/***Stickers..............***/
-default:
-		
-///Loli audios////
-		
-	if (isOwner){	
+default:		
         if (budy.startsWith(`Jaa`)) {
 		if (budy.endsWith(`Jaa`)){
         	const none = fs.readFileSync('./anishan/Jaa.mp3');
 		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
                   }
 		}
-	}					
-
         if (budy.startsWith(`Concha`)) {
 		if(budy.endsWith(`Concha`)){
         	const none = fs.readFileSync('./anishan/Concha.mp3');
