@@ -123,14 +123,14 @@ async function starts() {
 		try {
 			const mdata = await client.groupMetadata(anu.jid)
 			console.log(anu)
-			const teksyy =`〘 ${mdata.subject} 〙
+			if (anu.action == 'add') {
+				num = anu.participants[0]
+const teksyy =`〘 ${mdata.subject} 〙
 ╔═══════════════════
 ╠≽️ Nick : @${num.split('@')[0]}
 ╠≽️ Legal : Si hay pelito no hay delito
 ╚═══════════════════
 `
-			if (anu.action == 'add') {
-				num = anu.participants[0]
 				try {
 				ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
 				} catch {
@@ -140,6 +140,12 @@ async function starts() {
 client.sendMessage(from, buffxy, image, {quoted: mek, caption: teksyy, contextInfo: {"mentionedJid": [num]}})				
 			} else if (anu.action == 'promote') {
 				num = anu.participants[0]
+const teksyy =`〘 ${mdata.subject} 〙
+╔═══════════════════
+╠≽️ Nick : @${num.split('@')[0]}
+╠≽️ Legal : Si hay pelito no hay delito
+╚═══════════════════
+`
 				try {
 				ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
 				} catch {
