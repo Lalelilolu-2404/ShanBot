@@ -137,16 +137,7 @@ const teksyy =`〘 ${mdata.subject} 〙
 ╠≽️ Legal : Si hay pelito no hay delito
 ╚═══════════════════
 `
-sendButImage(from, `${teksyy}`, `Denle una paloma a Anna o los folla xd\nPansito para Cherry\nᴱⁿᵗʳᵃⁿᵈᵒ ᶠᵃᵛᵒʳ ᵈᵉ ᵉⁿᵛᶦᵃʳ ᶜᵉᵖᵉᶜᶦᵗᵒ ᵒ ˢᵉʳᵃⁿ ᵉˡᶦᵐᶦⁿᵃᵈᵒˢ ˣᵈ\n© Creator\n⛧⸸⁶Death⁹†حب♡ت`, buffxy,
-				[{buttonId: 'lau1', 
-				buttonText: 
-				{displayText: 'Uwu :3'}, 
-				type: 1},
-				{buttonId: 'lau2',
-				buttonText: 
-				{displayText: 'Hola'}, 
-				type: 1}], 
-				{contextInfo: {"mentionedJid": [num]}})				
+client.sendMessage(from, buffxy, image, { caption: teksyy, contextInfo: {"mentionedJid": [num]}})				
 			} else if (anu.action == 'promote') {
 				num = anu.participants[0]
 				try {
