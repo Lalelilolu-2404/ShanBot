@@ -123,6 +123,12 @@ async function starts() {
 		try {
 			const mdata = await client.groupMetadata(anu.jid)
 			console.log(anu)
+			const teksyy =`〘 ${mdata.subject} 〙
+╔═══════════════════
+╠≽️ Nick : @${num.split('@')[0]}
+╠≽️ Legal : Si hay pelito no hay delito
+╚═══════════════════
+`
 			if (anu.action == 'add') {
 				num = anu.participants[0]
 				try {
@@ -131,13 +137,7 @@ async function starts() {
 				ppimg = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
 				}
 				let buffxy = await getBuffer(ppimg)
-const teksyy =`〘 ${mdata.subject} 〙
-╔═══════════════════
-╠≽️ Nick : @${num.split('@')[0]}
-╠≽️ Legal : Si hay pelito no hay delito
-╚═══════════════════
-`
-client.sendMessage(from, buffxy, image, { caption: teksyy, contextInfo: {"mentionedJid": [num]}})				
+client.sendMessage(from, buffxy, image, {quoted: mek, caption: teksyy, contextInfo: {"mentionedJid": [num]}})				
 			} else if (anu.action == 'promote') {
 				num = anu.participants[0]
 				try {
@@ -146,13 +146,7 @@ client.sendMessage(from, buffxy, image, { caption: teksyy, contextInfo: {"mentio
 				ppimg = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
 				}
 				let buffxy = await getBuffer(ppimg)
-const teksyy =`〘 ${mdata.subject} 〙
-╔═══════════════════
-╠≽️ Nick : @${num.split('@')[0]}
-╠≽️ Legal : Si hay pelito no hay delito
-╚═══════════════════
-`
-   client.sendMessage(from, buffxy, image, { caption: teksyy, contextInfo: {"mentionedJid": [num]}})	
+client.sendMessage(from, buffxy, image, {quoted: mek, caption: teksyy, contextInfo: {"mentionedJid": [num]}})	
 			} 
 		}catch (e) {
 			console.log('Error : %s', color(e, 'red'))
@@ -177,12 +171,13 @@ const teksyy =`〘 ${mdata.subject} 〙
 			if (mek.key.fromMe) return
 			global.prefix
 			global.blocked
-const mentionByTag = type == "extendedTextMessage" && mek.message.extendedTextMessage.contextInfo != null ? mek.message.extendedTextMessage.contextInfo.mentionedJid : []
-const mentionByReply = type == "extendedTextMessage" && mek.message.extendedTextMessage.contextInfo != null ? mek.message.extendedTextMessage.contextInfo.participant || "" : ""
 			const content = JSON.stringify(mek.message)
 			const apikey = setting.apikey
 			const from = mek.key.remoteJid
 			const type = Object.keys(mek.message)[0]
+const mentionByTag = type == "extendedTextMessage" && mek.message.extendedTextMessage.contextInfo != null ? mek.message.extendedTextMessage.contextInfo.mentionedJid : []
+const mentionByReply = type == "extendedTextMessage" && mek.message.extendedTextMessage.contextInfo != null ? mek.message.extendedTextMessage.contextInfo.participant || "" : ""
+
 			const { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio, product } = MessageType
 			const time = moment.tz('America/Guayaquil').format('HH:mm:ss')
 			const date = moment.tz('America/Guayaquil').format('DD/MM/YY')
