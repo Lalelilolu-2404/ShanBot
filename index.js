@@ -137,7 +137,7 @@ const teksyy =`〘 ${mdata.subject} 〙
 				ppimg = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
 				}
 				let buffxy = await getBuffer(ppimg)
-client.sendMessage(mdata.id, buffxy, image, {quoted: mek, caption: teksyy, contextInfo: {"mentionedJid": [num]}})				
+client.sendMessage(mdata.id, buffxy, image, {caption: teksyy, contextInfo: {"mentionedJid": [num]}})				
 			} else if (anu.action == 'promote') {
 				num = anu.participants[0]
 const teksyy =`〘 ${mdata.subject} 〙
@@ -152,7 +152,7 @@ const teksyy =`〘 ${mdata.subject} 〙
 				ppimg = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
 				}
 				let buffxy = await getBuffer(ppimg)
-client.sendMessage(mdata.id, buffxy, image, {quoted: mek, caption: teksyy, contextInfo: {"mentionedJid": [num]}})	
+client.sendMessage(mdata.id, buffxy, image, {caption: teksyy, contextInfo: {"mentionedJid": [num]}})	
 			} 
 		}catch (e) {
 			console.log('Error : %s', color(e, 'red'))
