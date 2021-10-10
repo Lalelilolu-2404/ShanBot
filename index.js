@@ -88,7 +88,8 @@ const {
 	author,
 	pack
 } = settingan
-
+///
+const antilink = JSON.parse(fs.readFileSync('./src/antilink.json'))
 /******INICIO DE FUNCIONES ENTRADA******/
 
 function addMetadata(packname, author) {	
@@ -176,47 +177,8 @@ async function starts() {
 				num = anu.participants[0]
 				teks = `NOOOO, se nos fué @${num.split('@')[0]}👋\n\nNadie te extrañará 😎`
 				client.sendMessage(mdata.id, teks, MessageType.text, {contextInfo: {"mentionedJid": [num]}})
-			} else if (anu.action == 'promote') {
-			const mdata = await client.groupMetadata(anu.jid)
-			num = anu.participants[0]
-			try {
-					ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
-				} catch {
-					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
-				}
-			let buff = await getBuffer(ppimg)
-			
-			teks = `𝙉𝙐𝙀𝙑𝙊 𝘼𝙆𝙈𝙄𝙉
-			
-\`\`\`Nombre :\`\`\` ${num.replace('@s.whatsapp.net', '')}
-\`\`\`Usuario :\`\`\` @${num.split('@')[0]}
-\`\`\`Date : NOW\`\`\` 
-\`\`\`Grupo :\`\`\` ${mdata.subject}
-${promote}`
-			client.sendMessage(mdata.id, buff, MessageType.image, {caption : teks, contextInfo: {mentionedJid: [num]}, quoted: { "key": { "participant": `${numbernye}`, "remoteJid": `Kntl`, "fromMe": false, "id": "B391837A58338BA8186C47E51FFDFD4A" }, "message": { "documentMessage": { "jpegThumbnail": buff, "mimetype": "application/octet-stream", "title": `PROMOTE`, "fileLength": "36", "pageCount": 0, "fileName": `_Welcome_` }}, "messageTimestamp": "1614069378", "status": "PENDING"}})
-		} else if (anu.action == 'demote') {
-			num = anu.participants[0]
-			const mdata = await client.groupMetadata(anu.jid)
-			num = anu.participants[0]
-			try {
-					ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
-				} catch {
-					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
-				}
-			let buff = await getBuffer(ppimg)
-			teks = `𝙎𝙀 𝙈𝘼𝙏𝙊 𝘼 𝙐𝙉 𝘼𝙆𝙈𝙄𝙉
-			
-\`\`\`Nombre :\`\`\` ${num.replace('@s.whatsapp.net', '')}
-\`\`\`Usuario :\`\`\` @${num.split('@')[0]}
-\`\`\`Dato : Reciente\`\`\`
-\`\`\`Grupo :\`\`\` ${mdata.subject}
-${demote}`
-			client.sendMessage(mdata.id, teks, MessageType.text, {contextInfo: {mentionedJid: [num]}, quoted: { "key": { "participant": `${numbernye}`, "remoteJid": `Ktl`, "fromMe": false, "id": "B391837A58338BA8186C47E51FFDFD4A" }, "message": { "documentMessage": { "jpegThumbnail": buff, "mimetype": "application/octet-stream", "title": `DEMOTE`, "fileLength": "36", "pageCount": 0, "fileName": `_Welcome_` }}, "messageTimestamp": "1614069378", "status": "PENDING"}})
-		}
-			
-/////////				
-			
-		} catch (e) {
+			} 
+		}catch (e) {
 			console.log('Error : %s', color(e, 'red'))
 		}
 	})
@@ -292,6 +254,9 @@ ${demote}`
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
 			const groupName = isGroup ? groupMetadata.subject : ''
+			
+			const isAntiLink = isGroup ? antilink.includes(from) : false
+			
 			const groupId = isGroup ? groupMetadata.jid : ''
 			const groupMembers = isGroup ? groupMetadata.participants : ''
 			const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
@@ -340,26 +305,23 @@ ${demote}`
 			//let pushname = client.contacts[sender] != undefined ? client.contacts[sender].vname || client.contacts[sender].notify: undefined
 			let pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
 		
-			  
+	if (budy.includes("://chat.whatsapp.com/")){
+		if (!isGroup) return
+		if (!isAntiLink) return
+		if (isGroupAdmins) return reply('Eres un administrador del grupo, así que no te prohibiré el uso de enlaces :)')
+		client.updatePresence(from, Presence.composing)
+		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
+		reply(`*LINK DE WHATSAPP DETECTADO 📢* ${sender.split("@")[0]} Usted será expulsado del grupo`)
+		setTimeout( () => {
+			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
+		}, 0)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("Adios mi loco")
+		}, 0)
+	}  
 
 	        //FUNCION DE LEVEL
-            if (isGroup && isLevelingOn) {
-            const currentLevel = getLevelingLevel(sender)
-            const checkId = getLevelingId(sender)
-            try {
-                if (currentLevel === undefined && checkId === undefined) addLevelingId(sender)
-                const amountXp = Math.floor(Math.random() * 10) + 500
-                const requiredXp = 5000 * (Math.pow(2, currentLevel) - 1)
-                const getLevel = getLevelingLevel(sender)
-                addLevelingXp(sender, amountXp)
-                if (requiredXp <= getLevelingXp(sender)) {
-                    addLevelingLevel(sender, 1)
-                    await reply(`*「 LEVEL UP 」*\n\n➸ *Nombre*: ${sender}\n➸ *XP*: ${getLevelingXp(sender)}\n➸ *Level*: ${getLevel} -> ${getLevelingLevel(sender)}\n\nFelicidades weon!! 🎉🎉`)
-                }
-            } catch (err) {
-                console.error(err)
-            }
-        }
 
 			colors = ['red','white','black','blue','yellow','green']
 			const isMedia = (type === 'imageMessage' || type === 'videoMessage')
@@ -414,25 +376,6 @@ ${demote}`
 				})	
 
 			}
-/////////////////////////////////////////////////////////////
-	
-         // Ucapan Waktu
-        const hour_now = moment().format('HH')
-        var ucapanWaktu = 'wenas👋'
-        if (hour_now >= '03' && hour_now <= '10') {
-          ucapanWaktu = 'wenas👋'
-        } else if (hour_now >= '10' && hour_now <= '14') {
-          ucapanWaktu = 'wenas👋'
-        } else if (hour_now >= '14' && hour_now <= '17') {
-          ucapanWaktu = 'wenas👋'
-        } else if (hour_now >= '17' && hour_now <= '18') {
-          ucapanWaktu = 'wenas👋'
-        } else if (hour_now >= '18' && hour_now <= '23') {
-          ucapanWaktu = 'wenas🌚'
-        } else {
-          ucapanWaktu = 'wenas🌚'
-        }			
-			
 /////////////////////////////////			
 			
 	const fakestatus = (teks) => {
@@ -465,34 +408,6 @@ ${demote}`
                 }
             })
         }
-		
-        const fakegroup = (teks) => {
-            client.sendMessage(from, teks, text, {
-                quoted: {
-                    key: {
-                        fromMe: false,
-                        participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "@g.us" } : {})
-                    },
-                    message: {
-                        "imageMessage": {
-                            "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc",
-                            "mimetype": "image/jpeg",
-                            "caption": `Holi cosita UwU ${pushname}`,
-                            "fileSha256": "+Ia+Dwib70Y1CWRMAP9QLJKjIJt54fKycOfB2OEZbTU=",
-                            "fileLength": "28777",
-                            "height": 1080,
-                            "width": 1079,
-                            "mediaKey": "vXmRR7ZUeDWjXy5iQk17TrowBzuwRya0errAFnXxbGc=",
-                            "fileEncSha256": "sR9D2RS5JSifw49HeBADguI23fWDz1aZu4faWG/CyRY=",
-                            "directPath": "/v/t62.7118-24/21427642_840952686474581_572788076332761430_n.enc?oh=3f57c1ba2fcab95f2c0bb475d72720ba&oe=602F3D69",
-                            "mediaKeyTimestamp": "1610993486",
-                            "jpegThumbnail": fs.readFileSync('./assets/menuimg.jpg'),
-                            "scansSidecar": "1W0XhfaAcDwc7xh1R8lca6Qg/1bB4naFCSngM2LKO2NoP5RI7K+zLw=="
-                        }
-                    }
-                }
-            })
-        }	
 
 const faketokoforwaded = (teks) => {
 	anu = {
