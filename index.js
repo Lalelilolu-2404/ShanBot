@@ -448,14 +448,6 @@ case 'help':
 					
 break	
 		
-		case 'idioma':
-		client.sendMessage(from, bahasa(prefix, sender), text, {quoted: mek})
-		break
-
-		case 'desmenu':
-		client.sendMessage(from, desmenu(prefix, sender), text, {quoted: mek})
-		break
-		
 case 'swt':
 	client.updatePresence(from, Presence.composing)
 	if (!isOwner || !isLoli || !isGroupAdmins) return reply('Haha no')
@@ -500,8 +492,7 @@ case 'public':
           	fakestatus(`「 *PUBLICO OwO* 」`)
 break
 			
-		
-		case 'ytmp4':
+case 'ytmp4':
 		if (args.length < 1) return reply('Donde esta la url del video?\n\nEjemplo: *ytmp4 www.youtube.com/xxxxxxxxx')
 		if (!isUser) return reply(mess.only.daftarB)
 		reply(mess.only.mpv)
@@ -545,23 +536,7 @@ break
 					prefix = args[0]
 					reply(`El prefijo se ha cambiado correctamente a : ${prefix}`)
 					break
-			case 'todos':
-			case 'tagall':
-				client.updatePresence(from, Presence.composing) 
-					if (!isGroup) return reply(mess.only.group)
-                                     //   if (!isUser) return reply(mess.only.daftarB)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					members_id = []
-					teks = (args.length > 1) ? body.slice(8).trim() : ''
-					teks += `  \n╠➥Total : ${groupMembers.length}\n`
-					/**teks += `  Total : ${groupMembers.length}\n`**/
-					for (let mem of groupMembers) {
-						teks += `╠➥ @${mem.jid.split('@')[0]}\n`
-						members_id.push(mem.jid)
-					}
-					mentions('╔══✪〘 JUTSU EDO TENSEI 😎 〙✪══\n╠➥'+teks+'╚═〘 By Lalelilolu 〙', members_id, true)
-					break
-					
+
               case 'leave':
                     if (!isGroup) return reply(mess.only.group)
                     if (!isGroupAdmins) return reply(mess.only.admin)
