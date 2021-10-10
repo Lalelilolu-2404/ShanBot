@@ -261,7 +261,6 @@ async function starts() {
 			
 			const isSimi = isGroup ? samih.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
-			const isMe = meNumber.includes(sender) 
 			const isLoli = loliNumber.includes(sender) 
 			
                         const isUser = user.includes(sender)
