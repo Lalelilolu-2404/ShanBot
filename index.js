@@ -77,9 +77,6 @@ hit_today = []
 banChats = false
 offline = false
 fake = 'Lalelilolu ᵈᵃʳʸ⛥'
-numbernye = '0'
-promote = setting.promote
-demote = setting.demote
 public = false
 
 /******CONFIGURACION DE CARGA******/
@@ -171,11 +168,11 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-				teks = `Mi loco @${num.split('@')[0]}\nBienvenido a :*${mdata.subject}*😎\n\nRegístrate con el comando ${prefix}daftar ⌜Nombre⌟\n\nUtiliza ${prefix}help para ver los comandos\nOjito con el spam 🧐`
+				teks = `Mi loco @${num.split('@')[0]}\nBienvenido a :*${mdata.subject}*`
                           client.sendMessage(mdata.id, teks, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
-				teks = `NOOOO, se nos fué @${num.split('@')[0]}👋\n\nNadie te extrañará 😎`
+				teks = `NOOOO, se nos fué @${num.split('@')[0]}👋\n\nNadie te extrañará`
 				client.sendMessage(mdata.id, teks, MessageType.text, {contextInfo: {"mentionedJid": [num]}})
 			} 
 		}catch (e) {
@@ -237,9 +234,7 @@ async function starts() {
 					imgs: 'Euu flaco 🥴\n\n*Convirtiendo tu Sticker a Imagen 🔄*',
 					mpcancion: 'Calmaoooo estoy procesando 😎\n\n*Convirtiendo de MP4 a MP3 🔄*\n\nby Lalelilolu',
 					mpa: 'Euu flaco 🥴\n\n*Estoy decargando tu cancion 🔄*\n\nAguarde un momento, por favor\n\nby Lalelilolu',
-                                        mpv: 'Calmao pa 😎\n\n*Estoy descargando tu video 🔄*\n\nAguarde un momento, por favor\n\nby Lalelilolu',
-					/**musica: 'Calmao pa estoy bucando tu canción 😎\n\n*Recuerda colocar bien el nombre de la cancion o el link del video de youtube ❗*\n\nby shanduy',**/
-					daftarB: `「PERO PAAAAA!!!...」\n\nNo estas registrado en mi base de datos 😳 \nComando : ${prefix}daftar Nombre\nEjemplo : ${prefix}daftar Putit@`,
+                                        mpv: 'Calmao pa 😎\n\n*Estoy descargando tu video 🔄*\n\nAguarde un momento, por favor\n\nby Lalelilolu',	
 				}
 			}
     			const apakah = ['Si','No']
@@ -263,11 +258,6 @@ async function starts() {
 			const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
 			const isGroupAdmins = groupAdmins.includes(sender) || false
 			const isWelkom = isGroup ? welkom.includes(from) : false
-			const isNsfw = isGroup ? nsfw.includes(from) : false
-			
-			const isStick = isGroup ? stick.includes(from) : false
-			const isPacksito = isGroup ? packsito.includes(from) : false
-			const isInteract = isGroup ? interact.includes(from) : false
 			
 			const isSimi = isGroup ? samih.includes(from) : false
 			const isOwner = ownerNumber.includes(sender)
@@ -493,7 +483,6 @@ break
 			
 case 'ytmp4':
 		if (args.length < 1) return reply('Donde esta la url del video?\n\nEjemplo: *ytmp4 www.youtube.com/xxxxxxxxx')
-		if (!isUser) return reply(mess.only.daftarB)
 		reply(mess.only.mpv)
 		if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 		anu = await fetchJson(`https://api.zeks.me/api/ytmp4?apikey=${apikey}&url=${args[0]}`, {method: 'get'})
@@ -508,7 +497,6 @@ case 'ytmp4':
                                  case 'tts':
 				   client.updatePresence(from, Presence.recording) 
 				   if (args.length < 1) return client.sendMessage(from, 'Cual es el código de idioma?\n\nPara saber el codigo de idioma coloque el comando ${prefix}idioma', text, {quoted: mek})
-                                   /**if (!isUser) return reply(mess.only.daftarB)**/
 				   if (!isGroup) return reply(mess.only.group)
 					const gtts = require('./lib/gtts')(args[0])
 					if (args.length < 2) return client.sendMessage(from, 'Y el texto?', text, {quoted: mek})
@@ -669,7 +657,6 @@ case 'ytmp4':
 					
 			            case 'toimg':
 				    client.updatePresence(from, Presence.composing)
-                                 
 					if (!isQuotedSticker) return reply('❌ Solo stickers')
 					reply(mess.only.imgs)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -686,7 +673,6 @@ case 'ytmp4':
 ///////////
 		
 case 'play':
- // if (!isUser) return reply(mess.only.daftarB)
   if (!isGroup) return reply(mess.only.group)
   if (args.length < 1) return reply('Escribe el nombre')
   reply(mess.wait)
@@ -714,7 +700,6 @@ mimetype: 'audio/mp4', filename: `${anu.result.title}.mp3`, quoted: mek
 		case 'play2':   
 		if (!isGroup) return reply(mess.only.group)
 	        if (args.length < 1) return reply('Donde esta el nombre de la canción?')
-		//if (!isUser) return reply(mess.only.daftarB)
                 reply(mess.only.musica2)
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=shanduy50`)
@@ -729,7 +714,6 @@ mimetype: 'audio/mp4', filename: `${anu.result.title}.mp3`, quoted: mek
 					
                                 case 'welcome':
 					if (!isGroup) return reply(mess.only.group)
-                                        //if (!isUser) return reply(mess.only.daftarB)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isGroupAdmins) return reply(mess.only.Badmin)
 					if (args.length < 1) return reply('Para activar está funcion coloca *welcome 1')
@@ -750,7 +734,6 @@ mimetype: 'audio/mp4', filename: `${anu.result.title}.mp3`, quoted: mek
                         case 'delete':
 					case 'del':
 					if (!isGroup)return reply(mess.only.group)
-                                        if (!isUser) return reply(mess.only.daftarB)
 		                        client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 			break	
 			
@@ -766,7 +749,6 @@ break
 		
 case 'pinterest':
 	tels = body.slice(11)
-	if (!isUser) return reply(mess.only.daftarB)
 	if (args.length < 1) return reply('Ingresa lo que quieres buscar')
 	client.updatePresence(from, Presence.composing)
 	try {
