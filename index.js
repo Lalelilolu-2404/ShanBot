@@ -264,19 +264,6 @@ const mentionByReply = type == "extendedTextMessage" && mek.message.extendedText
 				client.sendMessage(hehe, teks, text)
 			}
 			
-		const sendButImage = async(id, text1, desc1, gam1, but = [], options = {}) => {
-		kma = gam1
-		mhan = await samu330.prepareMessage(from, kma, image)
-		const buttonMessages = {
-		imageMessage: mhan.message.imageMessage,
-		contentText: text1,
-		footerText: desc1,
-		buttons: but,
-		headerType: 4
-		}
-		client.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
-		}
-			
 			const mentions = (teks, memberr, id) => {
 				(id == null || id == undefined || id == false) ? client.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": memberr}})
 			}
