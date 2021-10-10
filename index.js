@@ -112,7 +112,7 @@ async function starts() {
 		start('2', 'Desconectado. Utiliza npm start Para conectarte')
 	})
 	client.on('open', () => {
-		success('2', 'Conectado by Shanduy')
+		success('2', 'Conectado by Death')
 	})
 	await client.connect({timeoutMs: 30*1000})
         fs.writeFileSync('./Nazwa.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
@@ -124,12 +124,52 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-				teks = `Mi loco @${num.split('@')[0]}\nBienvenido a :*${mdata.subject}*`
-                          client.sendMessage(mdata.id, teks, MessageType.text, { contextInfo: {"mentionedJid": [num]}})
-			} else if (anu.action == 'remove') {
+				try {
+				ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
+				} catch {
+				ppimg = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
+				}
+				let buffxy = await getBuffer(ppimg)
+const teksyy =`〘 ${mdata.subject} 〙
+╔═══════════════════
+╠≽️ Nick : @${num.split('@')[0]}
+╠≽️ Legal : Si hay pelito no hay delito
+╚═══════════════════
+`
+sendButImage(from, `${teksyy}`, `Denle una paloma a Anna o los folla xd\nPansito para Cherry\nᴱⁿᵗʳᵃⁿᵈᵒ ᶠᵃᵛᵒʳ ᵈᵉ ᵉⁿᵛᶦᵃʳ ᶜᵉᵖᵉᶜᶦᵗᵒ ᵒ ˢᵉʳᵃⁿ ᵉˡᶦᵐᶦⁿᵃᵈᵒˢ ˣᵈ\n© Creator\n⛧⸸⁶Death⁹†حب♡ت`, buffxy,
+				[{buttonId: 'lau1', 
+				buttonText: 
+				{displayText: 'Uwu :3'}, 
+				type: 1},
+				{buttonId: 'lau2',
+				buttonText: 
+				{displayText: 'Hola'}, 
+				type: 1}], 
+				{contextInfo: {"mentionedJid": [num]}})				
+			} else if (anu.action == 'promote') {
 				num = anu.participants[0]
-				teks = `NOOOO, se nos fué @${num.split('@')[0]}👋\n\nNadie te extrañará`
-				client.sendMessage(mdata.id, teks, MessageType.text, {contextInfo: {"mentionedJid": [num]}})
+				try {
+				ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
+				} catch {
+				ppimg = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
+				}
+				let buffxy = await getBuffer(ppimg)
+const teksyy =`〘 ${mdata.subject} 〙
+╔═══════════════════
+╠≽️ Nick : @${num.split('@')[0]}
+╠≽️ Legal : Si hay pelito no hay delito
+╚═══════════════════
+`
+sendButImage(from, `${teksyy}`, `Denle una paloma a Anna o los folla xd\nPansito para Cherry\nᴱⁿᵗʳᵃⁿᵈᵒ ᶠᵃᵛᵒʳ ᵈᵉ ᵉⁿᵛᶦᵃʳ ᶜᵉᵖᵉᶜᶦᵗᵒ ᵒ ˢᵉʳᵃⁿ ᵉˡᶦᵐᶦⁿᵃᵈᵒˢ ˣᵈ\n© Creator\n⛧⸸⁶Death⁹†حب♡ت`, buffxy,
+				[{buttonId: 'lau1', 
+				buttonText: 
+				{displayText: 'Uwu :3'}, 
+				type: 1},
+				{buttonId: 'lau2',
+				buttonText: 
+				{displayText: 'Hola'}, 
+				type: 1}], 
+				{contextInfo: {"mentionedJid": [num]}})	
 			} 
 		}catch (e) {
 			console.log('Error : %s', color(e, 'red'))
@@ -142,7 +182,8 @@ async function starts() {
 	    	blocked.push(i.replace('c.us','s.whatsapp.net'))
 	    }
 	})
-
+/////	
+	
 //Chat update
 	client.on('chat-update', async (mek) => {
 		try {
@@ -153,6 +194,8 @@ async function starts() {
 			if (mek.key.fromMe) return
 			global.prefix
 			global.blocked
+const mentionByTag = type == "extendedTextMessage" && mek.message.extendedTextMessage.contextInfo != null ? mek.message.extendedTextMessage.contextInfo.mentionedJid : []
+const mentionByReply = type == "extendedTextMessage" && mek.message.extendedTextMessage.contextInfo != null ? mek.message.extendedTextMessage.contextInfo.participant || "" : ""
 			const content = JSON.stringify(mek.message)
 			const apikey = setting.apikey
 			const from = mek.key.remoteJid
@@ -234,8 +277,22 @@ async function starts() {
 				client.sendMessage(from, teks, text, {quoted:mek})
 			}
 			const sendMess = (hehe, teks) => {
-				client.sendMessage(hehe, teks, text, {sendEphemeral: true})
+				client.sendMessage(hehe, teks, text)
 			}
+			
+		const sendButImage = async(id, text1, desc1, gam1, but = [], options = {}) => {
+		kma = gam1
+		mhan = await samu330.prepareMessage(from, kma, image)
+		const buttonMessages = {
+		imageMessage: mhan.message.imageMessage,
+		contentText: text1,
+		footerText: desc1,
+		buttons: but,
+		headerType: 4
+		}
+		client.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
+		}
+			
 			const mentions = (teks, memberr, id) => {
 				(id == null || id == undefined || id == false) ? client.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": memberr}})
 			}
@@ -377,15 +434,12 @@ const faketokoforwaded = (teks) => {
 }
 
 switch(command) {
-
 case 'menu':
 case 'help':
     var menu =`Nightcore  -  Rock mix  
 01:52 ━━━●───── 03:08
      ⇆ㅤㅤ ◁ㅤ ❚❚ㅤ ▷ㅤ ㅤ↻﻿
-                  ılıılıılıılıılıılı
-⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
-➥ *INFO*
+➥ *INFO*           ılıılıılıılıılıılı
   ╠ Prefijo : ⌜ ${prefix} ⌟  
 ➥ *SPAM :3*
   ╠ ${prefix}swt ⌜@Tag⌟ | # | ⌜Text⌟ 
@@ -398,10 +452,8 @@ case 'help':
   ╠ ${prefix}tts ⌜Code⌟ + ⌜Text⌟
   ╠ ${prefix}play + ⌜Text⌟
   ╠ ${prefix}play2 + ⌜Text⌟
-  ╠ ${prefix}ytmp4 + ⌜Link⌟ 
-⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
-⌜⛧⸸⁶Death⁹†حب♡ت⌟ `	
-    faketokoforwaded(menu)							
+  ╠ ${prefix}ytmp4 + ⌜Link⌟ `	
+faketokoforwaded(menu)							
 break	
 		
 case 'swt':
@@ -525,7 +577,7 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 if (mentioned.length !== 0){
 client.groupRemove(from, mentioned)
 } else if (isQuotedText) {
-client.groupRemove(from, quotedText.sender)
+client.groupRemove(from, mentioned)
 } 		
 break		
 /**		
@@ -713,6 +765,23 @@ case 'imagen':
             client.sendMessage(from,{url:images},image,{quoted:mek})
             });
 break
+		
+			       case 'antigp':
+                                        if (!isGroup) return reply(mess.only.group)
+					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+					if (!isGroupAdmins) return reply(mess.only.ownerG)
+					if (args.length < 1) return reply(`antigp 1 / 0`)
+					if (Number(args[0]) === 1) {
+						if (isAntiLink) return reply('El antigp ya esta activo')
+						antilink.push(from)
+						fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
+						reply('❬ ✅ ❭ Función habilitada')
+					} else if (Number(args[0]) === 0) {
+						antilink.splice(from)
+						fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
+						reply('❬ ✅ ❭ Función deshabilitada')
+					} 
+					break
 
 default:		
         if (budy.startsWith(`Jaa`)) {
