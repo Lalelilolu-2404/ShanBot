@@ -70,7 +70,6 @@ const vcard = 'BEGIN:VCARD\n' // Tarjeta de contacto
             + 'TEL;type=CELL;type=VOICE;waid=33749258491:+33 7 49 25 84 91\n' // ID de WhatsApp + número de teléfono
             + 'END:VCARD'
 
-selectedButton = (type == 'buttonsResponseMessage') ? sam.message.buttonsResponseMessage.selectedButtonId : ''
 /******FIN DE ENTRADA VCARD******/
 
 prefix = '.'
@@ -162,16 +161,7 @@ const teksyy =`〘 ${mdata.subject} 〙
 ╠≽️ Legal : Si hay pelito no hay delito
 ╚═══════════════════
 `
-sendButImage(from, `${teksyy}`, `Denle una paloma a Anna o los folla xd\nPansito para Cherry\nᴱⁿᵗʳᵃⁿᵈᵒ ᶠᵃᵛᵒʳ ᵈᵉ ᵉⁿᵛᶦᵃʳ ᶜᵉᵖᵉᶜᶦᵗᵒ ᵒ ˢᵉʳᵃⁿ ᵉˡᶦᵐᶦⁿᵃᵈᵒˢ ˣᵈ\n© Creator\n⛧⸸⁶Death⁹†حب♡ت`, buffxy,
-				[{buttonId: 'lau1', 
-				buttonText: 
-				{displayText: 'Uwu :3'}, 
-				type: 1},
-				{buttonId: 'lau2',
-				buttonText: 
-				{displayText: 'Hola'}, 
-				type: 1}], 
-				{contextInfo: {"mentionedJid": [num]}})	
+   client.sendMessage(from, buffxy, image, { caption: teksyy, contextInfo: {"mentionedJid": [num]}})	
 			} 
 		}catch (e) {
 			console.log('Error : %s', color(e, 'red'))
@@ -213,6 +203,7 @@ const mentionByReply = type == "extendedTextMessage" && mek.message.extendedText
 			const isCmd = body.startsWith(prefix)
 			const q = args.join(' ')
 			const arg = budy.slice(command.length + 1, budy.length)
+			selectedButton = (type == 'buttonsResponseMessage') ? sam.message.buttonsResponseMessage.selectedButtonId : ''
 
 			mess = {
 				wait: 'Relaja la raja😎\n\n❗Loading...❗',
