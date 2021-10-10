@@ -408,15 +408,15 @@ const faketokoforwaded = (teks) => {
 switch(command) {
 case 'menu':
 case 'help':
-    var menu =`Nightcore  -  Rock mix  
+const menu1 =`Nightcore  -  Rock mix  
 01:52 ━━━●───── 03:08
      ⇆ㅤㅤ ◁ㅤ ❚❚ㅤ ▷ㅤ ㅤ↻﻿
 ➥ *INFO*           ılıılıılıılıılıılı
   ╠ Prefijo : ⌜ ${prefix} ⌟  
 ➥ *SPAM :3*
   ╠ ${prefix}swt ⌜@Tag⌟ | # | ⌜Text⌟ 
-  ╠ ${prefix}spam ⌜Text⌟ | #  
-➥ *COMANDOS*
+  ╠ ${prefix}spam ⌜Text⌟ | # `
+const menu2 = `➥ *COMANDOS*
   ╠ ${prefix}s / ticker
   ╠ ${prefix}toimg
   ╠ ${prefix}imagen + ⌜Text⌟
@@ -425,7 +425,7 @@ case 'help':
   ╠ ${prefix}play + ⌜Text⌟
   ╠ ${prefix}play2 + ⌜Text⌟
   ╠ ${prefix}ytmp4 + ⌜Link⌟ `	
-faketokoforwaded(menu)							
+faketokoforwaded(`${menu1}\n${menu2}`)							
 break	
 		
 case 'swt':
@@ -549,7 +549,7 @@ mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 if (mentioned.length !== 0){
 client.groupRemove(from, mentioned)
 } else if (isQuotedText) {
-client.groupRemove(from, mentioned)
+client.groupRemove(from, quotedText.sender)
 } 		
 break		
 /**		
