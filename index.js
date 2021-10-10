@@ -137,8 +137,6 @@ function kyun(seconds){
   var hours = Math.floor(seconds / (60*60));
   var minutes = Math.floor(seconds % (60*60) / 60);
   var seconds = Math.floor(seconds % 60);
-
-  //return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds)
   return `${pad(hours)} Horas ${pad(minutes)} Minutos ${pad(seconds)} Segundos`
 }
 
@@ -198,6 +196,7 @@ async function starts() {
 			global.prefix
 			global.blocked
 			const content = JSON.stringify(mek.message)
+			const apikey = setting.apikey
 			const from = mek.key.remoteJid
 			const type = Object.keys(mek.message)[0]
 			const { text, extendedText, contact, location, liveLocation, image, video, sticker, document, audio, product } = MessageType
@@ -233,8 +232,8 @@ async function starts() {
 					attp: 'Calma crack estoy haciendo tu texto a sticker 👏\n\n*Loading...*',
 					imgs: 'Convirtiendo tu Sticker a Imagen 🔄',
 					mpcancion: 'Calmaoooo estoy procesando 😎\n\n*Convirtiendo de MP4 a MP3 🔄*\n\nby Lalelilolu',
-					mpa: 'Euu flaco 🥴\n\n*Estoy decargando tu cancion 🔄*\n\nAguarde un momento, por favor\n\nby Lalelilolu',
-                                        mpv: 'Calmao pa 😎\n\n*Estoy descargando tu video 🔄*\n\nAguarde un momento, por favor\n\nby Lalelilolu',	
+					mpa: '*Estoy decargando tu cancion 🔄*\n\nAguarde un momento',
+                                        mpv: '*Estoy descargando tu video 🔄*\n\nAguarde un momento',
 				}
 			}
     			const apakah = ['Si','No']
@@ -267,14 +266,7 @@ async function starts() {
                         const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
                         const NomerOwner = '33749258491@s.whatsapp.net'
                         /******Entrada ApiKey******/
-                        const BarBarKey = '8'
-			
-			//BarBarKey = up.BarBarKey;
-			vKey = up.Vhtearkey;
-			viKey = 'LEUJU9ybLwAHbLqnGShv'
-			meKey = up.Itsmeikyapi
-			lolKey = up.LolHumanKey
-			
+                        const BarBarKey = '8'		
                         /******Fin de la entrada de ApiKey******/
 
 			const isUrl = (url) => {
@@ -291,7 +283,6 @@ async function starts() {
 			}
 			
 			const conts = mek.key.fromMe ? client.user.jid : client.contacts[sender] || { notify: jid.replace(/@.+/, '') }
-			//let pushname = client.contacts[sender] != undefined ? client.contacts[sender].vname || client.contacts[sender].notify: undefined
 			let pushname = mek.key.fromMe ? client.user.name : conts.notify || conts.vname || conts.name || '-'
 		
 	if (budy.includes("://chat.whatsapp.com/")){
@@ -437,19 +428,19 @@ case 'help':
      ⇆ㅤㅤ ◁ㅤ ❚❚ㅤ ▷ㅤ ㅤ↻﻿
                   ılıılıılıılıılıılı
 ⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫⩫
-◉ *INFO*
+➥ *INFO*
   ╠ Prefijo : ⌜ ${prefix} ⌟
   
-◉ *SPAM :3*
+➥ *SPAM :3*
   ╠ ${prefix}swt ⌜@Tag⌟ | # | ⌜Text⌟ 
   ╠ ${prefix}spam ⌜Text⌟ | #  
 
-◉ *CREAR STICKERS*
+➥ *COMANDOS*
   ╠ ${prefix}s / ticker
   ╠ ${prefix}toimg
   ╠ ${prefix}imagen + ⌜Text⌟
 
-◉ *AUDIO*
+➥ *AUDIO*
   ╠ ${prefix}tts ⌜Code⌟ + ⌜Text⌟
   ╠ ${prefix}play + ⌜Text⌟
   ╠ ${prefix}play2 + ⌜Text⌟
@@ -516,19 +507,19 @@ case 'public':
           	banChats = false
           	fakestatus(`「 *PUBLICO OwO* 」`)
 break
-			
+		
 case 'ytmp4':
-		if (args.length < 1) return reply('Donde esta la url del video?\n\nEjemplo: *ytmp4 www.youtube.com/xxxxxxxxx')
-		reply(mess.only.mpv)
-		if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
-		anu = await fetchJson(`https://api.zeks.me/api/ytmp4?apikey=${apikey}&url=${args[0]}`, {method: 'get'})
-		if (anu.error) return reply(anu.error.yt)
-		teks = `*⌜Video Encontrado ✅⌟*\n◉ *Título:* ${anu.result.title} \n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP4 ⚠*\n\n_*Servicio proveido por shanduy*_`
-		lagu = await getBuffer(anu.result.thumbnail)
-                client.sendMessage(from, lagu, image, {quoted: mek, caption: teks})
-		buffer = await getBuffer(anu.result.url_video)
-		client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', filename: `${anu.result.title}.mp4`, quoted: mek})
-		break
+	if (args.length < 1) return reply('Donde esta la url del video?\n\nEjemplo: *ytmp4 www.youtube.com/xxxxxxxxx')
+	(mess.only.mpv)
+	if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
+	anu = await fetchJson(`https://api.zeks.me/api/ytmp4?apikey=${apikey}&url=${args[0]}`, {method: 'get'})
+	if (anu.error) return reply(anu.error.yt)
+	teks = `*⌜Video Encontrado ✅⌟*\n◉ *Título:* ${anu.result.title} \n◉ *Tamaño:* ${anu.result.size}\n\n*ESPERE ENVIANDO SU ARCHIVO MP4 ⚠*`
+	lagu = await getBuffer(anu.result.thumbnail)
+        client.sendMessage(from, lagu, image, {quoted: mek, caption: teks})
+	buffer = await getBuffer(anu.result.url_video)
+	client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', filename: `${anu.result.title}.mp4`, quoted: mek})
+break
 			
                                  case 'tts':
 				   client.updatePresence(from, Presence.recording) 
