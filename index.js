@@ -7,6 +7,7 @@ const {
     ReconnectMode,
     Presence,
     Mimetype,
+    WALocationMessage,
     rugaapi,
     waChatKey,
     GroupSettingChange,
@@ -125,29 +126,29 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-const teksyy =`〘 ${mdata.subject} 〙
+teksyy =`〘 ${mdata.subject} 〙
 ╔═══════════════════
 ╠≽️ Nick : @${num.split('@')[0]}
 ╠≽️ Legal : Si hay pelito no hay delito
 ╚═══════════════════
 `
 				try {
-				ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
+				ppimg = await client.getProfilePicture(`${num}`)
 				} catch {
 				ppimg = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
 				}
 				let buffxy = await getBuffer(ppimg)
-client.sendMessage(mdata.id, buffxy, image, {caption: teksyy})				
+client.sendMessage(mdata.id, buffxy, image, {caption: `${teksyy}`})				
 			} else if (anu.action == 'promote') {
 				num = anu.participants[0]
-const teksyy =`〘 ${mdata.subject} 〙
+teksyy =`〘 ${mdata.subject} 〙
 ╔═══════════════════
 ╠≽️ Nick : @${num.split('@')[0]}
 ╠≽️ Legal : Si hay pelito no hay delito
 ╚═══════════════════
 `
 				try {
-				ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
+				ppimg = await client.getProfilePicture(`${num}`)
 				} catch {
 				ppimg = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
 				}
