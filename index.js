@@ -425,6 +425,7 @@ var menu =`Nightcore  -  Rock mix
   ╠ ${prefix}imagen + ⌜Text⌟
   ╠ ${prefix}kick + ⌜@Tag⌟
   ╠ ${prefix}antigp 1/0
+  ╠ ${prefix}notif + ⌜Text⌟
 
 ➥ *AUDIO*
   ╠ ${prefix}tts ⌜Code⌟ + ⌜Text⌟
@@ -575,7 +576,25 @@ break
             }
     		fakestatus(`「 *Brutality!!!* 」`)
             break
-**/		
+**/			
+case 'notif':
+	client.updatePresence(from, Presence.composing) 
+        if (!isGroupAdmins) return reply(mess.only.Badmin)
+        if (!isGroup) return reply(mess.only.group)
+        teks = body.slice(6)
+        group = await client.groupMetadata(from);
+        member = group['participants']
+        jids = [];
+        member.map( async adm => {
+        jids.push(adm.id.replace('c.us', 's.whatsapp.net'));
+        })
+        options = {
+        text: teks,
+        contextInfo: {mentionedJid: jids},
+        quoted: mek
+        }
+await client.sendMessage(from, options, text)
+break
 		case 'exe':
 	              client.updatePresence(from, Presence.composing) 
 	              if (!isOwner) return reply(mess.only.ownerB)
