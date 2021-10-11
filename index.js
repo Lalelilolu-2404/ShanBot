@@ -126,34 +126,10 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-teksyy =`〘 ${mdata.subject} 〙
-╔═══════════════════
-╠≽️ Nick : @${num.split('@')[0]}
-╠≽️ Legal : Si hay pelito no hay delito
-╚═══════════════════
-`
-				try {
-				ppimg = await client.getProfilePicture(`${num}`)
-				} catch {
-				ppimg = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
-				}
-				let buffxy = await getBuffer(ppimg)
-client.sendMessage(mdata.id, buffxy, image, {caption: `${teksyy}`})				
+client.sendMessage(mdata.id, 'Hola perr@', MessageType.text)				
 			} else if (anu.action == 'promote') {
 				num = anu.participants[0]
-teksyy =`〘 ${mdata.subject} 〙
-╔═══════════════════
-╠≽️ Nick : @${num.split('@')[0]}
-╠≽️ Legal : Si hay pelito no hay delito
-╚═══════════════════
-`
-				try {
-				ppimg = await client.getProfilePicture(`${num}`)
-				} catch {
-				ppimg = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
-				}
-				let buffxy = await getBuffer(ppimg)
-client.sendMessage(mdata.id, buffxy, image, {caption: teksyy})	
+client.sendMessage(mdata.id, 'Fuera perro', MessageType.text)	
 			} 
 		}catch (e) {
 			console.log('Error : %s', color(e, 'red'))
