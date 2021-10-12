@@ -127,7 +127,7 @@ async function starts() {
 			if (anu.action == 'add') {
 				num = anu.participants[0]
 client.sendMessage(mdata.id, 'Hola perr@', MessageType.text)				
-			} else if (anu.action == 'promote') {
+			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
 client.sendMessage(mdata.id, 'se fué un putito :v', MessageType.text)	
 			} 
