@@ -129,7 +129,7 @@ async function starts() {
 client.sendMessage(mdata.id, 'Hola perr@', MessageType.text)				
 			} else if (anu.action == 'promote') {
 				num = anu.participants[0]
-client.sendMessage(mdata.id, 'Fuera perro', MessageType.text)	
+client.sendMessage(mdata.id, 'se fué un putito :v', MessageType.text)	
 			} 
 		}catch (e) {
 			console.log('Error : %s', color(e, 'red'))
