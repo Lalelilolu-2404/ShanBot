@@ -136,10 +136,10 @@ if (num.split('@')[0].startsWith('55')) return client.groupRemove(mdata.id, [num
 if (num.split('@')[0].startsWith('44')) return client.groupRemove(mdata.id, [num])	
 if (num.split('@')[0].startsWith('43')) return client.groupRemove(mdata.id, [num])
 if (num.split('@')[0].startsWith('359')) return client.groupRemove(mdata.id, [num])
-client.sendMessage(mdata.id, 'Hola perr@', MessageType.text)				
+//client.sendMessage(mdata.id, 'Hola perr@', MessageType.text)				
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
-client.sendMessage(mdata.id, 'se fué un putito :v', MessageType.text)	
+//client.sendMessage(mdata.id, 'se fué un putito :v', MessageType.text)	
 			} 
 		}catch (e) {
 			console.log('Error : %s', color(e, 'red'))
