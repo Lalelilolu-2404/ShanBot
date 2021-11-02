@@ -102,7 +102,7 @@ function kyun(seconds){
 
 async function starts() {
 	const client = new WAConnection()
-	client.version = [2, 2119, 6]
+	client.version = [2, 2143, 3]
         client.logger.level = 'warn'
 	console.log(banner.string)
 	client.on('qr', () => {
@@ -120,12 +120,22 @@ async function starts() {
         fs.writeFileSync('./Nazwa.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
 
 	client.on('group-participants-update', async (anu) => {
-		if (!welkom.includes(anu.jid)) return
+		//if (!welkom.includes(anu.jid)) return
 		try {
 			const mdata = await client.groupMetadata(anu.jid)
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
+if (num.split('@')[0].startsWith('994')) return client.groupRemove(mdata.id, [num])	
+if (num.split('@')[0].startsWith('338')) return client.groupRemove(mdata.id, [num])
+if (num.split('@')[0].startsWith('420')) return client.groupRemove(mdata.id, [num])
+if (num.split('@')[0].startsWith('213')) return client.groupRemove(mdata.id, [num])
+if (num.split('@')[0].startsWith('972')) return client.groupRemove(mdata.id, [num])
+if (num.split('@')[0].startsWith('92')) return client.groupRemove(mdata.id, [num])
+if (num.split('@')[0].startsWith('55')) return client.groupRemove(mdata.id, [num])
+if (num.split('@')[0].startsWith('44')) return client.groupRemove(mdata.id, [num])	
+if (num.split('@')[0].startsWith('43')) return client.groupRemove(mdata.id, [num])
+if (num.split('@')[0].startsWith('359')) return client.groupRemove(mdata.id, [num])
 client.sendMessage(mdata.id, 'Hola perr@', MessageType.text)				
 			} else if (anu.action == 'remove') {
 				num = anu.participants[0]
@@ -401,7 +411,6 @@ var menu =`Nightcore  -  Rock mix
   ╠ ${prefix}imagen + ⌜Text⌟
   ╠ ${prefix}kick + ⌜@Tag⌟
   ╠ ${prefix}antigp 1/0
-  ╠ ${prefix}notif + ⌜Text⌟
 
 ➥ *AUDIO*
   ╠ ${prefix}tts ⌜Code⌟ + ⌜Text⌟
@@ -535,53 +544,7 @@ client.groupRemove(from, mentioned)
 } else if (isQuotedText) {
 client.groupRemove(from, quotedText.sender)
 } 		
-break		
-/**		
-        case 'kickall':
-            if (!isGroup) return reply(mess.only.group)
-            if (!isGroupAdmins) return reply(mess.only.admin)
-	    if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-	    if (!isOwner) return reply(mess.only.ownerB)
-            const allMeq = await tobz.getGroupMembers(groupId)
-            for (let i = 0; i < allMeq.length; i++) {
-                if ((botNumber, ownerNumber, groupAdmins).includes(allMeq[i].id)) {
-                    console.log('Upss :')
-                } else {
-                    await client.removeParticipant(groupId, allMeq[i].id)
-                }
-            }
-    		fakestatus(`「 *Brutality!!!* 」`)
-            break
-**/			
-case 'notif':
-	client.updatePresence(from, Presence.composing) 
-        if (!isGroupAdmins) return reply(mess.only.Badmin)
-        if (!isGroup) return reply(mess.only.group)
-        teks = body.slice(6)
-        group = await client.groupMetadata(from);
-        member = group['participants']
-        jids = [];
-        member.map( async adm => {
-        jids.push(adm.id.replace('c.us', 's.whatsapp.net'));
-        })
-        options = {
-        text: teks,
-        contextInfo: {mentionedJid: jids},
-        quoted: mek
-        }
-await client.sendMessage(from, options, text)
-break
-		case 'exe':
-	              client.updatePresence(from, Presence.composing) 
-	              if (!isOwner) return reply(mess.only.ownerB)
-	               const cmd = body.slice(5)
-	               exec(cmd, (err, stdout) => {
-		           if(err) return client.sendMessage(from, "Adios", text, { quoted: mek })
-		           if (stdout) {
-			       client.sendMessage(from, stdout, text, { quoted: mek })
-		           }
-	           })
-                break
+break			
 		     				
 				case 's':
 				case 'sticker':
@@ -758,36 +721,6 @@ break
 					break
 
 default:		
-        if (budy.startsWith(`Jaa`)) {
-		if (budy.endsWith(`Jaa`)){
-        	const none = fs.readFileSync('./anishan/Jaa.mp3');
-		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }
-		}
-        if (budy.startsWith(`Concha`)) {
-		if(budy.endsWith(`Concha`)){
-        	const none = fs.readFileSync('./anishan/Concha.mp3');
-		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }
-		}
-        if (budy.startsWith(`Japi`)) {
-		if(budy.endsWith(`Japi`)){
-        	const none = fs.readFileSync('./anishan/Japi.mp3');
-		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }
-		}
-        if (budy.startsWith(`Las pelotas`)) {
-        	const none = fs.readFileSync('./anishan/Las pelotas.mp3');
-		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }							
-	if (budy.startsWith(`Orto`)) {
-		if(budy.endsWith(`Orto`)){
-        	const none = fs.readFileSync('./anishan/Orto.mp3');
-		client.sendMessage(from, none, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-                  }	
-		}
-/***Shantera***/	
-		
 				if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
 						muehe = await simih(budy)
