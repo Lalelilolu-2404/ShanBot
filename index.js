@@ -126,7 +126,8 @@ async function starts() {
 			console.log(anu)
 			if (anu.action == 'add') {
 				num = anu.participants[0]
-if (num.split('@')[0].startsWith('994')) return client.groupRemove(mdata.id, [num])	
+if (num.split('@')[0].startsWith('994')) return client.groupRemove(mdata.id, [num])
+if (num.split('@')[0].startsWith('380')) return client.groupRemove(mdata.id, [num])
 if (num.split('@')[0].startsWith('338')) return client.groupRemove(mdata.id, [num])
 if (num.split('@')[0].startsWith('420')) return client.groupRemove(mdata.id, [num])
 if (num.split('@')[0].startsWith('213')) return client.groupRemove(mdata.id, [num])
