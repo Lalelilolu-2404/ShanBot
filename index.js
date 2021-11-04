@@ -479,6 +479,11 @@ case 'public':
           	banChats = false
           	fakestatus(`「 *PUBLICO OwO* 」`)
 break
+	
+case 'ultrapack':
+const none = fs.readFileSync('./anishan/videos/Ultrapack.mp4');
+client.sendMessage(from, none, video, {mimetype: 'video/mp4', filename : `Detente perro !!! ... FBI 😎.mp4`, quoted: mek})
+break
 		
 case 'ytmp4':
 	if (args.length < 1) return reply('Donde esta la url del video?\n\nEjemplo: *ytmp4 www.youtube.com/xxxxxxxxx')
