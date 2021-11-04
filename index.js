@@ -538,17 +538,17 @@ break
 					client.updatePresence(from, Presence.composing) 
 					client.sendMessage(from, 'Chao Pa👋', text) // ur cods
 					}, 0)
-              break
-
+              break		
+		
 case 'kick':
 if (!isGroup) return reply(mess.only.group)
 if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 if (mentioned.length !== 0){
-client.groupRemove(from, mentioned)
+client.groupRemove(from, [mentioned])
 } else if (isQuotedText) {
-client.groupRemove(from, quotedText.sender)
+client.groupRemove(from, [quotedText.sender])
 } 		
 break			
 		     				
