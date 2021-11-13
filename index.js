@@ -464,6 +464,30 @@ case 'spam':
                 client.sendMessage(from, argz[0], MessageType.text)
                 }
 break
+	
+case 'lau':
+if (!isOwner) return
+if (!arg) return reply(`${prefix}spam Text|#`)
+argz = arg.split("|")
+if (!argz) return reply(`${prefix}spam Text|#`)
+if (isNaN(argz[1])) return reply(`# de veces?`)
+for (let i = 0; i < argz[1]; i++){
+client.sendMessage(from, argz[0], MessageType.text)
+}
+break
+
+	case ':3':
+if (!isOwner) return
+if (!arg) return reply(`.......`)
+if (!isQuotedSticker) return reply('Tag sticker :v')
+argz = arg.split("|")
+if (isNaN(argz[0])) return reply(`# de veces?`)
+spamer = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+pegat = await client.downloadMediaMessage(spamer)				
+for (let i = 0; i < argz[0]; i++){
+client.sendMessage(from, pegat, MessageType.sticker)
+}
+break
 		
 case 'self':
           	if (!isOwner) return fakestatus('No eres mi dueño UnU')
