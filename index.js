@@ -162,7 +162,7 @@ if (num.split('@')[0].startsWith('359')) return client.groupRemove(mdata.id, [nu
                         mek = JSON.parse(JSON.stringify(mek)).messages[0]
 			if (!mek.message) return
 			if (mek.key && mek.key.remoteJid == 'status@broadcast') return
-			if (mek.key.fromMe) return
+			//if (mek.key.fromMe) return
 			global.prefix
 			global.blocked
 			const content = JSON.stringify(mek.message)
